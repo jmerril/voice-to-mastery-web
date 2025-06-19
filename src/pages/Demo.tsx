@@ -65,17 +65,25 @@ const Demo = () => {
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Demo Video Placeholder */}
-            <div className="bg-gradient-to-br from-blue-500/20 to-teal-500/20 rounded-2xl p-8 flex items-center justify-center backdrop-blur-sm">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-white/80 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <div className="w-0 h-0 border-l-6 border-r-0 border-t-4 border-b-4 border-l-blue-600 border-t-transparent border-b-transparent ml-1"></div>
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=800&h=600&fit=crop" 
+                alt="Interactive displays showing AI-powered training simulations and analytics"
+                className="w-full h-96 object-cover rounded-2xl shadow-lg"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-teal-500/30 rounded-2xl"></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 text-center">
+                  <div className="w-20 h-20 bg-white/80 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <div className="w-0 h-0 border-l-6 border-r-0 border-t-4 border-b-4 border-l-blue-600 border-t-transparent border-b-transparent ml-1"></div>
+                  </div>
+                  <h3 className="text-xl font-semibold text-slate-800 mb-2">
+                    Watch Zyglio in Action
+                  </h3>
+                  <p className="text-slate-600">
+                    See how a simple voice explanation transforms into an interactive training simulation
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-2">
-                  Watch Zyglio in Action
-                </h3>
-                <p className="text-slate-600">
-                  See how a simple voice explanation transforms into an interactive training simulation
-                </p>
               </div>
             </div>
 
