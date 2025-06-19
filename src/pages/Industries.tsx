@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -22,6 +21,19 @@ const Industries = () => {
       ]
     },
     {
+      image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=600&fit=crop",
+      title: "Legal Practice & Case Simulation",
+      scenario: "Training junior attorneys on complex litigation strategies and courtroom procedures.",
+      voiceInput: "Senior partner explains cross-examination techniques and objection protocols for high-stakes depositions.",
+      sopGeneration: "Comprehensive legal procedure SOPs with case law references, ethical guidelines, and courtroom protocol documentation.",
+      outcome: "Interactive case simulations with multiple scenarios, witness examination practice, and real-time feedback on legal strategies.",
+      impact: "Accelerated attorney development, improved case preparation efficiency, and enhanced courtroom performance.",
+      stats: [
+        { icon: Users, label: "Case Prep Efficiency", value: "↑ 85%" },
+        { icon: TrendingUp, label: "Courtroom Performance", value: "↑ 67%" }
+      ]
+    },
+    {
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop",
       title: "Hospitals and Critical Care",
       scenario: "Emergency response protocols in a multilingual care environment.",
@@ -35,7 +47,7 @@ const Industries = () => {
       ]
     },
     {
-      image: "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=800&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-1632207691143-643e2a9a9361?w=800&h=600&fit=crop",
       title: "Automotive Repair & Diagnostics",
       scenario: "Diagnosing EV battery faults and performing ADAS calibration.",
       voiceInput: "A master tech walks through a typical calibration procedure.",
