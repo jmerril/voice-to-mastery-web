@@ -23,8 +23,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-              Zyglio
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/lovable-uploads/c0b7a398-4134-47e4-aa82-de5bf47aa45b.png" 
+                alt="Zyglio" 
+                className="h-8 w-auto"
+              />
             </Link>
           </div>
           
