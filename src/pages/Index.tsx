@@ -187,7 +187,7 @@ const Index = () => {
               { 
                 emoji: "🍴", 
                 label: "Restaurants & Hospitality",
-                image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=300&h=200&fit=crop"
+                image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=300&h=200&fit=crop"
               },
               { 
                 emoji: "🏥", 
@@ -197,7 +197,7 @@ const Index = () => {
               { 
                 emoji: "🚗", 
                 label: "Automotive",
-                image: "https://images.unsplash.com/photo-1632823471565-1ecdf6b21cd8?w=300&h=200&fit=crop"
+                image: "https://images.unsplash.com/photo-1632207691143-643e2a9a9361?w=300&h=200&fit=crop"
               },
               { 
                 emoji: "✈️", 

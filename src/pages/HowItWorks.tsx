@@ -127,8 +127,8 @@ const HowItWorks = () => {
               <div className="grid lg:grid-cols-2 gap-8 items-center">
                 <div>
                   <img 
-                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop" 
-                    alt="Professional chef in commercial kitchen teaching cooking techniques to apprentice"
+                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop" 
+                    alt="Executive chef in fine dining restaurant kitchen demonstrating advanced culinary techniques to culinary team"
                     className="w-full h-64 object-cover rounded-2xl shadow-lg"
                   />
                 </div>
@@ -138,8 +138,8 @@ const HowItWorks = () => {
                       <span className="text-2xl">👨‍🍳</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-slate-800">Chef's Training Session</h4>
-                      <p className="text-sm text-slate-600">2-minute explanation becomes comprehensive training</p>
+                      <h4 className="font-semibold text-slate-800">Executive Chef's Masterclass</h4>
+                      <p className="text-sm text-slate-600">5-minute explanation becomes comprehensive training program</p>
                     </div>
                   </div>
                   
@@ -147,8 +147,8 @@ const HowItWorks = () => {
                     <div className="p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
                       <p className="text-sm font-medium text-blue-800 mb-2">Voice Input:</p>
                       <p className="text-slate-700 italic">
-                        "First, heat the pan to medium-high. Season the steak 15 minutes before cooking. 
-                        Sear for 3 minutes each side, then finish in the oven at 400°F for 5-7 minutes depending on thickness..."
+                        "For the perfect duck confit, cure the legs in kosher salt and thyme for 24 hours. 
+                        Cook slowly at 200°F in duck fat for 2-3 hours until tender. Critical temperature points and timing variations based on leg size..."
                       </p>
                     </div>
                     
@@ -159,10 +159,10 @@ const HowItWorks = () => {
                     <div className="p-4 bg-green-50 rounded-lg border-l-4 border-green-500">
                       <p className="text-sm font-medium text-green-800 mb-2">Simulation Output:</p>
                       <ul className="text-slate-700 space-y-1">
-                        <li>• Interactive timing-based cooking simulation</li>
-                        <li>• Temperature checkpoints with feedback</li>
-                        <li>• Personalized reinforcement for each step</li>
-                        <li>• Quality assurance validation points</li>
+                        <li>• Interactive culinary simulation with timing precision</li>
+                        <li>• Temperature monitoring and quality checkpoints</li>
+                        <li>• Adaptive feedback for technique refinement</li>
+                        <li>• Sensory evaluation and plating standards</li>
                       </ul>
                     </div>
                   </div>
@@ -181,7 +181,7 @@ const HowItWorks = () => {
               <div className="bg-white rounded-2xl p-8 shadow-lg">
                 <div className="mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1632823471565-1ecdf6b21cd8?w=600&h=300&fit=crop" 
+                    src="https://images.unsplash.com/photo-1632207691143-643e2a9a9361?w=600&h=300&fit=crop" 
                     alt="Automotive technician working on car engine with diagnostic equipment"
                     className="w-full h-48 object-cover rounded-lg"
                   />
@@ -215,7 +215,7 @@ const HowItWorks = () => {
               <div className="bg-white rounded-2xl p-8 shadow-lg">
                 <div className="mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&h=300&fit=crop" 
+                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=300&fit=crop" 
                     alt="Medical students practicing clinical procedures in simulation lab"
                     className="w-full h-48 object-cover rounded-lg"
                   />
