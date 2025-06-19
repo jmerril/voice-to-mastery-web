@@ -16,6 +16,9 @@ const Footer = () => {
             <p className="text-sm text-slate-500">
               © 2025 Zyglio, Inc. All Rights Reserved
             </p>
+            <p className="text-sm text-slate-500 mt-1">
+              Patents Applied For
+            </p>
           </div>
           
           <div>
