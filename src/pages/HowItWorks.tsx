@@ -18,7 +18,7 @@ const HowItWorks = () => {
       title: "Extract Structure Using AI",
       description: "Our AI maps the knowledge into object-oriented elements: decisions, workflows, safety flags, equipment, timing windows, and more. These are categorized by complexity and domain.",
       color: "text-purple-500",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&h=400&fit=crop"
     },
     {
       icon: Settings,
@@ -127,8 +127,8 @@ const HowItWorks = () => {
               <div className="grid lg:grid-cols-2 gap-8 items-center">
                 <div>
                   <img 
-                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop" 
-                    alt="Executive chef in fine dining restaurant kitchen demonstrating advanced culinary techniques to culinary team"
+                    src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600&h=400&fit=crop" 
+                    alt="Professional chef demonstrating advanced culinary techniques in upscale restaurant kitchen with sous chefs"
                     className="w-full h-64 object-cover rounded-2xl shadow-lg"
                   />
                 </div>
@@ -181,8 +181,8 @@ const HowItWorks = () => {
               <div className="bg-white rounded-2xl p-8 shadow-lg">
                 <div className="mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1632207691143-643e2a9a9361?w=600&h=300&fit=crop" 
-                    alt="Automotive technician working on car engine with diagnostic equipment"
+                    src="https://images.unsplash.com/photo-1609859831103-178dc3c5c141?w=600&h=300&fit=crop" 
+                    alt="Professional automotive technician using advanced diagnostic equipment on modern electric vehicle"
                     className="w-full h-48 object-cover rounded-lg"
                   />
                 </div>
@@ -215,8 +215,8 @@ const HowItWorks = () => {
               <div className="bg-white rounded-2xl p-8 shadow-lg">
                 <div className="mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=300&fit=crop" 
-                    alt="Medical students practicing clinical procedures in simulation lab"
+                    src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=600&h=300&fit=crop" 
+                    alt="Medical students practicing clinical procedures in modern simulation lab with advanced medical equipment"
                     className="w-full h-48 object-cover rounded-lg"
                   />
                 </div>

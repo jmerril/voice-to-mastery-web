@@ -11,7 +11,7 @@ const CaseStudies = () => {
     {
       title: "Hospital Onboarding Reimagined",
       industry: "Healthcare",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=500&fit=crop",
+      image: "https://images.unsplash.com/photo-1638202993928-7267aad84c31?w=800&h=500&fit=crop",
       problem: "New nurses needed 40+ hours to onboard for trauma protocols.",
       solution: "Voice-led mentor walkthroughs auto-generated 8 modular simulations.",
       result: "Onboarding dropped to 12 hours; nurse confidence scores increased by 3.2×.",
