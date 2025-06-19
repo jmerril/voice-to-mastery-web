@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -20,7 +19,7 @@ const Technology = () => {
       title: "Object-Oriented Simulation Framework",
       description: "Training elements are designed like Lego blocks: reusable, remixable, and flexible across contexts and languages.",
       color: "text-green-500",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=500&h=300&fit=crop"
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=500&h=300&fit=crop"
     },
     {
       icon: Brain,
