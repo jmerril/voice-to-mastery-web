@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Play, Mic, Brain, Zap, Globe, Users, TrendingUp } from "lucide-react";
@@ -185,22 +184,18 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             {[
               { 
-                emoji: "🍴", 
                 label: "Restaurants & Hospitality",
                 image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=300&h=200&fit=crop"
               },
               { 
-                emoji: "🏥", 
                 label: "Healthcare",
                 image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=300&h=200&fit=crop"
               },
               { 
-                emoji: "🚗", 
                 label: "Automotive",
                 image: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=300&h=200&fit=crop"
               },
               { 
-                emoji: "✈️", 
                 label: "Aerospace",
                 image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&h=200&fit=crop"
               }
@@ -213,7 +208,6 @@ const Index = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-2xl"></div>
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-                  <div className="text-3xl mb-2">{industry.emoji}</div>
                   <p className="font-medium text-sm text-center px-2">{industry.label}</p>
                 </div>
               </div>
