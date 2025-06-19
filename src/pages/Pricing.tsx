@@ -4,84 +4,44 @@ import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, ArrowRight, Zap, Building, Shield } from "lucide-react";
+import { Check, ArrowRight, Zap, Building, Shield, Download, Phone, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Pricing = () => {
-  const plans = [
+  const valueProps = [
     {
-      name: "Starter",
-      price: "299",
-      period: "per month",
-      description: "Perfect for small teams getting started with voice-powered training",
-      icon: <Zap className="h-6 w-6" />,
-      features: [
-        "Up to 250 users",
-        "10 voice simulations",
-        "Basic analytics dashboard",
-        "Email support",
-        "Standard templates",
-        "Mobile app access"
-      ],
-      highlighted: false,
-      cta: "Start Free Trial"
+      icon: <TrendingUp className="h-8 w-8" />,
+      title: "Increase Company Value",
+      description: "Organizations using Zyglio see 25-40% improvement in operational efficiency, directly impacting company valuation and market position."
     },
     {
-      name: "Professional",
-      price: "899",
-      period: "per month",
-      description: "Advanced features for growing organizations with complex training needs",
-      icon: <Building className="h-6 w-6" />,
-      features: [
-        "Unlimited users",
-        "Unlimited simulations",
-        "Advanced analytics & reporting",
-        "Priority support",
-        "Custom scenario builder",
-        "API integrations",
-        "Multi-language support",
-        "White-label options"
-      ],
-      highlighted: true,
-      cta: "Request Demo"
+      icon: <Building className="h-8 w-8" />,
+      title: "Boost Profitability", 
+      description: "Reduce training costs by up to 70% while increasing knowledge retention by 2-4x, creating sustainable competitive advantages."
     },
     {
-      name: "Enterprise",
-      price: "Custom",
-      period: "contact us",
-      description: "Complete solution with dedicated support for large-scale deployments",
-      icon: <Shield className="h-6 w-6" />,
-      features: [
-        "Everything in Professional",
-        "On-premise deployment",
-        "Custom scenario engineering",
-        "Dedicated success manager",
-        "SLA guarantees",
-        "Advanced security features",
-        "Custom integrations",
-        "Training & onboarding"
-      ],
-      highlighted: false,
-      cta: "Contact Sales"
+      icon: <Shield className="h-8 w-8" />,
+      title: "Risk Mitigation",
+      description: "Better-trained teams mean fewer costly mistakes, improved compliance, and reduced liability exposure across your organization."
     }
   ];
 
   const roiHighlights = [
     {
-      metric: "100x",
-      description: "Faster content development speed"
+      metric: "300%",
+      description: "Average ROI within 12 months"
     },
     {
-      metric: "30-70%",
-      description: "Reduction in onboarding time"
+      metric: "70%",
+      description: "Reduction in training costs"
     },
     {
-      metric: "2-4x",
-      description: "Increase in knowledge retention"
+      metric: "4x",
+      description: "Faster employee competency"
     },
     {
-      metric: "$1000s",
-      description: "Annual cost savings per learner"
+      metric: "$2M+",
+      description: "Average annual value created"
     }
   ];
 
@@ -94,25 +54,76 @@ const Pricing = () => {
         <section className="py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-slate-900 mb-6">
-              Results That Justify the Investment
+              Make Your Company More Valuable & Profitable
             </h1>
             <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
-              Training used to be a drain on time and budget. With Zyglio, it's a strategic advantage 
-              that pays for itself through improved efficiency and outcomes.
+              Stop treating training as a cost center. With Zyglio, training becomes your competitive advantage 
+              that directly impacts your bottom line and company valuation.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/demo">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Get Free ROI Analysis
+                </Button>
+              </Link>
+              <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+                <Download className="mr-2 h-5 w-5" />
+                Download White Paper
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Value Propositions */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">
+                Transform Training Into Strategic Value
+              </h2>
+              <p className="text-xl text-slate-600">
+                Every minute spent on traditional training is money left on the table
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              {valueProps.map((prop, index) => (
+                <Card key={index} className="text-center border-slate-200 hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="mx-auto mb-4 p-3 bg-blue-100 rounded-full w-fit">
+                      {prop.icon}
+                    </div>
+                    <CardTitle className="text-xl">{prop.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-slate-600">{prop.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* ROI Highlights */}
-        <section className="py-16 px-4">
+        <section className="py-16 px-4 bg-slate-50">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-4 gap-8 mb-16">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">
+                Real Results, Real ROI
+              </h2>
+              <p className="text-xl text-slate-600">
+                Our clients don't just save money - they create measurable business value
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-4 gap-8">
               {roiHighlights.map((item, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">
+                  <div className="text-5xl font-bold text-blue-600 mb-2">
                     {item.metric}
                   </div>
-                  <div className="text-slate-600">
+                  <div className="text-slate-600 font-medium">
                     {item.description}
                   </div>
                 </div>
@@ -121,80 +132,96 @@ const Pricing = () => {
           </div>
         </section>
 
-        {/* Pricing Plans */}
+        {/* White Paper Section */}
         <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">
-                Choose Your Plan
-              </h2>
-              <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                Flexible pricing designed to grow with your organization's training needs
-              </p>
+          <div className="max-w-4xl mx-auto">
+            <Card className="bg-gradient-to-r from-blue-600 to-teal-600 text-white">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 p-3 bg-white/10 rounded-full w-fit">
+                  <Download className="h-8 w-8" />
+                </div>
+                <CardTitle className="text-3xl mb-4">
+                  Download Our ROI White Paper
+                </CardTitle>
+                <CardDescription className="text-blue-100 text-lg">
+                  "The Voice Training Revolution: How Leading Companies Are Turning Training 
+                  Into Competitive Advantage"
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <div className="mb-6">
+                  <p className="text-blue-100 mb-4">
+                    This comprehensive 24-page analysis includes:
+                  </p>
+                  <ul className="text-left inline-block text-blue-100 space-y-2">
+                    <li className="flex items-center">
+                      <Check className="h-5 w-5 mr-3 text-white" />
+                      ROI calculation frameworks and methodologies
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="h-5 w-5 mr-3 text-white" />
+                      5 detailed case studies with financial impact
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="h-5 w-5 mr-3 text-white" />
+                      Implementation roadmap and timeline
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="h-5 w-5 mr-3 text-white" />
+                      Industry-specific value creation strategies
+                    </li>
+                  </ul>
+                </div>
+                <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Free White Paper
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Custom ROI Analysis CTA */}
+        <section className="py-20 px-4 bg-slate-900 text-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-6">
+              Ready for Your Custom ROI Analysis?
+            </h2>
+            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+              Every organization is unique. Let our experts analyze your specific situation and 
+              show you exactly how Zyglio will impact your bottom line, operational efficiency, and company value.
+            </p>
+            <div className="bg-slate-800 rounded-lg p-8 mb-8">
+              <h3 className="text-2xl font-semibold mb-4">Your Free ROI Analysis Includes:</h3>
+              <div className="grid md:grid-cols-2 gap-4 text-left">
+                <div className="flex items-start">
+                  <Check className="h-5 w-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                  <span>Personalized cost-benefit projection</span>
+                </div>
+                <div className="flex items-start">
+                  <Check className="h-5 w-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                  <span>Industry-specific implementation roadmap</span>
+                </div>
+                <div className="flex items-start">
+                  <Check className="h-5 w-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                  <span>Risk assessment and mitigation strategies</span>
+                </div>
+                <div className="flex items-start">
+                  <Check className="h-5 w-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                  <span>Custom pricing based on your needs</span>
+                </div>
+              </div>
             </div>
-
-            <div className="grid lg:grid-cols-3 gap-8">
-              {plans.map((plan, index) => (
-                <Card 
-                  key={index} 
-                  className={`relative ${plan.highlighted ? 'border-blue-500 shadow-xl scale-105' : 'border-slate-200'}`}
-                >
-                  {plan.highlighted && (
-                    <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-blue-600">
-                      Most Popular
-                    </Badge>
-                  )}
-                  
-                  <CardHeader className="text-center pb-8">
-                    <div className="mb-4 flex justify-center">
-                      <div className={`p-3 rounded-full ${plan.highlighted ? 'bg-blue-100' : 'bg-slate-100'}`}>
-                        {plan.icon}
-                      </div>
-                    </div>
-                    <CardTitle className="text-2xl font-bold">
-                      {plan.name}
-                    </CardTitle>
-                    <CardDescription className="text-slate-600 mt-2">
-                      {plan.description}
-                    </CardDescription>
-                    <div className="mt-6">
-                      <div className="text-4xl font-bold text-slate-900">
-                        ${plan.price}
-                        {plan.price !== "Custom" && (
-                          <span className="text-lg font-normal text-slate-600">
-                            /{plan.period.split(' ')[1]}
-                          </span>
-                        )}
-                      </div>
-                      {plan.price === "Custom" && (
-                        <div className="text-slate-600 mt-1">{plan.period}</div>
-                      )}
-                    </div>
-                  </CardHeader>
-
-                  <CardContent>
-                    <ul className="space-y-3 mb-8">
-                      {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start">
-                          <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                          <span className="text-slate-700">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <Link to="/demo" className="block">
-                      <Button 
-                        className={`w-full ${plan.highlighted ? 'bg-blue-600 hover:bg-blue-700' : 'bg-slate-900 hover:bg-slate-800'}`}
-                        size="lg"
-                      >
-                        {plan.cta}
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </Link>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <Link to="/demo">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                <Phone className="mr-2 h-5 w-5" />
+                Schedule Your Free ROI Analysis
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+            <p className="text-slate-400 mt-4">
+              30-minute consultation • No obligation • Immediate insights
+            </p>
           </div>
         </section>
 
@@ -210,58 +237,40 @@ const Pricing = () => {
             <div className="space-y-8">
               <div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">
-                  How quickly can we get started?
+                  Why don't you publish standard pricing?
                 </h3>
                 <p className="text-slate-600">
-                  Most organizations are up and running within 48 hours. Our onboarding process includes setup, initial voice simulation creation, and team training.
+                  Every organization has unique training needs, user counts, and ROI potential. Our custom analysis ensures you get maximum value and pay only for what drives results in your specific situation.
                 </p>
               </div>
 
               <div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">
-                  What languages does Zyglio support?
+                  How quickly will we see ROI?
                 </h3>
                 <p className="text-slate-600">
-                  Zyglio supports voice input and output in 40+ languages, with cultural nuance and regional terminology automatically handled by our AI.
+                  Most organizations see measurable improvements within 30-60 days and full ROI within 6-12 months. Our analysis will show your specific timeline based on your current training costs and efficiency gaps.
                 </p>
               </div>
 
               <div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">
-                  Can we integrate with our existing LMS?
+                  What if Zyglio doesn't deliver the projected ROI?
                 </h3>
                 <p className="text-slate-600">
-                  Yes, Zyglio offers API integrations with major LMS platforms and can also function as a standalone training solution.
+                  We're so confident in our results that we offer ROI guarantees for qualified enterprise clients. If we don't hit the projected returns, we'll work with you at no additional cost until we do.
                 </p>
               </div>
 
               <div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">
-                  Is there a minimum contract term?
+                  Can you integrate with our existing systems?
                 </h3>
                 <p className="text-slate-600">
-                  Starter and Professional plans are month-to-month. Enterprise plans typically include annual agreements with flexible terms.
+                  Yes, Zyglio integrates with major LMS platforms, HRIS systems, and can connect to virtually any system via API. Integration planning is part of your free ROI analysis.
                 </p>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="py-20 px-4 bg-slate-900 text-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">
-              Ready to Transform Your Training ROI?
-            </h2>
-            <p className="text-xl text-slate-300 mb-8">
-              Join hundreds of organizations already using Zyglio to turn voice into their most valuable training asset.
-            </p>
-            <Link to="/demo">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                Start Your Free Trial
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
           </div>
         </section>
       </main>
