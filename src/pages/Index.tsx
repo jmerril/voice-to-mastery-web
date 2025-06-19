@@ -37,22 +37,30 @@ const Index = () => {
           </div>
           
           {/* Hero Visual */}
-          <div className="relative">
-            <div className="bg-gradient-to-r from-blue-500/10 to-teal-500/10 rounded-3xl p-12 backdrop-blur-sm">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                {[
-                  { icon: Mic, label: "Voice Input", color: "text-blue-500" },
-                  { icon: Brain, label: "AI Processing", color: "text-purple-500" },
-                  { icon: Zap, label: "Simulation", color: "text-yellow-500" },
-                  { icon: Users, label: "Training", color: "text-green-500" }
-                ].map((item, index) => (
-                  <div key={index} className="text-center">
-                    <div className={`${item.color} mb-3 flex justify-center`}>
-                      <item.icon size={48} />
+          <div className="relative mb-12">
+            <img 
+              src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=600&fit=crop" 
+              alt="Modern AI technology workspace with multiple screens showing data analytics"
+              className="w-full h-64 md:h-96 object-cover rounded-3xl shadow-2xl"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-teal-600/20 rounded-3xl"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                  {[
+                    { icon: Mic, label: "Voice Input", color: "text-blue-500" },
+                    { icon: Brain, label: "AI Processing", color: "text-purple-500" },
+                    { icon: Zap, label: "Simulation", color: "text-yellow-500" },
+                    { icon: Users, label: "Training", color: "text-green-500" }
+                  ].map((item, index) => (
+                    <div key={index} className="text-center">
+                      <div className={`${item.color} mb-3 flex justify-center`}>
+                        <item.icon size={48} />
+                      </div>
+                      <p className="text-sm font-medium text-slate-600">{item.label}</p>
                     </div>
-                    <p className="text-sm font-medium text-slate-600">{item.label}</p>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -61,26 +69,38 @@ const Index = () => {
 
       {/* Intro Section */}
       <section className="py-16 px-4 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-8">
-            The Future of Training is Here
-          </h2>
-          <div className="text-lg text-slate-600 space-y-6 leading-relaxed">
-            <p>
-              In the past, training content had to be carefully scripted, filmed, and edited. 
-              One hour of courseware could take over 100 hours of subject matter expert (SME) time.
-            </p>
-            <p className="font-semibold text-blue-600 text-xl">
-              With Zyglio, that model is gone.
-            </p>
-            <p>
-              Today, a single voice-based explanation—even a casual mentoring session—can generate 
-              adaptive learning modules, multilingual simulations, and measurable training outcomes.
-            </p>
-            <p>
-              Zyglio makes content dynamic, object-oriented, and infinitely flexible—without needing 
-              specialized teams to build from scratch.
-            </p>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-8">
+                The Future of Training is Here
+              </h2>
+              <div className="text-lg text-slate-600 space-y-6 leading-relaxed">
+                <p>
+                  In the past, training content had to be carefully scripted, filmed, and edited. 
+                  One hour of courseware could take over 100 hours of subject matter expert (SME) time.
+                </p>
+                <p className="font-semibold text-blue-600 text-xl">
+                  With Zyglio, that model is gone.
+                </p>
+                <p>
+                  Today, a single voice-based explanation—even a casual mentoring session—can generate 
+                  adaptive learning modules, multilingual simulations, and measurable training outcomes.
+                </p>
+                <p>
+                  Zyglio makes content dynamic, object-oriented, and infinitely flexible—without needing 
+                  specialized teams to build from scratch.
+                </p>
+              </div>
+            </div>
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop" 
+                alt="Professional team collaborating in modern office environment"
+                className="w-full h-96 object-cover rounded-2xl shadow-lg"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-transparent rounded-2xl"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -94,8 +114,15 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="p-8 hover:shadow-lg transition-shadow border-0 bg-white/80 backdrop-blur-sm">
               <CardContent className="p-0">
-                <div className="text-blue-600 mb-4">
-                  <TrendingUp size={48} />
+                <div className="relative mb-6">
+                  <img 
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop" 
+                    alt="Business analytics dashboard showing growth metrics"
+                    className="w-full h-32 object-cover rounded-lg"
+                  />
+                  <div className="absolute inset-0 bg-blue-600/20 rounded-lg flex items-center justify-center">
+                    <TrendingUp size={48} className="text-white" />
+                  </div>
                 </div>
                 <h3 className="text-xl font-bold mb-3">100x Faster Content Production</h3>
                 <p className="text-slate-600">
@@ -106,8 +133,15 @@ const Index = () => {
             
             <Card className="p-8 hover:shadow-lg transition-shadow border-0 bg-white/80 backdrop-blur-sm">
               <CardContent className="p-0">
-                <div className="text-teal-600 mb-4">
-                  <Users size={48} />
+                <div className="relative mb-6">
+                  <img 
+                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=250&fit=crop" 
+                    alt="Team of professionals working together in training session"
+                    className="w-full h-32 object-cover rounded-lg"
+                  />
+                  <div className="absolute inset-0 bg-teal-600/20 rounded-lg flex items-center justify-center">
+                    <Users size={48} className="text-white" />
+                  </div>
                 </div>
                 <h3 className="text-xl font-bold mb-3">Scalable Mentorship</h3>
                 <p className="text-slate-600">
@@ -118,8 +152,15 @@ const Index = () => {
             
             <Card className="p-8 hover:shadow-lg transition-shadow border-0 bg-white/80 backdrop-blur-sm">
               <CardContent className="p-0">
-                <div className="text-purple-600 mb-4">
-                  <Globe size={48} />
+                <div className="relative mb-6">
+                  <img 
+                    src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop" 
+                    alt="Global network connectivity representing multilingual capabilities"
+                    className="w-full h-32 object-cover rounded-lg"
+                  />
+                  <div className="absolute inset-0 bg-purple-600/20 rounded-lg flex items-center justify-center">
+                    <Globe size={48} className="text-white" />
+                  </div>
                 </div>
                 <h3 className="text-xl font-bold mb-3">Multilingual from Day One</h3>
                 <p className="text-slate-600">
@@ -143,14 +184,38 @@ const Index = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             {[
-              { emoji: "🍴", label: "Restaurants & Hospitality" },
-              { emoji: "🏥", label: "Healthcare" },
-              { emoji: "🚗", label: "Automotive" },
-              { emoji: "✈️", label: "Aerospace" }
+              { 
+                emoji: "🍴", 
+                label: "Restaurants & Hospitality",
+                image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=300&h=200&fit=crop"
+              },
+              { 
+                emoji: "🏥", 
+                label: "Healthcare",
+                image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=300&h=200&fit=crop"
+              },
+              { 
+                emoji: "🚗", 
+                label: "Automotive",
+                image: "https://images.unsplash.com/photo-1632823471565-1ecdf6b21cd8?w=300&h=200&fit=crop"
+              },
+              { 
+                emoji: "✈️", 
+                label: "Aerospace",
+                image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&h=200&fit=crop"
+              }
             ].map((industry, index) => (
-              <div key={index} className="p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-teal-50 hover:from-blue-100 hover:to-teal-100 transition-colors">
-                <div className="text-4xl mb-3">{industry.emoji}</div>
-                <p className="font-medium text-slate-700">{industry.label}</p>
+              <div key={index} className="relative group">
+                <img 
+                  src={industry.image} 
+                  alt={industry.label}
+                  className="w-full h-32 object-cover rounded-2xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-2xl"></div>
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+                  <div className="text-3xl mb-2">{industry.emoji}</div>
+                  <p className="font-medium text-sm text-center px-2">{industry.label}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -164,8 +229,15 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-teal-600">
-        <div className="max-w-4xl mx-auto text-center text-white">
+      <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-teal-600 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=400&fit=crop" 
+            alt="Modern office meeting room with presentation screen"
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
+        <div className="max-w-4xl mx-auto text-center text-white relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Transform Your Training?
           </h2>
