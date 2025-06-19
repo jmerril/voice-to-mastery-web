@@ -38,8 +38,8 @@ const About = () => {
           <div className="text-center mb-16">
             <div className="relative mb-8">
               <img 
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=400&fit=crop" 
-                alt="Diverse team of professionals collaborating in modern office"
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&h=400&fit=crop" 
+                alt="Diverse team of professionals collaborating in modern office with innovation and technology"
                 className="w-full h-64 object-cover rounded-3xl shadow-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/80 to-purple-600/80 rounded-3xl flex items-center justify-center">
@@ -61,8 +61,8 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop" 
-                alt="Medical professionals using advanced simulation technology"
+                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop" 
+                alt="Medical professionals using advanced simulation technology and training equipment"
                 className="w-full h-80 object-cover rounded-2xl shadow-lg mb-6"
               />
               <Card className="p-8 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
@@ -77,8 +77,8 @@ const About = () => {
             </div>
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop" 
-                alt="Futuristic AI and machine learning technology visualization"
+                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop" 
+                alt="Futuristic AI and machine learning technology visualization with data analytics"
                 className="w-full h-80 object-cover rounded-2xl shadow-lg mb-6"
               />
               <Card className="p-8 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
@@ -141,8 +141,8 @@ const About = () => {
               </div>
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop" 
-                  alt="Mentor teaching student in professional setting"
+                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop" 
+                  alt="Mentor teaching student in professional setting with modern technology integration"
                   className="w-full h-80 object-cover rounded-2xl shadow-lg"
                 />
               </div>
@@ -158,8 +158,8 @@ const About = () => {
               <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
                 <CardContent className="p-0 text-center">
                   <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" 
-                    alt="CEO headshot"
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&crop=face" 
+                    alt="CEO headshot - professional business leader"
                     className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                   />
                   <h4 className="font-bold text-slate-800 mb-2">Leadership Team</h4>
@@ -169,8 +169,8 @@ const About = () => {
               <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
                 <CardContent className="p-0 text-center">
                   <img 
-                    src="https://images.unsplash.com/photo-1494790108755-2616c2bb0eb3?w=200&h=200&fit=crop&crop=face" 
-                    alt="CTO headshot"
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face" 
+                    alt="CTO headshot - female technology executive"
                     className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                   />
                   <h4 className="font-bold text-slate-800 mb-2">Engineering Team</h4>
@@ -180,8 +180,8 @@ const About = () => {
               <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
                 <CardContent className="p-0 text-center">
                   <img 
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face" 
-                    alt="Head of Product headshot"
+                    src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop&crop=face" 
+                    alt="Head of Product headshot - diverse business professional"
                     className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                   />
                   <h4 className="font-bold text-slate-800 mb-2">Advisory Board</h4>

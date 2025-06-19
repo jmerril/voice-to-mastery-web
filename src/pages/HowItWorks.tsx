@@ -127,8 +127,8 @@ const HowItWorks = () => {
               <div className="grid lg:grid-cols-2 gap-8 items-center">
                 <div>
                   <img 
-                    src="https://images.unsplash.com/photo-1556909114-5ba5e4cbc4f4?w=600&h=400&fit=crop" 
-                    alt="Professional chef teaching cooking techniques in modern kitchen"
+                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop" 
+                    alt="Professional chef in commercial kitchen teaching cooking techniques to apprentice"
                     className="w-full h-64 object-cover rounded-2xl shadow-lg"
                   />
                 </div>
@@ -181,7 +181,7 @@ const HowItWorks = () => {
               <div className="bg-white rounded-2xl p-8 shadow-lg">
                 <div className="mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&h=300&fit=crop" 
+                    src="https://images.unsplash.com/photo-1632823471565-1ecdf6b21cd8?w=600&h=300&fit=crop" 
                     alt="Automotive technician working on car engine with diagnostic equipment"
                     className="w-full h-48 object-cover rounded-lg"
                   />
