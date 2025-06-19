@@ -27,7 +27,7 @@ const Navigation = () => {
               <img 
                 src="/lovable-uploads/c0b7a398-4134-47e4-aa82-de5bf47aa45b.png" 
                 alt="Zyglio" 
-                className="h-8 w-auto"
+                className="h-12 w-auto"
               />
             </Link>
           </div>
