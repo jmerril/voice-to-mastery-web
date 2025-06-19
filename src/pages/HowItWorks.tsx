@@ -25,7 +25,7 @@ const HowItWorks = () => {
       title: "Assemble Scenarios",
       description: "Using Zyglio's simulation engine, content managers or SMEs can generate real-time, branching simulations using drag-and-drop tools. No need to rewrite or restructure.",
       color: "text-green-500",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
     },
     {
       icon: Users,
@@ -39,7 +39,7 @@ const HowItWorks = () => {
       title: "Update and Evolve",
       description: "Every learner interaction feeds back into the simulation framework—making it smarter, faster, and more context-aware for future learners.",
       color: "text-teal-500", 
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop"
     }
   ];
 
@@ -165,6 +165,82 @@ const HowItWorks = () => {
                         <li>• Quality assurance validation points</li>
                       </ul>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Industry Examples */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold text-center text-slate-800 mb-12">
+              Real-World Applications
+            </h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Automotive Repair & Diagnostics */}
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <div className="mb-6">
+                  <img 
+                    src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&h=300&fit=crop" 
+                    alt="Automotive technician working on car engine with diagnostic equipment"
+                    className="w-full h-48 object-cover rounded-lg"
+                  />
+                </div>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
+                    <span className="text-lg">🔧</span>
+                  </div>
+                  <h4 className="font-semibold text-slate-800">Automotive Repair & Diagnostics</h4>
+                </div>
+                <p className="text-slate-600 mb-4">
+                  Master technician explains EV battery diagnostics and ADAS calibration procedures.
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    <span className="text-sm text-slate-600">Step-by-step diagnostic procedures</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span className="text-sm text-slate-600">Equipment-specific protocols</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-sm text-slate-600">Safety and compliance checks</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Medical Education & Simulation */}
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <div className="mb-6">
+                  <img 
+                    src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&h=300&fit=crop" 
+                    alt="Medical students practicing clinical procedures in simulation lab"
+                    className="w-full h-48 object-cover rounded-lg"
+                  />
+                </div>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                    <span className="text-lg">🩺</span>
+                  </div>
+                  <h4 className="font-semibold text-slate-800">Medical Education & Simulation</h4>
+                </div>
+                <p className="text-slate-600 mb-4">
+                  Teaching doctor explains post-operative sepsis diagnosis and treatment protocols.
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    <span className="text-sm text-slate-600">Patient scenario variations</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span className="text-sm text-slate-600">Multilingual patient interactions</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-sm text-slate-600">Adaptive complexity levels</span>
                   </div>
                 </div>
               </div>
