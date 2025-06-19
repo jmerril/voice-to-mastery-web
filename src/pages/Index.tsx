@@ -192,7 +192,7 @@ const Index = () => {
               { 
                 emoji: "🏥", 
                 label: "Healthcare",
-                image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=300&h=200&fit=crop"
+                image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&h=200&fit=crop"
               },
               { 
                 emoji: "🚗", 
