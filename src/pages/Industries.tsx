@@ -21,7 +21,7 @@ const Industries = () => {
       ]
     },
     {
-      image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=800&h=600&fit=crop",
       title: "Legal Practice & Case Simulation",
       scenario: "Training junior attorneys on complex litigation strategies and courtroom procedures.",
       voiceInput: "Senior partner explains cross-examination techniques and objection protocols for high-stakes depositions.",
@@ -34,7 +34,7 @@ const Industries = () => {
       ]
     },
     {
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=800&h=600&fit=crop",
       title: "Hospitals and Critical Care",
       scenario: "Emergency response protocols in a multilingual care environment.",
       voiceInput: "A nurse explains how to handle triage during a mass casualty incident.",
@@ -47,7 +47,7 @@ const Industries = () => {
       ]
     },
     {
-      image: "https://images.unsplash.com/photo-1632207691143-643e2a9a9361?w=800&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800&h=600&fit=crop",
       title: "Automotive Repair & Diagnostics",
       scenario: "Diagnosing EV battery faults and performing ADAS calibration.",
       voiceInput: "A master tech walks through a typical calibration procedure.",
@@ -73,7 +73,7 @@ const Industries = () => {
       ]
     },
     {
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&h=600&fit=crop",
       title: "Medical Education & Simulation",
       scenario: "A teaching doctor explains how to approach post-op sepsis.",
       voiceInput: "Doctor walks through diagnosis and treatment protocols for various patient scenarios.",
