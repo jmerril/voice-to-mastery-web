@@ -53,87 +53,87 @@ const HowItWorks = () => {
           {/* Enhanced Hero Section */}
           <div className="text-center mb-16">
             {/* Hero Image - Someone Speaking into Microphone */}
-            <div className="relative mb-8 overflow-hidden rounded-3xl shadow-2xl max-w-5xl mx-auto border-4 border-white/30">
+            <div className="relative mb-8 overflow-hidden rounded-2xl shadow-xl max-w-4xl mx-auto border-2 border-white/20">
               <img 
                 src="/lovable-uploads/366df3e2-1acc-47a9-94cd-9d5b850563fa.png"
                 alt="Person speaking into microphone - representing voice capture technology"
-                className="w-full h-80 sm:h-96 object-cover"
+                className="w-full h-64 sm:h-80 object-cover"
               />
               
               {/* Overlay with Content */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/90 to-teal-600/90 flex items-center justify-center">
-                {/* Background Pattern */}
-                <div className="absolute inset-0 opacity-10">
-                  <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16"></div>
-                  <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full translate-x-12 translate-y-12"></div>
-                  <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white rounded-full"></div>
-                  <div className="absolute top-1/4 right-1/4 w-20 h-20 bg-white rounded-full"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/85 to-teal-600/85 flex items-center justify-center p-4">
+                {/* Background Pattern - Subtle */}
+                <div className="absolute inset-0 opacity-5">
+                  <div className="absolute top-0 left-0 w-24 h-24 bg-white rounded-full -translate-x-12 -translate-y-12"></div>
+                  <div className="absolute bottom-0 right-0 w-20 h-20 bg-white rounded-full translate-x-10 translate-y-10"></div>
+                  <div className="absolute top-1/2 left-1/4 w-12 h-12 bg-white rounded-full"></div>
+                  <div className="absolute top-1/4 right-1/4 w-16 h-16 bg-white rounded-full"></div>
                 </div>
                 
-                <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-                  {/* Main Heading with better containment */}
-                  <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20 mb-8">
-                    <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-4 leading-tight">
+                <div className="relative z-10 text-center max-w-3xl mx-auto">
+                  {/* Main Heading - Smaller and Better Contained */}
+                  <div className="bg-black/15 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/20 mb-6">
+                    <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 leading-tight">
                       From Spoken Knowledge to<br />Structured Intelligence
                     </h1>
-                    <p className="text-base sm:text-lg lg:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-sm sm:text-base lg:text-lg text-blue-100 max-w-2xl mx-auto leading-relaxed">
                       What if every explanation you gave automatically created a library of usable, modular, scalable training tools?
                     </p>
                   </div>
 
-                  {/* Zyglio Statement */}
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/30 mb-8">
-                    <div className="flex items-center justify-center gap-3">
-                      <Zap className="h-6 w-6 text-yellow-300 flex-shrink-0" />
-                      <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">
+                  {/* Zyglio Statement - Smaller */}
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-white/25 mb-6">
+                    <div className="flex items-center justify-center gap-2">
+                      <Zap className="h-4 w-4 text-yellow-300 flex-shrink-0" />
+                      <p className="text-lg sm:text-xl lg:text-2xl font-bold text-white">
                         That's what Zyglio does.
                       </p>
-                      <Zap className="h-6 w-6 text-yellow-300 flex-shrink-0" />
+                      <Zap className="h-4 w-4 text-yellow-300 flex-shrink-0" />
                     </div>
                   </div>
 
-                  {/* Visual Workflow Preview - Properly Contained */}
-                  <div className="max-w-2xl mx-auto mb-6">
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+                  {/* Visual Workflow Preview - Smaller and Centered */}
+                  <div className="max-w-lg mx-auto mb-4">
+                    <div className="grid grid-cols-3 gap-2 sm:gap-3">
                       {/* Voice Input */}
-                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20">
-                        <div className="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-2">
-                          <Mic className="h-5 w-5 text-white" />
+                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center border border-white/20">
+                        <div className="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-2">
+                          <Mic className="h-4 w-4 text-white" />
                         </div>
-                        <div className="text-white text-sm font-semibold mb-1">Voice</div>
+                        <div className="text-white text-xs font-semibold mb-1">Voice</div>
                         <div className="text-blue-100 text-xs">Capture</div>
                       </div>
 
                       {/* AI Processing */}
-                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20">
-                        <div className="w-10 h-10 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-2">
-                          <Brain className="h-5 w-5 text-white" />
+                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center border border-white/20">
+                        <div className="w-8 h-8 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-2">
+                          <Brain className="h-4 w-4 text-white" />
                         </div>
-                        <div className="text-white text-sm font-semibold mb-1">AI</div>
+                        <div className="text-white text-xs font-semibold mb-1">AI</div>
                         <div className="text-blue-100 text-xs">Processing</div>
                       </div>
 
                       {/* Interactive Training */}
-                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20">
-                        <div className="w-10 h-10 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-2">
-                          <Users className="h-5 w-5 text-white" />
+                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center border border-white/20">
+                        <div className="w-8 h-8 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-2">
+                          <Users className="h-4 w-4 text-white" />
                         </div>
-                        <div className="text-white text-sm font-semibold mb-1">Training</div>
+                        <div className="text-white text-xs font-semibold mb-1">Training</div>
                         <div className="text-blue-100 text-xs">Simulation</div>
                       </div>
                     </div>
                   </div>
 
-                  {/* Enhanced Call-to-Action */}
+                  {/* Enhanced Call-to-Action - Smaller */}
                   <div className="text-center">
-                    <div className="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 border border-white/30 inline-block">
+                    <div className="bg-white/15 backdrop-blur-sm rounded-full px-3 py-2 border border-white/25 inline-block">
                       <div className="flex items-center gap-2 text-white">
-                        <Play className="h-4 w-4 fill-current flex-shrink-0" />
-                        <span className="font-semibold text-sm">See the complete workflow below</span>
+                        <Play className="h-3 w-3 fill-current flex-shrink-0" />
+                        <span className="font-medium text-xs">See the complete workflow below</span>
                       </div>
                     </div>
                     
-                    <p className="text-white/80 text-sm mt-3">
+                    <p className="text-white/70 text-xs mt-2">
                       ✨ Transform expertise into interactive learning experiences
                     </p>
                   </div>
