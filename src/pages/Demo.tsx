@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import VideoModal from "@/components/VideoModal";
@@ -158,15 +157,26 @@ const Demo = () => {
                   </div>
                 </div>
 
-                {/* Play Button */}
+                {/* Enhanced Play Button */}
                 <div className="text-center mt-8">
-                  <Button 
-                    onClick={() => setIsVideoModalOpen(true)}
-                    className="bg-white/20 hover:bg-white/30 text-white border-white/30 backdrop-blur-sm px-8 py-3 text-lg"
-                    variant="outline"
-                  >
-                    <Play className="mr-2 h-5 w-5" /> Watch Demo Video
-                  </Button>
+                  <div className="relative inline-block">
+                    {/* Pulsing ring animation */}
+                    <div className="absolute inset-0 rounded-full bg-white/30 animate-ping"></div>
+                    <div className="absolute inset-0 rounded-full bg-white/20 animate-pulse"></div>
+                    
+                    <Button 
+                      onClick={() => setIsVideoModalOpen(true)}
+                      className="relative bg-white hover:bg-white/90 text-blue-600 hover:text-blue-700 border-0 shadow-2xl px-10 py-4 text-lg font-bold rounded-full transform hover:scale-105 transition-all duration-300 hover:shadow-3xl"
+                    >
+                      <Play className="mr-3 h-6 w-6 fill-current" /> 
+                      Watch Demo Video
+                    </Button>
+                  </div>
+                  
+                  {/* Call-to-action text */}
+                  <p className="text-white/90 text-sm mt-3 font-medium animate-pulse">
+                    ✨ See the magic happen in 2 minutes
+                  </p>
                 </div>
               </div>
             </div>
