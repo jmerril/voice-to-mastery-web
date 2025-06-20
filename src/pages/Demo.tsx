@@ -20,26 +20,52 @@ const Demo = () => {
     comments: ""
   });
   
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Simulate form submission
-    toast({
-      title: "Demo Request Submitted!",
-      description: "We'll contact you within 24 hours to schedule your personalized demo.",
-    });
-    
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      industry: "",
-      role: "",
-      currentMethod: "",
-      comments: ""
-    });
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("https://ammonowgtxzohwbkajml.supabase.co/functions/v1/send-contact-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to submit form");
+      }
+
+      toast({
+        title: "Demo request received",
+        description: "Our team will contact you shortly to schedule your personalized demo.",
+      });
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        industry: "",
+        role: "",
+        currentMethod: "",
+        comments: ""
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Error",
+        description: error instanceof Error ? error.message : "Failed to submit form. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -105,6 +131,7 @@ const Demo = () => {
                         onChange={(e) => handleInputChange("name", e.target.value)}
                         required
                         className="bg-white/80"
+                        disabled={isSubmitting}
                       />
                     </div>
                     <div>
@@ -116,13 +143,14 @@ const Demo = () => {
                         onChange={(e) => handleInputChange("email", e.target.value)}
                         required
                         className="bg-white/80"
+                        disabled={isSubmitting}
                       />
                     </div>
                   </div>
                   
                   <div>
                     <Label htmlFor="industry">Industry</Label>
-                    <Select onValueChange={(value) => handleInputChange("industry", value)}>
+                    <Select onValueChange={(value) => handleInputChange("industry", value)} disabled={isSubmitting}>
                       <SelectTrigger className="bg-white/80">
                         <SelectValue placeholder="Select your industry" />
                       </SelectTrigger>
@@ -147,6 +175,7 @@ const Demo = () => {
                       onChange={(e) => handleInputChange("role", e.target.value)}
                       placeholder="e.g., Training Manager, Operations Director"
                       className="bg-white/80"
+                      disabled={isSubmitting}
                     />
                   </div>
                   
@@ -158,6 +187,7 @@ const Demo = () => {
                       onChange={(e) => handleInputChange("currentMethod", e.target.value)}
                       placeholder="e.g., In-person training, LMS, Video courses"
                       className="bg-white/80"
+                      disabled={isSubmitting}
                     />
                   </div>
                   
@@ -170,14 +200,16 @@ const Demo = () => {
                       placeholder="Tell us about your training challenges or specific use cases you'd like to explore"
                       className="bg-white/80"
                       rows={3}
+                      disabled={isSubmitting}
                     />
                   </div>
                   
                   <Button 
                     type="submit" 
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3"
+                    disabled={isSubmitting}
                   >
-                    Request Demo
+                    {isSubmitting ? "Submitting..." : "Request Demo"}
                   </Button>
                 </form>
               </CardContent>
