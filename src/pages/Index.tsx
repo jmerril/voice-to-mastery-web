@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Play, Mic, Brain, Zap, Globe, Users, TrendingUp } from "lucide-react";
+import { ArrowRight, Play, Mic, Brain, Zap, Globe, Users, TrendingUp, Languages } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
@@ -120,7 +120,7 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-800 mb-12">
             Why Zyglio?
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="p-8 hover:shadow-lg transition-shadow border-0 bg-white/80 backdrop-blur-sm">
               <CardContent className="p-0">
                 <div className="relative mb-6">
@@ -174,6 +174,25 @@ const Index = () => {
                 <h3 className="text-xl font-bold mb-3">Multilingual from Day One</h3>
                 <p className="text-slate-600">
                   Zyglio's voice engine supports language expansion and localization with no manual scripting.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 hover:shadow-lg transition-shadow border-0 bg-white/80 backdrop-blur-sm">
+              <CardContent className="p-0">
+                <div className="relative mb-6">
+                  <img 
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=250&fit=crop" 
+                    alt="Diverse group of people speaking different languages in a collaborative setting"
+                    className="w-full h-32 object-cover rounded-lg"
+                  />
+                  <div className="absolute inset-0 bg-emerald-600/20 rounded-lg flex items-center justify-center">
+                    <Languages size={48} className="text-white" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-3">Language Barrier-Free Learning</h3>
+                <p className="text-slate-600">
+                  Support for 40+ languages eliminates language as a barrier to accessing expert knowledge and training.
                 </p>
               </CardContent>
             </Card>
