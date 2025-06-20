@@ -1,4 +1,5 @@
 
+import * as React from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 interface VideoModalProps {
@@ -7,6 +8,18 @@ interface VideoModalProps {
 }
 
 const VideoModal = ({ isOpen, onClose }: VideoModalProps) => {
+  // Add a safety check to ensure we're in a valid React context
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Don't render until we're properly mounted
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl w-full p-0">
