@@ -69,79 +69,63 @@ const HowItWorks = () => {
                   <div className="absolute top-1/4 right-1/4 w-20 h-20 bg-white rounded-full"></div>
                 </div>
                 
-                <div className="relative z-10 text-center px-8">
-                  <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                <div className="relative z-10 text-center px-4 sm:px-8 max-w-6xl mx-auto">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
                     From Spoken Knowledge to Structured Intelligence
                   </h1>
-                  <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-6">
+                  <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-4 sm:mb-6">
                     What if every explanation you gave automatically created a library of usable, modular, scalable training tools?
                   </p>
-                  <div className="flex items-center justify-center gap-4 mb-8">
-                    <Zap className="h-8 w-8 text-yellow-300" />
-                    <p className="text-2xl font-semibold text-white">
+                  <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6 sm:mb-8">
+                    <Zap className="h-6 w-6 sm:h-8 sm:w-8 text-yellow-300" />
+                    <p className="text-xl sm:text-2xl font-semibold text-white">
                       That's what Zyglio does.
                     </p>
-                    <Zap className="h-8 w-8 text-yellow-300" />
+                    <Zap className="h-6 w-6 sm:h-8 sm:w-8 text-yellow-300" />
                   </div>
 
-                  {/* Visual Workflow Preview - Responsive */}
-                  <div className="max-w-4xl mx-auto mb-8">
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                  {/* Visual Workflow Preview - Fixed Layout */}
+                  <div className="max-w-5xl mx-auto mb-6 sm:mb-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
                       {/* Voice Input */}
-                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center min-w-[120px]">
-                        <div className="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-3">
-                          <Mic className="h-6 w-6 text-white" />
+                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
+                        <div className="w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <Mic className="h-8 w-8 text-white" />
                         </div>
-                        <div className="text-white text-sm font-medium">Voice</div>
-                        <div className="text-blue-100 text-xs">Capture</div>
-                      </div>
-
-                      {/* Separator */}
-                      <div className="hidden sm:block">
-                        <Separator orientation="vertical" className="h-12 bg-white/30" />
-                      </div>
-                      <div className="sm:hidden">
-                        <Separator className="w-16 bg-white/30" />
+                        <div className="text-white text-lg font-semibold mb-1">Voice</div>
+                        <div className="text-blue-100 text-sm">Capture</div>
                       </div>
 
                       {/* AI Processing */}
-                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center min-w-[120px]">
-                        <div className="w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-3">
-                          <Brain className="h-6 w-6 text-white" />
+                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
+                        <div className="w-16 h-16 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <Brain className="h-8 w-8 text-white" />
                         </div>
-                        <div className="text-white text-sm font-medium">AI</div>
-                        <div className="text-blue-100 text-xs">Processing</div>
-                      </div>
-
-                      {/* Separator */}
-                      <div className="hidden sm:block">
-                        <Separator orientation="vertical" className="h-12 bg-white/30" />
-                      </div>
-                      <div className="sm:hidden">
-                        <Separator className="w-16 bg-white/30" />
+                        <div className="text-white text-lg font-semibold mb-1">AI</div>
+                        <div className="text-blue-100 text-sm">Processing</div>
                       </div>
 
                       {/* Interactive Training */}
-                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center min-w-[120px]">
-                        <div className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-3">
-                          <Users className="h-6 w-6 text-white" />
+                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
+                        <div className="w-16 h-16 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <Users className="h-8 w-8 text-white" />
                         </div>
-                        <div className="text-white text-sm font-medium">Training</div>
-                        <div className="text-blue-100 text-xs">Simulation</div>
+                        <div className="text-white text-lg font-semibold mb-1">Training</div>
+                        <div className="text-blue-100 text-sm">Simulation</div>
                       </div>
                     </div>
                   </div>
 
                   {/* Enhanced Call-to-Action */}
                   <div className="text-center">
-                    <div className="bg-white/20 backdrop-blur-sm rounded-full px-8 py-4 border border-white/30 inline-block">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-full px-6 sm:px-8 py-3 sm:py-4 border border-white/30 inline-block">
                       <div className="flex items-center gap-3 text-white">
-                        <Play className="h-5 w-5 fill-current" />
-                        <span className="font-semibold">See the complete workflow below</span>
+                        <Play className="h-4 w-4 sm:h-5 sm:w-5 fill-current" />
+                        <span className="font-semibold text-sm sm:text-base">See the complete workflow below</span>
                       </div>
                     </div>
                     
-                    <p className="text-white/80 text-sm mt-4">
+                    <p className="text-white/80 text-xs sm:text-sm mt-4">
                       ✨ Transform expertise into interactive learning experiences
                     </p>
                   </div>
