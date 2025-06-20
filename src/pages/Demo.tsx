@@ -1,12 +1,14 @@
 
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import VideoModal from "@/components/VideoModal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Play } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -21,6 +23,7 @@ const Demo = () => {
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -106,9 +109,15 @@ const Demo = () => {
                   <h3 className="text-xl font-semibold text-slate-800 mb-2">
                     Watch Zyglio in Action
                   </h3>
-                  <p className="text-slate-600">
+                  <p className="text-slate-600 mb-4">
                     See how a simple voice explanation transforms into an interactive training simulation
                   </p>
+                  <Button 
+                    onClick={() => setIsVideoModalOpen(true)}
+                    className="bg-blue-600 hover:bg-blue-700 text-white"
+                  >
+                    <Play className="mr-2 h-4 w-4" /> Watch Video
+                  </Button>
                 </div>
               </div>
             </div>
@@ -257,6 +266,11 @@ const Demo = () => {
       </div>
 
       <Footer />
+      
+      <VideoModal 
+        isOpen={isVideoModalOpen} 
+        onClose={setIsVideoModalOpen}
+      />
     </div>
   );
 };
