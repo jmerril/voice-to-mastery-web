@@ -20,7 +20,7 @@ const Index = () => {
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent mb-6">
             From Voice to Mastery
           </h1>
-          <p className="text-xl md:text-2xl text-slate-600 mb-4 max-w-4xl mx-auto">
+          <p className="text-3xl md:text-5xl font-black text-slate-800 mb-6 max-w-6xl mx-auto leading-tight">
             From Prompt to Unprecedented Educational Experiences
           </p>
           <p className="text-lg text-slate-500 mb-12 max-w-5xl mx-auto leading-relaxed">
