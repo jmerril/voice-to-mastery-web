@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -79,17 +78,6 @@ const HowItWorks = () => {
                     <p className="text-sm sm:text-base lg:text-lg text-blue-100 max-w-2xl mx-auto leading-relaxed">
                       What if every explanation you gave automatically created a library of usable, modular, scalable training tools?
                     </p>
-                  </div>
-
-                  {/* Zyglio Statement - Smaller */}
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-white/25 mb-6">
-                    <div className="flex items-center justify-center gap-2">
-                      <Zap className="h-4 w-4 text-yellow-300 flex-shrink-0" />
-                      <p className="text-lg sm:text-xl lg:text-2xl font-bold text-white">
-                        That's what Zyglio does.
-                      </p>
-                      <Zap className="h-4 w-4 text-yellow-300 flex-shrink-0" />
-                    </div>
                   </div>
 
                   {/* Visual Workflow Preview - Smaller and Centered */}
