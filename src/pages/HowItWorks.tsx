@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -95,9 +94,9 @@ const HowItWorks = () => {
                       <div className="text-blue-100 text-xs">Capture</div>
                     </div>
 
-                    {/* Arrow */}
+                    {/* Separator Line */}
                     <div className="flex items-center justify-center">
-                      <ArrowRight className="h-6 w-6 text-white/70" />
+                      <div className="h-0.5 w-full bg-white/30"></div>
                     </div>
 
                     {/* AI Processing */}
@@ -109,9 +108,9 @@ const HowItWorks = () => {
                       <div className="text-blue-100 text-xs">Processing</div>
                     </div>
 
-                    {/* Arrow */}
+                    {/* Separator Line */}
                     <div className="flex items-center justify-center">
-                      <ArrowRight className="h-6 w-6 text-white/70" />
+                      <div className="h-0.5 w-full bg-white/30"></div>
                     </div>
 
                     {/* Interactive Training */}
@@ -126,20 +125,14 @@ const HowItWorks = () => {
 
                   {/* Enhanced Call-to-Action */}
                   <div className="text-center">
-                    <div className="relative inline-block">
-                      <div className="absolute inset-0 rounded-full bg-white/20 animate-ping"></div>
-                      <div className="absolute inset-0 rounded-full bg-white/10 animate-pulse"></div>
-                      
-                      <div className="relative bg-white/20 backdrop-blur-sm rounded-full px-8 py-4 border border-white/30">
-                        <div className="flex items-center gap-3 text-white">
-                          <Play className="h-5 w-5 fill-current" />
-                          <span className="font-semibold">See the complete workflow below</span>
-                          <ArrowRight className="h-5 w-5" />
-                        </div>
+                    <div className="bg-white/20 backdrop-blur-sm rounded-full px-8 py-4 border border-white/30 inline-block">
+                      <div className="flex items-center gap-3 text-white">
+                        <Play className="h-5 w-5 fill-current" />
+                        <span className="font-semibold">See the complete workflow below</span>
                       </div>
                     </div>
                     
-                    <p className="text-white/80 text-sm mt-4 animate-pulse">
+                    <p className="text-white/80 text-sm mt-4">
                       ✨ Transform expertise into interactive learning experiences
                     </p>
                   </div>
