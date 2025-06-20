@@ -11,7 +11,7 @@ const HowItWorks = () => {
       title: "Capture Voice, Video, or Text",
       description: "Zyglio starts by capturing natural human communication. This can be an informal coaching session, a formal interview, or even a Zoom call. Our system transcribes and cleans the data in real time.",
       color: "text-blue-500",
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=600&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop"
     },
     {
       icon: Brain,
@@ -47,7 +47,7 @@ const HowItWorks = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Navigation />
       
-      <div className="pt-24 pb-16 px-4">
+      <div className="pt-32 pb-24 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Enhanced Hero Section */}
           <div className="text-center mb-16">
