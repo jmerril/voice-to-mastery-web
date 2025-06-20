@@ -1,8 +1,10 @@
 
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mic, Brain, Settings, Users, TrendingUp, ArrowRight, Play, Zap } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 const HowItWorks = () => {
   const steps = [
@@ -77,50 +79,58 @@ const HowItWorks = () => {
                     What if every explanation you gave automatically created a library of usable, modular, scalable training tools?
                   </p>
                   <div className="flex items-center justify-center gap-4 mb-8">
-                    <Zap className="h-8 w-8 text-yellow-300 animate-pulse" />
+                    <Zap className="h-8 w-8 text-yellow-300" />
                     <p className="text-2xl font-semibold text-white">
                       That's what Zyglio does.
                     </p>
-                    <Zap className="h-8 w-8 text-yellow-300 animate-pulse" />
+                    <Zap className="h-8 w-8 text-yellow-300" />
                   </div>
 
-                  {/* Visual Workflow Preview */}
-                  <div className="grid md:grid-cols-5 gap-4 mb-8">
-                    {/* Voice Input */}
-                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                      <div className="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <Mic className="h-6 w-6 text-white" />
+                  {/* Visual Workflow Preview - Responsive */}
+                  <div className="max-w-4xl mx-auto mb-8">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                      {/* Voice Input */}
+                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center min-w-[120px]">
+                        <div className="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-3">
+                          <Mic className="h-6 w-6 text-white" />
+                        </div>
+                        <div className="text-white text-sm font-medium">Voice</div>
+                        <div className="text-blue-100 text-xs">Capture</div>
                       </div>
-                      <div className="text-white text-sm font-medium">Voice</div>
-                      <div className="text-blue-100 text-xs">Capture</div>
-                    </div>
 
-                    {/* Separator Line */}
-                    <div className="flex items-center justify-center">
-                      <div className="h-0.5 w-full bg-white/30"></div>
-                    </div>
-
-                    {/* AI Processing */}
-                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                      <div className="w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <Brain className="h-6 w-6 text-white animate-pulse" />
+                      {/* Separator */}
+                      <div className="hidden sm:block">
+                        <Separator orientation="vertical" className="h-12 bg-white/30" />
                       </div>
-                      <div className="text-white text-sm font-medium">AI</div>
-                      <div className="text-blue-100 text-xs">Processing</div>
-                    </div>
-
-                    {/* Separator Line */}
-                    <div className="flex items-center justify-center">
-                      <div className="h-0.5 w-full bg-white/30"></div>
-                    </div>
-
-                    {/* Interactive Training */}
-                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                      <div className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <Users className="h-6 w-6 text-white" />
+                      <div className="sm:hidden">
+                        <Separator className="w-16 bg-white/30" />
                       </div>
-                      <div className="text-white text-sm font-medium">Training</div>
-                      <div className="text-blue-100 text-xs">Simulation</div>
+
+                      {/* AI Processing */}
+                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center min-w-[120px]">
+                        <div className="w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-3">
+                          <Brain className="h-6 w-6 text-white" />
+                        </div>
+                        <div className="text-white text-sm font-medium">AI</div>
+                        <div className="text-blue-100 text-xs">Processing</div>
+                      </div>
+
+                      {/* Separator */}
+                      <div className="hidden sm:block">
+                        <Separator orientation="vertical" className="h-12 bg-white/30" />
+                      </div>
+                      <div className="sm:hidden">
+                        <Separator className="w-16 bg-white/30" />
+                      </div>
+
+                      {/* Interactive Training */}
+                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center min-w-[120px]">
+                        <div className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-3">
+                          <Users className="h-6 w-6 text-white" />
+                        </div>
+                        <div className="text-white text-sm font-medium">Training</div>
+                        <div className="text-blue-100 text-xs">Simulation</div>
+                      </div>
                     </div>
                   </div>
 
@@ -323,3 +333,4 @@ const HowItWorks = () => {
 };
 
 export default HowItWorks;
+
