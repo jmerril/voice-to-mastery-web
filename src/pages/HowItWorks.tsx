@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -248,7 +249,7 @@ const HowItWorks = () => {
               <div className="bg-white rounded-2xl p-8 shadow-lg">
                 <div className="mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1609859831103-178dc3c5c141?w=600&h=300&fit=crop" 
+                    src="https://images.unsplash.com/photo-1632823471565-1ecdf5c22c6f?w=600&h=300&fit=crop" 
                     alt="Professional automotive technician using advanced diagnostic equipment on modern electric vehicle"
                     className="w-full h-48 object-cover rounded-lg"
                   />
