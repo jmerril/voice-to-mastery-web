@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Play } from "lucide-react";
+import { Play, Mic, ArrowRight, Users, Settings } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -93,30 +93,79 @@ const Demo = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {/* Demo Video Placeholder */}
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=800&h=600&fit=crop" 
-                alt="Interactive displays showing AI-powered training simulations and analytics"
-                className="w-full h-96 object-cover rounded-2xl shadow-lg"
-              />
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-teal-500/30 rounded-2xl"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 text-center">
-                  <div className="w-20 h-20 bg-white/80 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <div className="w-0 h-0 border-l-6 border-r-0 border-t-4 border-b-4 border-l-blue-600 border-t-transparent border-b-transparent ml-1"></div>
-                  </div>
-                  <h3 className="text-xl font-semibold text-slate-800 mb-2">
+            {/* Enhanced Demo Visual */}
+            <div className="relative bg-gradient-to-br from-blue-600 to-teal-600 rounded-2xl p-8 shadow-2xl overflow-hidden">
+              {/* Background Pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16"></div>
+                <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full translate-x-12 translate-y-12"></div>
+                <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white rounded-full"></div>
+              </div>
+              
+              <div className="relative z-10">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">
                     Watch Zyglio in Action
                   </h3>
-                  <p className="text-slate-600 mb-4">
+                  <p className="text-blue-100">
                     See how a simple voice explanation transforms into an interactive training simulation
                   </p>
+                </div>
+
+                {/* Visual Flow */}
+                <div className="space-y-6">
+                  {/* Step 1: Voice Input */}
+                  <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                      <Mic className="h-6 w-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-white font-semibold">Voice Input</div>
+                      <div className="text-blue-100 text-sm">"First, check the patient's vitals..."</div>
+                    </div>
+                  </div>
+
+                  {/* Arrow */}
+                  <div className="flex justify-center py-2">
+                    <ArrowRight className="h-6 w-6 text-white" />
+                  </div>
+
+                  {/* Step 2: AI Processing */}
+                  <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                      <Settings className="h-6 w-6 text-white animate-spin" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-white font-semibold">AI Processing</div>
+                      <div className="text-blue-100 text-sm">Converting to interactive scenario</div>
+                    </div>
+                  </div>
+
+                  {/* Arrow */}
+                  <div className="flex justify-center py-2">
+                    <ArrowRight className="h-6 w-6 text-white" />
+                  </div>
+
+                  {/* Step 3: Interactive Simulation */}
+                  <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                      <Users className="h-6 w-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-white font-semibold">Interactive Simulation</div>
+                      <div className="text-blue-100 text-sm">Learners practice with real scenarios</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Play Button */}
+                <div className="text-center mt-8">
                   <Button 
                     onClick={() => setIsVideoModalOpen(true)}
-                    className="bg-blue-600 hover:bg-blue-700 text-white"
+                    className="bg-white/20 hover:bg-white/30 text-white border-white/30 backdrop-blur-sm px-8 py-3 text-lg"
+                    variant="outline"
                   >
-                    <Play className="mr-2 h-4 w-4" /> Watch Video
+                    <Play className="mr-2 h-5 w-5" /> Watch Demo Video
                   </Button>
                 </div>
               </div>
