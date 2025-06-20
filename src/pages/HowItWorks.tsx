@@ -249,8 +249,8 @@ const HowItWorks = () => {
               <div className="bg-white rounded-2xl p-8 shadow-lg">
                 <div className="mb-6">
                   <img 
-                    src="/lovable-uploads/9a2d67a8-8807-44eb-b1b5-954c113ae69f.png" 
-                    alt="Automotive technician working on car engine diagnostics with modern tools"
+                    src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&h=300&fit=crop" 
+                    alt="Professional automotive technician working on modern car engine diagnostics with advanced diagnostic equipment"
                     className="w-full h-48 object-cover rounded-lg"
                   />
                 </div>
