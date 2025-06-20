@@ -2,8 +2,10 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mic, Brain, Settings, Users, TrendingUp, ArrowRight, Play, Zap, Sparkles } from "lucide-react";
+import { Mic, Brain, Settings, Users, TrendingUp, ArrowRight, Play, Zap, Sparkles, BookOpen, Target, Lightbulb, Clock } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
 
 const HowItWorks = () => {
   const steps = [
@@ -12,7 +14,7 @@ const HowItWorks = () => {
       title: "Capture Voice, Video, or Text",
       description: "Zyglio starts by capturing natural human communication. This can be an informal coaching session, a formal interview, or even a Zoom call. Our system transcribes and cleans the data in real time.",
       color: "text-blue-500",
-      image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop"
     },
     {
       icon: Brain,
@@ -55,7 +57,7 @@ const HowItWorks = () => {
             {/* Hero Graphic - Completely Redesigned */}
             <div className="relative mb-8 overflow-hidden rounded-3xl max-w-5xl mx-auto">
               {/* Main Container with Gradient Background */}
-              <div className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 p-8 md:p-12">
+              <div className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 p-12 md:p-16">
                 {/* Animated Background Elements */}
                 <div className="absolute inset-0 overflow-hidden">
                   <div className="absolute top-0 left-0 w-32 h-32 bg-white/10 rounded-full blur-xl -translate-x-16 -translate-y-16 animate-pulse"></div>
@@ -77,7 +79,7 @@ const HowItWorks = () => {
                       <span className="text-white/90 text-sm font-medium">Revolutionary AI-Powered Learning</span>
                     </div>
                     
-                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
                       From <span className="text-yellow-300">Spoken Knowledge</span><br />
                       to <span className="text-blue-200">Structured Intelligence</span>
                     </h1>
@@ -152,6 +154,191 @@ const HowItWorks = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* AI-Enhanced Tutorial Courses Section */}
+          <div className="mb-16">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-blue-100 rounded-full px-4 py-2 mb-4">
+                <BookOpen className="h-5 w-5 text-purple-600" />
+                <span className="text-purple-800 font-medium">AI-Enhanced Learning</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+                Transform Tribal Knowledge into 
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600"> Interactive Courses</span>
+              </h2>
+              <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+                Convert decades of expertise into curated, interactive tutorial courses that adapt to each learner's pace and provide rapid skill acquisition.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+              <div>
+                <img 
+                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop" 
+                  alt="AI-enhanced tutorial interface showing interactive learning modules"
+                  className="w-full h-80 object-cover rounded-2xl shadow-2xl"
+                />
+              </div>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Target className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-800 mb-2">Adaptive Learning Paths</h3>
+                    <p className="text-slate-600">AI analyzes learner performance and adjusts difficulty, pacing, and content focus in real-time to optimize knowledge retention.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Lightbulb className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-800 mb-2">Interactive Knowledge Modules</h3>
+                    <p className="text-slate-600">Convert expert explanations into bite-sized, interactive modules with embedded quizzes, simulations, and practical exercises.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Clock className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-800 mb-2">Rapid Skill Acquisition</h3>
+                    <p className="text-slate-600">Accelerate learning through AI-curated content that identifies knowledge gaps and provides targeted practice opportunities.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Interactive Tutorial Examples */}
+            <div className="bg-white rounded-3xl p-8 shadow-xl border border-slate-100">
+              <h3 className="text-2xl font-bold text-center text-slate-800 mb-8">
+                Experience Interactive Tutorial Courses
+              </h3>
+              
+              <Tabs defaultValue="medical" className="w-full">
+                <TabsList className="grid w-full grid-cols-3 mb-8">
+                  <TabsTrigger value="medical" className="flex items-center gap-2">
+                    <span className="text-lg">🩺</span>
+                    Medical Training
+                  </TabsTrigger>
+                  <TabsTrigger value="culinary" className="flex items-center gap-2">
+                    <span className="text-lg">👨‍🍳</span>
+                    Culinary Arts
+                  </TabsTrigger>
+                  <TabsTrigger value="automotive" className="flex items-center gap-2">
+                    <span className="text-lg">🔧</span>
+                    Automotive
+                  </TabsTrigger>
+                </TabsList>
+
+                <TabsContent value="medical" className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div className="space-y-4">
+                      <div className="p-6 bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl border border-red-100">
+                        <h4 className="font-bold text-slate-800 mb-3">Emergency Response Protocol</h4>
+                        <p className="text-slate-600 mb-4">Learn critical decision-making in high-pressure medical situations through adaptive scenarios.</p>
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2 text-sm text-slate-600">
+                            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                            <span>Voice-guided symptom assessment</span>
+                          </div>
+                          <div className="flex items-center gap-2 text-sm text-slate-600">
+                            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            <span>Interactive patient simulations</span>
+                          </div>
+                          <div className="flex items-center gap-2 text-sm text-slate-600">
+                            <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                            <span>Real-time performance feedback</span>
+                          </div>
+                        </div>
+                      </div>
+                      <Button className="w-full">Start Medical Simulation</Button>
+                    </div>
+                    <div className="flex items-center justify-center bg-slate-50 rounded-2xl p-8">
+                      <div className="text-center">
+                        <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <span className="text-3xl">🚨</span>
+                        </div>
+                        <p className="text-slate-600 font-medium">Interactive medical emergency simulation ready to launch</p>
+                      </div>
+                    </div>
+                  </div>
+                </TabsContent>
+
+                <TabsContent value="culinary" className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div className="space-y-4">
+                      <div className="p-6 bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl border border-yellow-100">
+                        <h4 className="font-bold text-slate-800 mb-3">Advanced Cooking Techniques</h4>
+                        <p className="text-slate-600 mb-4">Master complex culinary skills through step-by-step interactive tutorials with real-time guidance.</p>
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2 text-sm text-slate-600">
+                            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                            <span>Temperature-sensitive timing alerts</span>
+                          </div>
+                          <div className="flex items-center gap-2 text-sm text-slate-600">
+                            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            <span>Visual technique demonstrations</span>
+                          </div>
+                          <div className="flex items-center gap-2 text-sm text-slate-600">
+                            <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                            <span>Adaptive difficulty progression</span>
+                          </div>
+                        </div>
+                      </div>
+                      <Button className="w-full">Begin Culinary Course</Button>
+                    </div>
+                    <div className="flex items-center justify-center bg-slate-50 rounded-2xl p-8">
+                      <div className="text-center">
+                        <div className="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <span className="text-3xl">👨‍🍳</span>
+                        </div>
+                        <p className="text-slate-600 font-medium">Professional culinary training experience</p>
+                      </div>
+                    </div>
+                  </div>
+                </TabsContent>
+
+                <TabsContent value="automotive" className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div className="space-y-4">
+                      <div className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border border-blue-100">
+                        <h4 className="font-bold text-slate-800 mb-3">Advanced Diagnostics & Repair</h4>
+                        <p className="text-slate-600 mb-4">Learn complex diagnostic procedures through hands-on virtual workshops with expert guidance.</p>
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2 text-sm text-slate-600">
+                            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                            <span>Equipment-specific procedures</span>
+                          </div>
+                          <div className="flex items-center gap-2 text-sm text-slate-600">
+                            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            <span>Safety protocol integration</span>
+                          </div>
+                          <div className="flex items-center gap-2 text-sm text-slate-600">
+                            <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                            <span>Troubleshooting decision trees</span>
+                          </div>
+                        </div>
+                      </div>
+                      <Button className="w-full">Launch Diagnostic Training</Button>
+                    </div>
+                    <div className="flex items-center justify-center bg-slate-50 rounded-2xl p-8">
+                      <div className="text-center">
+                        <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <span className="text-3xl">🔧</span>
+                        </div>
+                        <p className="text-slate-600 font-medium">Professional automotive training simulation</p>
+                      </div>
+                    </div>
+                  </div>
+                </TabsContent>
+              </Tabs>
             </div>
           </div>
 
