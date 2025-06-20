@@ -53,7 +53,7 @@ const HowItWorks = () => {
           {/* Enhanced Hero Section */}
           <div className="text-center mb-16">
             {/* Hero Image - Someone Speaking into Microphone */}
-            <div className="relative mb-8 overflow-hidden rounded-3xl shadow-2xl max-w-6xl mx-auto">
+            <div className="relative mb-8 overflow-hidden rounded-3xl shadow-2xl max-w-5xl mx-auto border-4 border-white/30">
               <img 
                 src="/lovable-uploads/366df3e2-1acc-47a9-94cd-9d5b850563fa.png"
                 alt="Person speaking into microphone - representing voice capture technology"
@@ -70,63 +70,70 @@ const HowItWorks = () => {
                   <div className="absolute top-1/4 right-1/4 w-20 h-20 bg-white rounded-full"></div>
                 </div>
                 
-                <div className="relative z-10 text-center px-6 sm:px-8 max-w-5xl mx-auto">
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 leading-tight">
-                    From Spoken Knowledge to<br />Structured Intelligence
-                  </h1>
-                  <p className="text-base sm:text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-4 sm:mb-6 leading-relaxed">
-                    What if every explanation you gave automatically created a library of usable, modular, scalable training tools?
-                  </p>
-                  <div className="flex items-center justify-center gap-3 mb-6 sm:mb-8">
-                    <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-300 flex-shrink-0" />
-                    <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-                      That's what Zyglio does.
+                <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+                  {/* Main Heading with better containment */}
+                  <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20 mb-8">
+                    <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-4 leading-tight">
+                      From Spoken Knowledge to<br />Structured Intelligence
+                    </h1>
+                    <p className="text-base sm:text-lg lg:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                      What if every explanation you gave automatically created a library of usable, modular, scalable training tools?
                     </p>
-                    <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-300 flex-shrink-0" />
                   </div>
 
-                  {/* Visual Workflow Preview - Better Responsive Layout */}
-                  <div className="w-full max-w-3xl mx-auto mb-6 px-4">
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+                  {/* Zyglio Statement */}
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/30 mb-8">
+                    <div className="flex items-center justify-center gap-3">
+                      <Zap className="h-6 w-6 text-yellow-300 flex-shrink-0" />
+                      <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">
+                        That's what Zyglio does.
+                      </p>
+                      <Zap className="h-6 w-6 text-yellow-300 flex-shrink-0" />
+                    </div>
+                  </div>
+
+                  {/* Visual Workflow Preview - Properly Contained */}
+                  <div className="max-w-2xl mx-auto mb-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
                       {/* Voice Input */}
-                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-5 text-center border border-white/20">
-                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-3">
-                          <Mic className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20">
+                        <div className="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-2">
+                          <Mic className="h-5 w-5 text-white" />
                         </div>
-                        <div className="text-white text-sm sm:text-base font-semibold mb-1">Voice</div>
-                        <div className="text-blue-100 text-xs sm:text-sm">Capture</div>
+                        <div className="text-white text-sm font-semibold mb-1">Voice</div>
+                        <div className="text-blue-100 text-xs">Capture</div>
                       </div>
 
                       {/* AI Processing */}
-                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-5 text-center border border-white/20">
-                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-3">
-                          <Brain className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20">
+                        <div className="w-10 h-10 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-2">
+                          <Brain className="h-5 w-5 text-white" />
                         </div>
-                        <div className="text-white text-sm sm:text-base font-semibold mb-1">AI</div>
-                        <div className="text-blue-100 text-xs sm:text-sm">Processing</div>
+                        <div className="text-white text-sm font-semibold mb-1">AI</div>
+                        <div className="text-blue-100 text-xs">Processing</div>
                       </div>
 
                       {/* Interactive Training */}
-                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-5 text-center border border-white/20">
-                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-3">
-                          <Users className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20">
+                        <div className="w-10 h-10 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-2">
+                          <Users className="h-5 w-5 text-white" />
                         </div>
-                        <div className="text-white text-sm sm:text-base font-semibold mb-1">Training</div>
-                        <div className="text-blue-100 text-xs sm:text-sm">Simulation</div>
+                        <div className="text-white text-sm font-semibold mb-1">Training</div>
+                        <div className="text-blue-100 text-xs">Simulation</div>
                       </div>
                     </div>
                   </div>
 
                   {/* Enhanced Call-to-Action */}
                   <div className="text-center">
-                    <div className="bg-white/20 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 border border-white/30 inline-block">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 border border-white/30 inline-block">
                       <div className="flex items-center gap-2 text-white">
                         <Play className="h-4 w-4 fill-current flex-shrink-0" />
-                        <span className="font-semibold text-xs sm:text-sm">See the complete workflow below</span>
+                        <span className="font-semibold text-sm">See the complete workflow below</span>
                       </div>
                     </div>
                     
-                    <p className="text-white/80 text-xs sm:text-sm mt-3">
+                    <p className="text-white/80 text-sm mt-3">
                       ✨ Transform expertise into interactive learning experiences
                     </p>
                   </div>
