@@ -1,7 +1,8 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mic, Brain, Settings, Users, TrendingUp, ArrowRight, Play, Zap } from "lucide-react";
+import { Mic, Brain, Settings, Users, TrendingUp, ArrowRight, Play, Zap, Sparkles } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const HowItWorks = () => {
@@ -51,78 +52,102 @@ const HowItWorks = () => {
         <div className="max-w-7xl mx-auto">
           {/* Enhanced Hero Section */}
           <div className="text-center mb-16">
-            {/* Hero Image - Someone Speaking into Microphone */}
-            <div className="relative mb-8 overflow-hidden rounded-2xl shadow-xl max-w-4xl mx-auto border-2 border-white/20">
-              <img 
-                src="/lovable-uploads/366df3e2-1acc-47a9-94cd-9d5b850563fa.png"
-                alt="Person speaking into microphone - representing voice capture technology"
-                className="w-full h-64 sm:h-80 object-cover"
-              />
-              
-              {/* Overlay with Content */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/85 to-teal-600/85 flex items-center justify-center p-4">
-                {/* Background Pattern - Subtle */}
-                <div className="absolute inset-0 opacity-5">
-                  <div className="absolute top-0 left-0 w-24 h-24 bg-white rounded-full -translate-x-12 -translate-y-12"></div>
-                  <div className="absolute bottom-0 right-0 w-20 h-20 bg-white rounded-full translate-x-10 translate-y-10"></div>
-                  <div className="absolute top-1/2 left-1/4 w-12 h-12 bg-white rounded-full"></div>
-                  <div className="absolute top-1/4 right-1/4 w-16 h-16 bg-white rounded-full"></div>
+            {/* Hero Graphic - Completely Redesigned */}
+            <div className="relative mb-8 overflow-hidden rounded-3xl max-w-5xl mx-auto">
+              {/* Main Container with Gradient Background */}
+              <div className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 p-8 md:p-12">
+                {/* Animated Background Elements */}
+                <div className="absolute inset-0 overflow-hidden">
+                  <div className="absolute top-0 left-0 w-32 h-32 bg-white/10 rounded-full blur-xl -translate-x-16 -translate-y-16 animate-pulse"></div>
+                  <div className="absolute bottom-0 right-0 w-24 h-24 bg-white/10 rounded-full blur-lg translate-x-12 translate-y-12 animate-pulse delay-1000"></div>
+                  <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/5 rounded-full blur-lg animate-pulse delay-500"></div>
+                  <div className="absolute top-1/4 right-1/4 w-20 h-20 bg-white/5 rounded-full blur-lg animate-pulse delay-700"></div>
+                  
+                  {/* Floating Particles */}
+                  <div className="absolute top-10 left-10 w-2 h-2 bg-white/30 rounded-full animate-bounce delay-300"></div>
+                  <div className="absolute top-20 right-20 w-1 h-1 bg-white/40 rounded-full animate-bounce delay-1000"></div>
+                  <div className="absolute bottom-20 left-20 w-1.5 h-1.5 bg-white/25 rounded-full animate-bounce delay-700"></div>
                 </div>
                 
-                <div className="relative z-10 text-center max-w-3xl mx-auto">
-                  {/* Main Heading - Smaller and Better Contained */}
-                  <div className="bg-black/15 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/20 mb-6">
-                    <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 leading-tight">
-                      From Spoken Knowledge to<br />Structured Intelligence
+                <div className="relative z-10 text-center">
+                  {/* Main Headline with Enhanced Typography */}
+                  <div className="mb-8">
+                    <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-white/20">
+                      <Sparkles className="h-4 w-4 text-yellow-300" />
+                      <span className="text-white/90 text-sm font-medium">Revolutionary AI-Powered Learning</span>
+                    </div>
+                    
+                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                      From <span className="text-yellow-300">Spoken Knowledge</span><br />
+                      to <span className="text-blue-200">Structured Intelligence</span>
                     </h1>
-                    <p className="text-sm sm:text-base lg:text-lg text-blue-100 max-w-2xl mx-auto leading-relaxed">
-                      What if every explanation you gave automatically created a library of usable, modular, scalable training tools?
+                    
+                    <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed mb-8">
+                      What if every explanation you gave automatically created a library of 
+                      <span className="text-white font-semibold"> usable, modular, scalable </span>
+                      training tools?
                     </p>
                   </div>
 
-                  {/* Visual Workflow Preview - Smaller and Centered */}
-                  <div className="max-w-lg mx-auto mb-4">
-                    <div className="grid grid-cols-3 gap-2 sm:gap-3">
-                      {/* Voice Input */}
-                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center border border-white/20">
-                        <div className="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-2">
-                          <Mic className="h-4 w-4 text-white" />
+                  {/* Enhanced Workflow Visualization */}
+                  <div className="max-w-4xl mx-auto mb-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                      {/* Voice Capture */}
+                      <div className="group">
+                        <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                          <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-shadow">
+                            <Mic className="h-8 w-8 text-white" />
+                          </div>
+                          <div className="text-white text-lg font-bold mb-2">Voice</div>
+                          <div className="text-blue-100 text-sm font-medium">Capture</div>
+                          <div className="text-blue-200/70 text-xs mt-2">Natural communication</div>
                         </div>
-                        <div className="text-white text-xs font-semibold mb-1">Voice</div>
-                        <div className="text-blue-100 text-xs">Capture</div>
                       </div>
 
                       {/* AI Processing */}
-                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center border border-white/20">
-                        <div className="w-8 h-8 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-2">
-                          <Brain className="h-4 w-4 text-white" />
+                      <div className="group">
+                        <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                          <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-shadow">
+                            <Brain className="h-8 w-8 text-white" />
+                          </div>
+                          <div className="text-white text-lg font-bold mb-2">AI</div>
+                          <div className="text-blue-100 text-sm font-medium">Processing</div>
+                          <div className="text-blue-200/70 text-xs mt-2">Intelligent extraction</div>
                         </div>
-                        <div className="text-white text-xs font-semibold mb-1">AI</div>
-                        <div className="text-blue-100 text-xs">Processing</div>
                       </div>
 
-                      {/* Interactive Training */}
-                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center border border-white/20">
-                        <div className="w-8 h-8 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-2">
-                          <Users className="h-4 w-4 text-white" />
+                      {/* Training Simulation */}
+                      <div className="group">
+                        <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                          <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-shadow">
+                            <Users className="h-8 w-8 text-white" />
+                          </div>
+                          <div className="text-white text-lg font-bold mb-2">Training</div>
+                          <div className="text-blue-100 text-sm font-medium">Simulation</div>
+                          <div className="text-blue-200/70 text-xs mt-2">Interactive learning</div>
                         </div>
-                        <div className="text-white text-xs font-semibold mb-1">Training</div>
-                        <div className="text-blue-100 text-xs">Simulation</div>
                       </div>
+                    </div>
+
+                    {/* Connecting Lines */}
+                    <div className="hidden md:flex justify-center items-center mt-6 space-x-8">
+                      <ArrowRight className="h-6 w-6 text-white/50" />
+                      <ArrowRight className="h-6 w-6 text-white/50" />
                     </div>
                   </div>
 
-                  {/* Enhanced Call-to-Action - Smaller */}
+                  {/* Enhanced Call-to-Action */}
                   <div className="text-center">
-                    <div className="bg-white/15 backdrop-blur-sm rounded-full px-3 py-2 border border-white/25 inline-block">
-                      <div className="flex items-center gap-2 text-white">
-                        <Play className="h-3 w-3 fill-current flex-shrink-0" />
-                        <span className="font-medium text-xs">See the complete workflow below</span>
+                    <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-md rounded-full px-6 py-3 border border-white/30 mb-4 hover:bg-white/25 transition-all duration-300 cursor-pointer group">
+                      <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                        <Play className="h-4 w-4 text-white fill-current" />
                       </div>
+                      <span className="text-white font-semibold">See the complete workflow below</span>
+                      <Zap className="h-4 w-4 text-yellow-300" />
                     </div>
                     
-                    <p className="text-white/70 text-xs mt-2">
-                      ✨ Transform expertise into interactive learning experiences
+                    <p className="text-white/80 text-sm">
+                      ✨ Transform expertise into interactive learning experiences in minutes
                     </p>
                   </div>
                 </div>
