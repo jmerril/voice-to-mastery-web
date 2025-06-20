@@ -12,7 +12,7 @@ const Technology = () => {
       title: "Voice-to-Structure Engine",
       description: "Transforms speech into metadata-rich instructional content, indexed by skill, risk, and relevance.",
       color: "text-blue-500",
-      image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=500&h=300&fit=crop"
+      image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=500&h=300&fit=crop"
     },
     {
       icon: Blocks,
