@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -50,91 +51,98 @@ const HowItWorks = () => {
         <div className="max-w-7xl mx-auto">
           {/* Enhanced Hero Section */}
           <div className="text-center mb-16">
-            {/* Dynamic Zyglio Workflow Graphic */}
-            <div className="relative mb-8 bg-gradient-to-br from-blue-600 to-teal-600 rounded-3xl p-12 shadow-2xl overflow-hidden">
-              {/* Background Pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16"></div>
-                <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full translate-x-12 translate-y-12"></div>
-                <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white rounded-full"></div>
-                <div className="absolute top-1/4 right-1/4 w-20 h-20 bg-white rounded-full"></div>
-              </div>
+            {/* Hero Image - Someone Speaking into Microphone */}
+            <div className="relative mb-8 overflow-hidden rounded-3xl shadow-2xl">
+              <img 
+                src="/lovable-uploads/366df3e2-1acc-47a9-94cd-9d5b850563fa.png"
+                alt="Person speaking into microphone - representing voice capture technology"
+                className="w-full h-96 object-cover"
+              />
               
-              <div className="relative z-10">
-                <div className="text-center mb-12">
+              {/* Overlay with Content */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/90 to-teal-600/90 flex items-center justify-center">
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-10">
+                  <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16"></div>
+                  <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full translate-x-12 translate-y-12"></div>
+                  <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white rounded-full"></div>
+                  <div className="absolute top-1/4 right-1/4 w-20 h-20 bg-white rounded-full"></div>
+                </div>
+                
+                <div className="relative z-10 text-center px-8">
                   <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                     From Spoken Knowledge to Structured Intelligence
                   </h1>
-                  <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+                  <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-6">
                     What if every explanation you gave automatically created a library of usable, modular, scalable training tools?
                   </p>
-                  <div className="mt-6 flex items-center justify-center gap-4">
+                  <div className="flex items-center justify-center gap-4 mb-8">
                     <Zap className="h-8 w-8 text-yellow-300 animate-pulse" />
                     <p className="text-2xl font-semibold text-white">
                       That's what Zyglio does.
                     </p>
                     <Zap className="h-8 w-8 text-yellow-300 animate-pulse" />
                   </div>
-                </div>
 
-                {/* Visual Workflow Preview */}
-                <div className="grid md:grid-cols-5 gap-4 mb-8">
-                  {/* Voice Input */}
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                    <div className="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <Mic className="h-6 w-6 text-white" />
+                  {/* Visual Workflow Preview */}
+                  <div className="grid md:grid-cols-5 gap-4 mb-8">
+                    {/* Voice Input */}
+                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                      <div className="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <Mic className="h-6 w-6 text-white" />
+                      </div>
+                      <div className="text-white text-sm font-medium">Voice</div>
+                      <div className="text-blue-100 text-xs">Capture</div>
                     </div>
-                    <div className="text-white text-sm font-medium">Voice</div>
-                    <div className="text-blue-100 text-xs">Capture</div>
-                  </div>
 
-                  {/* Arrow */}
-                  <div className="flex items-center justify-center">
-                    <ArrowRight className="h-6 w-6 text-white/70" />
-                  </div>
-
-                  {/* AI Processing */}
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                    <div className="w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <Brain className="h-6 w-6 text-white animate-pulse" />
+                    {/* Arrow */}
+                    <div className="flex items-center justify-center">
+                      <ArrowRight className="h-6 w-6 text-white/70" />
                     </div>
-                    <div className="text-white text-sm font-medium">AI</div>
-                    <div className="text-blue-100 text-xs">Processing</div>
-                  </div>
 
-                  {/* Arrow */}
-                  <div className="flex items-center justify-center">
-                    <ArrowRight className="h-6 w-6 text-white/70" />
-                  </div>
-
-                  {/* Interactive Training */}
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                    <div className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <Users className="h-6 w-6 text-white" />
+                    {/* AI Processing */}
+                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                      <div className="w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <Brain className="h-6 w-6 text-white animate-pulse" />
+                      </div>
+                      <div className="text-white text-sm font-medium">AI</div>
+                      <div className="text-blue-100 text-xs">Processing</div>
                     </div>
-                    <div className="text-white text-sm font-medium">Training</div>
-                    <div className="text-blue-100 text-xs">Simulation</div>
-                  </div>
-                </div>
 
-                {/* Enhanced Call-to-Action */}
-                <div className="text-center">
-                  <div className="relative inline-block">
-                    <div className="absolute inset-0 rounded-full bg-white/20 animate-ping"></div>
-                    <div className="absolute inset-0 rounded-full bg-white/10 animate-pulse"></div>
-                    
-                    <div className="relative bg-white/20 backdrop-blur-sm rounded-full px-8 py-4 border border-white/30">
-                      <div className="flex items-center gap-3 text-white">
-                        <Play className="h-5 w-5 fill-current" />
-                        <span className="font-semibold">See the complete workflow below</span>
-                        <ArrowRight className="h-5 w-5" />
+                    {/* Arrow */}
+                    <div className="flex items-center justify-center">
+                      <ArrowRight className="h-6 w-6 text-white/70" />
+                    </div>
+
+                    {/* Interactive Training */}
+                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                      <div className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <Users className="h-6 w-6 text-white" />
+                      </div>
+                      <div className="text-white text-sm font-medium">Training</div>
+                      <div className="text-blue-100 text-xs">Simulation</div>
+                    </div>
+                  </div>
+
+                  {/* Enhanced Call-to-Action */}
+                  <div className="text-center">
+                    <div className="relative inline-block">
+                      <div className="absolute inset-0 rounded-full bg-white/20 animate-ping"></div>
+                      <div className="absolute inset-0 rounded-full bg-white/10 animate-pulse"></div>
+                      
+                      <div className="relative bg-white/20 backdrop-blur-sm rounded-full px-8 py-4 border border-white/30">
+                        <div className="flex items-center gap-3 text-white">
+                          <Play className="h-5 w-5 fill-current" />
+                          <span className="font-semibold">See the complete workflow below</span>
+                          <ArrowRight className="h-5 w-5" />
+                        </div>
                       </div>
                     </div>
+                    
+                    <p className="text-white/80 text-sm mt-4 animate-pulse">
+                      ✨ Transform expertise into interactive learning experiences
+                    </p>
                   </div>
-                  
-                  <p className="text-white/80 text-sm mt-4 animate-pulse">
-                    ✨ Transform expertise into interactive learning experiences
-                  </p>
                 </div>
               </div>
             </div>
