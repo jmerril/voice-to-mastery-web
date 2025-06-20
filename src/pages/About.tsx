@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -91,8 +92,8 @@ const About = () => {
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                   <div className="order-2 lg:order-1 relative">
                     <img 
-                      src="https://images.unsplash.com/photo-1589254065878-42c9da997008?w=600&h=400&fit=crop" 
-                      alt="Professional using voice commands with AI assistant in modern office setting"
+                      src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop" 
+                      alt="People collaborating around computers in modern office setting"
                       className="w-full h-64 object-cover rounded-2xl"
                     />
                     <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/20 to-transparent rounded-2xl"></div>
