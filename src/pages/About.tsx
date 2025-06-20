@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -47,8 +46,8 @@ const About = () => {
                 <CardContent className="p-0">
                   <div className="mb-6">
                     <img 
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop" 
-                      alt="CEO headshot - professional business leader"
+                      src="https://images.unsplash.com/photo-1486718448742-163732cd1544?w=400&h=250&fit=crop" 
+                      alt="Abstract minimalist photography of brown wavy structure representing leadership vision"
                       className="w-full h-48 object-cover rounded-xl"
                     />
                   </div>
@@ -87,8 +86,8 @@ const About = () => {
                 <CardContent className="p-0">
                   <div className="mb-6">
                     <img 
-                      src="https://images.unsplash.com/photo-1494790108755-2616c667e7d3?w=400&h=250&fit=crop" 
-                      alt="CTO headshot - female technology executive"
+                      src="https://images.unsplash.com/photo-1439337153520-7082a56a81f4?w=400&h=250&fit=crop" 
+                      alt="Abstract clear glass roof architecture representing technical transparency and innovation"
                       className="w-full h-48 object-cover rounded-xl"
                     />
                   </div>
@@ -127,8 +126,8 @@ const About = () => {
                 <CardContent className="p-0">
                   <div className="mb-6">
                     <img 
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=250&fit=crop" 
-                      alt="Head of Product headshot - diverse business professional"
+                      src="https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a?w=400&h=250&fit=crop" 
+                      alt="Abstract worm's eye view of glass building representing elevated perspective and advisory guidance"
                       className="w-full h-48 object-cover rounded-xl"
                     />
                   </div>
