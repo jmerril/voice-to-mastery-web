@@ -17,14 +17,53 @@ interface DemoRequestValues {
 }
 
 const handler = async (req: Request): Promise<Response> => {
+  console.log("=== Function called ===");
+  console.log("Method:", req.method);
+  console.log("URL:", req.url);
+
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
+    console.log("Handling CORS preflight");
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    console.log("Function started, checking API key...");
+    console.log("=== Starting main handler ===");
     
+    // Check if request body exists
+    console.log("Checking request body...");
+    let values: DemoRequestValues;
+    
+    try {
+      values = await req.json();
+      console.log("Successfully parsed JSON:", { 
+        hasName: !!values.name, 
+        hasEmail: !!values.email 
+      });
+    } catch (jsonError) {
+      console.error("Failed to parse JSON:", jsonError);
+      return new Response(
+        JSON.stringify({ error: "Invalid JSON in request body" }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    // Validate required fields
+    if (!values.name || !values.email) {
+      console.error("Missing required fields:", { name: values.name, email: values.email });
+      return new Response(
+        JSON.stringify({ error: "Name and email are required" }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+    
+    console.log("=== Checking API key ===");
     const apiKey = Deno.env.get("RESEND_API_KEY");
     if (!apiKey) {
       console.error("RESEND_API_KEY not found in environment variables");
@@ -36,16 +75,26 @@ const handler = async (req: Request): Promise<Response> => {
         }
       );
     }
+    console.log("API key found, length:", apiKey.length);
 
-    console.log("API key found, initializing Resend...");
-    const resend = new Resend(apiKey);
+    console.log("=== Initializing Resend ===");
+    let resend;
+    try {
+      resend = new Resend(apiKey);
+      console.log("Resend initialized successfully");
+    } catch (resendError) {
+      console.error("Failed to initialize Resend:", resendError);
+      return new Response(
+        JSON.stringify({ error: "Failed to initialize email service" }),
+        {
+          status: 500,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
 
-    const values: DemoRequestValues = await req.json();
-    console.log("Received demo request:", { name: values.name, email: values.email });
-
-    // Send email to jmerril@mac.com
-    console.log("Attempting to send email...");
-    const emailResponse = await resend.emails.send({
+    console.log("=== Sending email ===");
+    const emailData = {
       from: "Zyglio Demo Requests <onboarding@resend.dev>",
       to: ["jmerril@mac.com"],
       subject: `New Demo Request from ${values.name}`,
@@ -53,38 +102,72 @@ const handler = async (req: Request): Promise<Response> => {
         <h2>New Demo Request Received</h2>
         <p><strong>Name:</strong> ${values.name}</p>
         <p><strong>Email:</strong> ${values.email}</p>
-        <p><strong>Industry:</strong> ${values.industry}</p>
-        <p><strong>Role:</strong> ${values.role}</p>
-        <p><strong>Current Training Method:</strong> ${values.currentMethod}</p>
+        <p><strong>Industry:</strong> ${values.industry || 'Not specified'}</p>
+        <p><strong>Role:</strong> ${values.role || 'Not specified'}</p>
+        <p><strong>Current Training Method:</strong> ${values.currentMethod || 'Not specified'}</p>
         <p><strong>Comments:</strong></p>
-        <p>${values.comments}</p>
+        <p>${values.comments || 'No comments provided'}</p>
         
         <hr>
         <p>This request was submitted through the Zyglio website demo form.</p>
       `,
+    };
+
+    console.log("Email data prepared:", { 
+      from: emailData.from, 
+      to: emailData.to, 
+      subject: emailData.subject 
     });
 
-    console.log("Email sent successfully:", emailResponse);
+    let emailResponse;
+    try {
+      emailResponse = await resend.emails.send(emailData);
+      console.log("Email sent successfully:", emailResponse);
+    } catch (emailError) {
+      console.error("Failed to send email:", emailError);
+      console.error("Email error details:", {
+        name: emailError.name,
+        message: emailError.message,
+        cause: emailError.cause
+      });
+      return new Response(
+        JSON.stringify({ 
+          error: "Failed to send email",
+          details: emailError.message
+        }),
+        {
+          status: 500,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
 
-    return new Response(JSON.stringify({ success: true, emailId: emailResponse.data?.id }), {
+    console.log("=== Success ===");
+    return new Response(JSON.stringify({ 
+      success: true, 
+      emailId: emailResponse.data?.id,
+      message: "Demo request submitted successfully"
+    }), {
       status: 200,
       headers: {
         "Content-Type": "application/json",
         ...corsHeaders,
       },
     });
+
   } catch (error: any) {
-    console.error("Error in send-contact-email function:", error);
-    console.error("Error details:", {
-      name: error.name,
-      message: error.message,
-      stack: error.stack
-    });
+    console.error("=== UNEXPECTED ERROR ===");
+    console.error("Error:", error);
+    console.error("Error name:", error.name);
+    console.error("Error message:", error.message);
+    console.error("Error stack:", error.stack);
+    console.error("Error cause:", error.cause);
     
     return new Response(
       JSON.stringify({ 
-        error: error.message || "An error occurred while processing your request",
-        details: error.name || "Unknown error"
+        error: "An unexpected error occurred",
+        message: error.message || "Unknown error",
+        type: error.name || "Unknown"
       }),
       {
         status: 500,
