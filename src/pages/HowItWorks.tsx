@@ -2,7 +2,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mic, Brain, Settings, Users, TrendingUp, ArrowRight, Play, Zap, Sparkles, BookOpen, Target, Lightbulb, Clock } from "lucide-react";
+import { Mic, Brain, Settings, Users, TrendingUp, ArrowRight, Play, Zap, Sparkles, BookOpen, Target, Lightbulb, Clock, Activity, ChefHat, Wrench } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -215,24 +215,30 @@ const HowItWorks = () => {
               </div>
             </div>
 
-            {/* Interactive Tutorial Examples */}
+            {/* Enhanced Interactive Tutorial Examples */}
             <div className="bg-white rounded-3xl p-8 shadow-xl border border-slate-100">
               <h3 className="text-2xl font-bold text-center text-slate-800 mb-8">
                 Experience Interactive Tutorial Courses
               </h3>
               
               <Tabs defaultValue="medical" className="w-full">
-                <TabsList className="grid w-full grid-cols-3 mb-8">
-                  <TabsTrigger value="medical" className="flex items-center gap-2">
-                    <span className="text-lg">🩺</span>
+                <TabsList className="grid w-full grid-cols-3 mb-8 bg-slate-100">
+                  <TabsTrigger value="medical" className="flex items-center gap-2 text-base font-medium">
+                    <div className="w-8 h-8 bg-gradient-to-br from-red-500 to-pink-500 rounded-lg flex items-center justify-center">
+                      <Activity className="h-4 w-4 text-white" />
+                    </div>
                     Medical Training
                   </TabsTrigger>
-                  <TabsTrigger value="culinary" className="flex items-center gap-2">
-                    <span className="text-lg">👨‍🍳</span>
+                  <TabsTrigger value="culinary" className="flex items-center gap-2 text-base font-medium">
+                    <div className="w-8 h-8 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center">
+                      <ChefHat className="h-4 w-4 text-white" />
+                    </div>
                     Culinary Arts
                   </TabsTrigger>
-                  <TabsTrigger value="automotive" className="flex items-center gap-2">
-                    <span className="text-lg">🔧</span>
+                  <TabsTrigger value="automotive" className="flex items-center gap-2 text-base font-medium">
+                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                      <Wrench className="h-4 w-4 text-white" />
+                    </div>
                     Automotive
                   </TabsTrigger>
                 </TabsList>
@@ -240,32 +246,67 @@ const HowItWorks = () => {
                 <TabsContent value="medical" className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="space-y-4">
-                      <div className="p-6 bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl border border-red-100">
-                        <h4 className="font-bold text-slate-800 mb-3">Emergency Response Protocol</h4>
-                        <p className="text-slate-600 mb-4">Learn critical decision-making in high-pressure medical situations through adaptive scenarios.</p>
-                        <div className="space-y-2">
-                          <div className="flex items-center gap-2 text-sm text-slate-600">
-                            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                            <span>Voice-guided symptom assessment</span>
+                      <div className="p-6 bg-gradient-to-br from-red-50 via-pink-50 to-red-50 rounded-2xl border border-red-100 shadow-sm">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg">
+                            <Activity className="h-6 w-6 text-white" />
                           </div>
-                          <div className="flex items-center gap-2 text-sm text-slate-600">
-                            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                            <span>Interactive patient simulations</span>
+                          <div>
+                            <h4 className="font-bold text-slate-800 text-lg">Emergency Response Protocol</h4>
+                            <p className="text-red-600 text-sm font-medium">Critical Care Simulation</p>
                           </div>
-                          <div className="flex items-center gap-2 text-sm text-slate-600">
-                            <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                            <span>Real-time performance feedback</span>
+                        </div>
+                        <p className="text-slate-600 mb-4 leading-relaxed">
+                          Learn critical decision-making in high-pressure medical situations through adaptive scenarios with real-time patient monitoring.
+                        </p>
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3 text-sm text-slate-600">
+                            <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                            </div>
+                            <span className="font-medium">Voice-guided symptom assessment</span>
+                          </div>
+                          <div className="flex items-center gap-3 text-sm text-slate-600">
+                            <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+                              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            </div>
+                            <span className="font-medium">Interactive patient simulations</span>
+                          </div>
+                          <div className="flex items-center gap-3 text-sm text-slate-600">
+                            <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center">
+                              <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                            </div>
+                            <span className="font-medium">Real-time performance feedback</span>
                           </div>
                         </div>
                       </div>
-                      <Button className="w-full">Start Medical Simulation</Button>
+                      <Button className="w-full bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white font-semibold py-3 shadow-lg">
+                        Start Medical Simulation
+                      </Button>
                     </div>
-                    <div className="flex items-center justify-center bg-slate-50 rounded-2xl p-8">
-                      <div className="text-center">
-                        <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                          <span className="text-3xl">🚨</span>
+                    <div className="relative overflow-hidden bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl p-8 border border-red-100">
+                      {/* Background Pattern */}
+                      <div className="absolute inset-0 opacity-10">
+                        <div className="absolute top-4 left-4 w-8 h-8 border-2 border-red-300 rounded-full"></div>
+                        <div className="absolute top-12 right-8 w-4 h-4 bg-red-300 rounded-full"></div>
+                        <div className="absolute bottom-8 left-8 w-6 h-6 border border-red-300 rounded-sm rotate-45"></div>
+                        <div className="absolute bottom-4 right-4 w-10 h-10 border-2 border-red-300 rounded-full"></div>
+                      </div>
+                      
+                      <div className="relative text-center">
+                        <div className="w-24 h-24 bg-gradient-to-br from-red-400 to-pink-400 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+                          <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
+                            <Activity className="h-8 w-8 text-white" />
+                          </div>
                         </div>
-                        <p className="text-slate-600 font-medium">Interactive medical emergency simulation ready to launch</p>
+                        <h5 className="text-xl font-bold text-slate-800 mb-2">Emergency Simulation Ready</h5>
+                        <p className="text-slate-600 font-medium leading-relaxed">
+                          Interactive medical emergency simulation with adaptive scenarios and real-time patient monitoring systems
+                        </p>
+                        <div className="mt-4 inline-flex items-center gap-2 bg-white/50 backdrop-blur-sm rounded-full px-4 py-2">
+                          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                          <span className="text-sm font-medium text-slate-700">System Ready</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -274,32 +315,67 @@ const HowItWorks = () => {
                 <TabsContent value="culinary" className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="space-y-4">
-                      <div className="p-6 bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl border border-yellow-100">
-                        <h4 className="font-bold text-slate-800 mb-3">Advanced Cooking Techniques</h4>
-                        <p className="text-slate-600 mb-4">Master complex culinary skills through step-by-step interactive tutorials with real-time guidance.</p>
-                        <div className="space-y-2">
-                          <div className="flex items-center gap-2 text-sm text-slate-600">
-                            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                            <span>Temperature-sensitive timing alerts</span>
+                      <div className="p-6 bg-gradient-to-br from-yellow-50 via-orange-50 to-yellow-50 rounded-2xl border border-yellow-100 shadow-sm">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center shadow-lg">
+                            <ChefHat className="h-6 w-6 text-white" />
                           </div>
-                          <div className="flex items-center gap-2 text-sm text-slate-600">
-                            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                            <span>Visual technique demonstrations</span>
+                          <div>
+                            <h4 className="font-bold text-slate-800 text-lg">Advanced Cooking Techniques</h4>
+                            <p className="text-orange-600 text-sm font-medium">Professional Culinary Training</p>
                           </div>
-                          <div className="flex items-center gap-2 text-sm text-slate-600">
-                            <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                            <span>Adaptive difficulty progression</span>
+                        </div>
+                        <p className="text-slate-600 mb-4 leading-relaxed">
+                          Master complex culinary skills through step-by-step interactive tutorials with real-time guidance and temperature monitoring.
+                        </p>
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3 text-sm text-slate-600">
+                            <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                            </div>
+                            <span className="font-medium">Temperature-sensitive timing alerts</span>
+                          </div>
+                          <div className="flex items-center gap-3 text-sm text-slate-600">
+                            <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+                              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            </div>
+                            <span className="font-medium">Visual technique demonstrations</span>
+                          </div>
+                          <div className="flex items-center gap-3 text-sm text-slate-600">
+                            <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center">
+                              <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                            </div>
+                            <span className="font-medium">Adaptive difficulty progression</span>
                           </div>
                         </div>
                       </div>
-                      <Button className="w-full">Begin Culinary Course</Button>
+                      <Button className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-semibold py-3 shadow-lg">
+                        Begin Culinary Course
+                      </Button>
                     </div>
-                    <div className="flex items-center justify-center bg-slate-50 rounded-2xl p-8">
-                      <div className="text-center">
-                        <div className="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                          <span className="text-3xl">👨‍🍳</span>
+                    <div className="relative overflow-hidden bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-8 border border-yellow-100">
+                      {/* Background Pattern */}
+                      <div className="absolute inset-0 opacity-10">
+                        <div className="absolute top-4 left-4 w-8 h-8 border-2 border-orange-300 rounded-full"></div>
+                        <div className="absolute top-12 right-8 w-4 h-4 bg-orange-300 rounded-full"></div>
+                        <div className="absolute bottom-8 left-8 w-6 h-6 border border-orange-300 rounded-sm rotate-45"></div>
+                        <div className="absolute bottom-4 right-4 w-10 h-10 border-2 border-orange-300 rounded-full"></div>
+                      </div>
+                      
+                      <div className="relative text-center">
+                        <div className="w-24 h-24 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+                          <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
+                            <ChefHat className="h-8 w-8 text-white" />
+                          </div>
                         </div>
-                        <p className="text-slate-600 font-medium">Professional culinary training experience</p>
+                        <h5 className="text-xl font-bold text-slate-800 mb-2">Culinary Training Center</h5>
+                        <p className="text-slate-600 font-medium leading-relaxed">
+                          Professional culinary training experience with interactive cooking simulations and expert chef guidance
+                        </p>
+                        <div className="mt-4 inline-flex items-center gap-2 bg-white/50 backdrop-blur-sm rounded-full px-4 py-2">
+                          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                          <span className="text-sm font-medium text-slate-700">Kitchen Ready</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -308,32 +384,67 @@ const HowItWorks = () => {
                 <TabsContent value="automotive" className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="space-y-4">
-                      <div className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border border-blue-100">
-                        <h4 className="font-bold text-slate-800 mb-3">Advanced Diagnostics & Repair</h4>
-                        <p className="text-slate-600 mb-4">Learn complex diagnostic procedures through hands-on virtual workshops with expert guidance.</p>
-                        <div className="space-y-2">
-                          <div className="flex items-center gap-2 text-sm text-slate-600">
-                            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                            <span>Equipment-specific procedures</span>
+                      <div className="p-6 bg-gradient-to-br from-blue-50 via-cyan-50 to-blue-50 rounded-2xl border border-blue-100 shadow-sm">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg">
+                            <Wrench className="h-6 w-6 text-white" />
                           </div>
-                          <div className="flex items-center gap-2 text-sm text-slate-600">
-                            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                            <span>Safety protocol integration</span>
+                          <div>
+                            <h4 className="font-bold text-slate-800 text-lg">Advanced Diagnostics & Repair</h4>
+                            <p className="text-blue-600 text-sm font-medium">Professional Automotive Training</p>
                           </div>
-                          <div className="flex items-center gap-2 text-sm text-slate-600">
-                            <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                            <span>Troubleshooting decision trees</span>
+                        </div>
+                        <p className="text-slate-600 mb-4 leading-relaxed">
+                          Learn complex diagnostic procedures through hands-on virtual workshops with expert guidance and safety protocols.
+                        </p>
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3 text-sm text-slate-600">
+                            <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                            </div>
+                            <span className="font-medium">Equipment-specific procedures</span>
+                          </div>
+                          <div className="flex items-center gap-3 text-sm text-slate-600">
+                            <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+                              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            </div>
+                            <span className="font-medium">Safety protocol integration</span>
+                          </div>
+                          <div className="flex items-center gap-3 text-sm text-slate-600">
+                            <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center">
+                              <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                            </div>
+                            <span className="font-medium">Troubleshooting decision trees</span>
                           </div>
                         </div>
                       </div>
-                      <Button className="w-full">Launch Diagnostic Training</Button>
+                      <Button className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-3 shadow-lg">
+                        Launch Diagnostic Training
+                      </Button>
                     </div>
-                    <div className="flex items-center justify-center bg-slate-50 rounded-2xl p-8">
-                      <div className="text-center">
-                        <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                          <span className="text-3xl">🔧</span>
+                    <div className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border border-blue-100">
+                      {/* Background Pattern */}
+                      <div className="absolute inset-0 opacity-10">
+                        <div className="absolute top-4 left-4 w-8 h-8 border-2 border-blue-300 rounded-full"></div>
+                        <div className="absolute top-12 right-8 w-4 h-4 bg-blue-300 rounded-full"></div>
+                        <div className="absolute bottom-8 left-8 w-6 h-6 border border-blue-300 rounded-sm rotate-45"></div>
+                        <div className="absolute bottom-4 right-4 w-10 h-10 border-2 border-blue-300 rounded-full"></div>
+                      </div>
+                      
+                      <div className="relative text-center">
+                        <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+                          <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
+                            <Wrench className="h-8 w-8 text-white" />
+                          </div>
                         </div>
-                        <p className="text-slate-600 font-medium">Professional automotive training simulation</p>
+                        <h5 className="text-xl font-bold text-slate-800 mb-2">Diagnostic Workshop</h5>
+                        <p className="text-slate-600 font-medium leading-relaxed">
+                          Professional automotive training simulation with advanced diagnostic tools and safety procedures
+                        </p>
+                        <div className="mt-4 inline-flex items-center gap-2 bg-white/50 backdrop-blur-sm rounded-full px-4 py-2">
+                          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                          <span className="text-sm font-medium text-slate-700">Workshop Ready</span>
+                        </div>
                       </div>
                     </div>
                   </div>
