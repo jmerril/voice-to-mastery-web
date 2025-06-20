@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -84,34 +85,34 @@ const HowItWorks = () => {
                     <Zap className="h-6 w-6 sm:h-8 sm:w-8 text-yellow-300" />
                   </div>
 
-                  {/* Visual Workflow Preview - Fixed Layout */}
-                  <div className="max-w-5xl mx-auto mb-6 sm:mb-8">
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+                  {/* Visual Workflow Preview - Improved Responsive Layout */}
+                  <div className="w-full max-w-4xl mx-auto mb-6 sm:mb-8 px-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
                       {/* Voice Input */}
-                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
-                        <div className="w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                          <Mic className="h-8 w-8 text-white" />
+                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center border border-white/20">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                          <Mic className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                         </div>
-                        <div className="text-white text-lg font-semibold mb-1">Voice</div>
-                        <div className="text-blue-100 text-sm">Capture</div>
+                        <div className="text-white text-base sm:text-lg font-semibold mb-1">Voice</div>
+                        <div className="text-blue-100 text-xs sm:text-sm">Capture</div>
                       </div>
 
                       {/* AI Processing */}
-                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
-                        <div className="w-16 h-16 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                          <Brain className="h-8 w-8 text-white" />
+                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center border border-white/20">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                          <Brain className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                         </div>
-                        <div className="text-white text-lg font-semibold mb-1">AI</div>
-                        <div className="text-blue-100 text-sm">Processing</div>
+                        <div className="text-white text-base sm:text-lg font-semibold mb-1">AI</div>
+                        <div className="text-blue-100 text-xs sm:text-sm">Processing</div>
                       </div>
 
                       {/* Interactive Training */}
-                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
-                        <div className="w-16 h-16 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                          <Users className="h-8 w-8 text-white" />
+                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center border border-white/20">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                          <Users className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                         </div>
-                        <div className="text-white text-lg font-semibold mb-1">Training</div>
-                        <div className="text-blue-100 text-sm">Simulation</div>
+                        <div className="text-white text-base sm:text-lg font-semibold mb-1">Training</div>
+                        <div className="text-blue-100 text-xs sm:text-sm">Simulation</div>
                       </div>
                     </div>
                   </div>
@@ -241,7 +242,7 @@ const HowItWorks = () => {
               <div className="bg-white rounded-2xl p-8 shadow-lg">
                 <div className="mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=600&h=300&fit=crop" 
+                    src="/lovable-uploads/9a2d67a8-8807-44eb-b1b5-954c113ae69f.png" 
                     alt="Automotive technician working on car engine diagnostics with modern tools"
                     className="w-full h-48 object-cover rounded-lg"
                   />
