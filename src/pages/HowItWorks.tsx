@@ -1,8 +1,7 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mic, Brain, Settings, Users, TrendingUp, ArrowRight } from "lucide-react";
+import { Mic, Brain, Settings, Users, TrendingUp, ArrowRight, Play, Zap } from "lucide-react";
 
 const HowItWorks = () => {
   const steps = [
@@ -49,29 +48,96 @@ const HowItWorks = () => {
       
       <div className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
-          {/* Hero Section */}
+          {/* Enhanced Hero Section */}
           <div className="text-center mb-16">
-            <div className="relative mb-8">
-              <img 
-                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&h=400&fit=crop" 
-                alt="AI and machine learning visualization with neural networks"
-                className="w-full h-64 object-cover rounded-3xl shadow-lg"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/80 to-teal-600/80 rounded-3xl flex items-center justify-center">
-                <div className="text-center text-white">
-                  <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            {/* Dynamic Zyglio Workflow Graphic */}
+            <div className="relative mb-8 bg-gradient-to-br from-blue-600 to-teal-600 rounded-3xl p-12 shadow-2xl overflow-hidden">
+              {/* Background Pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16"></div>
+                <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full translate-x-12 translate-y-12"></div>
+                <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white rounded-full"></div>
+                <div className="absolute top-1/4 right-1/4 w-20 h-20 bg-white rounded-full"></div>
+              </div>
+              
+              <div className="relative z-10">
+                <div className="text-center mb-12">
+                  <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                     From Spoken Knowledge to Structured Intelligence
                   </h1>
+                  <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+                    What if every explanation you gave automatically created a library of usable, modular, scalable training tools?
+                  </p>
+                  <div className="mt-6 flex items-center justify-center gap-4">
+                    <Zap className="h-8 w-8 text-yellow-300 animate-pulse" />
+                    <p className="text-2xl font-semibold text-white">
+                      That's what Zyglio does.
+                    </p>
+                    <Zap className="h-8 w-8 text-yellow-300 animate-pulse" />
+                  </div>
+                </div>
+
+                {/* Visual Workflow Preview */}
+                <div className="grid md:grid-cols-5 gap-4 mb-8">
+                  {/* Voice Input */}
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                    <div className="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <Mic className="h-6 w-6 text-white" />
+                    </div>
+                    <div className="text-white text-sm font-medium">Voice</div>
+                    <div className="text-blue-100 text-xs">Capture</div>
+                  </div>
+
+                  {/* Arrow */}
+                  <div className="flex items-center justify-center">
+                    <ArrowRight className="h-6 w-6 text-white/70" />
+                  </div>
+
+                  {/* AI Processing */}
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                    <div className="w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <Brain className="h-6 w-6 text-white animate-pulse" />
+                    </div>
+                    <div className="text-white text-sm font-medium">AI</div>
+                    <div className="text-blue-100 text-xs">Processing</div>
+                  </div>
+
+                  {/* Arrow */}
+                  <div className="flex items-center justify-center">
+                    <ArrowRight className="h-6 w-6 text-white/70" />
+                  </div>
+
+                  {/* Interactive Training */}
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                    <div className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <Users className="h-6 w-6 text-white" />
+                    </div>
+                    <div className="text-white text-sm font-medium">Training</div>
+                    <div className="text-blue-100 text-xs">Simulation</div>
+                  </div>
+                </div>
+
+                {/* Enhanced Call-to-Action */}
+                <div className="text-center">
+                  <div className="relative inline-block">
+                    <div className="absolute inset-0 rounded-full bg-white/20 animate-ping"></div>
+                    <div className="absolute inset-0 rounded-full bg-white/10 animate-pulse"></div>
+                    
+                    <div className="relative bg-white/20 backdrop-blur-sm rounded-full px-8 py-4 border border-white/30">
+                      <div className="flex items-center gap-3 text-white">
+                        <Play className="h-5 w-5 fill-current" />
+                        <span className="font-semibold">See the complete workflow below</span>
+                        <ArrowRight className="h-5 w-5" />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <p className="text-white/80 text-sm mt-4 animate-pulse">
+                    ✨ Transform expertise into interactive learning experiences
+                  </p>
                 </div>
               </div>
             </div>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto">
-              What if every explanation you gave—every time you mentored someone, walked them through a task, 
-              or recorded your thoughts—automatically created a library of usable, modular, scalable training tools?
-            </p>
-            <p className="text-2xl font-semibold text-blue-600 mt-6">
-              That's what Zyglio does.
-            </p>
           </div>
 
           {/* Workflow Steps */}
