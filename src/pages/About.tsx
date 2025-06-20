@@ -1,30 +1,29 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Target, Users, Lightbulb, ArrowRight } from "lucide-react";
+import { Users, Target, Award, Zap, Brain, Blocks, Gamepad2, Sparkles, Cpu, Globe, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const About = () => {
-  const values = [
+  const teamMembers = [
     {
-      icon: Target,
-      title: "Mission-Driven",
-      description: "To turn human voice into the world's most powerful training asset.",
-      color: "text-blue-500"
+      name: "Dr. Anya Sharma",
+      role: "Chief Learning Officer",
+      bio: "Anya is a cognitive scientist and education visionary with over 20 years of experience in AI-driven learning.",
+      image: "https://images.unsplash.com/photo-1599507980544-5ff6581b1140?w=300&h=300&fit=crop"
     },
     {
-      icon: Users,
-      title: "Human-Centered",
-      description: "Technology should amplify human expertise, not replace it.",
-      color: "text-green-500"
+      name: "Kenji Tanaka",
+      role: "Chief Technology Officer",
+      bio: "Kenji is a seasoned technology leader with expertise in AI, simulation technology, and cloud infrastructure.",
+      image: "https://images.unsplash.com/photo-1544717305-27825999d857?w=300&h=300&fit=crop"
     },
     {
-      icon: Lightbulb,
-      title: "Innovation-First",
-      description: "Continuously pushing the boundaries of what's possible in learning technology.",
-      color: "text-purple-500"
+      name: "Maria Rodriguez",
+      role: "VP of Customer Success",
+      bio: "Maria is dedicated to ensuring our clients achieve their learning objectives through Zyglio's innovative platform.",
+      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop"
     }
   ];
 
@@ -36,60 +35,209 @@ const About = () => {
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-16">
-            <div className="relative mb-8">
-              <img 
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&h=400&fit=crop" 
-                alt="Diverse team of professionals collaborating in modern office with innovation and technology"
-                className="w-full h-64 object-cover rounded-3xl shadow-lg"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/80 to-purple-600/80 rounded-3xl flex items-center justify-center">
-                <div className="text-center text-white">
-                  <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                    The Voice Behind the Vision
-                  </h1>
-                </div>
-              </div>
-            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6">
+              About <span className="text-blue-600">Zyglio</span>
+            </h1>
             <p className="text-xl text-slate-600 max-w-4xl mx-auto">
-              Zyglio was founded by experts in simulation, AI, medical education, and enterprise training. 
-              With decades of experience and a shared frustration with outdated LMS models, we created a platform 
-              that doesn't just inform—it transforms.
+              We're building the future of education through AI-powered simulations that transform 
+              tribal knowledge into immersive, adaptive learning experiences.
             </p>
           </div>
 
-          {/* Mission & Vision */}
-          <div className="grid lg:grid-cols-2 gap-12 mb-16">
-            <div>
-              <img 
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop" 
-                alt="Medical professionals using advanced simulation technology and training equipment"
-                className="w-full h-80 object-cover rounded-2xl shadow-lg mb-6"
-              />
-              <Card className="p-8 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-                <CardContent className="p-0">
-                  <h3 className="text-2xl font-bold text-slate-800 mb-4">Our Mission</h3>
-                  <p className="text-lg text-slate-600 leading-relaxed">
-                    To turn human voice into the world's most powerful training asset. We believe that the best learning 
-                    happens when expertise is shared naturally, conversationally, and adaptively.
-                  </p>
-                </CardContent>
-              </Card>
+          {/* AI-Enhanced Holodeck Section */}
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-blue-100 rounded-full px-4 py-2 mb-4">
+                <Sparkles className="h-5 w-5 text-purple-600" />
+                <span className="text-purple-800 font-medium">Revolutionary Technology</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+                Building the Educational 
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600"> Holodeck</span>
+              </h2>
+              <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+                By combining AI with object-oriented technology, we create realistic, immersive simulations 
+                without the traditional complexity and cost. Welcome to agile, gamified education.
+              </p>
             </div>
-            <div>
-              <img 
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop" 
-                alt="Futuristic AI and machine learning technology visualization with data analytics"
-                className="w-full h-80 object-cover rounded-2xl shadow-lg mb-6"
-              />
-              <Card className="p-8 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-                <CardContent className="p-0">
-                  <h3 className="text-2xl font-bold text-slate-800 mb-4">Our Vision</h3>
-                  <p className="text-lg text-slate-600 leading-relaxed">
-                    A world where knowledge transfer is instant, personalized, and infinitely scalable. Where every expert 
-                    can share their wisdom with thousands, and every learner receives training tailored to their needs.
+
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+              <div>
+                <img 
+                  src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop" 
+                  alt="Futuristic holographic interface displaying AI-powered educational simulations with interactive 3D elements"
+                  className="w-full h-80 object-cover rounded-2xl shadow-2xl"
+                />
+              </div>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Brain className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-800 mb-2">AI-Driven Object Assembly</h3>
+                    <p className="text-slate-600">Our AI intelligently selects and combines objects, people, and scenarios to create realistic simulations on-demand, eliminating traditional development overhead.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Blocks className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-800 mb-2">Object-Oriented Reusability</h3>
+                    <p className="text-slate-600">Every element is modular and reusable—from equipment and procedures to environments and characters—creating infinite learning combinations.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Gamepad2 className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-800 mb-2">Gamified Engagement</h3>
+                    <p className="text-slate-600">Immersive, game-like experiences with real-time feedback, achievements, and adaptive challenges that keep learners engaged and motivated.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Technology Showcase */}
+            <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
+              {/* Background Pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-4 left-4 w-32 h-32 border border-white/20 rounded-full"></div>
+                <div className="absolute bottom-8 right-8 w-24 h-24 bg-white/10 rounded-lg rotate-45"></div>
+                <div className="absolute top-1/2 left-1/4 w-16 h-16 border-2 border-white/15 rounded-full"></div>
+                <div className="absolute top-1/4 right-1/3 w-20 h-20 bg-white/5 rounded-lg"></div>
+                
+                {/* Floating Elements */}
+                <div className="absolute top-12 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                <div className="absolute bottom-20 left-16 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000"></div>
+                <div className="absolute top-32 left-32 w-1 h-1 bg-white/40 rounded-full animate-bounce"></div>
+              </div>
+
+              <div className="relative z-10">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                    The Future of Simulation Technology
+                  </h3>
+                  <p className="text-blue-100 text-lg max-w-3xl mx-auto">
+                    Traditional simulation development takes months and massive budgets. 
+                    Our AI-enhanced approach creates rich, interactive experiences in minutes.
                   </p>
-                </CardContent>
-              </Card>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-lg flex items-center justify-center mb-4">
+                      <Cpu className="h-6 w-6 text-white" />
+                    </div>
+                    <h4 className="font-bold text-lg mb-2">Intelligent Object Library</h4>
+                    <p className="text-blue-100 text-sm">
+                      Vast library of interactive objects, environments, and characters that AI assembles contextually
+                    </p>
+                  </div>
+
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-400 rounded-lg flex items-center justify-center mb-4">
+                      <Zap className="h-6 w-6 text-white" />
+                    </div>
+                    <h4 className="font-bold text-lg mb-2">Real-Time Adaptation</h4>
+                    <p className="text-blue-100 text-sm">
+                      Simulations adapt in real-time based on learner actions, creating unique experiences every time
+                    </p>
+                  </div>
+
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-teal-400 rounded-lg flex items-center justify-center mb-4">
+                      <Globe className="h-6 w-6 text-white" />
+                    </div>
+                    <h4 className="font-bold text-lg mb-2">Agile Development</h4>
+                    <p className="text-blue-100 text-sm">
+                      Rapid prototyping and deployment of educational simulations without traditional development cycles
+                    </p>
+                  </div>
+                </div>
+
+                <div className="text-center">
+                  <div className="inline-flex items-center gap-3 bg-white/15 backdrop-blur-md rounded-full px-6 py-3 border border-white/30">
+                    <span className="text-white font-semibold">Experience the holodeck difference</span>
+                    <ArrowRight className="h-4 w-4 text-white" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Vision & Mission */}
+          <div className="grid lg:grid-cols-2 gap-16 mb-20">
+            <Card className="p-8 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
+              <CardContent className="p-0">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                    <Target className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-800">Our Vision</h3>
+                </div>
+                <p className="text-slate-600 leading-relaxed">
+                  To democratize expertise by transforming how knowledge is captured, structured, and transmitted. 
+                  We envision a world where every piece of tribal knowledge becomes accessible, interactive, 
+                  and infinitely scalable through AI-powered simulations.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
+              <CardContent className="p-0">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                    <Zap className="h-6 w-6 text-green-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-800">Our Mission</h3>
+                </div>
+                <p className="text-slate-600 leading-relaxed">
+                  To bridge the gap between human expertise and scalable education through cutting-edge AI 
+                  and simulation technology. We're committed to making complex knowledge accessible, 
+                  engaging, and immediately applicable in real-world scenarios.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Team Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center text-slate-800 mb-12">
+              Meet Our Team
+            </h2>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {teamMembers.map((member, index) => (
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="relative">
+                      <img 
+                        src={member.image} 
+                        alt={member.name}
+                        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold text-slate-800 mb-2">
+                        {member.name}
+                      </h3>
+                      <p className="text-blue-600 font-medium mb-3">
+                        {member.role}
+                      </p>
+                      <p className="text-slate-600 leading-relaxed">
+                        {member.bio}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
 
@@ -98,121 +246,69 @@ const About = () => {
             <h2 className="text-3xl font-bold text-center text-slate-800 mb-12">
               Our Values
             </h2>
+            
             <div className="grid md:grid-cols-3 gap-8">
-              {values.map((value, index) => (
-                <Card key={index} className="p-8 hover:shadow-lg transition-shadow border-0 bg-white/80 backdrop-blur-sm text-center">
-                  <CardContent className="p-0">
-                    <div className={`${value.color} mb-6 flex justify-center`}>
-                      <value.icon size={64} />
-                    </div>
-                    <h3 className="text-xl font-bold mb-4 text-slate-800">{value.title}</h3>
-                    <p className="text-slate-600 leading-relaxed">{value.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
+              <Card className="p-8 bg-white/80 backdrop-blur-sm border-0 shadow-lg text-center">
+                <CardContent className="p-0">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Users className="h-8 w-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-800 mb-4">Human-Centered</h3>
+                  <p className="text-slate-600">
+                    We believe technology should amplify human potential, not replace it. 
+                    Every feature we build starts with understanding human needs.
+                  </p>
+                </CardContent>
+              </Card>
 
-          {/* Story Section */}
-          <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-3xl p-12 mb-16 backdrop-blur-sm">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h3 className="text-3xl font-bold text-slate-800 mb-6">
-                  Born from Frustration, Built for Excellence
-                </h3>
-                <div className="space-y-4 text-slate-600 leading-relaxed">
-                  <p>
-                    The idea for Zyglio came from a simple observation: the best training happens when an expert 
-                    sits down with a learner and shares their knowledge naturally, conversationally.
+              <Card className="p-8 bg-white/80 backdrop-blur-sm border-0 shadow-lg text-center">
+                <CardContent className="p-0">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Award className="h-8 w-8 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-800 mb-4">Excellence</h3>
+                  <p className="text-slate-600">
+                    We're committed to delivering exceptional quality in everything we do, 
+                    from our technology to our customer relationships.
                   </p>
-                  <p>
-                    But traditional training methods forced this natural process into rigid, linear formats that 
-                    stripped away the nuance and adaptability that made expert mentorship so effective.
-                  </p>
-                  <p>
-                    We asked ourselves: What if we could capture that natural conversation and turn it into 
-                    something that could scale? What if AI could understand not just the words, but the intent, 
-                    the structure, and the wisdom behind them?
-                  </p>
-                  <p className="font-semibold text-blue-600">
-                    That's how Zyglio was born.
-                  </p>
-                </div>
-              </div>
-              <div>
-                <img 
-                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop" 
-                  alt="Mentor teaching student in professional setting with modern technology integration"
-                  className="w-full h-80 object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </div>
-          </div>
+                </CardContent>
+              </Card>
 
-          {/* Team Preview */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-800 mb-8">
-              Meet the Team
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-                <CardContent className="p-0 text-center">
-                  <img 
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&crop=face" 
-                    alt="CEO headshot - professional business leader"
-                    className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-                  />
-                  <h4 className="font-bold text-slate-800 mb-2">Leadership Team</h4>
-                  <p className="text-slate-600 text-sm">Former executives from leading EdTech and AI companies</p>
-                </CardContent>
-              </Card>
-              <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-                <CardContent className="p-0 text-center">
-                  <img 
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face" 
-                    alt="CTO headshot - female technology executive"
-                    className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-                  />
-                  <h4 className="font-bold text-slate-800 mb-2">Engineering Team</h4>
-                  <p className="text-slate-600 text-sm">AI and ML experts from top technology companies</p>
-                </CardContent>
-              </Card>
-              <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-                <CardContent className="p-0 text-center">
-                  <img 
-                    src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop&crop=face" 
-                    alt="Head of Product headshot - diverse business professional"
-                    className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-                  />
-                  <h4 className="font-bold text-slate-800 mb-2">Advisory Board</h4>
-                  <p className="text-slate-600 text-sm">Industry leaders in healthcare, aerospace, and education</p>
+              <Card className="p-8 bg-white/80 backdrop-blur-sm border-0 shadow-lg text-center">
+                <CardContent className="p-0">
+                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Zap className="h-8 w-8 text-purple-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-800 mb-4">Innovation</h3>
+                  <p className="text-slate-600">
+                    We push the boundaries of what's possible in education technology, 
+                    always looking for better ways to facilitate learning.
+                  </p>
                 </CardContent>
               </Card>
             </div>
-            <p className="text-slate-600 mb-8">
-              Our diverse team brings together decades of experience in AI, education, simulation technology, 
-              and enterprise software to create solutions that truly transform how people learn.
-            </p>
           </div>
 
           {/* CTA Section */}
-          <div className="text-center bg-gradient-to-r from-blue-500/10 to-green-500/10 rounded-3xl p-12 backdrop-blur-sm">
-            <h2 className="text-3xl font-bold text-slate-800 mb-6">
-              Join Us in Revolutionizing Training
-            </h2>
-            <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-              Whether you're looking to transform your organization's training or interested in joining our mission, 
-              we'd love to hear from you.
+          <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-3xl p-12 backdrop-blur-sm text-center">
+            <h3 className="text-2xl font-bold text-slate-800 mb-4">
+              Ready to Transform Your Training?
+            </h3>
+            <p className="text-slate-600 text-lg mb-8 max-w-2xl mx-auto">
+              Join the revolution in education technology and see how Zyglio can help you 
+              capture, structure, and scale your organization's expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/demo">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
-                  See Zyglio in Action <ArrowRight className="ml-2 h-5 w-5" />
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4">
+                  Request a Demo
                 </Button>
               </Link>
-              <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
-                Careers & Opportunities
-              </Button>
+              <Link to="/contact">
+                <Button size="lg" variant="outline" className="px-8 py-4">
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
