@@ -1,11 +1,16 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Play, Mic, Brain, Zap, Globe, Users, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import VideoModal from "@/components/VideoModal";
 
 const Index = () => {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Navigation />
@@ -30,7 +35,12 @@ const Index = () => {
                 Request a Live Demo <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="px-8 py-4 text-lg"
+              onClick={() => setIsVideoModalOpen(true)}
+            >
               <Play className="mr-2 h-5 w-5" /> Watch How It Works
             </Button>
           </div>
@@ -247,6 +257,11 @@ const Index = () => {
       </section>
 
       <Footer />
+      
+      <VideoModal 
+        isOpen={isVideoModalOpen} 
+        onClose={setIsVideoModalOpen}
+      />
     </div>
   );
 };
