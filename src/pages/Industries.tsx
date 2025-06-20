@@ -47,7 +47,7 @@ const Industries = () => {
       ]
     },
     {
-      image: "https://images.unsplash.com/photo-1632823471565-1ecdf5c22c6f?w=800&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop",
       title: "Automotive Repair & Diagnostics",
       scenario: "Diagnosing EV battery faults and performing ADAS calibration.",
       voiceInput: "A master tech walks through a typical calibration procedure.",
