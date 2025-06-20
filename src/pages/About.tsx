@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -23,111 +24,111 @@ const About = () => {
             </p>
           </div>
 
-          {/* Who We Serve Section */}
+          {/* Meet the Team Section */}
           <div className="mb-20">
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full px-4 py-2 mb-4">
                 <Users className="h-5 w-5 text-blue-600" />
-                <span className="text-blue-800 font-medium">Industry Leaders</span>
+                <span className="text-blue-800 font-medium">Meet the Team</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-                Trusted by 
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"> Executive Leaders</span>
+                Our 
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"> Expert Team</span>
               </h2>
               <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-                From educational technology pioneers to specialized industry experts, 
-                Zyglio empowers leaders across sectors to transform their expertise into scalable learning experiences.
+                Industry veterans from leading EdTech, AI, and specialized sectors bringing 
+                decades of experience to revolutionize educational technology.
               </p>
             </div>
 
             <div className="grid lg:grid-cols-3 gap-8">
-              {/* EdTech and SME Leaders */}
+              {/* Leadership Team */}
               <Card className="p-8 bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-0">
                   <div className="mb-6">
                     <img 
-                      src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=250&fit=crop" 
-                      alt="EdTech executive working on educational platform development"
-                      className="w-full h-48 object-cover rounded-xl"
-                    />
-                  </div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-full flex items-center justify-center">
-                      <BookOpen className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-slate-800">EdTech & SME Leaders</h3>
-                      <p className="text-green-600 font-medium">Educational Innovators</p>
-                    </div>
-                  </div>
-                  <p className="text-slate-600 mb-4 leading-relaxed">
-                    Chief Learning Officers, Training Directors, and Subject Matter Experts who need to 
-                    scale institutional knowledge and create engaging learning experiences at enterprise scale.
-                  </p>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-sm text-slate-600">
-                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                      <span>Corporate Universities</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-slate-600">
-                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                      <span>Learning & Development</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-slate-600">
-                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                      <span>Knowledge Management</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* AI Computer Science Professionals */}
-              <Card className="p-8 bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-0">
-                  <div className="mb-6">
-                    <img 
-                      src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=250&fit=crop" 
-                      alt="AI computer science professional working on machine learning algorithms"
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop" 
+                      alt="CEO headshot - professional business leader"
                       className="w-full h-48 object-cover rounded-xl"
                     />
                   </div>
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                      <Brain className="h-6 w-6 text-white" />
+                      <Target className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-slate-800">AI & Computer Science</h3>
-                      <p className="text-blue-600 font-medium">Technology Innovators</p>
+                      <h3 className="text-xl font-bold text-slate-800">Leadership Team</h3>
+                      <p className="text-blue-600 font-medium">Executive Leadership</p>
                     </div>
                   </div>
                   <p className="text-slate-600 mb-4 leading-relaxed">
-                    CTOs, AI Research Directors, and Computer Science leaders who leverage cutting-edge 
-                    technology to create next-generation educational platforms and intelligent tutoring systems.
+                    Former executives from leading EdTech and AI companies with proven track records 
+                    of scaling innovative educational technologies and building successful teams.
                   </p>
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 text-sm text-slate-600">
                       <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                      <span>Machine Learning Platforms</span>
+                      <span>Strategic Vision</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-slate-600">
                       <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                      <span>Adaptive Learning Systems</span>
+                      <span>EdTech Experience</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-slate-600">
                       <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                      <span>Educational AI Research</span>
+                      <span>Market Leadership</span>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              {/* Specialized Industry Advisors */}
+              {/* Engineering Team */}
               <Card className="p-8 bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-0">
                   <div className="mb-6">
                     <img 
-                      src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=250&fit=crop" 
-                      alt="Industry advisors in aerospace, defense, and medical sectors collaborating on training systems"
+                      src="https://images.unsplash.com/photo-1494790108755-2616c667e7d3?w=400&h=250&fit=crop" 
+                      alt="CTO headshot - female technology executive"
+                      className="w-full h-48 object-cover rounded-xl"
+                    />
+                  </div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-full flex items-center justify-center">
+                      <Brain className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-800">Engineering Team</h3>
+                      <p className="text-green-600 font-medium">Technical Innovation</p>
+                    </div>
+                  </div>
+                  <p className="text-slate-600 mb-4 leading-relaxed">
+                    AI and ML experts from top technology companies specializing in educational AI, 
+                    simulation technology, and scalable platform architecture.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-sm text-slate-600">
+                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                      <span>AI/ML Expertise</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-slate-600">
+                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                      <span>Simulation Technology</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-slate-600">
+                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                      <span>Platform Architecture</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Advisory Board */}
+              <Card className="p-8 bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-0">
+                  <div className="mb-6">
+                    <img 
+                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=250&fit=crop" 
+                      alt="Head of Product headshot - diverse business professional"
                       className="w-full h-48 object-cover rounded-xl"
                     />
                   </div>
@@ -136,39 +137,39 @@ const About = () => {
                       <Shield className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-slate-800">Specialized Advisors</h3>
-                      <p className="text-orange-600 font-medium">Critical Industry Experts</p>
+                      <h3 className="text-xl font-bold text-slate-800">Advisory Board</h3>
+                      <p className="text-orange-600 font-medium">Industry Expertise</p>
                     </div>
                   </div>
                   <p className="text-slate-600 mb-4 leading-relaxed">
-                    Senior advisors and training executives in high-stakes industries like medical, aerospace, 
-                    and defense who require mission-critical simulation training with zero margin for error.
+                    Industry leaders in healthcare, aerospace, and education providing strategic guidance 
+                    and domain expertise for mission-critical simulation applications.
                   </p>
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 text-sm text-slate-600">
                       <Stethoscope className="w-3 h-3 text-red-500" />
-                      <span>Medical Training</span>
+                      <span>Healthcare Leaders</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-slate-600">
                       <Plane className="w-3 h-3 text-blue-500" />
-                      <span>Aerospace Simulation</span>
+                      <span>Aerospace Experts</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-slate-600">
-                      <Shield className="w-3 h-3 text-green-500" />
-                      <span>Defense & Security</span>
+                      <BookOpen className="w-3 h-3 text-green-500" />
+                      <span>Education Innovators</span>
                     </div>
                   </div>
                 </CardContent>
               </Card>
             </div>
 
-            {/* Industry Impact Statement */}
+            {/* Team Impact Statement */}
             <div className="mt-12 text-center">
               <div className="bg-gradient-to-r from-slate-100 to-blue-100 rounded-2xl p-8 max-w-4xl mx-auto">
                 <p className="text-lg text-slate-700 font-medium">
-                  "Whether you're scaling corporate training, advancing AI education, or ensuring 
-                  mission-critical competency, Zyglio transforms your expertise into immersive, 
-                  adaptive learning experiences that deliver measurable results."
+                  "Our diverse team combines deep technical expertise with real-world industry experience, 
+                  ensuring that every simulation we create meets the highest standards of accuracy, 
+                  engagement, and educational effectiveness."
                 </p>
               </div>
             </div>
