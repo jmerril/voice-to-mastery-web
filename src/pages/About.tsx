@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -6,27 +7,6 @@ import { Users, Target, Award, Zap, Brain, Blocks, Gamepad2, Sparkles, Cpu, Glob
 import { Link } from "react-router-dom";
 
 const About = () => {
-  const teamMembers = [
-    {
-      name: "Dr. Anya Sharma",
-      role: "Chief Learning Officer",
-      bio: "Anya is a cognitive scientist and education visionary with over 20 years of experience in AI-driven learning.",
-      image: "https://images.unsplash.com/photo-1599507980544-5ff6581b1140?w=300&h=300&fit=crop"
-    },
-    {
-      name: "Kenji Tanaka",
-      role: "Chief Technology Officer",
-      bio: "Kenji is a seasoned technology leader with expertise in AI, simulation technology, and cloud infrastructure.",
-      image: "https://images.unsplash.com/photo-1544717305-27825999d857?w=300&h=300&fit=crop"
-    },
-    {
-      name: "Maria Rodriguez",
-      role: "VP of Customer Success",
-      bio: "Maria is dedicated to ensuring our clients achieve their learning objectives through Zyglio's innovative platform.",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Navigation />
@@ -204,41 +184,6 @@ const About = () => {
                 </p>
               </CardContent>
             </Card>
-          </div>
-
-          {/* Team Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center text-slate-800 mb-12">
-              Meet Our Team
-            </h2>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {teamMembers.map((member, index) => (
-                <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm overflow-hidden">
-                  <CardContent className="p-0">
-                    <div className="relative">
-                      <img 
-                        src={member.image} 
-                        alt={member.name}
-                        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-slate-800 mb-2">
-                        {member.name}
-                      </h3>
-                      <p className="text-blue-600 font-medium mb-3">
-                        {member.role}
-                      </p>
-                      <p className="text-slate-600 leading-relaxed">
-                        {member.bio}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
           </div>
 
           {/* Values */}
