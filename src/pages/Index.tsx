@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Play, Mic, Brain, Zap, Globe, Users, TrendingUp, Languages } from "lucide-react";
@@ -22,7 +21,7 @@ const Index = () => {
             From Voice to Mastery
           </h1>
           <p className="text-xl md:text-2xl text-slate-600 mb-4 max-w-4xl mx-auto">
-            AI-Powered Simulation, Built from Your Conversations
+            From Prompt to Unprecedented Educational Experiences
           </p>
           <p className="text-lg text-slate-500 mb-12 max-w-5xl mx-auto leading-relaxed">
             Zyglio revolutionizes how people learn by transforming speech into structured, object-based training simulations. 
