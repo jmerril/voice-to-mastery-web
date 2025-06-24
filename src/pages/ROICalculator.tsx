@@ -60,18 +60,6 @@ const ROICalculator = () => {
               Stop treating training as a cost center. With Zyglio, training becomes your competitive advantage 
               that directly impacts your bottom line and company valuation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/demo">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Get Free ROI Analysis
-                </Button>
-              </Link>
-              <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
-                <Download className="mr-2 h-5 w-5" />
-                Download White Paper
-              </Button>
-            </div>
           </div>
         </section>
 
