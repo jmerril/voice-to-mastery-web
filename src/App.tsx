@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -14,6 +13,7 @@ import Pricing from "./pages/Pricing";
 import About from "./pages/About";
 import Demo from "./pages/Demo";
 import NotFound from "./pages/NotFound";
+import ZyglioLanding from "./pages/ZyglioLanding";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +27,7 @@ const App = () => {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/zyglio" element={<ZyglioLanding />} />
               <Route path="/how-it-works" element={<HowItWorks />} />
               <Route path="/industries" element={<Industries />} />
               <Route path="/technology" element={<Technology />} />
