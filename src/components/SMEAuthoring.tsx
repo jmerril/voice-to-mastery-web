@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Mic, Target, Users, Tag, Wand2 } from "lucide-react";
+import { Mic, Target, Users, Tag, Wand2, Link, QrCode, BookOpen } from "lucide-react";
 
 const SMEAuthoring = () => {
   return (
@@ -32,6 +32,45 @@ const SMEAuthoring = () => {
                 Our platform captures SME knowledge through voice recording and converts it into interactive 
                 simulations, educational modules, and engagement activities using advanced AI processing.
               </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Scientific Publishing Enhancement */}
+        <div className="mb-16">
+          <Card className="p-8 bg-gradient-to-r from-green-50 to-blue-50 border-0">
+            <CardContent className="p-0">
+              <div className="flex items-center mb-6">
+                <div className="p-3 bg-gradient-to-r from-green-600 to-blue-600 rounded-full mr-4">
+                  <BookOpen size={32} className="text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-800">Scientific & Technical Publishing Enhancement</h3>
+              </div>
+              <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                Revolutionize scientific and technical publishing by augmenting traditional articles and publications 
+                with AI-powered mentorship. Each publication can be enhanced with an intelligent AI mentor that provides 
+                personalized guidance, explanations, and interactive learning experiences.
+              </p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="flex items-start">
+                  <Link size={24} className="text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-slate-800 mb-2">Direct Link Access</h4>
+                    <p className="text-slate-600 text-sm">
+                      Embed direct links within publications that connect readers to AI mentors specialized in the article content.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <QrCode size={24} className="text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-slate-800 mb-2">QR Code Integration</h4>
+                    <p className="text-slate-600 text-sm">
+                      Generate QR codes for print publications, enabling instant access to AI mentors through mobile devices.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </div>
