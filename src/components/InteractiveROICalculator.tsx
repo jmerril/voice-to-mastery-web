@@ -1,9 +1,12 @@
+
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { Calculator, TrendingUp, DollarSign, Users, Clock, UserCheck, Megaphone, Zap, Brain, Target, Database } from "lucide-react";
+import { Calculator, TrendingUp, DollarSign, Users, Clock, UserCheck, Megaphone, Zap, Brain, Target, Database, AlertCircle, BarChart3 } from "lucide-react";
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
+import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line } from "recharts";
 
 const InteractiveROICalculator = () => {
   const [inputs, setInputs] = useState({
@@ -137,6 +140,44 @@ const InteractiveROICalculator = () => {
       minimumFractionDigits: 0,
       maximumFractionDigits: 0
     }).format(amount);
+  };
+
+  // Chart data for visualizations
+  const costComparisonData = [
+    {
+      name: 'Current System',
+      cost: results.currentAnnualCost,
+      color: '#ef4444'
+    },
+    {
+      name: 'With Zyglio',
+      cost: results.zyglioAnnualCost,
+      color: '#3b82f6'
+    }
+  ];
+
+  const valueBreakdownData = [
+    { name: 'AI Integration', value: results.aiIntegrationBenefits, color: '#06b6d4' },
+    { name: 'Employee Agility', value: results.employeeAgilityBenefits, color: '#10b981' },
+    { name: 'Knowledge Capture', value: results.tribalKnowledgeBenefits, color: '#f59e0b' },
+    { name: 'Competitive Advantage', value: results.competitiveAdvantage, color: '#8b5cf6' },
+    { name: 'Productivity Gains', value: results.productivityGains, color: '#ec4899' },
+    { name: 'Risk Reduction', value: results.riskReduction, color: '#84cc16' }
+  ];
+
+  const roiTimelineData = [
+    { month: 'Month 1', cumulative: results.annualSavings * 0.08, investment: results.zyglioAnnualCost },
+    { month: 'Month 3', cumulative: results.annualSavings * 0.25, investment: results.zyglioAnnualCost },
+    { month: 'Month 6', cumulative: results.annualSavings * 0.5, investment: results.zyglioAnnualCost },
+    { month: 'Month 9', cumulative: results.annualSavings * 0.75, investment: results.zyglioAnnualCost },
+    { month: 'Month 12', cumulative: results.annualSavings, investment: results.zyglioAnnualCost }
+  ];
+
+  const chartConfig = {
+    cost: { label: "Cost", color: "#3b82f6" },
+    value: { label: "Value", color: "#10b981" },
+    cumulative: { label: "Cumulative Benefits", color: "#06b6d4" },
+    investment: { label: "Investment", color: "#f59e0b" }
   };
 
   return (
@@ -348,98 +389,197 @@ const InteractiveROICalculator = () => {
 
             {/* Results Section */}
             <div className="space-y-8">
-              <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur-md rounded-2xl p-8 border border-green-400/30">
-                <h3 className="text-2xl font-bold text-white mb-8 flex items-center">
-                  <TrendingUp className="h-6 w-6 mr-3 text-green-400" />
-                  Your ROI Analysis
+              {/* Cost Comparison with Clear Explanations */}
+              <div className="bg-gradient-to-br from-slate-800/50 to-blue-900/50 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                  <AlertCircle className="h-6 w-6 mr-3 text-yellow-400" />
+                  Cost Analysis Breakdown
                 </h3>
                 
-                <div className="grid grid-cols-2 gap-6 mb-8">
-                  <Card className="bg-red-500/20 border-red-400/30 backdrop-blur-md">
-                    <CardContent className="p-6 text-center">
-                      <DollarSign className="h-8 w-8 text-red-400 mx-auto mb-3" />
-                      <div className="text-sm text-red-200 mb-2">Current Annual Cost</div>
-                      <div className="text-2xl font-bold text-red-300">
-                        {formatCurrency(results.currentAnnualCost)}
-                      </div>
-                    </CardContent>
-                  </Card>
+                <div className="space-y-6">
+                  <div className="bg-red-500/20 border border-red-400/30 rounded-xl p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-red-200 font-medium">Your Current Training Burden</span>
+                      <DollarSign className="h-5 w-5 text-red-400" />
+                    </div>
+                    <div className="text-3xl font-bold text-red-300 mb-2">
+                      {formatCurrency(results.currentAnnualCost)}
+                    </div>
+                    <p className="text-sm text-red-200/80">
+                      Total cost of your existing training approach including direct costs, 
+                      productivity losses, errors, and inefficiencies
+                    </p>
+                  </div>
 
-                  <Card className="bg-blue-500/20 border-blue-400/30 backdrop-blur-md">
-                    <CardContent className="p-6 text-center">
-                      <Calculator className="h-8 w-8 text-blue-400 mx-auto mb-3" />
-                      <div className="text-sm text-blue-200 mb-2">Zyglio Annual Cost</div>
-                      <div className="text-2xl font-bold text-blue-300">
-                        {formatCurrency(results.zyglioAnnualCost)}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
+                  <div className="bg-blue-500/20 border border-blue-400/30 rounded-xl p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-blue-200 font-medium">Zyglio Investment Required</span>
+                      <Calculator className="h-5 w-5 text-blue-400" />
+                    </div>
+                    <div className="text-3xl font-bold text-blue-300 mb-2">
+                      {formatCurrency(results.zyglioAnnualCost)}
+                    </div>
+                    <p className="text-sm text-blue-200/80">
+                      Annual investment in Zyglio's AI-powered training platform 
+                      (estimated at 30% of current training costs)
+                    </p>
+                  </div>
 
-                <Card className="bg-gradient-to-r from-green-500/30 to-emerald-500/30 border-green-400/40 backdrop-blur-md mb-8">
-                  <CardContent className="p-8 text-center">
-                    <TrendingUp className="h-12 w-12 text-green-400 mx-auto mb-4" />
-                    <div className="text-lg text-green-200 mb-3">Total Annual Value Created</div>
-                    <div className="text-4xl font-bold text-green-300 mb-6">
+                  <div className="bg-gradient-to-r from-green-500/30 to-emerald-500/30 border border-green-400/40 rounded-xl p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-green-200 font-medium">Net Annual Value Created</span>
+                      <TrendingUp className="h-5 w-5 text-green-400" />
+                    </div>
+                    <div className="text-4xl font-bold text-green-300 mb-2">
                       {formatCurrency(results.annualSavings)}
                     </div>
+                    <p className="text-sm text-green-200/80">
+                      Total value generated after deducting Zyglio investment from 
+                      all productivity gains, cost savings, and strategic benefits
+                    </p>
                     
-                    <div className="grid grid-cols-2 gap-6">
-                      <div className="bg-white/10 rounded-xl p-4">
-                        <div className="text-3xl font-bold text-purple-300">
+                    <div className="grid grid-cols-2 gap-4 mt-6">
+                      <div className="bg-white/10 rounded-lg p-4 text-center">
+                        <div className="text-2xl font-bold text-purple-300">
                           {Math.round(results.roiPercentage)}%
                         </div>
-                        <div className="text-sm text-purple-200">ROI</div>
+                        <div className="text-xs text-purple-200">Return on Investment</div>
                       </div>
-                      <div className="bg-white/10 rounded-xl p-4">
-                        <div className="text-3xl font-bold text-orange-300">
+                      <div className="bg-white/10 rounded-lg p-4 text-center">
+                        <div className="text-2xl font-bold text-orange-300">
                           {Math.round(results.paybackMonths)}
                         </div>
-                        <div className="text-sm text-orange-200">Months Payback</div>
+                        <div className="text-xs text-orange-200">Months to Payback</div>
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
+              </div>
 
-                <div className="bg-white/10 backdrop-blur-md rounded-xl p-6">
-                  <h4 className="text-lg font-semibold text-white mb-4">Value Breakdown</h4>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex justify-between items-center">
-                      <span className="text-blue-200 flex items-center">
-                        <Brain className="h-4 w-4 mr-2 text-cyan-400" />
-                        AI Integration Benefits:
-                      </span>
-                      <span className="font-medium text-cyan-300">{formatCurrency(results.aiIntegrationBenefits)}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-blue-200 flex items-center">
-                        <Target className="h-4 w-4 mr-2 text-green-400" />
-                        Employee Agility Benefits:
-                      </span>
-                      <span className="font-medium text-green-300">{formatCurrency(results.employeeAgilityBenefits)}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-blue-200 flex items-center">
-                        <Database className="h-4 w-4 mr-2 text-orange-400" />
-                        Knowledge Capture Benefits:
-                      </span>
-                      <span className="font-medium text-orange-300">{formatCurrency(results.tribalKnowledgeBenefits)}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-blue-200 flex items-center">
-                        <TrendingUp className="h-4 w-4 mr-2 text-purple-400" />
-                        Competitive Advantage:
-                      </span>
-                      <span className="font-medium text-purple-300">{formatCurrency(results.competitiveAdvantage)}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-blue-200">Productivity Gains:</span>
-                      <span className="font-medium text-white">{formatCurrency(results.productivityGains)}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-blue-200">Risk Reduction:</span>
-                      <span className="font-medium text-white">{formatCurrency(results.riskReduction)}</span>
-                    </div>
+              {/* ROI Visualization Charts */}
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                  <BarChart3 className="h-6 w-6 mr-3 text-cyan-400" />
+                  ROI Visualization
+                </h3>
+
+                {/* Cost Comparison Chart */}
+                <div className="mb-8">
+                  <h4 className="text-lg font-semibold text-white mb-4">Annual Cost Comparison</h4>
+                  <ChartContainer config={chartConfig} className="h-64">
+                    <ResponsiveContainer width="100%" height="100%">
+                      <BarChart data={costComparisonData}>
+                        <XAxis dataKey="name" stroke="#94a3b8" />
+                        <YAxis stroke="#94a3b8" tickFormatter={(value) => `$${(value / 1000).toFixed(0)}K`} />
+                        <ChartTooltip 
+                          content={<ChartTooltipContent />}
+                          formatter={(value) => [formatCurrency(Number(value)), 'Annual Cost']}
+                        />
+                        <Bar dataKey="cost" fill="#3b82f6" radius={[4, 4, 0, 0]} />
+                      </BarChart>
+                    </ResponsiveContainer>
+                  </ChartContainer>
+                </div>
+
+                {/* Value Breakdown Pie Chart */}
+                <div className="mb-8">
+                  <h4 className="text-lg font-semibold text-white mb-4">Value Creation Breakdown</h4>
+                  <ChartContainer config={chartConfig} className="h-64">
+                    <ResponsiveContainer width="100%" height="100%">
+                      <PieChart>
+                        <Pie
+                          data={valueBreakdownData}
+                          cx="50%"
+                          cy="50%"
+                          outerRadius={80}
+                          dataKey="value"
+                          label={({ name, percent }) => `${name} (${(percent * 100).toFixed(0)}%)`}
+                        >
+                          {valueBreakdownData.map((entry, index) => (
+                            <Cell key={`cell-${index}`} fill={entry.color} />
+                          ))}
+                        </Pie>
+                        <ChartTooltip 
+                          content={<ChartTooltipContent />}
+                          formatter={(value) => [formatCurrency(Number(value)), 'Annual Value']}
+                        />
+                      </PieChart>
+                    </ResponsiveContainer>
+                  </ChartContainer>
+                </div>
+
+                {/* ROI Timeline */}
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-4">ROI Timeline - Path to Payback</h4>
+                  <ChartContainer config={chartConfig} className="h-64">
+                    <ResponsiveContainer width="100%" height="100%">
+                      <LineChart data={roiTimelineData}>
+                        <XAxis dataKey="month" stroke="#94a3b8" />
+                        <YAxis stroke="#94a3b8" tickFormatter={(value) => `$${(value / 1000).toFixed(0)}K`} />
+                        <ChartTooltip 
+                          content={<ChartTooltipContent />}
+                          formatter={(value, name) => [formatCurrency(Number(value)), name === 'cumulative' ? 'Cumulative Benefits' : 'Investment']}
+                        />
+                        <Line 
+                          type="monotone" 
+                          dataKey="cumulative" 
+                          stroke="#06b6d4" 
+                          strokeWidth={3}
+                          dot={{ fill: '#06b6d4', strokeWidth: 2, r: 6 }}
+                        />
+                        <Line 
+                          type="monotone" 
+                          dataKey="investment" 
+                          stroke="#f59e0b" 
+                          strokeWidth={2}
+                          strokeDasharray="5 5"
+                          dot={{ fill: '#f59e0b', strokeWidth: 2, r: 4 }}
+                        />
+                      </LineChart>
+                    </ResponsiveContainer>
+                  </ChartContainer>
+                </div>
+              </div>
+
+              {/* Value Breakdown Details */}
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+                <h4 className="text-lg font-semibold text-white mb-4">Detailed Value Breakdown</h4>
+                <div className="space-y-3 text-sm">
+                  <div className="flex justify-between items-center">
+                    <span className="text-blue-200 flex items-center">
+                      <Brain className="h-4 w-4 mr-2 text-cyan-400" />
+                      AI Integration Benefits:
+                    </span>
+                    <span className="font-medium text-cyan-300">{formatCurrency(results.aiIntegrationBenefits)}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-blue-200 flex items-center">
+                      <Target className="h-4 w-4 mr-2 text-green-400" />
+                      Employee Agility Benefits:
+                    </span>
+                    <span className="font-medium text-green-300">{formatCurrency(results.employeeAgilityBenefits)}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-blue-200 flex items-center">
+                      <Database className="h-4 w-4 mr-2 text-orange-400" />
+                      Knowledge Capture Benefits:
+                    </span>
+                    <span className="font-medium text-orange-300">{formatCurrency(results.tribalKnowledgeBenefits)}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-blue-200 flex items-center">
+                      <TrendingUp className="h-4 w-4 mr-2 text-purple-400" />
+                      Competitive Advantage:
+                    </span>
+                    <span className="font-medium text-purple-300">{formatCurrency(results.competitiveAdvantage)}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-blue-200">Productivity Gains:</span>
+                    <span className="font-medium text-white">{formatCurrency(results.productivityGains)}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-blue-200">Risk Reduction:</span>
+                    <span className="font-medium text-white">{formatCurrency(results.riskReduction)}</span>
                   </div>
                 </div>
               </div>
