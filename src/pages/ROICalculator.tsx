@@ -1,6 +1,6 @@
-
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import InteractiveROICalculator from "../components/InteractiveROICalculator";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -75,8 +75,15 @@ const ROICalculator = () => {
           </div>
         </section>
 
+        {/* Interactive ROI Calculator */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <InteractiveROICalculator />
+          </div>
+        </section>
+
         {/* Value Propositions */}
-        <section className="py-16 px-4">
+        <section className="py-16 px-4 bg-slate-50">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-slate-900 mb-4">
@@ -133,7 +140,7 @@ const ROICalculator = () => {
         </section>
 
         {/* White Paper Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 bg-slate-50">
           <div className="max-w-4xl mx-auto">
             <Card className="bg-gradient-to-r from-blue-600 to-teal-600 text-white">
               <CardHeader className="text-center">
