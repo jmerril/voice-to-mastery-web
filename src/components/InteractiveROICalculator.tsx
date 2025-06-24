@@ -20,7 +20,8 @@ const InteractiveROICalculator = () => {
     materialWastageCostPerEmployee: 500,
     recruitmentCostPerEmployee: 15000,
     turnoverRate: 15, // percentage
-    brandingMarketingBenefit: 100000 // annual benefit
+    brandingMarketingBenefit: 100000, // annual benefit
+    competitiveAdvantageValue: 200000 // annual competitive advantage value
   });
 
   const [results, setResults] = useState({
@@ -33,6 +34,7 @@ const InteractiveROICalculator = () => {
     materialSavings: 0,
     recruitmentSavings: 0,
     brandingBenefits: 0,
+    competitiveAdvantage: 0,
     totalAnnualValue: 0,
     roiPercentage: 0,
     paybackMonths: 0
@@ -56,7 +58,8 @@ const InteractiveROICalculator = () => {
       materialWastageCostPerEmployee,
       recruitmentCostPerEmployee,
       turnoverRate,
-      brandingMarketingBenefit
+      brandingMarketingBenefit,
+      competitiveAdvantageValue
     } = inputs;
 
     // Current training costs
@@ -80,8 +83,9 @@ const InteractiveROICalculator = () => {
     const currentTurnoverCost = employees * (turnoverRate / 100) * recruitmentCostPerEmployee;
     const recruitmentSavings = currentTurnoverCost * 0.4; // 40% reduction in turnover
     const brandingBenefits = brandingMarketingBenefit * 0.8; // 80% of the branding benefit realized
+    const competitiveAdvantage = competitiveAdvantageValue * 0.6; // 60% of competitive advantage realized
 
-    const totalAnnualValue = trainingSavings + productivityGains + riskReduction + supervisorSavings + materialSavings + recruitmentSavings + brandingBenefits;
+    const totalAnnualValue = trainingSavings + productivityGains + riskReduction + supervisorSavings + materialSavings + recruitmentSavings + brandingBenefits + competitiveAdvantage;
     const annualSavings = totalAnnualValue - zyglioAnnualCost;
     const roiPercentage = (annualSavings / zyglioAnnualCost) * 100;
     const paybackMonths = (zyglioAnnualCost / (annualSavings / 12));
@@ -96,6 +100,7 @@ const InteractiveROICalculator = () => {
       materialSavings,
       recruitmentSavings,
       brandingBenefits,
+      competitiveAdvantage,
       totalAnnualValue,
       roiPercentage,
       paybackMonths
@@ -279,6 +284,17 @@ const InteractiveROICalculator = () => {
                     className="mt-1"
                   />
                 </div>
+
+                <div>
+                  <Label htmlFor="competitiveAdvantage">Annual Competitive Advantage Value ($)</Label>
+                  <Input
+                    id="competitiveAdvantage"
+                    type="number"
+                    value={inputs.competitiveAdvantageValue}
+                    onChange={(e) => handleInputChange('competitiveAdvantageValue', e.target.value)}
+                    className="mt-1"
+                  />
+                </div>
               </div>
             </div>
 
@@ -346,7 +362,7 @@ const InteractiveROICalculator = () => {
                 <div className="space-y-2 text-sm text-slate-600">
                   <div className="flex justify-between">
                     <span>Training Cost Savings:</span>
-                    <span className="font-medium">{formatCurrency(results.totalAnnualValue - results.productivityGains - results.riskReduction - results.supervisorSavings - results.materialSavings - results.recruitmentSavings - results.brandingBenefits)}</span>
+                    <span className="font-medium">{formatCurrency(results.totalAnnualValue - results.productivityGains - results.riskReduction - results.supervisorSavings - results.materialSavings - results.recruitmentSavings - results.brandingBenefits - results.competitiveAdvantage)}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Productivity Gains:</span>
@@ -372,6 +388,10 @@ const InteractiveROICalculator = () => {
                     <span>Branding Benefits:</span>
                     <span className="font-medium">{formatCurrency(results.brandingBenefits)}</span>
                   </div>
+                  <div className="flex justify-between">
+                    <span>Competitive Advantage:</span>
+                    <span className="font-medium">{formatCurrency(results.competitiveAdvantage)}</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -380,7 +400,7 @@ const InteractiveROICalculator = () => {
           <div className="mt-8 p-6 bg-slate-50 rounded-lg">
             <h4 className="font-semibold mb-2">About This Calculation</h4>
             <p className="text-sm text-slate-600 mb-4">
-              This enhanced calculator includes supervisor costs, material wastage, recruitment/retention benefits, and branding value. 
+              This enhanced calculator includes supervisor costs, material wastage, recruitment/retention benefits, branding value, and competitive advantage improvements. 
               Results are based on industry benchmarks and Zyglio's proven outcomes.
             </p>
             <div className="text-xs text-slate-500 space-y-1">
@@ -391,6 +411,7 @@ const InteractiveROICalculator = () => {
               <div>• Material waste reduction: 60% less training material waste</div>
               <div>• Turnover reduction: 40% improvement in retention</div>
               <div>• Branding benefit: 80% realization of enhanced employer brand value</div>
+              <div>• Competitive advantage: 60% realization of improved competitive position</div>
               <div>• Zyglio cost estimated at 30% of current training expenses</div>
             </div>
           </div>
