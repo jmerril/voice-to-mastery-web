@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -21,7 +20,10 @@ const InteractiveROICalculator = () => {
     recruitmentCostPerEmployee: 15000,
     turnoverRate: 15, // percentage
     brandingMarketingBenefit: 100000, // annual benefit
-    competitiveAdvantageValue: 200000 // annual competitive advantage value
+    competitiveAdvantageValue: 200000, // annual competitive advantage value
+    aiIntegrationValue: 150000, // annual AI integration value
+    employeeAgilityValue: 120000, // annual employee agility value
+    tribalKnowledgeValue: 180000 // annual tribal knowledge capture value
   });
 
   const [results, setResults] = useState({
@@ -35,6 +37,9 @@ const InteractiveROICalculator = () => {
     recruitmentSavings: 0,
     brandingBenefits: 0,
     competitiveAdvantage: 0,
+    aiIntegrationBenefits: 0,
+    employeeAgilityBenefits: 0,
+    tribalKnowledgeBenefits: 0,
     totalAnnualValue: 0,
     roiPercentage: 0,
     paybackMonths: 0
@@ -59,7 +64,10 @@ const InteractiveROICalculator = () => {
       recruitmentCostPerEmployee,
       turnoverRate,
       brandingMarketingBenefit,
-      competitiveAdvantageValue
+      competitiveAdvantageValue,
+      aiIntegrationValue,
+      employeeAgilityValue,
+      tribalKnowledgeValue
     } = inputs;
 
     // Current training costs
@@ -84,8 +92,13 @@ const InteractiveROICalculator = () => {
     const recruitmentSavings = currentTurnoverCost * 0.4; // 40% reduction in turnover
     const brandingBenefits = brandingMarketingBenefit * 0.8; // 80% of the branding benefit realized
     const competitiveAdvantage = competitiveAdvantageValue * 0.6; // 60% of competitive advantage realized
+    
+    // New AI and agility benefits
+    const aiIntegrationBenefits = aiIntegrationValue * 0.7; // 70% of AI integration value realized
+    const employeeAgilityBenefits = employeeAgilityValue * 0.75; // 75% of employee agility value realized
+    const tribalKnowledgeBenefits = tribalKnowledgeValue * 0.8; // 80% of tribal knowledge value realized
 
-    const totalAnnualValue = trainingSavings + productivityGains + riskReduction + supervisorSavings + materialSavings + recruitmentSavings + brandingBenefits + competitiveAdvantage;
+    const totalAnnualValue = trainingSavings + productivityGains + riskReduction + supervisorSavings + materialSavings + recruitmentSavings + brandingBenefits + competitiveAdvantage + aiIntegrationBenefits + employeeAgilityBenefits + tribalKnowledgeBenefits;
     const annualSavings = totalAnnualValue - zyglioAnnualCost;
     const roiPercentage = (annualSavings / zyglioAnnualCost) * 100;
     const paybackMonths = (zyglioAnnualCost / (annualSavings / 12));
@@ -101,6 +114,9 @@ const InteractiveROICalculator = () => {
       recruitmentSavings,
       brandingBenefits,
       competitiveAdvantage,
+      aiIntegrationBenefits,
+      employeeAgilityBenefits,
+      tribalKnowledgeBenefits,
       totalAnnualValue,
       roiPercentage,
       paybackMonths
@@ -295,6 +311,39 @@ const InteractiveROICalculator = () => {
                     className="mt-1"
                   />
                 </div>
+
+                <div>
+                  <Label htmlFor="aiIntegration">Annual AI Integration Value ($)</Label>
+                  <Input
+                    id="aiIntegration"
+                    type="number"
+                    value={inputs.aiIntegrationValue}
+                    onChange={(e) => handleInputChange('aiIntegrationValue', e.target.value)}
+                    className="mt-1"
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="employeeAgility">Annual Employee Agility Value ($)</Label>
+                  <Input
+                    id="employeeAgility"
+                    type="number"
+                    value={inputs.employeeAgilityValue}
+                    onChange={(e) => handleInputChange('employeeAgilityValue', e.target.value)}
+                    className="mt-1"
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="tribalKnowledge">Annual Tribal Knowledge Capture Value ($)</Label>
+                  <Input
+                    id="tribalKnowledge"
+                    type="number"
+                    value={inputs.tribalKnowledgeValue}
+                    onChange={(e) => handleInputChange('tribalKnowledgeValue', e.target.value)}
+                    className="mt-1"
+                  />
+                </div>
               </div>
             </div>
 
@@ -362,7 +411,7 @@ const InteractiveROICalculator = () => {
                 <div className="space-y-2 text-sm text-slate-600">
                   <div className="flex justify-between">
                     <span>Training Cost Savings:</span>
-                    <span className="font-medium">{formatCurrency(results.totalAnnualValue - results.productivityGains - results.riskReduction - results.supervisorSavings - results.materialSavings - results.recruitmentSavings - results.brandingBenefits - results.competitiveAdvantage)}</span>
+                    <span className="font-medium">{formatCurrency(results.totalAnnualValue - results.productivityGains - results.riskReduction - results.supervisorSavings - results.materialSavings - results.recruitmentSavings - results.brandingBenefits - results.competitiveAdvantage - results.aiIntegrationBenefits - results.employeeAgilityBenefits - results.tribalKnowledgeBenefits)}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Productivity Gains:</span>
@@ -392,6 +441,18 @@ const InteractiveROICalculator = () => {
                     <span>Competitive Advantage:</span>
                     <span className="font-medium">{formatCurrency(results.competitiveAdvantage)}</span>
                   </div>
+                  <div className="flex justify-between">
+                    <span>AI Integration Benefits:</span>
+                    <span className="font-medium">{formatCurrency(results.aiIntegrationBenefits)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Employee Agility Benefits:</span>
+                    <span className="font-medium">{formatCurrency(results.employeeAgilityBenefits)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Tribal Knowledge Benefits:</span>
+                    <span className="font-medium">{formatCurrency(results.tribalKnowledgeBenefits)}</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -400,7 +461,7 @@ const InteractiveROICalculator = () => {
           <div className="mt-8 p-6 bg-slate-50 rounded-lg">
             <h4 className="font-semibold mb-2">About This Calculation</h4>
             <p className="text-sm text-slate-600 mb-4">
-              This enhanced calculator includes supervisor costs, material wastage, recruitment/retention benefits, branding value, and competitive advantage improvements. 
+              This comprehensive calculator includes all aspects of training ROI: supervisor costs, material wastage, recruitment/retention benefits, branding value, competitive advantage improvements, AI integration value, employee agility benefits, and tribal knowledge capture. 
               Results are based on industry benchmarks and Zyglio's proven outcomes.
             </p>
             <div className="text-xs text-slate-500 space-y-1">
@@ -412,6 +473,9 @@ const InteractiveROICalculator = () => {
               <div>• Turnover reduction: 40% improvement in retention</div>
               <div>• Branding benefit: 80% realization of enhanced employer brand value</div>
               <div>• Competitive advantage: 60% realization of improved competitive position</div>
+              <div>• AI integration benefits: 70% realization of AI-powered training value</div>
+              <div>• Employee agility benefits: 75% realization of best practices adoption</div>
+              <div>• Tribal knowledge benefits: 80% realization of knowledge capture value</div>
               <div>• Zyglio cost estimated at 30% of current training expenses</div>
             </div>
           </div>

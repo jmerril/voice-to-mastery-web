@@ -1,3 +1,4 @@
+
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import InteractiveROICalculator from "../components/InteractiveROICalculator";
@@ -123,55 +124,6 @@ const ROICalculator = () => {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-20 px-4 bg-slate-50">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">
-                Frequently Asked Questions
-              </h2>
-            </div>
-
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">
-                  Why don't you publish standard pricing?
-                </h3>
-                <p className="text-slate-600">
-                  Every organization has unique training needs, user counts, and ROI potential. Our custom analysis ensures you get maximum value and pay only for what drives results in your specific situation.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">
-                  How quickly will we see ROI?
-                </h3>
-                <p className="text-slate-600">
-                  Most organizations see measurable improvements within 30-60 days and full ROI within 6-12 months. Our analysis will show your specific timeline based on your current training costs and efficiency gaps.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">
-                  What if Zyglio doesn't deliver the projected ROI?
-                </h3>
-                <p className="text-slate-600">
-                  We're so confident in our results that we offer ROI guarantees for qualified enterprise clients. If we don't hit the projected returns, we'll work with you at no additional cost until we do.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">
-                  Can you integrate with our existing systems?
-                </h3>
-                <p className="text-slate-600">
-                  Yes, Zyglio integrates with major LMS platforms, HRIS systems, and can connect to virtually any system via API. Integration planning is part of your free ROI analysis.
-                </p>
-              </div>
             </div>
           </div>
         </section>
