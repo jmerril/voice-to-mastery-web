@@ -10,6 +10,7 @@ const Navigation = () => {
   
   const navItems = [
     { name: "Home", path: "/" },
+    { name: "Zyglio Platform", path: "/zyglio" },
     { name: "How It Works", path: "/how-it-works" },
     { name: "Industries", path: "/industries" },
     { name: "Technology", path: "/technology" },
