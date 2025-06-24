@@ -1,5 +1,5 @@
 
-import Header from "@/components/Header";
+import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import SMEAuthoring from "@/components/SMEAuthoring";
 import LearnerFramework from "@/components/LearnerFramework";
@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 const ZyglioLanding = () => {
   return (
     <div className="min-h-screen">
-      <Header />
+      <Navigation />
       <Hero />
       <SMEAuthoring />
       <LearnerFramework />
