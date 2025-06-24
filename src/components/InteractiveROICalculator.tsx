@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { Calculator, TrendingUp, DollarSign, Users, Clock } from "lucide-react";
+import { Calculator, TrendingUp, DollarSign, Users, Clock, UserCheck, Megaphone } from "lucide-react";
 
 const InteractiveROICalculator = () => {
   const [inputs, setInputs] = useState({
@@ -14,7 +14,13 @@ const InteractiveROICalculator = () => {
     currentTrainingCostPerHour: 150,
     productivityLossHours: 160, // Time to competency
     errorCostPerYear: 50000,
-    complianceRiskCost: 25000
+    complianceRiskCost: 25000,
+    supervisorCostPerHour: 100,
+    supervisorHoursPerTraining: 8,
+    materialWastageCostPerEmployee: 500,
+    recruitmentCostPerEmployee: 15000,
+    turnoverRate: 15, // percentage
+    brandingMarketingBenefit: 100000 // annual benefit
   });
 
   const [results, setResults] = useState({
@@ -23,6 +29,10 @@ const InteractiveROICalculator = () => {
     annualSavings: 0,
     productivityGains: 0,
     riskReduction: 0,
+    supervisorSavings: 0,
+    materialSavings: 0,
+    recruitmentSavings: 0,
+    brandingBenefits: 0,
     totalAnnualValue: 0,
     roiPercentage: 0,
     paybackMonths: 0
@@ -40,13 +50,21 @@ const InteractiveROICalculator = () => {
       currentTrainingCostPerHour,
       productivityLossHours,
       errorCostPerYear,
-      complianceRiskCost
+      complianceRiskCost,
+      supervisorCostPerHour,
+      supervisorHoursPerTraining,
+      materialWastageCostPerEmployee,
+      recruitmentCostPerEmployee,
+      turnoverRate,
+      brandingMarketingBenefit
     } = inputs;
 
     // Current training costs
     const currentTrainingCost = employees * trainingHoursPerYear * currentTrainingCostPerHour;
     const productivityLossCost = employees * (productivityLossHours / 2080) * averageSalary; // 2080 = work hours per year
-    const currentAnnualCost = currentTrainingCost + productivityLossCost + errorCostPerYear + complianceRiskCost;
+    const supervisorCost = employees * (trainingHoursPerYear / 8) * supervisorHoursPerTraining * supervisorCostPerHour;
+    const materialWastageCost = employees * materialWastageCostPerEmployee;
+    const currentAnnualCost = currentTrainingCost + productivityLossCost + errorCostPerYear + complianceRiskCost + supervisorCost + materialWastageCost;
 
     // Zyglio costs (estimated at 30% of current training costs)
     const zyglioAnnualCost = currentTrainingCost * 0.3;
@@ -55,8 +73,15 @@ const InteractiveROICalculator = () => {
     const trainingSavings = currentTrainingCost * 0.7; // 70% reduction
     const productivityGains = productivityLossCost * 0.75; // 4x faster = 75% time saved
     const riskReduction = (errorCostPerYear + complianceRiskCost) * 0.6; // 60% reduction
+    const supervisorSavings = supervisorCost * 0.5; // 50% reduction in supervisor time needed
+    const materialSavings = materialWastageCost * 0.6; // 60% reduction in material waste
+    
+    // Enhanced recruitment and retention benefits
+    const currentTurnoverCost = employees * (turnoverRate / 100) * recruitmentCostPerEmployee;
+    const recruitmentSavings = currentTurnoverCost * 0.4; // 40% reduction in turnover
+    const brandingBenefits = brandingMarketingBenefit * 0.8; // 80% of the branding benefit realized
 
-    const totalAnnualValue = trainingSavings + productivityGains + riskReduction;
+    const totalAnnualValue = trainingSavings + productivityGains + riskReduction + supervisorSavings + materialSavings + recruitmentSavings + brandingBenefits;
     const annualSavings = totalAnnualValue - zyglioAnnualCost;
     const roiPercentage = (annualSavings / zyglioAnnualCost) * 100;
     const paybackMonths = (zyglioAnnualCost / (annualSavings / 12));
@@ -67,6 +92,10 @@ const InteractiveROICalculator = () => {
       annualSavings,
       productivityGains,
       riskReduction,
+      supervisorSavings,
+      materialSavings,
+      recruitmentSavings,
+      brandingBenefits,
       totalAnnualValue,
       roiPercentage,
       paybackMonths
@@ -153,6 +182,39 @@ const InteractiveROICalculator = () => {
                 </div>
 
                 <div>
+                  <Label htmlFor="supervisorCost">Supervisor Cost Per Hour ($)</Label>
+                  <Input
+                    id="supervisorCost"
+                    type="number"
+                    value={inputs.supervisorCostPerHour}
+                    onChange={(e) => handleInputChange('supervisorCostPerHour', e.target.value)}
+                    className="mt-1"
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="supervisorHours">Supervisor Hours Per Training Session</Label>
+                  <Input
+                    id="supervisorHours"
+                    type="number"
+                    value={inputs.supervisorHoursPerTraining}
+                    onChange={(e) => handleInputChange('supervisorHoursPerTraining', e.target.value)}
+                    className="mt-1"
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="materialWastage">Material Wastage Cost Per Employee ($)</Label>
+                  <Input
+                    id="materialWastage"
+                    type="number"
+                    value={inputs.materialWastageCostPerEmployee}
+                    onChange={(e) => handleInputChange('materialWastageCostPerEmployee', e.target.value)}
+                    className="mt-1"
+                  />
+                </div>
+
+                <div>
                   <Label htmlFor="productivityLoss">Hours to Employee Competency</Label>
                   <Input
                     id="productivityLoss"
@@ -181,6 +243,39 @@ const InteractiveROICalculator = () => {
                     type="number"
                     value={inputs.complianceRiskCost}
                     onChange={(e) => handleInputChange('complianceRiskCost', e.target.value)}
+                    className="mt-1"
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="recruitmentCost">Recruitment Cost Per Employee ($)</Label>
+                  <Input
+                    id="recruitmentCost"
+                    type="number"
+                    value={inputs.recruitmentCostPerEmployee}
+                    onChange={(e) => handleInputChange('recruitmentCostPerEmployee', e.target.value)}
+                    className="mt-1"
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="turnoverRate">Annual Turnover Rate (%)</Label>
+                  <Input
+                    id="turnoverRate"
+                    type="number"
+                    value={inputs.turnoverRate}
+                    onChange={(e) => handleInputChange('turnoverRate', e.target.value)}
+                    className="mt-1"
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="brandingBenefit">Annual Branding/Marketing Benefit ($)</Label>
+                  <Input
+                    id="brandingBenefit"
+                    type="number"
+                    value={inputs.brandingMarketingBenefit}
+                    onChange={(e) => handleInputChange('brandingMarketingBenefit', e.target.value)}
                     className="mt-1"
                   />
                 </div>
@@ -251,7 +346,7 @@ const InteractiveROICalculator = () => {
                 <div className="space-y-2 text-sm text-slate-600">
                   <div className="flex justify-between">
                     <span>Training Cost Savings:</span>
-                    <span className="font-medium">{formatCurrency(results.totalAnnualValue - results.productivityGains - results.riskReduction)}</span>
+                    <span className="font-medium">{formatCurrency(results.totalAnnualValue - results.productivityGains - results.riskReduction - results.supervisorSavings - results.materialSavings - results.recruitmentSavings - results.brandingBenefits)}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Productivity Gains:</span>
@@ -261,6 +356,22 @@ const InteractiveROICalculator = () => {
                     <span>Risk Reduction:</span>
                     <span className="font-medium">{formatCurrency(results.riskReduction)}</span>
                   </div>
+                  <div className="flex justify-between">
+                    <span>Supervisor Savings:</span>
+                    <span className="font-medium">{formatCurrency(results.supervisorSavings)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Material Savings:</span>
+                    <span className="font-medium">{formatCurrency(results.materialSavings)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Recruitment Savings:</span>
+                    <span className="font-medium">{formatCurrency(results.recruitmentSavings)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Branding Benefits:</span>
+                    <span className="font-medium">{formatCurrency(results.brandingBenefits)}</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -269,13 +380,17 @@ const InteractiveROICalculator = () => {
           <div className="mt-8 p-6 bg-slate-50 rounded-lg">
             <h4 className="font-semibold mb-2">About This Calculation</h4>
             <p className="text-sm text-slate-600 mb-4">
-              This calculator uses industry benchmarks and Zyglio's proven results to project your ROI. 
-              Actual results may vary based on your specific implementation and use case.
+              This enhanced calculator includes supervisor costs, material wastage, recruitment/retention benefits, and branding value. 
+              Results are based on industry benchmarks and Zyglio's proven outcomes.
             </p>
             <div className="text-xs text-slate-500 space-y-1">
               <div>• Training cost reduction: 70% (industry average with Zyglio)</div>
               <div>• Productivity improvement: 4x faster competency development</div>
               <div>• Risk reduction: 60% fewer errors and compliance issues</div>
+              <div>• Supervisor time savings: 50% reduction in oversight needed</div>
+              <div>• Material waste reduction: 60% less training material waste</div>
+              <div>• Turnover reduction: 40% improvement in retention</div>
+              <div>• Branding benefit: 80% realization of enhanced employer brand value</div>
               <div>• Zyglio cost estimated at 30% of current training expenses</div>
             </div>
           </div>
