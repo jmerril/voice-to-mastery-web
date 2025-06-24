@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { Calculator, TrendingUp, DollarSign, Users, Clock, UserCheck, Megaphone } from "lucide-react";
+import { Calculator, TrendingUp, DollarSign, Users, Clock, UserCheck, Megaphone, Zap, Brain, Target, Database } from "lucide-react";
 
 const InteractiveROICalculator = () => {
   const [inputs, setInputs] = useState({
@@ -141,342 +141,338 @@ const InteractiveROICalculator = () => {
 
   return (
     <div className="space-y-8">
-      <Card>
-        <CardHeader className="text-center">
-          <div className="mx-auto mb-4 p-3 bg-blue-100 rounded-full w-fit">
-            <Calculator className="h-8 w-8 text-blue-600" />
+      <Card className="relative overflow-hidden border-0 shadow-2xl">
+        {/* Tech Background Pattern */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:2rem_2rem] opacity-20" />
+        
+        <CardHeader className="text-center relative z-10 py-12">
+          <div className="mx-auto mb-6 p-4 bg-gradient-to-br from-cyan-400/20 to-blue-400/20 backdrop-blur-md rounded-full w-fit border border-cyan-400/30">
+            <Calculator className="h-12 w-12 text-cyan-400" />
           </div>
-          <CardTitle className="text-3xl">Interactive ROI Calculator</CardTitle>
-          <CardDescription className="text-lg">
-            Enter your company's data to see your personalized ROI projection
+          <CardTitle className="text-4xl font-bold text-white mb-4">
+            AI-Powered ROI Calculator
+          </CardTitle>
+          <CardDescription className="text-xl text-blue-200 max-w-2xl mx-auto">
+            Enter your organization's data to discover your personalized training transformation potential
           </CardDescription>
         </CardHeader>
-        <CardContent>
-          <div className="grid md:grid-cols-2 gap-8">
+        
+        <CardContent className="relative z-10 pb-12">
+          <div className="grid lg:grid-cols-2 gap-12">
             {/* Input Section */}
-            <div className="space-y-6">
-              <h3 className="text-xl font-semibold mb-4">Your Company Data</h3>
-              
-              <div className="space-y-4">
-                <div>
-                  <Label htmlFor="employees">Number of Employees</Label>
-                  <Input
-                    id="employees"
-                    type="number"
-                    value={inputs.employees}
-                    onChange={(e) => handleInputChange('employees', e.target.value)}
-                    className="mt-1"
-                  />
-                </div>
+            <div className="space-y-8">
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                  <Users className="h-6 w-6 mr-3 text-cyan-400" />
+                  Organization Profile
+                </h3>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="employees" className="text-white font-medium">Number of Employees</Label>
+                    <Input
+                      id="employees"
+                      type="number"
+                      value={inputs.employees}
+                      onChange={(e) => handleInputChange('employees', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="100"
+                    />
+                  </div>
 
-                <div>
-                  <Label htmlFor="averageSalary">Average Employee Salary ($)</Label>
-                  <Input
-                    id="averageSalary"
-                    type="number"
-                    value={inputs.averageSalary}
-                    onChange={(e) => handleInputChange('averageSalary', e.target.value)}
-                    className="mt-1"
-                  />
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="averageSalary" className="text-white font-medium">Average Salary ($)</Label>
+                    <Input
+                      id="averageSalary"
+                      type="number"
+                      value={inputs.averageSalary}
+                      onChange={(e) => handleInputChange('averageSalary', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="75,000"
+                    />
+                  </div>
 
-                <div>
-                  <Label htmlFor="trainingHours">Training Hours Per Employee/Year</Label>
-                  <Input
-                    id="trainingHours"
-                    type="number"
-                    value={inputs.trainingHoursPerYear}
-                    onChange={(e) => handleInputChange('trainingHoursPerYear', e.target.value)}
-                    className="mt-1"
-                  />
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="trainingHours" className="text-white font-medium">Training Hours/Year</Label>
+                    <Input
+                      id="trainingHours"
+                      type="number"
+                      value={inputs.trainingHoursPerYear}
+                      onChange={(e) => handleInputChange('trainingHoursPerYear', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="40"
+                    />
+                  </div>
 
-                <div>
-                  <Label htmlFor="trainingCost">Current Training Cost Per Hour ($)</Label>
-                  <Input
-                    id="trainingCost"
-                    type="number"
-                    value={inputs.currentTrainingCostPerHour}
-                    onChange={(e) => handleInputChange('currentTrainingCostPerHour', e.target.value)}
-                    className="mt-1"
-                  />
+                  <div className="space-y-2">
+                    <Label htmlFor="trainingCost" className="text-white font-medium">Training Cost/Hour ($)</Label>
+                    <Input
+                      id="trainingCost"
+                      type="number"
+                      value={inputs.currentTrainingCostPerHour}
+                      onChange={(e) => handleInputChange('currentTrainingCostPerHour', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="150"
+                    />
+                  </div>
                 </div>
+              </div>
 
-                <div>
-                  <Label htmlFor="supervisorCost">Supervisor Cost Per Hour ($)</Label>
-                  <Input
-                    id="supervisorCost"
-                    type="number"
-                    value={inputs.supervisorCostPerHour}
-                    onChange={(e) => handleInputChange('supervisorCostPerHour', e.target.value)}
-                    className="mt-1"
-                  />
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                  <Clock className="h-6 w-6 mr-3 text-purple-400" />
+                  Operational Metrics
+                </h3>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="productivityLoss" className="text-white font-medium">Hours to Competency</Label>
+                    <Input
+                      id="productivityLoss"
+                      type="number"
+                      value={inputs.productivityLossHours}
+                      onChange={(e) => handleInputChange('productivityLossHours', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="160"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="errorCost" className="text-white font-medium">Annual Error Cost ($)</Label>
+                    <Input
+                      id="errorCost"
+                      type="number"
+                      value={inputs.errorCostPerYear}
+                      onChange={(e) => handleInputChange('errorCostPerYear', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="50,000"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="turnoverRate" className="text-white font-medium">Turnover Rate (%)</Label>
+                    <Input
+                      id="turnoverRate"
+                      type="number"
+                      value={inputs.turnoverRate}
+                      onChange={(e) => handleInputChange('turnoverRate', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="15"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="complianceRisk" className="text-white font-medium">Compliance Risk Cost ($)</Label>
+                    <Input
+                      id="complianceRisk"
+                      type="number"
+                      value={inputs.complianceRiskCost}
+                      onChange={(e) => handleInputChange('complianceRiskCost', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="25,000"
+                    />
+                  </div>
                 </div>
+              </div>
 
-                <div>
-                  <Label htmlFor="supervisorHours">Supervisor Hours Per Training Session</Label>
-                  <Input
-                    id="supervisorHours"
-                    type="number"
-                    value={inputs.supervisorHoursPerTraining}
-                    onChange={(e) => handleInputChange('supervisorHoursPerTraining', e.target.value)}
-                    className="mt-1"
-                  />
-                </div>
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                  <Zap className="h-6 w-6 mr-3 text-yellow-400" />
+                  Strategic Value Drivers
+                </h3>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="aiIntegration" className="text-white font-medium flex items-center">
+                      <Brain className="h-4 w-4 mr-2 text-cyan-400" />
+                      AI Training Value ($)
+                    </Label>
+                    <Input
+                      id="aiIntegration"
+                      type="number"
+                      value={inputs.aiIntegrationValue}
+                      onChange={(e) => handleInputChange('aiIntegrationValue', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="150,000"
+                    />
+                  </div>
 
-                <div>
-                  <Label htmlFor="materialWastage">Material Wastage Cost Per Employee ($)</Label>
-                  <Input
-                    id="materialWastage"
-                    type="number"
-                    value={inputs.materialWastageCostPerEmployee}
-                    onChange={(e) => handleInputChange('materialWastageCostPerEmployee', e.target.value)}
-                    className="mt-1"
-                  />
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="employeeAgility" className="text-white font-medium flex items-center">
+                      <Target className="h-4 w-4 mr-2 text-green-400" />
+                      Employee Agility Value ($)
+                    </Label>
+                    <Input
+                      id="employeeAgility"
+                      type="number"
+                      value={inputs.employeeAgilityValue}
+                      onChange={(e) => handleInputChange('employeeAgilityValue', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="120,000"
+                    />
+                  </div>
 
-                <div>
-                  <Label htmlFor="productivityLoss">Hours to Employee Competency</Label>
-                  <Input
-                    id="productivityLoss"
-                    type="number"
-                    value={inputs.productivityLossHours}
-                    onChange={(e) => handleInputChange('productivityLossHours', e.target.value)}
-                    className="mt-1"
-                  />
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="tribalKnowledge" className="text-white font-medium flex items-center">
+                      <Database className="h-4 w-4 mr-2 text-orange-400" />
+                      Knowledge Capture Value ($)
+                    </Label>
+                    <Input
+                      id="tribalKnowledge"
+                      type="number"
+                      value={inputs.tribalKnowledgeValue}
+                      onChange={(e) => handleInputChange('tribalKnowledgeValue', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="180,000"
+                    />
+                  </div>
 
-                <div>
-                  <Label htmlFor="errorCost">Annual Cost of Errors/Mistakes ($)</Label>
-                  <Input
-                    id="errorCost"
-                    type="number"
-                    value={inputs.errorCostPerYear}
-                    onChange={(e) => handleInputChange('errorCostPerYear', e.target.value)}
-                    className="mt-1"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="complianceRisk">Annual Compliance Risk Cost ($)</Label>
-                  <Input
-                    id="complianceRisk"
-                    type="number"
-                    value={inputs.complianceRiskCost}
-                    onChange={(e) => handleInputChange('complianceRiskCost', e.target.value)}
-                    className="mt-1"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="recruitmentCost">Recruitment Cost Per Employee ($)</Label>
-                  <Input
-                    id="recruitmentCost"
-                    type="number"
-                    value={inputs.recruitmentCostPerEmployee}
-                    onChange={(e) => handleInputChange('recruitmentCostPerEmployee', e.target.value)}
-                    className="mt-1"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="turnoverRate">Annual Turnover Rate (%)</Label>
-                  <Input
-                    id="turnoverRate"
-                    type="number"
-                    value={inputs.turnoverRate}
-                    onChange={(e) => handleInputChange('turnoverRate', e.target.value)}
-                    className="mt-1"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="brandingBenefit">Annual Branding/Marketing Benefit ($)</Label>
-                  <Input
-                    id="brandingBenefit"
-                    type="number"
-                    value={inputs.brandingMarketingBenefit}
-                    onChange={(e) => handleInputChange('brandingMarketingBenefit', e.target.value)}
-                    className="mt-1"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="competitiveAdvantage">Annual Competitive Advantage Value ($)</Label>
-                  <Input
-                    id="competitiveAdvantage"
-                    type="number"
-                    value={inputs.competitiveAdvantageValue}
-                    onChange={(e) => handleInputChange('competitiveAdvantageValue', e.target.value)}
-                    className="mt-1"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="aiIntegration">Annual AI Integration Value ($)</Label>
-                  <Input
-                    id="aiIntegration"
-                    type="number"
-                    value={inputs.aiIntegrationValue}
-                    onChange={(e) => handleInputChange('aiIntegrationValue', e.target.value)}
-                    className="mt-1"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="employeeAgility">Annual Employee Agility Value ($)</Label>
-                  <Input
-                    id="employeeAgility"
-                    type="number"
-                    value={inputs.employeeAgilityValue}
-                    onChange={(e) => handleInputChange('employeeAgilityValue', e.target.value)}
-                    className="mt-1"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="tribalKnowledge">Annual Tribal Knowledge Capture Value ($)</Label>
-                  <Input
-                    id="tribalKnowledge"
-                    type="number"
-                    value={inputs.tribalKnowledgeValue}
-                    onChange={(e) => handleInputChange('tribalKnowledgeValue', e.target.value)}
-                    className="mt-1"
-                  />
+                  <div className="space-y-2">
+                    <Label htmlFor="competitiveAdvantage" className="text-white font-medium flex items-center">
+                      <TrendingUp className="h-4 w-4 mr-2 text-purple-400" />
+                      Competitive Advantage ($)
+                    </Label>
+                    <Input
+                      id="competitiveAdvantage"
+                      type="number"
+                      value={inputs.competitiveAdvantageValue}
+                      onChange={(e) => handleInputChange('competitiveAdvantageValue', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="200,000"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Results Section */}
-            <div className="space-y-6">
-              <h3 className="text-xl font-semibold mb-4">Your ROI Projection</h3>
-              
-              <div className="space-y-4">
-                <Card className="bg-red-50 border-red-200">
-                  <CardContent className="p-4">
-                    <div className="flex items-center mb-2">
-                      <DollarSign className="h-5 w-5 text-red-600 mr-2" />
-                      <span className="font-medium text-red-800">Current Annual Cost</span>
-                    </div>
-                    <div className="text-2xl font-bold text-red-600">
-                      {formatCurrency(results.currentAnnualCost)}
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-blue-50 border-blue-200">
-                  <CardContent className="p-4">
-                    <div className="flex items-center mb-2">
-                      <DollarSign className="h-5 w-5 text-blue-600 mr-2" />
-                      <span className="font-medium text-blue-800">Zyglio Annual Cost</span>
-                    </div>
-                    <div className="text-2xl font-bold text-blue-600">
-                      {formatCurrency(results.zyglioAnnualCost)}
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-green-50 border-green-200">
-                  <CardContent className="p-4">
-                    <div className="flex items-center mb-2">
-                      <TrendingUp className="h-5 w-5 text-green-600 mr-2" />
-                      <span className="font-medium text-green-800">Annual Savings</span>
-                    </div>
-                    <div className="text-2xl font-bold text-green-600">
-                      {formatCurrency(results.annualSavings)}
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <Card className="bg-purple-50 border-purple-200">
-                    <CardContent className="p-4 text-center">
-                      <div className="text-3xl font-bold text-purple-600">
-                        {Math.round(results.roiPercentage)}%
+            <div className="space-y-8">
+              <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur-md rounded-2xl p-8 border border-green-400/30">
+                <h3 className="text-2xl font-bold text-white mb-8 flex items-center">
+                  <TrendingUp className="h-6 w-6 mr-3 text-green-400" />
+                  Your ROI Analysis
+                </h3>
+                
+                <div className="grid grid-cols-2 gap-6 mb-8">
+                  <Card className="bg-red-500/20 border-red-400/30 backdrop-blur-md">
+                    <CardContent className="p-6 text-center">
+                      <DollarSign className="h-8 w-8 text-red-400 mx-auto mb-3" />
+                      <div className="text-sm text-red-200 mb-2">Current Annual Cost</div>
+                      <div className="text-2xl font-bold text-red-300">
+                        {formatCurrency(results.currentAnnualCost)}
                       </div>
-                      <div className="text-sm text-purple-800">ROI</div>
                     </CardContent>
                   </Card>
 
-                  <Card className="bg-orange-50 border-orange-200">
-                    <CardContent className="p-4 text-center">
-                      <div className="text-3xl font-bold text-orange-600">
-                        {Math.round(results.paybackMonths)}
+                  <Card className="bg-blue-500/20 border-blue-400/30 backdrop-blur-md">
+                    <CardContent className="p-6 text-center">
+                      <Calculator className="h-8 w-8 text-blue-400 mx-auto mb-3" />
+                      <div className="text-sm text-blue-200 mb-2">Zyglio Annual Cost</div>
+                      <div className="text-2xl font-bold text-blue-300">
+                        {formatCurrency(results.zyglioAnnualCost)}
                       </div>
-                      <div className="text-sm text-orange-800">Months Payback</div>
                     </CardContent>
                   </Card>
                 </div>
 
-                <div className="space-y-2 text-sm text-slate-600">
-                  <div className="flex justify-between">
-                    <span>Training Cost Savings:</span>
-                    <span className="font-medium">{formatCurrency(results.totalAnnualValue - results.productivityGains - results.riskReduction - results.supervisorSavings - results.materialSavings - results.recruitmentSavings - results.brandingBenefits - results.competitiveAdvantage - results.aiIntegrationBenefits - results.employeeAgilityBenefits - results.tribalKnowledgeBenefits)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Productivity Gains:</span>
-                    <span className="font-medium">{formatCurrency(results.productivityGains)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Risk Reduction:</span>
-                    <span className="font-medium">{formatCurrency(results.riskReduction)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Supervisor Savings:</span>
-                    <span className="font-medium">{formatCurrency(results.supervisorSavings)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Material Savings:</span>
-                    <span className="font-medium">{formatCurrency(results.materialSavings)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Recruitment Savings:</span>
-                    <span className="font-medium">{formatCurrency(results.recruitmentSavings)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Branding Benefits:</span>
-                    <span className="font-medium">{formatCurrency(results.brandingBenefits)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Competitive Advantage:</span>
-                    <span className="font-medium">{formatCurrency(results.competitiveAdvantage)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>AI Integration Benefits:</span>
-                    <span className="font-medium">{formatCurrency(results.aiIntegrationBenefits)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Employee Agility Benefits:</span>
-                    <span className="font-medium">{formatCurrency(results.employeeAgilityBenefits)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Tribal Knowledge Benefits:</span>
-                    <span className="font-medium">{formatCurrency(results.tribalKnowledgeBenefits)}</span>
+                <Card className="bg-gradient-to-r from-green-500/30 to-emerald-500/30 border-green-400/40 backdrop-blur-md mb-8">
+                  <CardContent className="p-8 text-center">
+                    <TrendingUp className="h-12 w-12 text-green-400 mx-auto mb-4" />
+                    <div className="text-lg text-green-200 mb-3">Total Annual Value Created</div>
+                    <div className="text-4xl font-bold text-green-300 mb-6">
+                      {formatCurrency(results.annualSavings)}
+                    </div>
+                    
+                    <div className="grid grid-cols-2 gap-6">
+                      <div className="bg-white/10 rounded-xl p-4">
+                        <div className="text-3xl font-bold text-purple-300">
+                          {Math.round(results.roiPercentage)}%
+                        </div>
+                        <div className="text-sm text-purple-200">ROI</div>
+                      </div>
+                      <div className="bg-white/10 rounded-xl p-4">
+                        <div className="text-3xl font-bold text-orange-300">
+                          {Math.round(results.paybackMonths)}
+                        </div>
+                        <div className="text-sm text-orange-200">Months Payback</div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <div className="bg-white/10 backdrop-blur-md rounded-xl p-6">
+                  <h4 className="text-lg font-semibold text-white mb-4">Value Breakdown</h4>
+                  <div className="space-y-3 text-sm">
+                    <div className="flex justify-between items-center">
+                      <span className="text-blue-200 flex items-center">
+                        <Brain className="h-4 w-4 mr-2 text-cyan-400" />
+                        AI Integration Benefits:
+                      </span>
+                      <span className="font-medium text-cyan-300">{formatCurrency(results.aiIntegrationBenefits)}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-blue-200 flex items-center">
+                        <Target className="h-4 w-4 mr-2 text-green-400" />
+                        Employee Agility Benefits:
+                      </span>
+                      <span className="font-medium text-green-300">{formatCurrency(results.employeeAgilityBenefits)}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-blue-200 flex items-center">
+                        <Database className="h-4 w-4 mr-2 text-orange-400" />
+                        Knowledge Capture Benefits:
+                      </span>
+                      <span className="font-medium text-orange-300">{formatCurrency(results.tribalKnowledgeBenefits)}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-blue-200 flex items-center">
+                        <TrendingUp className="h-4 w-4 mr-2 text-purple-400" />
+                        Competitive Advantage:
+                      </span>
+                      <span className="font-medium text-purple-300">{formatCurrency(results.competitiveAdvantage)}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-blue-200">Productivity Gains:</span>
+                      <span className="font-medium text-white">{formatCurrency(results.productivityGains)}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-blue-200">Risk Reduction:</span>
+                      <span className="font-medium text-white">{formatCurrency(results.riskReduction)}</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="mt-8 p-6 bg-slate-50 rounded-lg">
-            <h4 className="font-semibold mb-2">About This Calculation</h4>
-            <p className="text-sm text-slate-600 mb-4">
-              This comprehensive calculator includes all aspects of training ROI: supervisor costs, material wastage, recruitment/retention benefits, branding value, competitive advantage improvements, AI integration value, employee agility benefits, and tribal knowledge capture. 
-              Results are based on industry benchmarks and Zyglio's proven outcomes.
+          <div className="mt-12 p-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+            <h4 className="font-semibold text-white text-lg mb-4 flex items-center">
+              <Calculator className="h-5 w-5 mr-2 text-cyan-400" />
+              Methodology & Assumptions
+            </h4>
+            <p className="text-blue-200 mb-6 leading-relaxed">
+              This comprehensive ROI calculator incorporates all measurable training value drivers including AI integration benefits, 
+              employee agility improvements, tribal knowledge capture, competitive positioning, and traditional cost savings. 
+              Results are based on industry benchmarks and Zyglio's proven client outcomes.
             </p>
-            <div className="text-xs text-slate-500 space-y-1">
-              <div>• Training cost reduction: 70% (industry average with Zyglio)</div>
-              <div>• Productivity improvement: 4x faster competency development</div>
-              <div>• Risk reduction: 60% fewer errors and compliance issues</div>
-              <div>• Supervisor time savings: 50% reduction in oversight needed</div>
-              <div>• Material waste reduction: 60% less training material waste</div>
-              <div>• Turnover reduction: 40% improvement in retention</div>
-              <div>• Branding benefit: 80% realization of enhanced employer brand value</div>
-              <div>• Competitive advantage: 60% realization of improved competitive position</div>
-              <div>• AI integration benefits: 70% realization of AI-powered training value</div>
-              <div>• Employee agility benefits: 75% realization of best practices adoption</div>
-              <div>• Tribal knowledge benefits: 80% realization of knowledge capture value</div>
-              <div>• Zyglio cost estimated at 30% of current training expenses</div>
+            <div className="grid md:grid-cols-2 gap-6 text-xs text-blue-300">
+              <div className="space-y-2">
+                <div>• Training cost reduction: 70% (industry average)</div>
+                <div>• Productivity improvement: 4x faster competency</div>
+                <div>• Risk reduction: 60% fewer errors</div>
+                <div>• Material waste reduction: 60% less waste</div>
+                <div>• Turnover reduction: 40% improvement</div>
+                <div>• AI integration benefits: 70% realization</div>
+              </div>
+              <div className="space-y-2">
+                <div>• Employee agility benefits: 75% realization</div>
+                <div>• Knowledge capture: 80% realization</div>
+                <div>• Competitive advantage: 60% realization</div>
+                <div>• Supervisor time savings: 50% reduction</div>
+                <div>• Branding benefit: 80% realization</div>
+                <div>• Zyglio cost: 30% of current training expenses</div>
+              </div>
             </div>
           </div>
         </CardContent>

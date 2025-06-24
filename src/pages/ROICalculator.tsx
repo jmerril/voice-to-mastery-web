@@ -51,53 +51,77 @@ const ROICalculator = () => {
       <Navigation />
       
       <main className="pt-20">
-        {/* Enhanced Hero Section */}
-        <section className="py-24 px-4 bg-gradient-to-br from-blue-50 via-slate-50 to-purple-50 relative overflow-hidden">
-          <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-          <div className="max-w-5xl mx-auto text-center relative">
-            <div className="inline-flex items-center space-x-2 mb-6 px-4 py-2 bg-blue-100 rounded-full">
-              <Calculator className="h-5 w-5 text-blue-600" />
-              <span className="text-blue-800 font-medium">ROI Calculator</span>
+        {/* Enhanced Hero Section with Tech Background */}
+        <section className="relative py-32 px-4 overflow-hidden">
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
+            }}
+          />
+          
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/95 via-slate-900/90 to-purple-900/95" />
+          
+          {/* Animated Grid Pattern */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f46e5_1px,transparent_1px),linear-gradient(to_bottom,#4f46e5_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
+          </div>
+          
+          {/* Floating Elements */}
+          <div className="absolute top-20 left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl animate-pulse" />
+          <div className="absolute bottom-32 right-16 w-32 h-32 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-1000" />
+          <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-cyan-500/20 rounded-full blur-xl animate-pulse delay-500" />
+          
+          <div className="max-w-6xl mx-auto text-center relative z-10">
+            <div className="inline-flex items-center space-x-3 mb-8 px-6 py-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+              <Calculator className="h-6 w-6 text-cyan-400" />
+              <span className="text-white font-semibold text-lg">AI-Powered ROI Calculator</span>
             </div>
             
-            <h1 className="text-6xl font-bold text-slate-900 mb-6 leading-tight">
+            <h1 className="text-7xl font-bold text-white mb-8 leading-tight">
               Calculate Your
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block">
+              <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Training ROI
               </span>
             </h1>
             
-            <p className="text-xl text-slate-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Stop treating training as a cost center. Discover how Zyglio transforms your training investment 
-              into measurable business value, competitive advantage, and sustainable growth.
+            <p className="text-2xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+              Transform training from cost center to competitive advantage. 
+              <span className="text-cyan-300 font-semibold"> Discover your personalized ROI </span>
+              with our advanced calculator.
             </p>
             
-            <div className="flex items-center justify-center space-x-8 mb-8">
-              <div className="flex items-center space-x-2">
-                <DollarSign className="h-6 w-6 text-green-600" />
-                <span className="text-slate-700 font-medium">Instant ROI Analysis</span>
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div className="flex flex-col items-center space-y-3 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+                <DollarSign className="h-10 w-10 text-green-400" />
+                <span className="text-white font-semibold text-lg">Instant Analysis</span>
+                <span className="text-blue-200 text-center">Real-time ROI calculations</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <TrendingUp className="h-6 w-6 text-blue-600" />
-                <span className="text-slate-700 font-medium">Personalized Results</span>
+              <div className="flex flex-col items-center space-y-3 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+                <TrendingUp className="h-10 w-10 text-blue-400" />
+                <span className="text-white font-semibold text-lg">Personalized Results</span>
+                <span className="text-blue-200 text-center">Tailored to your organization</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Shield className="h-6 w-6 text-purple-600" />
-                <span className="text-slate-700 font-medium">Risk-Free Analysis</span>
+              <div className="flex flex-col items-center space-y-3 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+                <Shield className="h-10 w-10 text-purple-400" />
+                <span className="text-white font-semibold text-lg">Enterprise Grade</span>
+                <span className="text-blue-200 text-center">Proven methodologies</span>
               </div>
             </div>
           </div>
         </section>
 
         {/* Interactive ROI Calculator */}
-        <section className="py-20 px-4 bg-white">
+        <section className="py-24 px-4 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
           <div className="max-w-7xl mx-auto">
             <InteractiveROICalculator />
           </div>
         </section>
 
         {/* Value Propositions */}
-        <section className="py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
+        <section className="py-20 px-4 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-slate-900 mb-6">
@@ -130,7 +154,7 @@ const ROICalculator = () => {
         </section>
 
         {/* ROI Highlights */}
-        <section className="py-20 px-4 bg-white">
+        <section className="py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-slate-900 mb-6">
