@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -14,6 +15,7 @@ import About from "./pages/About";
 import Demo from "./pages/Demo";
 import NotFound from "./pages/NotFound";
 import ZyglioLanding from "./pages/ZyglioLanding";
+import ROICalculator from "./pages/ROICalculator";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +35,7 @@ const App = () => {
               <Route path="/technology" element={<Technology />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/pricing" element={<Pricing />} />
+              <Route path="/roi-calculator" element={<ROICalculator />} />
               <Route path="/about" element={<About />} />
               <Route path="/demo" element={<Demo />} />
               <Route path="*" element={<NotFound />} />

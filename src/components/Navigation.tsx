@@ -15,6 +15,7 @@ const Navigation = () => {
     { name: "Industries", path: "/industries" },
     { name: "Technology", path: "/technology" },
     { name: "Case Studies", path: "/case-studies" },
+    { name: "ROI Calculator", path: "/roi-calculator" },
     { name: "Pricing", path: "/pricing" },
     { name: "About", path: "/about" }
   ];
