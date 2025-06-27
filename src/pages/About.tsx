@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Users, Target, Award, Zap, Brain, Blocks, Gamepad2, Sparkles, Cpu, Globe, ArrowRight, CheckCircle, Mic, Headphones, Play, BookOpen, MessageSquare, Shield, Stethoscope, Plane } from "lucide-react";
+import { Users, Target, Award, Zap, Brain, Blocks, Gamepad2, Sparkles, Cpu, Globe, ArrowRight, CheckCircle, Mic, Headphones, Play, BookOpen, MessageSquare, Shield, Stethoscope, Plane, Bot } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const About = () => {
@@ -22,6 +22,69 @@ const About = () => {
               We're building the future of education through AI-powered simulations that transform 
               tribal knowledge into immersive, adaptive learning experiences.
             </p>
+          </div>
+
+          {/* AI-First Approach Section */}
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-blue-100 rounded-full px-4 py-2 mb-4">
+                <Bot className="h-5 w-5 text-purple-600" />
+                <span className="text-purple-800 font-medium">AI-First Philosophy</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+                Why We're 
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600"> AI-First</span>
+              </h2>
+            </div>
+
+            <Card className="p-8 bg-gradient-to-br from-purple-50 to-blue-50 border-purple-200 shadow-xl">
+              <CardContent className="p-0">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Sparkles className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-slate-800 mb-4">Embracing AI-First Innovation</h3>
+                    <div className="text-slate-700 leading-relaxed space-y-4 text-lg">
+                      <p>
+                        At Zyglio.ai, we are embracing an AI-first approach because the most successful and innovative companies today are those that put artificial intelligence at the core of their operations. AI-first organizations consistently demonstrate how building around intelligent systems leads to rapid growth, breakthrough products, and remarkable efficiency—even with lean teams.
+                      </p>
+                      <p>
+                        By making AI the foundation of Zyglio.ai, we are able to deliver scalable, adaptive, and highly personalized solutions that transform how expertise is captured, shared, and applied—starting with surgical training and extending far beyond. This strategy empowers us to stay agile, continuously innovate, and provide exceptional value to our users in a world where technology and knowledge are evolving faster than ever.
+                      </p>
+                      <p className="font-semibold text-purple-800">
+                        We believe that being AI-first is not just a competitive advantage, but the key to shaping the future of learning, professional development, and impact across industries.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* AI Benefits Grid */}
+                <div className="grid md:grid-cols-3 gap-6 mt-8">
+                  <div className="bg-white/70 backdrop-blur-sm rounded-xl p-4 border border-purple-200">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Zap className="h-5 w-5 text-purple-600" />
+                      <span className="font-semibold text-slate-800">Rapid Growth</span>
+                    </div>
+                    <p className="text-sm text-slate-600">AI enables exponential scaling without proportional resource increases</p>
+                  </div>
+                  <div className="bg-white/70 backdrop-blur-sm rounded-xl p-4 border border-blue-200">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Brain className="h-5 w-5 text-blue-600" />
+                      <span className="font-semibold text-slate-800">Breakthrough Products</span>
+                    </div>
+                    <p className="text-sm text-slate-600">Intelligent systems create entirely new categories of solutions</p>
+                  </div>
+                  <div className="bg-white/70 backdrop-blur-sm rounded-xl p-4 border border-green-200">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Target className="h-5 w-5 text-green-600" />
+                      <span className="font-semibold text-slate-800">Remarkable Efficiency</span>
+                    </div>
+                    <p className="text-sm text-slate-600">Lean teams achieve more with AI-powered automation and insights</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Meet the Team Section */}
