@@ -1,4 +1,5 @@
 
+import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -25,7 +26,9 @@ const Pharmaceutical = () => {
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%226%22%20cy%3D%226%22%20r%3D%226%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 opacity-20" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg%20width%3D%2760%27%20height%3D%2760%27%20viewBox%3D%270%200%2060%2060%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3Cg%20fill%3D%27none%27%20fill-rule%3D%27evenodd%27%3E%3Cg%20fill%3D%27%239C92AC%27%20fill-opacity%3D%270.1%27%3E%3Ccircle%20cx%3D%276%27%20cy%3D%276%27%20r%3D%276%27/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-12">
@@ -187,25 +190,25 @@ const Pharmaceutical = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-white">
               <CardContent className="p-0 text-center">
-                <p className="text-lg font-semibold">"Not a Slide Deck. A Clinical Experience."</p>
+                <p className="text-lg font-semibold">Not a Slide Deck. A Clinical Experience.</p>
               </CardContent>
             </Card>
             
             <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-white">
               <CardContent className="p-0 text-center">
-                <p className="text-lg font-semibold">"From Information to Insight—One Story at a Time."</p>
+                <p className="text-lg font-semibold">From Information to Insight—One Story at a Time.</p>
               </CardContent>
             </Card>
             
             <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-white">
               <CardContent className="p-0 text-center">
-                <p className="text-lg font-semibold">"Activate Engagement Through AI-Driven Storytelling."</p>
+                <p className="text-lg font-semibold">Activate Engagement Through AI-Driven Storytelling.</p>
               </CardContent>
             </Card>
             
             <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-white">
               <CardContent className="p-0 text-center">
-                <p className="text-lg font-semibold">"Your Innovation, Their Journey—Told with Zyglio."</p>
+                <p className="text-lg font-semibold">Your Innovation, Their Journey—Told with Zyglio.</p>
               </CardContent>
             </Card>
           </div>
@@ -225,7 +228,7 @@ const Pharmaceutical = () => {
                 <div className="mb-4">
                   <Target className="mx-auto text-blue-600" size={48} />
                 </div>
-                <h3 className="text-xl font-bold text-blue-800 mb-4">"Move Beyond the Brochure"</h3>
+                <h3 className="text-xl font-bold text-blue-800 mb-4">Move Beyond the Brochure</h3>
                 <p className="text-blue-700">
                   Create emotionally engaging, evidence-based stories your audience will remember.
                 </p>
@@ -237,7 +240,7 @@ const Pharmaceutical = () => {
                 <div className="mb-4">
                   <Globe className="mx-auto text-green-600" size={48} />
                 </div>
-                <h3 className="text-xl font-bold text-green-800 mb-4">"Built for Global Teams"</h3>
+                <h3 className="text-xl font-bold text-green-800 mb-4">Built for Global Teams</h3>
                 <p className="text-green-700">
                   Deliver in multiple languages, with clinical and regulatory sensitivity.
                 </p>
@@ -249,7 +252,7 @@ const Pharmaceutical = () => {
                 <div className="mb-4">
                   <TrendingUp className="mx-auto text-purple-600" size={48} />
                 </div>
-                <h3 className="text-xl font-bold text-purple-800 mb-4">"Designed for Impact"</h3>
+                <h3 className="text-xl font-bold text-purple-800 mb-4">Designed for Impact</h3>
                 <p className="text-purple-700">
                   Built-in analytics, voice-enabled pathways, and simulation tracking ensure measurable results.
                 </p>
