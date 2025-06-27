@@ -125,7 +125,7 @@ const About = () => {
                     </div>
                   </div>
                   <p className="text-slate-600 mb-4 leading-relaxed">
-                    Former executives from leading EdTech and AI companies with proven track records 
+                    World-class experts in eLearning and SaaS educational products with proven track records 
                     of scaling innovative educational technologies and building successful teams.
                   </p>
                   <div className="space-y-2">
@@ -135,7 +135,7 @@ const About = () => {
                     </div>
                     <div className="flex items-center gap-2 text-sm text-slate-600">
                       <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                      <span>EdTech Experience</span>
+                      <span>eLearning Expertise</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-slate-600">
                       <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
