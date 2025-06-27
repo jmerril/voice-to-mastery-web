@@ -25,6 +25,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Product</h4>
             <ul className="space-y-2 text-sm">
               <li><Link to="/how-it-works" className="text-slate-400 hover:text-white transition-colors">How It Works</Link></li>
+              <li><Link to="/zyglio" className="text-slate-400 hover:text-white transition-colors">Zyglio Platform</Link></li>
               <li><Link to="/technology" className="text-slate-400 hover:text-white transition-colors">Technology</Link></li>
               <li><Link to="/pricing" className="text-slate-400 hover:text-white transition-colors">Pricing</Link></li>
             </ul>
@@ -34,7 +35,9 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Solutions</h4>
             <ul className="space-y-2 text-sm">
               <li><Link to="/industries" className="text-slate-400 hover:text-white transition-colors">Industries</Link></li>
+              <li><Link to="/pharmaceutical" className="text-slate-400 hover:text-white transition-colors">Pharmaceutical</Link></li>
               <li><Link to="/case-studies" className="text-slate-400 hover:text-white transition-colors">Case Studies</Link></li>
+              <li><Link to="/roi-calculator" className="text-slate-400 hover:text-white transition-colors">ROI Calculator</Link></li>
             </ul>
           </div>
           
