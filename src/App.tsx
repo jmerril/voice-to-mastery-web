@@ -16,6 +16,7 @@ import Demo from "./pages/Demo";
 import NotFound from "./pages/NotFound";
 import ZyglioLanding from "./pages/ZyglioLanding";
 import ROICalculator from "./pages/ROICalculator";
+import Pharmaceutical from "./pages/Pharmaceutical";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => {
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/roi-calculator" element={<ROICalculator />} />
+              <Route path="/pharmaceutical" element={<Pharmaceutical />} />
               <Route path="/about" element={<About />} />
               <Route path="/demo" element={<Demo />} />
               <Route path="*" element={<NotFound />} />
