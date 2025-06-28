@@ -105,13 +105,13 @@ const About = () => {
             </div>
 
             <div className="grid lg:grid-cols-3 gap-8">
-              {/* Leadership Team */}
+              {/* Executive Leadership */}
               <Card className="p-8 bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-0">
                   <div className="mb-6">
                     <img 
-                      src="https://images.unsplash.com/photo-1486718448742-163732cd1544?w=400&h=250&fit=crop" 
-                      alt="Abstract minimalist photography of brown wavy structure representing leadership vision"
+                      src="https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a?w=400&h=250&fit=crop" 
+                      alt="Transparent glass canopy rising above modern architecture representing visionary clarity and innovation"
                       className="w-full h-48 object-cover rounded-xl"
                     />
                   </div>
@@ -120,26 +120,28 @@ const About = () => {
                       <Target className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-slate-800">Leadership Team</h3>
-                      <p className="text-blue-600 font-medium">Executive Leadership</p>
+                      <h3 className="text-xl font-bold text-slate-800">Executive Leadership</h3>
+                      <p className="text-blue-600 font-medium">Global Leaders in Scalable Learning</p>
                     </div>
                   </div>
                   <p className="text-slate-600 mb-4 leading-relaxed">
-                    World-class experts in eLearning and SaaS educational products with proven track records 
-                    of scaling innovative educational technologies and building successful teams.
+                    Zyglio's executive team blends visionary leadership with deep operational expertise across SaaS, immersive simulation, and AI-enhanced learning. With over 150 published works in simulation, learning science, and digital education, they have built and scaled platforms adopted by leading medical associations, enterprise clients, and government agencies.
+                  </p>
+                  <p className="text-slate-600 mb-4 leading-relaxed text-sm">
+                    Their track record includes patented training technologies, award-winning educational programs, and a legacy of transforming how knowledge is delivered and retained—guiding Zyglio to reshape the future of workforce development.
                   </p>
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 text-sm text-slate-600">
                       <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                      <span>Strategic Vision</span>
+                      <span>Strategic Vision Rooted in Evidence</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-slate-600">
                       <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                      <span>eLearning Expertise</span>
+                      <span>Proven Scalers of SaaS and EdTech Platforms</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-slate-600">
                       <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                      <span>Market Leadership</span>
+                      <span>Thought Leadership in Simulation & Learning Science</span>
                     </div>
                   </div>
                 </CardContent>
@@ -151,7 +153,7 @@ const About = () => {
                   <div className="mb-6">
                     <img 
                       src="https://images.unsplash.com/photo-1439337153520-7082a56a81f4?w=400&h=250&fit=crop" 
-                      alt="Abstract clear glass roof architecture representing technical transparency and innovation"
+                      alt="Worm's-eye view of glass-clad high-rise with upward motion representing engineering precision and agile problem-solving"
                       className="w-full h-48 object-cover rounded-xl"
                     />
                   </div>
@@ -161,25 +163,27 @@ const About = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-slate-800">Engineering Team</h3>
-                      <p className="text-green-600 font-medium">Technical Innovation</p>
+                      <p className="text-green-600 font-medium">Builders of Intelligent Simulation</p>
                     </div>
                   </div>
                   <p className="text-slate-600 mb-4 leading-relaxed">
-                    AI and ML experts from top technology companies specializing in educational AI, 
-                    simulation technology, and scalable platform architecture.
+                    Our engineering team consists of elite AI/ML engineers, simulation architects, and platform developers from top-tier technology and research institutions. They design and implement intelligent learning environments that respond dynamically to learner behavior, skill gaps, and workflow complexity.
+                  </p>
+                  <p className="text-slate-600 mb-4 leading-relaxed text-sm">
+                    Drawing from real-world systems in healthcare, hospitality, and industrial training, the team specializes in agile development of scalable platforms—integrating narrative simulation, adaptive learning, and multilingual voice interaction.
                   </p>
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 text-sm text-slate-600">
                       <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                      <span>AI/ML Expertise</span>
+                      <span>Expertise in Applied AI and LLMs</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-slate-600">
                       <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                      <span>Simulation Technology</span>
+                      <span>Advanced Simulation and Scenario Authoring</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-slate-600">
                       <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                      <span>Platform Architecture</span>
+                      <span>Modular, Scalable Platform Architecture</span>
                     </div>
                   </div>
                 </CardContent>
@@ -190,8 +194,8 @@ const About = () => {
                 <CardContent className="p-0">
                   <div className="mb-6">
                     <img 
-                      src="https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a?w=400&h=250&fit=crop" 
-                      alt="Abstract worm's eye view of glass building representing elevated perspective and advisory guidance"
+                      src="https://images.unsplash.com/photo-1486718448742-163732cd1544?w=400&h=250&fit=crop" 
+                      alt="Conceptual fusion representing multidisciplinary foresight and strategic depth across healthcare, aerospace, and education"
                       className="w-full h-48 object-cover rounded-xl"
                     />
                   </div>
@@ -201,25 +205,27 @@ const About = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-slate-800">Advisory Board</h3>
-                      <p className="text-orange-600 font-medium">Industry Expertise</p>
+                      <p className="text-orange-600 font-medium">Strategic Advisors</p>
                     </div>
                   </div>
                   <p className="text-slate-600 mb-4 leading-relaxed">
-                    Industry leaders in healthcare, aerospace, and education providing strategic guidance 
-                    and domain expertise for mission-critical simulation applications.
+                    Zyglio's advisory board features recognized leaders in healthcare delivery, aerospace systems, and educational innovation. With decades of frontline and executive experience, they bring invaluable insights into domains where high-fidelity simulation, safety, and certification are mission-critical.
+                  </p>
+                  <p className="text-slate-600 mb-4 leading-relaxed text-sm">
+                    Their input shapes Zyglio's strategic roadmap—ensuring our solutions meet the rigorous demands of regulated industries while remaining at the forefront of technological change and educational outcomes.
                   </p>
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 text-sm text-slate-600">
                       <Stethoscope className="w-3 h-3 text-red-500" />
-                      <span>Healthcare Leaders</span>
+                      <span>Healthcare Training & Certification Authorities</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-slate-600">
                       <Plane className="w-3 h-3 text-blue-500" />
-                      <span>Aerospace Experts</span>
+                      <span>Aerospace Simulation & Systems Experts</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-slate-600">
                       <BookOpen className="w-3 h-3 text-green-500" />
-                      <span>Education Innovators</span>
+                      <span>Innovators in Academic & Workforce Education</span>
                     </div>
                   </div>
                 </CardContent>
