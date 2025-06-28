@@ -1,3 +1,4 @@
+
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
@@ -63,13 +64,9 @@ const Pricing = () => {
               <Link to="/demo">
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                   <Phone className="mr-2 h-5 w-5" />
-                  Get Free ROI Analysis
+                  Request Demo
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
-                <Download className="mr-2 h-5 w-5" />
-                Download White Paper
-              </Button>
             </div>
           </div>
         </section>
@@ -128,55 +125,6 @@ const Pricing = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* White Paper Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto">
-            <Card className="bg-gradient-to-r from-blue-600 to-teal-600 text-white">
-              <CardHeader className="text-center">
-                <div className="mx-auto mb-4 p-3 bg-white/10 rounded-full w-fit">
-                  <Download className="h-8 w-8" />
-                </div>
-                <CardTitle className="text-3xl mb-4">
-                  Download Our ROI White Paper
-                </CardTitle>
-                <CardDescription className="text-blue-100 text-lg">
-                  "The Voice Training Revolution: How Leading Companies Are Turning Training 
-                  Into Competitive Advantage"
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="text-center">
-                <div className="mb-6">
-                  <p className="text-blue-100 mb-4">
-                    This comprehensive 24-page analysis includes:
-                  </p>
-                  <ul className="text-left inline-block text-blue-100 space-y-2">
-                    <li className="flex items-center">
-                      <Check className="h-5 w-5 mr-3 text-white" />
-                      ROI calculation frameworks and methodologies
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="h-5 w-5 mr-3 text-white" />
-                      5 detailed case studies with financial impact
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="h-5 w-5 mr-3 text-white" />
-                      Implementation roadmap and timeline
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="h-5 w-5 mr-3 text-white" />
-                      Industry-specific value creation strategies
-                    </li>
-                  </ul>
-                </div>
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
-                  <Download className="mr-2 h-5 w-5" />
-                  Download Free White Paper
-                </Button>
-              </CardContent>
-            </Card>
           </div>
         </section>
 
