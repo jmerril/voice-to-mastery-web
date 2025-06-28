@@ -210,73 +210,30 @@ const ROICalculator = () => {
           </div>
           
           <div className="relative z-10 max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-16">
-              <div>
-                <div className="bg-gradient-to-br from-purple-900 to-indigo-900 rounded-3xl p-10 shadow-2xl border-4 border-purple-200">
-                  <div className="border-l-6 border-purple-400 pl-8 mb-8">
-                    <h2 className="text-3xl font-bold text-white mb-4">Research & Methodology</h2>
-                    <p className="text-purple-200 text-lg leading-relaxed">Based on industry benchmarks and proven client outcomes.</p>
-                  </div>
-                  
-                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-inner border-2 border-white/20">
-                    <h3 className="font-bold text-white mb-6 text-xl">Key Assumptions</h3>
-                    <div className="grid grid-cols-2 gap-6">
-                      <div className="text-center bg-white/10 rounded-xl p-4 border border-white/20">
-                        <div className="text-purple-300 text-sm font-medium mb-2">Training Cost Reduction</div>
-                        <div className="font-black text-white text-2xl">70%</div>
-                      </div>
-                      <div className="text-center bg-white/10 rounded-xl p-4 border border-white/20">
-                        <div className="text-purple-300 text-sm font-medium mb-2">Productivity Improvement</div>
-                        <div className="font-black text-white text-2xl">4x</div>
-                      </div>
-                      <div className="text-center bg-white/10 rounded-xl p-4 border border-white/20">
-                        <div className="text-purple-300 text-sm font-medium mb-2">Error Reduction</div>
-                        <div className="font-black text-white text-2xl">60%</div>
-                      </div>
-                      <div className="text-center bg-white/10 rounded-xl p-4 border border-white/20">
-                        <div className="text-purple-300 text-sm font-medium mb-2">Turnover Reduction</div>
-                        <div className="font-black text-white text-2xl">40%</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div className="bg-gradient-to-br from-purple-900 to-indigo-900 rounded-3xl p-10 shadow-2xl border-4 border-purple-200">
+              <div className="border-l-6 border-purple-400 pl-8 mb-8">
+                <h2 className="text-3xl font-bold text-white mb-4">Research & Methodology</h2>
+                <p className="text-purple-200 text-lg leading-relaxed">Based on industry benchmarks and proven client outcomes.</p>
               </div>
-
-              <div>
-                <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl p-10 shadow-2xl border-4 border-orange-200">
-                  <div className="border-l-6 border-orange-500 pl-8 mb-8">
-                    <h2 className="text-3xl font-bold text-slate-900 mb-4">Client Success Stories</h2>
-                    <p className="text-slate-700 text-lg leading-relaxed">Real results from organizations like yours.</p>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-inner border-2 border-white/20">
+                <h3 className="font-bold text-white mb-6 text-xl">Key Assumptions</h3>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center bg-white/10 rounded-xl p-4 border border-white/20">
+                    <div className="text-purple-300 text-sm font-medium mb-2">Training Cost Reduction</div>
+                    <div className="font-black text-white text-2xl">70%</div>
                   </div>
-                  
-                  <div className="space-y-6">
-                    <div className="bg-white rounded-2xl p-8 shadow-xl border-3 border-blue-100 hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                      <div className="flex items-center mb-6">
-                        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mr-6 shadow-lg">
-                          <Building className="h-8 w-8 text-white" />
-                        </div>
-                        <div>
-                          <div className="font-bold text-slate-900 text-lg">Manufacturing Corp</div>
-                          <div className="text-slate-600 font-medium">500+ employees</div>
-                        </div>
-                      </div>
-                      <div className="text-4xl font-black text-green-600 mb-2">425% ROI</div>
-                      <div className="text-slate-700 font-medium">Achieved in 8 months with 65% cost reduction</div>
-                    </div>
-
-                    <div className="bg-white rounded-2xl p-8 shadow-xl border-3 border-green-100 hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                      <div className="flex items-center mb-6">
-                        <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mr-6 shadow-lg">
-                          <Shield className="h-8 w-8 text-white" />
-                        </div>
-                        <div>
-                          <div className="font-bold text-slate-900 text-lg">Healthcare System</div>
-                          <div className="text-slate-600 font-medium">1200+ employees</div>
-                        </div>
-                      </div>
-                      <div className="text-4xl font-black text-green-600 mb-2">380% ROI</div>
-                      <div className="text-slate-700 font-medium">6 month payback with 70% error reduction</div>
-                    </div>
+                  <div className="text-center bg-white/10 rounded-xl p-4 border border-white/20">
+                    <div className="text-purple-300 text-sm font-medium mb-2">Productivity Improvement</div>
+                    <div className="font-black text-white text-2xl">4x</div>
+                  </div>
+                  <div className="text-center bg-white/10 rounded-xl p-4 border border-white/20">
+                    <div className="text-purple-300 text-sm font-medium mb-2">Error Reduction</div>
+                    <div className="font-black text-white text-2xl">60%</div>
+                  </div>
+                  <div className="text-center bg-white/10 rounded-xl p-4 border border-white/20">
+                    <div className="text-purple-300 text-sm font-medium mb-2">Turnover Reduction</div>
+                    <div className="font-black text-white text-2xl">40%</div>
                   </div>
                 </div>
               </div>
