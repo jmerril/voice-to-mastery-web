@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import VideoModal from "@/components/VideoModal";
@@ -75,7 +76,7 @@ const ZyglioLanding = () => {
             />
           </div>
           
-          <div className="grid md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
+          <div className="grid md:grid-cols-6 gap-8 max-w-6xl mx-auto text-center">
             <div className="space-y-4">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
                 <span className="text-2xl">🎤</span>
@@ -99,6 +100,18 @@ const ZyglioLanding = () => {
                 <span className="text-2xl">📚</span>
               </div>
               <h3 className="text-xl font-semibold">Training</h3>
+            </div>
+            <div className="space-y-4">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
+                <span className="text-2xl">📊</span>
+              </div>
+              <h3 className="text-xl font-semibold">Assessment</h3>
+            </div>
+            <div className="space-y-4">
+              <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto">
+                <span className="text-2xl">🔄</span>
+              </div>
+              <h3 className="text-xl font-semibold">Course Improvement</h3>
             </div>
           </div>
         </div>
