@@ -1,9 +1,8 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Calculator, TrendingUp, DollarSign, Users, Clock, Zap, Brain, Target, Award, BookOpen, Banknote, GraduationCap, BarChart3 } from "lucide-react";
+import { Calculator, TrendingUp, DollarSign, Users, Clock, Zap, Brain, Target, Award, BookOpen, Banknote, GraduationCap, BarChart3, Shield, Building2 } from "lucide-react";
 
 const InteractiveROICalculator = () => {
   const [inputs, setInputs] = useState({
@@ -17,7 +16,11 @@ const InteractiveROICalculator = () => {
     educationMonetizationValue: 250000,
     simulationLicensingValue: 180000,
     trainingServicesRevenueValue: 300000,
-    certificationProgramRevenueValue: 150000
+    certificationProgramRevenueValue: 150000,
+    sponsorshipPartnershipRevenue: 100000,
+    certificateFees: 75000,
+    insuranceReduction: 120000,
+    replacementInstructionSavings: 200000
   });
 
   const [results, setResults] = useState({
@@ -45,7 +48,11 @@ const InteractiveROICalculator = () => {
       educationMonetizationValue,
       simulationLicensingValue,
       trainingServicesRevenueValue,
-      certificationProgramRevenueValue
+      certificationProgramRevenueValue,
+      sponsorshipPartnershipRevenue,
+      certificateFees,
+      insuranceReduction,
+      replacementInstructionSavings
     } = inputs;
 
     // Current costs
@@ -64,10 +71,18 @@ const InteractiveROICalculator = () => {
     const simulationLicensingBenefits = simulationLicensingValue * 0.7;
     const trainingServicesRevenueBenefits = trainingServicesRevenueValue * 0.65;
     const certificationProgramRevenueBenefits = certificationProgramRevenueValue * 0.75;
+    
+    // New revenue opportunities
+    const sponsorshipPartnershipBenefits = sponsorshipPartnershipRevenue * 0.65;
+    const certificateFeeBenefits = certificateFees * 0.8;
+    const insuranceReductionBenefits = insuranceReduction * 0.7;
+    const replacementInstructionBenefits = replacementInstructionSavings * 0.75;
 
     const totalAnnualValue = trainingSavings + productivityGains + riskReduction + 
       educationMonetizationBenefits + simulationLicensingBenefits + 
-      trainingServicesRevenueBenefits + certificationProgramRevenueBenefits;
+      trainingServicesRevenueBenefits + certificationProgramRevenueBenefits +
+      sponsorshipPartnershipBenefits + certificateFeeBenefits + 
+      insuranceReductionBenefits + replacementInstructionBenefits;
     
     const annualSavings = totalAnnualValue - zyglioAnnualCost;
     const roiPercentage = (annualSavings / zyglioAnnualCost) * 100;
@@ -135,13 +150,31 @@ const InteractiveROICalculator = () => {
         { key: 'educationMonetizationValue', label: 'Education Revenue ($)', placeholder: '250,000' },
         { key: 'trainingServicesRevenueValue', label: 'Training Services ($)', placeholder: '300,000' }
       ]
+    },
+    {
+      title: "Partnership & Fees",
+      icon: <Building2 className="h-5 w-5" />,
+      color: "from-pink-500 to-rose-600",
+      fields: [
+        { key: 'sponsorshipPartnershipRevenue', label: 'Sponsorship Revenue ($)', placeholder: '100,000' },
+        { key: 'certificateFees', label: 'Certificate Fees ($)', placeholder: '75,000' }
+      ]
+    },
+    {
+      title: "Cost Reductions",
+      icon: <Shield className="h-5 w-5" />,
+      color: "from-cyan-500 to-blue-600",
+      fields: [
+        { key: 'insuranceReduction', label: 'Insurance Savings ($)', placeholder: '120,000' },
+        { key: 'replacementInstructionSavings', label: 'Instruction Replacement ($)', placeholder: '200,000' }
+      ]
     }
   ];
 
   return (
     <div className="space-y-10">
       {/* Enhanced Input Grid */}
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {inputSections.map((section, index) => (
           <Card key={index} className="border-3 border-slate-200 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-gradient-to-br from-white to-slate-50">
             <CardContent className="p-6">
@@ -231,9 +264,9 @@ const InteractiveROICalculator = () => {
         <h4 className="font-bold text-slate-900 text-xl mb-4">Methodology</h4>
         <p className="text-slate-700 leading-relaxed mb-6 font-medium">
           Results based on industry benchmarks and Zyglio client outcomes. Key assumptions: 70% training cost reduction, 
-          4x faster competency, 60% error reduction, revenue opportunities at 60-75% realization rates.
+          4x faster competency, 60% error reduction, revenue opportunities at 60-80% realization rates, partnership and fee revenue at 65-80% rates.
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           <div className="text-center bg-white rounded-xl p-4 shadow-md border-2 border-slate-200">
             <div className="font-black text-slate-900 text-2xl mb-1">70%</div>
             <div className="text-slate-600 font-semibold text-sm">Cost Reduction</div>
@@ -249,6 +282,10 @@ const InteractiveROICalculator = () => {
           <div className="text-center bg-white rounded-xl p-4 shadow-md border-2 border-slate-200">
             <div className="font-black text-slate-900 text-2xl mb-1">65%</div>
             <div className="text-slate-600 font-semibold text-sm">Revenue Potential</div>
+          </div>
+          <div className="text-center bg-white rounded-xl p-4 shadow-md border-2 border-slate-200">
+            <div className="font-black text-slate-900 text-2xl mb-1">75%</div>
+            <div className="text-slate-600 font-semibold text-sm">Cost Savings</div>
           </div>
         </div>
       </div>
