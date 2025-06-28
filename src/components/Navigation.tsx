@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
@@ -11,7 +12,7 @@ const Navigation = () => {
     { name: "Home", path: "/" },
     { name: "How It Works", path: "/how-it-works" },
     { name: "Zyglio Platform", path: "/zyglio" },
-    { name: "Medicine", path: "/pharmaceutical" },
+    { name: "Medical", path: "/pharmaceutical" },
     { name: "Industries", path: "/industries" },
     { name: "Technology", path: "/technology" },
     { name: "Case Studies", path: "/case-studies" },
