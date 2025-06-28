@@ -14,87 +14,95 @@ const ROICalculator = () => {
       icon: <TrendingUp className="h-6 w-6" />,
       title: "Company Value",
       description: "25-40% efficiency boost",
-      detail: "Organizations using Zyglio see dramatic improvements in operational efficiency."
+      detail: "Organizations using Zyglio see dramatic improvements in operational efficiency.",
+      color: "from-emerald-500 to-teal-600"
     },
     {
       icon: <Building className="h-6 w-6" />,
       title: "Profitability", 
       description: "70% cost reduction",
-      detail: "Reduce training costs while increasing retention by 2-4x."
+      detail: "Reduce training costs while increasing retention by 2-4x.",
+      color: "from-blue-500 to-indigo-600"
     },
     {
       icon: <Shield className="h-6 w-6" />,
       title: "Risk Mitigation",
       description: "60% fewer errors",
-      detail: "Better-trained teams mean fewer costly mistakes and improved compliance."
+      detail: "Better-trained teams mean fewer costly mistakes and improved compliance.",
+      color: "from-purple-500 to-violet-600"
     }
   ];
 
   const roiHighlights = [
-    { metric: "300%", description: "Average ROI within 12 months" },
-    { metric: "70%", description: "Reduction in training costs" },
-    { metric: "4x", description: "Faster employee competency" },
-    { metric: "$2M+", description: "Average annual value created" }
+    { metric: "300%", description: "Average ROI within 12 months", color: "bg-gradient-to-br from-green-500 to-emerald-600" },
+    { metric: "70%", description: "Reduction in training costs", color: "bg-gradient-to-br from-blue-500 to-cyan-600" },
+    { metric: "4x", description: "Faster employee competency", color: "bg-gradient-to-br from-purple-500 to-indigo-600" },
+    { metric: "$2M+", description: "Average annual value created", color: "bg-gradient-to-br from-orange-500 to-red-600" }
   ];
 
   const howItWorks = [
-    { step: "1", title: "Enter Data", description: "Input your organization's training metrics" },
-    { step: "2", title: "AI Analysis", description: "Algorithm calculates personalized ROI" },
-    { step: "3", title: "Get Results", description: "Receive detailed breakdown of value" }
+    { step: "1", title: "Enter Data", description: "Input your organization's training metrics", icon: <Users className="h-5 w-5" /> },
+    { step: "2", title: "AI Analysis", description: "Algorithm calculates personalized ROI", icon: <Brain className="h-5 w-5" /> },
+    { step: "3", title: "Get Results", description: "Receive detailed breakdown of value", icon: <Target className="h-5 w-5" /> }
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
       <Navigation />
       
       <main className="pt-20">
-        {/* Condensed Hero Section */}
-        <section className="relative pt-16 pb-12 px-4 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+        {/* Enhanced Hero Section */}
+        <section className="relative pt-20 pb-16 px-4 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <div className="absolute top-10 right-5 w-64 h-64 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full opacity-20 blur-2xl"></div>
+            <div className="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full opacity-30 blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-10 left-10 w-64 h-64 bg-gradient-to-br from-emerald-200 to-teal-200 rounded-full opacity-20 blur-2xl"></div>
             <img 
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop&crop=center" 
-              alt="ROI Calculator Analytics" 
-              className="absolute top-0 right-0 w-1/3 h-full object-cover opacity-5"
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop&crop=center" 
+              alt="ROI Calculator Analytics Dashboard" 
+              className="absolute top-0 right-0 w-2/5 h-full object-cover opacity-8 rounded-l-3xl"
             />
           </div>
           
           <div className="relative z-10 max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-3 gap-8 items-center">
+            <div className="grid lg:grid-cols-5 gap-12 items-center">
               {/* Main Title Column */}
-              <div className="lg:col-span-2">
-                <Badge className="mb-4 bg-white/80 backdrop-blur-sm text-slate-700 border-slate-200 px-4 py-1">
-                  <Calculator className="w-3 h-3 mr-2" />
-                  AI-Powered ROI Calculator
-                </Badge>
-                
-                <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight">
-                  Calculate Your
-                  <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                    Training ROI
-                  </span>
-                </h1>
-                
-                <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                  Transform training from cost center to competitive advantage with our advanced calculator.
-                </p>
+              <div className="lg:col-span-3">
+                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-white/50">
+                  <Badge className="mb-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white border-0 px-6 py-2 text-sm font-semibold shadow-lg">
+                    <Calculator className="w-4 h-4 mr-2" />
+                    AI-Powered ROI Calculator
+                  </Badge>
+                  
+                  <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+                    Calculate Your
+                    <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 bg-clip-text text-transparent">
+                      Training ROI
+                    </span>
+                  </h1>
+                  
+                  <p className="text-xl text-slate-700 mb-8 leading-relaxed font-medium">
+                    Transform training from cost center to competitive advantage with our advanced scientific calculator.
+                  </p>
 
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg shadow-lg"
-                  onClick={() => document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  <Calculator className="mr-2 h-4 w-4" />
-                  Calculate Now
-                </Button>
+                  <Button 
+                    size="lg" 
+                    className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-800 text-white px-8 py-4 rounded-xl shadow-2xl text-lg font-semibold transform hover:scale-105 transition-all duration-200"
+                    onClick={() => document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    <Calculator className="mr-3 h-5 w-5" />
+                    Calculate Your ROI Now
+                  </Button>
+                </div>
               </div>
 
               {/* Stats Column */}
-              <div className="space-y-4">
+              <div className="lg:col-span-2 space-y-4">
                 {roiHighlights.map((stat, index) => (
-                  <div key={index} className="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-sm border border-white/50">
-                    <div className="text-2xl font-bold text-slate-900">{stat.metric}</div>
-                    <div className="text-slate-600 text-sm">{stat.description}</div>
+                  <div key={index} className="group hover:scale-105 transition-all duration-300">
+                    <div className={`${stat.color} rounded-2xl p-6 shadow-xl border-2 border-white/50 backdrop-blur-sm`}>
+                      <div className="text-4xl font-black text-white mb-2 drop-shadow-lg">{stat.metric}</div>
+                      <div className="text-white/90 text-sm font-semibold tracking-wide">{stat.description}</div>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -102,43 +110,55 @@ const ROICalculator = () => {
           </div>
         </section>
 
-        {/* Multi-Column Content Section */}
-        <section className="py-16 px-4 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-12 gap-8">
+        {/* Enhanced Multi-Column Content Section */}
+        <section className="py-20 px-4 bg-white relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-50 via-white to-blue-50 opacity-50"></div>
+          <div className="relative z-10 max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-12 gap-10">
               {/* Left Column - How It Works */}
               <div className="lg:col-span-4">
                 <div className="sticky top-24">
-                  <div className="border-l-4 border-blue-600 pl-6 mb-8">
-                    <h2 className="text-2xl font-bold text-slate-900 mb-3">How It Works</h2>
-                    <p className="text-slate-600">AI-powered calculator using industry benchmarks and proven methodologies.</p>
-                  </div>
-                  
-                  <div className="space-y-6">
-                    {howItWorks.map((step, index) => (
-                      <div key={index} className="relative">
-                        <div className="flex items-start">
-                          <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold mr-4 mt-1">
-                            {step.step}
+                  <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 shadow-2xl border-4 border-slate-200">
+                    <div className="border-l-6 border-yellow-400 pl-8 mb-8">
+                      <h2 className="text-3xl font-bold text-white mb-4">How It Works</h2>
+                      <p className="text-slate-300 text-lg leading-relaxed">AI-powered calculator using industry benchmarks and proven methodologies.</p>
+                    </div>
+                    
+                    <div className="space-y-8">
+                      {howItWorks.map((step, index) => (
+                        <div key={index} className="relative group">
+                          <div className="flex items-start bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
+                            <div className="w-14 h-14 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center text-slate-900 text-xl font-bold mr-6 shadow-lg">
+                              {step.step}
+                            </div>
+                            <div className="flex-1">
+                              <div className="flex items-center mb-3">
+                                <div className="text-yellow-400 mr-3">{step.icon}</div>
+                                <h3 className="font-bold text-white text-lg">{step.title}</h3>
+                              </div>
+                              <p className="text-slate-300 leading-relaxed">{step.description}</p>
+                            </div>
                           </div>
-                          <div>
-                            <h3 className="font-bold text-slate-900 mb-1">{step.title}</h3>
-                            <p className="text-slate-600 text-sm">{step.description}</p>
-                          </div>
+                          {index < howItWorks.length - 1 && (
+                            <div className="w-1 h-8 bg-gradient-to-b from-yellow-400 to-orange-500 ml-7 mt-4 rounded-full"></div>
+                          )}
                         </div>
-                        {index < howItWorks.length - 1 && (
-                          <div className="w-px h-6 bg-slate-200 ml-4 mt-2"></div>
-                        )}
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
 
               {/* Center Column - Calculator */}
               <div className="lg:col-span-5">
-                <div className="bg-gradient-to-br from-slate-50 to-white rounded-2xl border-2 border-slate-100 p-1 shadow-lg">
-                  <div className="bg-white rounded-xl p-6">
+                <div className="bg-gradient-to-br from-white via-blue-50 to-purple-50 rounded-3xl border-4 border-blue-200 p-2 shadow-2xl">
+                  <div className="bg-white rounded-2xl p-8 shadow-inner border-2 border-slate-100">
+                    <div className="text-center mb-8">
+                      <div className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-2xl shadow-lg mb-4">
+                        <Calculator className="h-6 w-6 mr-3" />
+                        <span className="font-bold text-lg">Interactive Calculator</span>
+                      </div>
+                    </div>
                     <div id="calculator">
                       <InteractiveROICalculator />
                     </div>
@@ -149,30 +169,114 @@ const ROICalculator = () => {
               {/* Right Column - Value Props */}
               <div className="lg:col-span-3">
                 <div className="sticky top-24">
-                  <div className="border-l-4 border-green-600 pl-6 mb-8">
-                    <h2 className="text-2xl font-bold text-slate-900 mb-3">Strategic Value</h2>
-                    <p className="text-slate-600">Transform training into competitive advantage.</p>
+                  <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-8 shadow-2xl border-4 border-emerald-200">
+                    <div className="border-l-6 border-emerald-500 pl-8 mb-8">
+                      <h2 className="text-3xl font-bold text-slate-900 mb-4">Strategic Value</h2>
+                      <p className="text-slate-700 text-lg leading-relaxed">Transform training into competitive advantage.</p>
+                    </div>
+                    
+                    <div className="space-y-6">
+                      {valueProps.map((prop, index) => (
+                        <Card key={index} className="border-3 border-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-white/80 backdrop-blur-sm">
+                          <CardContent className="p-6">
+                            <div className="flex items-start mb-4">
+                              <div className={`w-14 h-14 bg-gradient-to-br ${prop.color} rounded-2xl flex items-center justify-center mr-4 shadow-lg`}>
+                                <div className="text-white">
+                                  {prop.icon}
+                                </div>
+                              </div>
+                              <div className="flex-1">
+                                <h3 className="font-bold text-slate-900 text-lg mb-2">{prop.title}</h3>
+                                <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white border-0 font-semibold px-3 py-1 shadow-md">{prop.description}</Badge>
+                              </div>
+                            </div>
+                            <p className="text-slate-700 leading-relaxed font-medium">{prop.detail}</p>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Enhanced Methodology Section */}
+        <section className="py-20 px-4 bg-gradient-to-br from-slate-100 via-white to-purple-50 relative">
+          <div className="absolute inset-0 opacity-30">
+            <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-br from-blue-300 to-purple-300 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-br from-emerald-300 to-teal-300 rounded-full blur-3xl"></div>
+          </div>
+          
+          <div className="relative z-10 max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-16">
+              <div>
+                <div className="bg-gradient-to-br from-purple-900 to-indigo-900 rounded-3xl p-10 shadow-2xl border-4 border-purple-200">
+                  <div className="border-l-6 border-purple-400 pl-8 mb-8">
+                    <h2 className="text-3xl font-bold text-white mb-4">Research & Methodology</h2>
+                    <p className="text-purple-200 text-lg leading-relaxed">Based on industry benchmarks and proven client outcomes.</p>
+                  </div>
+                  
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-inner border-2 border-white/20">
+                    <h3 className="font-bold text-white mb-6 text-xl">Key Assumptions</h3>
+                    <div className="grid grid-cols-2 gap-6">
+                      <div className="text-center bg-white/10 rounded-xl p-4 border border-white/20">
+                        <div className="text-purple-300 text-sm font-medium mb-2">Training Cost Reduction</div>
+                        <div className="font-black text-white text-2xl">70%</div>
+                      </div>
+                      <div className="text-center bg-white/10 rounded-xl p-4 border border-white/20">
+                        <div className="text-purple-300 text-sm font-medium mb-2">Productivity Improvement</div>
+                        <div className="font-black text-white text-2xl">4x</div>
+                      </div>
+                      <div className="text-center bg-white/10 rounded-xl p-4 border border-white/20">
+                        <div className="text-purple-300 text-sm font-medium mb-2">Error Reduction</div>
+                        <div className="font-black text-white text-2xl">60%</div>
+                      </div>
+                      <div className="text-center bg-white/10 rounded-xl p-4 border border-white/20">
+                        <div className="text-purple-300 text-sm font-medium mb-2">Turnover Reduction</div>
+                        <div className="font-black text-white text-2xl">40%</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl p-10 shadow-2xl border-4 border-orange-200">
+                  <div className="border-l-6 border-orange-500 pl-8 mb-8">
+                    <h2 className="text-3xl font-bold text-slate-900 mb-4">Client Success Stories</h2>
+                    <p className="text-slate-700 text-lg leading-relaxed">Real results from organizations like yours.</p>
                   </div>
                   
                   <div className="space-y-6">
-                    {valueProps.map((prop, index) => (
-                      <Card key={index} className="border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                        <CardContent className="p-4">
-                          <div className="flex items-start mb-3">
-                            <div className="w-10 h-10 bg-gradient-to-br from-slate-50 to-blue-50 rounded-lg flex items-center justify-center mr-3">
-                              <div className="text-blue-600">
-                                {prop.icon}
-                              </div>
-                            </div>
-                            <div>
-                              <h3 className="font-bold text-slate-900 text-sm">{prop.title}</h3>
-                              <Badge className="bg-green-100 text-green-800 text-xs mt-1">{prop.description}</Badge>
-                            </div>
-                          </div>
-                          <p className="text-slate-600 text-sm leading-relaxed">{prop.detail}</p>
-                        </CardContent>
-                      </Card>
-                    ))}
+                    <div className="bg-white rounded-2xl p-8 shadow-xl border-3 border-blue-100 hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                      <div className="flex items-center mb-6">
+                        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mr-6 shadow-lg">
+                          <Building className="h-8 w-8 text-white" />
+                        </div>
+                        <div>
+                          <div className="font-bold text-slate-900 text-lg">Manufacturing Corp</div>
+                          <div className="text-slate-600 font-medium">500+ employees</div>
+                        </div>
+                      </div>
+                      <div className="text-4xl font-black text-green-600 mb-2">425% ROI</div>
+                      <div className="text-slate-700 font-medium">Achieved in 8 months with 65% cost reduction</div>
+                    </div>
+
+                    <div className="bg-white rounded-2xl p-8 shadow-xl border-3 border-green-100 hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                      <div className="flex items-center mb-6">
+                        <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mr-6 shadow-lg">
+                          <Shield className="h-8 w-8 text-white" />
+                        </div>
+                        <div>
+                          <div className="font-bold text-slate-900 text-lg">Healthcare System</div>
+                          <div className="text-slate-600 font-medium">1200+ employees</div>
+                        </div>
+                      </div>
+                      <div className="text-4xl font-black text-green-600 mb-2">380% ROI</div>
+                      <div className="text-slate-700 font-medium">6 month payback with 70% error reduction</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -180,95 +284,27 @@ const ROICalculator = () => {
           </div>
         </section>
 
-        {/* Methodology Section */}
-        <section className="py-16 px-4 bg-gradient-to-br from-slate-50 to-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12">
-              <div>
-                <div className="border-l-4 border-purple-600 pl-6 mb-6">
-                  <h2 className="text-2xl font-bold text-slate-900 mb-3">Research & Methodology</h2>
-                  <p className="text-slate-600">Based on industry benchmarks and proven client outcomes.</p>
-                </div>
-                
-                <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-100">
-                  <h3 className="font-bold text-slate-900 mb-4">Key Assumptions</h3>
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div>
-                      <div className="text-slate-500">Training Cost Reduction</div>
-                      <div className="font-semibold text-slate-900">70%</div>
-                    </div>
-                    <div>
-                      <div className="text-slate-500">Productivity Improvement</div>
-                      <div className="font-semibold text-slate-900">4x Faster</div>
-                    </div>
-                    <div>
-                      <div className="text-slate-500">Error Reduction</div>
-                      <div className="font-semibold text-slate-900">60%</div>
-                    </div>
-                    <div>
-                      <div className="text-slate-500">Turnover Reduction</div>
-                      <div className="font-semibold text-slate-900">40%</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <div className="border-l-4 border-orange-600 pl-6 mb-6">
-                  <h2 className="text-2xl font-bold text-slate-900 mb-3">Client Success Stories</h2>
-                  <p className="text-slate-600">Real results from organizations like yours.</p>
-                </div>
-                
-                <div className="space-y-4">
-                  <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-100">
-                    <div className="flex items-center mb-3">
-                      <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center mr-4">
-                        <Building className="h-6 w-6 text-blue-600" />
-                      </div>
-                      <div>
-                        <div className="font-bold text-slate-900">Manufacturing Corp</div>
-                        <div className="text-slate-500 text-sm">500+ employees</div>
-                      </div>
-                    </div>
-                    <div className="text-2xl font-bold text-green-600 mb-1">425% ROI</div>
-                    <div className="text-slate-600 text-sm">Achieved in 8 months with 65% cost reduction</div>
-                  </div>
-
-                  <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-100">
-                    <div className="flex items-center mb-3">
-                      <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-teal-100 rounded-full flex items-center justify-center mr-4">
-                        <Shield className="h-6 w-6 text-green-600" />
-                      </div>
-                      <div>
-                        <div className="font-bold text-slate-900">Healthcare System</div>
-                        <div className="text-slate-500 text-sm">1200+ employees</div>
-                      </div>
-                    </div>
-                    <div className="text-2xl font-bold text-green-600 mb-1">380% ROI</div>
-                    <div className="text-slate-600 text-sm">6 month payback with 70% error reduction</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        {/* Enhanced CTA */}
+        <section className="py-20 px-4 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full opacity-20 blur-3xl"></div>
+            <div className="absolute bottom-10 right-10 w-72 h-72 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-full opacity-20 blur-3xl"></div>
           </div>
-        </section>
-
-        {/* Compact CTA */}
-        <section className="py-16 px-4 bg-gradient-to-r from-slate-900 to-slate-800">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
+          
+          <div className="relative z-10 max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Training ROI?
             </h2>
-            <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
               Join hundreds of organizations discovering the power of AI-driven training.
             </p>
             <Link to="/demo">
               <Button 
                 size="lg" 
-                className="bg-white text-slate-900 hover:bg-slate-100 px-8 py-3 rounded-lg shadow-lg"
+                className="bg-gradient-to-r from-white to-slate-100 text-slate-900 hover:from-slate-100 hover:to-white px-10 py-4 rounded-xl shadow-2xl text-lg font-bold transform hover:scale-110 transition-all duration-300"
               >
                 Schedule Free Demo
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-3 h-5 w-5" />
               </Button>
             </Link>
           </div>

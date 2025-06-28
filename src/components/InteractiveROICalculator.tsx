@@ -102,7 +102,8 @@ const InteractiveROICalculator = () => {
   const inputSections = [
     {
       title: "Organization",
-      icon: <Users className="h-4 w-4" />,
+      icon: <Users className="h-5 w-5" />,
+      color: "from-blue-500 to-indigo-600",
       fields: [
         { key: 'employees', label: 'Employees', placeholder: '100' },
         { key: 'averageSalary', label: 'Avg Salary ($)', placeholder: '75,000' }
@@ -110,7 +111,8 @@ const InteractiveROICalculator = () => {
     },
     {
       title: "Training",
-      icon: <Clock className="h-4 w-4" />,
+      icon: <Clock className="h-5 w-5" />,
+      color: "from-emerald-500 to-teal-600",
       fields: [
         { key: 'trainingHoursPerYear', label: 'Hours/Year', placeholder: '40' },
         { key: 'currentTrainingCostPerHour', label: 'Cost/Hour ($)', placeholder: '150' }
@@ -118,7 +120,8 @@ const InteractiveROICalculator = () => {
     },
     {
       title: "Operations",
-      icon: <BarChart3 className="h-4 w-4" />,
+      icon: <BarChart3 className="h-5 w-5" />,
+      color: "from-purple-500 to-violet-600",
       fields: [
         { key: 'productivityLossHours', label: 'Hours to Competency', placeholder: '160' },
         { key: 'errorCostPerYear', label: 'Annual Error Cost ($)', placeholder: '50,000' }
@@ -126,7 +129,8 @@ const InteractiveROICalculator = () => {
     },
     {
       title: "Revenue Opportunities",
-      icon: <Banknote className="h-4 w-4" />,
+      icon: <Banknote className="h-5 w-5" />,
+      color: "from-orange-500 to-red-600",
       fields: [
         { key: 'educationMonetizationValue', label: 'Education Revenue ($)', placeholder: '250,000' },
         { key: 'trainingServicesRevenueValue', label: 'Training Services ($)', placeholder: '300,000' }
@@ -135,23 +139,23 @@ const InteractiveROICalculator = () => {
   ];
 
   return (
-    <div className="space-y-8">
-      {/* Compact Input Grid */}
-      <div className="grid md:grid-cols-2 gap-6">
+    <div className="space-y-10">
+      {/* Enhanced Input Grid */}
+      <div className="grid md:grid-cols-2 gap-8">
         {inputSections.map((section, index) => (
-          <Card key={index} className="border-slate-200 shadow-sm">
-            <CardContent className="p-4">
-              <div className="flex items-center mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg flex items-center justify-center mr-3">
-                  <div className="text-blue-600">{section.icon}</div>
+          <Card key={index} className="border-3 border-slate-200 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-gradient-to-br from-white to-slate-50">
+            <CardContent className="p-6">
+              <div className="flex items-center mb-6">
+                <div className={`w-12 h-12 bg-gradient-to-br ${section.color} rounded-2xl flex items-center justify-center mr-4 shadow-lg`}>
+                  <div className="text-white">{section.icon}</div>
                 </div>
-                <h3 className="font-bold text-slate-900 text-sm">{section.title}</h3>
+                <h3 className="font-bold text-slate-900 text-lg">{section.title}</h3>
               </div>
               
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {section.fields.map((field) => (
-                  <div key={field.key} className="space-y-1">
-                    <Label htmlFor={field.key} className="text-slate-700 text-xs font-medium">
+                  <div key={field.key} className="space-y-2">
+                    <Label htmlFor={field.key} className="text-slate-700 font-semibold">
                       {field.label}
                     </Label>
                     <Input
@@ -159,7 +163,7 @@ const InteractiveROICalculator = () => {
                       type="number"
                       value={inputs[field.key as keyof typeof inputs]}
                       onChange={(e) => handleInputChange(field.key, e.target.value)}
-                      className="bg-white border-slate-200 text-slate-900 h-9 text-sm"
+                      className="bg-white border-2 border-slate-200 text-slate-900 h-12 text-base font-medium focus:border-blue-500 focus:ring-2 focus:ring-blue-200 rounded-xl shadow-sm"
                       placeholder={field.placeholder}
                     />
                   </div>
@@ -170,81 +174,81 @@ const InteractiveROICalculator = () => {
         ))}
       </div>
 
-      {/* Compact Results */}
-      <Card className="border-2 border-blue-200 shadow-lg bg-gradient-to-br from-blue-50 to-white">
-        <CardContent className="p-6">
-          <div className="text-center mb-6">
-            <h3 className="text-xl font-bold text-slate-900 mb-2 flex items-center justify-center">
-              <Calculator className="h-5 w-5 mr-2 text-blue-600" />
+      {/* Enhanced Results */}
+      <Card className="border-4 border-blue-300 shadow-2xl bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        <CardContent className="p-8">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-slate-900 mb-4 flex items-center justify-center">
+              <Calculator className="h-6 w-6 mr-3 text-blue-600" />
               Your ROI Results
             </h3>
           </div>
           
-          {/* Key Metrics Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-            <div className="bg-white rounded-lg p-4 text-center shadow-sm border border-blue-100">
-              <div className="text-2xl font-bold text-green-600 mb-1">
+          {/* Enhanced Key Metrics Grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl p-6 text-center shadow-xl border-3 border-white transform hover:scale-105 transition-all duration-300">
+              <div className="text-3xl font-black text-white mb-2 drop-shadow-lg">
                 {Math.round(results.roiPercentage)}%
               </div>
-              <div className="text-xs text-slate-600">ROI</div>
+              <div className="text-white/90 font-semibold">ROI</div>
             </div>
-            <div className="bg-white rounded-lg p-4 text-center shadow-sm border border-blue-100">
-              <div className="text-2xl font-bold text-blue-600 mb-1">
+            <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl p-6 text-center shadow-xl border-3 border-white transform hover:scale-105 transition-all duration-300">
+              <div className="text-3xl font-black text-white mb-2 drop-shadow-lg">
                 {Math.round(results.paybackMonths)}
               </div>
-              <div className="text-xs text-slate-600">Months</div>
+              <div className="text-white/90 font-semibold">Months</div>
             </div>
-            <div className="bg-white rounded-lg p-4 text-center shadow-sm border border-blue-100 lg:col-span-2">
-              <div className="text-xl font-bold text-slate-900 mb-1">
+            <div className="bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl p-6 text-center shadow-xl border-3 border-white lg:col-span-2 transform hover:scale-105 transition-all duration-300">
+              <div className="text-2xl font-black text-white mb-2 drop-shadow-lg">
                 {formatCurrency(results.annualSavings)}
               </div>
-              <div className="text-xs text-slate-600">Net Annual Value</div>
+              <div className="text-white/90 font-semibold">Net Annual Value</div>
             </div>
           </div>
 
-          {/* Cost Breakdown */}
-          <div className="space-y-2 text-sm">
-            <div className="flex justify-between items-center p-3 bg-red-50 rounded-lg border border-red-100">
-              <span className="text-red-800 font-medium">Current Burden</span>
-              <span className="text-red-700 font-bold">{formatCurrency(results.currentAnnualCost)}</span>
+          {/* Enhanced Cost Breakdown */}
+          <div className="space-y-4">
+            <div className="flex justify-between items-center p-6 bg-gradient-to-r from-red-50 to-red-100 rounded-2xl border-3 border-red-200 shadow-lg">
+              <span className="text-red-800 font-bold text-lg">Current Burden</span>
+              <span className="text-red-700 font-black text-xl">{formatCurrency(results.currentAnnualCost)}</span>
             </div>
             
-            <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg border border-blue-100">
-              <span className="text-blue-800 font-medium">Zyglio Investment</span>
-              <span className="text-blue-700 font-bold">{formatCurrency(results.zyglioAnnualCost)}</span>
+            <div className="flex justify-between items-center p-6 bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl border-3 border-blue-200 shadow-lg">
+              <span className="text-blue-800 font-bold text-lg">Zyglio Investment</span>
+              <span className="text-blue-700 font-black text-xl">{formatCurrency(results.zyglioAnnualCost)}</span>
             </div>
             
-            <div className="flex justify-between items-center p-3 bg-green-50 rounded-lg border border-green-100">
-              <span className="text-green-800 font-medium">Total Value Created</span>
-              <span className="text-green-700 font-bold">{formatCurrency(results.totalAnnualValue)}</span>
+            <div className="flex justify-between items-center p-6 bg-gradient-to-r from-green-50 to-green-100 rounded-2xl border-3 border-green-200 shadow-lg">
+              <span className="text-green-800 font-bold text-lg">Total Value Created</span>
+              <span className="text-green-700 font-black text-xl">{formatCurrency(results.totalAnnualValue)}</span>
             </div>
           </div>
         </CardContent>
       </Card>
 
-      {/* Methodology Note */}
-      <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-        <h4 className="font-bold text-slate-900 text-sm mb-2">Methodology</h4>
-        <p className="text-slate-600 text-xs leading-relaxed mb-3">
+      {/* Enhanced Methodology Note */}
+      <div className="bg-gradient-to-br from-slate-100 to-slate-200 rounded-2xl p-8 border-3 border-slate-300 shadow-xl">
+        <h4 className="font-bold text-slate-900 text-xl mb-4">Methodology</h4>
+        <p className="text-slate-700 leading-relaxed mb-6 font-medium">
           Results based on industry benchmarks and Zyglio client outcomes. Key assumptions: 70% training cost reduction, 
           4x faster competency, 60% error reduction, revenue opportunities at 60-75% realization rates.
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
-          <div className="text-center">
-            <div className="font-semibold text-slate-900">70%</div>
-            <div className="text-slate-500">Cost Reduction</div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="text-center bg-white rounded-xl p-4 shadow-md border-2 border-slate-200">
+            <div className="font-black text-slate-900 text-2xl mb-1">70%</div>
+            <div className="text-slate-600 font-semibold text-sm">Cost Reduction</div>
           </div>
-          <div className="text-center">
-            <div className="font-semibold text-slate-900">4x</div>
-            <div className="text-slate-500">Faster Training</div>
+          <div className="text-center bg-white rounded-xl p-4 shadow-md border-2 border-slate-200">
+            <div className="font-black text-slate-900 text-2xl mb-1">4x</div>
+            <div className="text-slate-600 font-semibold text-sm">Faster Training</div>
           </div>
-          <div className="text-center">
-            <div className="font-semibold text-slate-900">60%</div>
-            <div className="text-slate-500">Fewer Errors</div>
+          <div className="text-center bg-white rounded-xl p-4 shadow-md border-2 border-slate-200">
+            <div className="font-black text-slate-900 text-2xl mb-1">60%</div>
+            <div className="text-slate-600 font-semibold text-sm">Fewer Errors</div>
           </div>
-          <div className="text-center">
-            <div className="font-semibold text-slate-900">65%</div>
-            <div className="text-slate-500">Revenue Potential</div>
+          <div className="text-center bg-white rounded-xl p-4 shadow-md border-2 border-slate-200">
+            <div className="font-black text-slate-900 text-2xl mb-1">65%</div>
+            <div className="text-slate-600 font-semibold text-sm">Revenue Potential</div>
           </div>
         </div>
       </div>
