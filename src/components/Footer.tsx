@@ -51,7 +51,7 @@ const Footer = () => {
         
         <div className="border-t border-slate-800 pt-8 text-center">
           <p className="text-slate-400 text-sm">
-            Transforming tribal knowledge into the world's most powerful training asset.
+            Transforming tribal knowledge into the world's most powerful training and assessment asset.
           </p>
         </div>
       </div>
