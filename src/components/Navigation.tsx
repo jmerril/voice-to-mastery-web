@@ -48,7 +48,7 @@ const Navigation = () => {
               </Link>
             ))}
             <Link to="/demo">
-              <Button className="bg-blue-600 hover:bg-blue-700">
+              <Button className="bg-blue-400 hover:bg-blue-500">
                 Get Demo
               </Button>
             </Link>
@@ -82,7 +82,7 @@ const Navigation = () => {
                 </Link>
               ))}
               <Link to="/demo" onClick={() => setIsOpen(false)}>
-                <Button className="bg-blue-600 hover:bg-blue-700 w-full">
+                <Button className="bg-blue-400 hover:bg-blue-500 w-full">
                   Get Demo
                 </Button>
               </Link>
