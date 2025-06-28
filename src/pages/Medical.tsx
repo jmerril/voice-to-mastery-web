@@ -419,43 +419,6 @@ const Medical = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="absolute inset-0 opacity-20" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg%20width%3D%2780%27%20height%3D%2780%27%20viewBox%3D%270%200%2080%2080%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3Cg%20fill%3D%27none%27%20fill-rule%3D%27evenodd%27%3E%3Cg%20fill%3D%27%23ffffff%27%20fill-opacity%3D%270.1%27%3E%3Ccircle%20cx%3D%278%27%20cy%3D%278%27%20r%3D%276%27/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-        }}></div>
-        
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <div className="mb-8">
-            <Sparkles className="mx-auto h-16 w-16 text-yellow-300 mb-4" />
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              ✅ Ready to Transform Medical Engagement?
-            </h2>
-            <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto leading-relaxed">
-              Zyglio helps you create AI-powered, interactive, multilingual clinical stories that drive engagement, education, and action.
-            </p>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-bold px-10 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-              <Heart className="h-5 w-5 mr-2" />
-              Get Started Today
-            </Button>
-            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold px-10 py-4 text-lg hover:scale-105 transition-all duration-300">
-              <Sparkles className="h-5 w-5 mr-2" />
-              Explore What You Can Build
-            </Button>
-          </div>
-
-          {/* Contact Information */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto">
-            <p className="text-lg font-medium mb-2">Ready to get started?</p>
-            <p className="opacity-90">Contact our pharmaceutical specialists for a personalized consultation</p>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );
