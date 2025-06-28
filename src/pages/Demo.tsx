@@ -158,7 +158,7 @@ const Demo = () => {
                     </div>
                     <div className="flex-1">
                       <div className="text-white font-semibold">AI Processing</div>
-                      <div className="text-blue-100 text-sm">Converting to interactive scenario</div>
+                      <div className="text-blue-100 text-sm">Converting to interactive scenarios, ability to specify KPIs and evaluative criteria (such as voice stress detection, hesitation, and ability to add distraction elements to realistically simulate real-world environments)</div>
                     </div>
                   </div>
 
