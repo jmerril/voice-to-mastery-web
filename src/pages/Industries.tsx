@@ -88,108 +88,159 @@ const Industries = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <Navigation />
-      
-      <div className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent mb-6">
-              Industry-Agnostic. Discipline-Flexible.
-            </h1>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto">
-              Zyglio is industry-agnostic, discipline-flexible, and context-smart. Wherever there's expertise 
-              to transfer—whether in the kitchen, the OR, the garage, or the flight deck—Zyglio turns human 
-              mentorship into scalable training.
-            </p>
-          </div>
-
-          {/* Industries Grid */}
-          <div className="space-y-12">
-            {industries.map((industry, index) => (
-              <Card key={index} className="p-0 bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
-                <CardContent className="p-0">
-                  <div className="grid lg:grid-cols-2 gap-0">
-                    {/* Image Section */}
-                    <div className="relative h-64 lg:h-auto">
-                      <img 
-                        src={industry.image} 
-                        alt={industry.title}
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
-                      <div className="absolute bottom-4 left-4 text-white">
-                        <h2 className="text-2xl font-bold mb-2">
-                          {industry.title}
-                        </h2>
-                        <p className="text-sm opacity-90">
-                          <strong>Scenario:</strong> {industry.scenario}
-                        </p>
-                      </div>
-                    </div>
-                    
-                    {/* Content Section */}
-                    <div className="p-8">
-                      <div className="space-y-6">
-                        <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-                          <p className="text-sm font-medium text-blue-800 mb-2">Voice Input:</p>
-                          <p className="text-slate-700 italic">"{industry.voiceInput}"</p>
-                        </div>
-                        
-                        <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
-                          <div className="flex items-center gap-2 mb-2">
-                            <FileText className="w-4 h-4 text-purple-600" />
-                            <p className="text-sm font-medium text-purple-800">SOPs & Documentation Generated:</p>
-                          </div>
-                          <p className="text-slate-700">{industry.sopGeneration}</p>
-                        </div>
-                        
-                        <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
-                          <p className="text-sm font-medium text-green-800 mb-2">Simulation Outcome:</p>
-                          <p className="text-slate-700">{industry.outcome}</p>
-                        </div>
-                        
-                        <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500 mb-6">
-                          <p className="text-sm font-medium text-orange-800 mb-2">Impact:</p>
-                          <p className="text-slate-700">{industry.impact}</p>
-                        </div>
-                        
-                        <div className="grid grid-cols-2 gap-4">
-                          {industry.stats.map((stat, statIndex) => (
-                            <div key={statIndex} className="bg-slate-50 p-3 rounded-lg text-center">
-                              <stat.icon className="w-5 h-5 text-slate-600 mx-auto mb-1" />
-                              <p className="text-xs text-slate-600 mb-1">{stat.label}</p>
-                              <p className="font-bold text-slate-800">{stat.value}</p>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* CTA Section */}
-          <div className="mt-16 text-center bg-gradient-to-r from-blue-500/10 to-teal-500/10 rounded-3xl p-12 backdrop-blur-sm">
-            <h2 className="text-3xl font-bold text-slate-800 mb-6">
-              Ready to Transform Your Industry?
-            </h2>
-            <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-              See how Zyglio can revolutionize training in your specific field with a personalized demonstration.
-            </p>
-            <Link to="/demo">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
-                Request Industry-Specific Demo <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
+      {/* Background Graphic */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=1920&h=1080&fit=crop" 
+          alt="Industrial background with modern architecture"
+          className="w-full h-full object-cover opacity-5"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-teal-500/5"></div>
+        
+        {/* Decorative geometric elements */}
+        <div className="absolute top-20 left-10 w-32 h-32 border border-blue-200/20 rounded-lg rotate-12 bg-blue-100/10 backdrop-blur-sm"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 border border-teal-200/20 rounded-full bg-teal-100/10 backdrop-blur-sm"></div>
+        <div className="absolute bottom-40 left-1/4 w-20 h-20 border border-purple-200/20 rounded bg-purple-100/10 backdrop-blur-sm rotate-45"></div>
+        <div className="absolute bottom-60 right-1/3 w-16 h-16 border border-orange-200/20 rounded-full bg-orange-100/10 backdrop-blur-sm"></div>
+        
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="w-full h-full" style={{
+            backgroundImage: 'linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)',
+            backgroundSize: '50px 50px'
+          }}></div>
         </div>
       </div>
 
-      <Footer />
+      <div className="relative z-10">
+        <Navigation />
+        
+        <div className="pt-24 pb-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            {/* Hero Section */}
+            <div className="text-center mb-16">
+              <div className="relative mb-8 overflow-hidden rounded-3xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1460574283810-2aab119d8511?w=1200&h=500&fit=crop" 
+                  alt="Modern industrial buildings and infrastructure representing diverse industries"
+                  className="w-full h-80 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-purple-900/80 to-blue-900/90 flex items-center justify-center">
+                  <div className="text-center text-white max-w-5xl px-8">
+                    <div className="mb-6 flex justify-center">
+                      <div className="flex space-x-4">
+                        <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+                        <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-100"></div>
+                        <div className="w-3 h-3 bg-teal-400 rounded-full animate-pulse delay-200"></div>
+                      </div>
+                    </div>
+                    <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                      Industry-Agnostic.<br />
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-teal-300">
+                        Discipline-Flexible.
+                      </span>
+                    </h1>
+                    <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
+                      Zyglio is industry-agnostic, discipline-flexible, and context-smart. Wherever there's expertise 
+                      to transfer—whether in the kitchen, the OR, the garage, or the flight deck—Zyglio turns human 
+                      mentorship into scalable training.
+                    </p>
+                  </div>
+                </div>
+                {/* Decorative tech elements */}
+                <div className="absolute top-4 left-4 w-20 h-20 border border-blue-300/30 rounded-lg bg-blue-500/10 backdrop-blur-sm"></div>
+                <div className="absolute bottom-4 right-4 w-16 h-16 border border-purple-300/30 rounded-full bg-purple-500/10 backdrop-blur-sm"></div>
+                <div className="absolute top-1/2 left-8 w-12 h-12 border border-teal-300/30 rounded bg-teal-500/10 backdrop-blur-sm rotate-45"></div>
+              </div>
+            </div>
+
+            {/* Industries Grid */}
+            <div className="space-y-12">
+              {industries.map((industry, index) => (
+                <Card key={index} className="p-0 bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="grid lg:grid-cols-2 gap-0">
+                      {/* Image Section */}
+                      <div className="relative h-64 lg:h-auto">
+                        <img 
+                          src={industry.image} 
+                          alt={industry.title}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
+                        <div className="absolute bottom-4 left-4 text-white">
+                          <h2 className="text-2xl font-bold mb-2">
+                            {industry.title}
+                          </h2>
+                          <p className="text-sm opacity-90">
+                            <strong>Scenario:</strong> {industry.scenario}
+                          </p>
+                        </div>
+                      </div>
+                      
+                      {/* Content Section */}
+                      <div className="p-8">
+                        <div className="space-y-6">
+                          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                            <p className="text-sm font-medium text-blue-800 mb-2">Voice Input:</p>
+                            <p className="text-slate-700 italic">"{industry.voiceInput}"</p>
+                          </div>
+                          
+                          <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                            <div className="flex items-center gap-2 mb-2">
+                              <FileText className="w-4 h-4 text-purple-600" />
+                              <p className="text-sm font-medium text-purple-800">SOPs & Documentation Generated:</p>
+                            </div>
+                            <p className="text-slate-700">{industry.sopGeneration}</p>
+                          </div>
+                          
+                          <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                            <p className="text-sm font-medium text-green-800 mb-2">Simulation Outcome:</p>
+                            <p className="text-slate-700">{industry.outcome}</p>
+                          </div>
+                          
+                          <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500 mb-6">
+                            <p className="text-sm font-medium text-orange-800 mb-2">Impact:</p>
+                            <p className="text-slate-700">{industry.impact}</p>
+                          </div>
+                          
+                          <div className="grid grid-cols-2 gap-4">
+                            {industry.stats.map((stat, statIndex) => (
+                              <div key={statIndex} className="bg-slate-50 p-3 rounded-lg text-center">
+                                <stat.icon className="w-5 h-5 text-slate-600 mx-auto mb-1" />
+                                <p className="text-xs text-slate-600 mb-1">{stat.label}</p>
+                                <p className="font-bold text-slate-800">{stat.value}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* CTA Section */}
+            <div className="mt-16 text-center bg-gradient-to-r from-blue-500/10 to-teal-500/10 rounded-3xl p-12 backdrop-blur-sm">
+              <h2 className="text-3xl font-bold text-slate-800 mb-6">
+                Ready to Transform Your Industry?
+              </h2>
+              <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
+                See how Zyglio can revolutionize training in your specific field with a personalized demonstration.
+              </p>
+              <Link to="/demo">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
+                  Request Industry-Specific Demo <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <Footer />
+      </div>
     </div>
   );
 };
