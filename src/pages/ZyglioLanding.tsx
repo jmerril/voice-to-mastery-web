@@ -2,8 +2,9 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const ZyglioLanding = () => {
   return (
@@ -250,6 +251,106 @@ const ZyglioLanding = () => {
               Explore All Industries
             </Button>
           </Link>
+        </div>
+      </section>
+
+      {/* Explore Zyglio's Capabilities Section */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-6">
+              Explore Zyglio's Capabilities
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Discover how our AI-powered platform transforms traditional training into engaging, effective learning experiences.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Link to="/how-it-works">
+              <Card className="h-full border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-blue-50 to-purple-50 cursor-pointer">
+                <CardHeader>
+                  <CardTitle className="text-xl text-slate-900 flex items-center gap-2">
+                    How It Works
+                    <ArrowRight className="h-5 w-5 text-blue-600" />
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600">Learn how Zyglio transforms expertise into interactive learning experiences using AI.</p>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link to="/roi-calculator">
+              <Card className="h-full border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-green-50 to-teal-50 cursor-pointer">
+                <CardHeader>
+                  <CardTitle className="text-xl text-slate-900 flex items-center gap-2">
+                    ROI Calculator
+                    <ArrowRight className="h-5 w-5 text-green-600" />
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600">Calculate your potential return on investment with our personalized ROI calculator.</p>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link to="/industries">
+              <Card className="h-full border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-purple-50 to-pink-50 cursor-pointer">
+                <CardHeader>
+                  <CardTitle className="text-xl text-slate-900 flex items-center gap-2">
+                    Industries
+                    <ArrowRight className="h-5 w-5 text-purple-600" />
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600">Explore how Zyglio transforms training across healthcare, manufacturing, and more.</p>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link to="/technology">
+              <Card className="h-full border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-cyan-50 to-blue-50 cursor-pointer">
+                <CardHeader>
+                  <CardTitle className="text-xl text-slate-900 flex items-center gap-2">
+                    Technology
+                    <ArrowRight className="h-5 w-5 text-cyan-600" />
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600">Discover the cutting-edge AI technology that powers Zyglio's learning platform.</p>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link to="/case-studies">
+              <Card className="h-full border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-orange-50 to-red-50 cursor-pointer">
+                <CardHeader>
+                  <CardTitle className="text-xl text-slate-900 flex items-center gap-2">
+                    Case Studies
+                    <ArrowRight className="h-5 w-5 text-orange-600" />
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600">See real-world success stories from companies transforming their training programs.</p>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link to="/demo">
+              <Card className="h-full border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-yellow-50 to-orange-50 cursor-pointer">
+                <CardHeader>
+                  <CardTitle className="text-xl text-slate-900 flex items-center gap-2">
+                    Get Demo
+                    <ArrowRight className="h-5 w-5 text-yellow-600" />
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600">Schedule a personalized demo to see how Zyglio can transform your training programs.</p>
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
         </div>
       </section>
 
