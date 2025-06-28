@@ -259,14 +259,11 @@ const InteractiveROICalculator = () => {
   };
 
   return (
-    <div className="space-y-8">
-      <Card className="relative overflow-hidden border border-slate-200 shadow-lg">
-        {/* Simplified Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-blue-100" />
-        
-        <CardHeader className="text-center relative z-10 py-8">
-          <div className="mx-auto mb-4 p-3 bg-blue-100 rounded-lg w-fit">
-            <Calculator className="h-8 w-8 text-blue-600" />
+    <div className="space-y-12">
+      <Card className="border-slate-200 shadow-sm">
+        <CardHeader className="text-center py-12 bg-slate-50">
+          <div className="mx-auto mb-4 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+            <Calculator className="h-6 w-6 text-blue-600" />
           </div>
           <CardTitle className="text-3xl font-bold text-slate-900 mb-3">
             AI-Powered ROI Calculator
@@ -276,158 +273,161 @@ const InteractiveROICalculator = () => {
           </CardDescription>
         </CardHeader>
         
-        <CardContent className="relative z-10 pb-12">
-          <div className="grid lg:grid-cols-2 gap-12">
+        <CardContent className="p-8">
+          <div className="grid xl:grid-cols-2 gap-16">
             {/* Input Section */}
             <div className="space-y-8">
-              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-slate-200 shadow-sm">
+              {/* Organization Profile */}
+              <div className="bg-white border border-slate-200 rounded-xl p-8">
                 <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center">
                   <Users className="h-5 w-5 mr-3 text-blue-600" />
                   Organization Profile
                 </h3>
                 
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="employees" className="text-slate-900 font-medium">Number of Employees</Label>
                     <Input
                       id="employees"
                       type="number"
                       value={inputs.employees}
                       onChange={(e) => handleInputChange('employees', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="100"
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="averageSalary" className="text-slate-900 font-medium">Average Salary ($)</Label>
                     <Input
                       id="averageSalary"
                       type="number"
                       value={inputs.averageSalary}
                       onChange={(e) => handleInputChange('averageSalary', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="75,000"
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="trainingHours" className="text-slate-900 font-medium">Training Hours/Year</Label>
                     <Input
                       id="trainingHours"
                       type="number"
                       value={inputs.trainingHoursPerYear}
                       onChange={(e) => handleInputChange('trainingHoursPerYear', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="40"
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="trainingCost" className="text-slate-900 font-medium">Training Cost/Hour ($)</Label>
                     <Input
                       id="trainingCost"
                       type="number"
                       value={inputs.currentTrainingCostPerHour}
                       onChange={(e) => handleInputChange('currentTrainingCostPerHour', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="150"
                     />
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-slate-200 shadow-sm">
+              {/* Operational Metrics */}
+              <div className="bg-white border border-slate-200 rounded-xl p-8">
                 <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center">
                   <Clock className="h-5 w-5 mr-3 text-purple-600" />
                   Operational Metrics
                 </h3>
                 
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="productivityLoss" className="text-slate-900 font-medium">Hours to Competency</Label>
                     <Input
                       id="productivityLoss"
                       type="number"
                       value={inputs.productivityLossHours}
                       onChange={(e) => handleInputChange('productivityLossHours', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="160"
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="errorCost" className="text-slate-900 font-medium">Annual Error Cost ($)</Label>
                     <Input
                       id="errorCost"
                       type="number"
                       value={inputs.errorCostPerYear}
                       onChange={(e) => handleInputChange('errorCostPerYear', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="50,000"
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="turnoverRate" className="text-slate-900 font-medium">Turnover Rate (%)</Label>
                     <Input
                       id="turnoverRate"
                       type="number"
                       value={inputs.turnoverRate}
                       onChange={(e) => handleInputChange('turnoverRate', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="15"
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="complianceRisk" className="text-slate-900 font-medium">Compliance Risk Cost ($)</Label>
                     <Input
                       id="complianceRisk"
                       type="number"
                       value={inputs.complianceRiskCost}
                       onChange={(e) => handleInputChange('complianceRiskCost', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="25,000"
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="mentoringHours" className="text-slate-900 font-medium">Mentoring Hours/Employee/Year</Label>
                     <Input
                       id="mentoringHours"
                       type="number"
                       value={inputs.mentoringHoursPerEmployee}
                       onChange={(e) => handleInputChange('mentoringHoursPerEmployee', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="20"
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="distractorSimulation" className="text-slate-900 font-medium">Distractor Simulation Value ($)</Label>
                     <Input
                       id="distractorSimulation"
                       type="number"
                       value={inputs.distractorSimulationValue}
                       onChange={(e) => handleInputChange('distractorSimulationValue', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="75,000"
                     />
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-slate-200 shadow-sm">
+              {/* AI & Technology Value Drivers */}
+              <div className="bg-white border border-slate-200 rounded-xl p-8">
                 <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center">
                   <Zap className="h-5 w-5 mr-3 text-yellow-600" />
                   AI & Technology Value Drivers
                 </h3>
                 
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="aiIntegration" className="text-slate-900 font-medium flex items-center">
-                      <Brain className="h-4 w-4 mr-2 text-cyan-400" />
+                      <Brain className="h-4 w-4 mr-2 text-cyan-600" />
                       AI Training Value ($)
                     </Label>
                     <Input
@@ -435,14 +435,14 @@ const InteractiveROICalculator = () => {
                       type="number"
                       value={inputs.aiIntegrationValue}
                       onChange={(e) => handleInputChange('aiIntegrationValue', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="150,000"
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="employeeAgility" className="text-slate-900 font-medium flex items-center">
-                      <Target className="h-4 w-4 mr-2 text-green-400" />
+                      <Target className="h-4 w-4 mr-2 text-green-600" />
                       Employee Agility Value ($)
                     </Label>
                     <Input
@@ -450,14 +450,14 @@ const InteractiveROICalculator = () => {
                       type="number"
                       value={inputs.employeeAgilityValue}
                       onChange={(e) => handleInputChange('employeeAgilityValue', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="120,000"
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="tribalKnowledge" className="text-slate-900 font-medium flex items-center">
-                      <Database className="h-4 w-4 mr-2 text-orange-400" />
+                      <Database className="h-4 w-4 mr-2 text-orange-600" />
                       Knowledge Capture Value ($)
                     </Label>
                     <Input
@@ -465,14 +465,14 @@ const InteractiveROICalculator = () => {
                       type="number"
                       value={inputs.tribalKnowledgeValue}
                       onChange={(e) => handleInputChange('tribalKnowledgeValue', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="180,000"
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="competitiveAdvantage" className="text-slate-900 font-medium flex items-center">
-                      <TrendingUp className="h-4 w-4 mr-2 text-purple-400" />
+                      <TrendingUp className="h-4 w-4 mr-2 text-purple-600" />
                       Competitive Advantage ($)
                     </Label>
                     <Input
@@ -480,14 +480,14 @@ const InteractiveROICalculator = () => {
                       type="number"
                       value={inputs.competitiveAdvantageValue}
                       onChange={(e) => handleInputChange('competitiveAdvantageValue', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="200,000"
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="assessmentCertification" className="text-slate-900 font-medium flex items-center">
-                      <Award className="h-4 w-4 mr-2 text-indigo-400" />
+                      <Award className="h-4 w-4 mr-2 text-indigo-600" />
                       Assessment & Certification ($)
                     </Label>
                     <Input
@@ -495,14 +495,14 @@ const InteractiveROICalculator = () => {
                       type="number"
                       value={inputs.assessmentCertificationValue}
                       onChange={(e) => handleInputChange('assessmentCertificationValue', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="90,000"
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="operatingProcedureImprovement" className="text-slate-900 font-medium flex items-center">
-                      <Cog className="h-4 w-4 mr-2 text-rose-400" />
+                      <Cog className="h-4 w-4 mr-2 text-rose-600" />
                       Procedure Automation ($)
                     </Label>
                     <Input
@@ -510,23 +510,24 @@ const InteractiveROICalculator = () => {
                       type="number"
                       value={inputs.operatingProcedureImprovementValue}
                       onChange={(e) => handleInputChange('operatingProcedureImprovementValue', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="110,000"
                     />
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-slate-200 shadow-sm">
+              {/* Strategic Value Factors */}
+              <div className="bg-white border border-slate-200 rounded-xl p-8">
                 <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center">
                   <Star className="h-5 w-5 mr-3 text-yellow-600" />
                   Strategic Value Factors
                 </h3>
                 
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="recruitmentBranding" className="text-slate-900 font-medium flex items-center">
-                      <Users className="h-4 w-4 mr-2 text-green-400" />
+                      <Users className="h-4 w-4 mr-2 text-green-600" />
                       Recruitment Branding ($)
                     </Label>
                     <Input
@@ -534,14 +535,14 @@ const InteractiveROICalculator = () => {
                       type="number"
                       value={inputs.recruitmentBrandingValue}
                       onChange={(e) => handleInputChange('recruitmentBrandingValue', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="130,000"
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="retentionEnhancement" className="text-slate-900 font-medium flex items-center">
-                      <Shield className="h-4 w-4 mr-2 text-blue-400" />
+                      <Shield className="h-4 w-4 mr-2 text-blue-600" />
                       Retention Enhancement ($)
                     </Label>
                     <Input
@@ -549,14 +550,14 @@ const InteractiveROICalculator = () => {
                       type="number"
                       value={inputs.retentionEnhancementValue}
                       onChange={(e) => handleInputChange('retentionEnhancementValue', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="160,000"
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="customerRecognition" className="text-slate-900 font-medium flex items-center">
-                      <Award className="h-4 w-4 mr-2 text-purple-400" />
+                      <Award className="h-4 w-4 mr-2 text-purple-600" />
                       Customer Recognition ($)
                     </Label>
                     <Input
@@ -564,14 +565,14 @@ const InteractiveROICalculator = () => {
                       type="number"
                       value={inputs.customerRecognitionValue}
                       onChange={(e) => handleInputChange('customerRecognitionValue', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="140,000"
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="publicRelationsMedia" className="text-slate-900 font-medium flex items-center">
-                      <Megaphone className="h-4 w-4 mr-2 text-orange-400" />
+                      <Megaphone className="h-4 w-4 mr-2 text-orange-600" />
                       PR & Media Value ($)
                     </Label>
                     <Input
@@ -579,23 +580,24 @@ const InteractiveROICalculator = () => {
                       type="number"
                       value={inputs.publicRelationsMediaValue}
                       onChange={(e) => handleInputChange('publicRelationsMediaValue', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="95,000"
                     />
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-slate-200 shadow-sm">
+              {/* Monetization Opportunities */}
+              <div className="bg-white border border-slate-200 rounded-xl p-8">
                 <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center">
                   <Banknote className="h-5 w-5 mr-3 text-green-600" />
                   Monetization Opportunities
                 </h3>
                 
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="educationMonetization" className="text-slate-900 font-medium flex items-center">
-                      <GraduationCap className="h-4 w-4 mr-2 text-green-400" />
+                      <GraduationCap className="h-4 w-4 mr-2 text-green-600" />
                       Education Monetization ($)
                     </Label>
                     <Input
@@ -603,14 +605,14 @@ const InteractiveROICalculator = () => {
                       type="number"
                       value={inputs.educationMonetizationValue}
                       onChange={(e) => handleInputChange('educationMonetizationValue', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="250,000"
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="simulationLicensing" className="text-slate-900 font-medium flex items-center">
-                      <Zap className="h-4 w-4 mr-2 text-blue-400" />
+                      <Zap className="h-4 w-4 mr-2 text-blue-600" />
                       Simulation Licensing Revenue ($)
                     </Label>
                     <Input
@@ -618,14 +620,14 @@ const InteractiveROICalculator = () => {
                       type="number"
                       value={inputs.simulationLicensingValue}
                       onChange={(e) => handleInputChange('simulationLicensingValue', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="180,000"
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="trainingServicesRevenue" className="text-slate-900 font-medium flex items-center">
-                      <BookOpen className="h-4 w-4 mr-2 text-red-400" />
+                      <BookOpen className="h-4 w-4 mr-2 text-red-600" />
                       Training Services Revenue ($)
                     </Label>
                     <Input
@@ -633,14 +635,14 @@ const InteractiveROICalculator = () => {
                       type="number"
                       value={inputs.trainingServicesRevenueValue}
                       onChange={(e) => handleInputChange('trainingServicesRevenueValue', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="300,000"
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <Label htmlFor="certificationProgramRevenue" className="text-slate-900 font-medium flex items-center">
-                      <Award className="h-4 w-4 mr-2 text-purple-400" />
+                      <Award className="h-4 w-4 mr-2 text-purple-600" />
                       Certification Program Revenue ($)
                     </Label>
                     <Input
@@ -648,14 +650,14 @@ const InteractiveROICalculator = () => {
                       type="number"
                       value={inputs.certificationProgramRevenueValue}
                       onChange={(e) => handleInputChange('certificationProgramRevenueValue', e.target.value)}
-                      className="bg-white/80 border-slate-200 text-slate-900 placeholder-slate-500 backdrop-blur-sm"
+                      className="bg-white border-slate-300 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="150,000"
                     />
                   </div>
                 </div>
                 
                 <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                  <p className="text-green-700 text-sm leading-relaxed">
+                  <p className="text-green-800 text-sm leading-relaxed">
                     <strong>Monetization Opportunities:</strong> These represent potential revenue-generating opportunities that can transform training from a cost center into a profit center. Organizations can monetize their enhanced training capabilities through external education services, simulation licensing, certification programs, and knowledge commercialization.
                   </p>
                 </div>
@@ -664,86 +666,88 @@ const InteractiveROICalculator = () => {
 
             {/* Results Section */}
             <div className="space-y-8">
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 border border-slate-200 shadow-sm">
+              {/* Cost Analysis */}
+              <div className="bg-white border border-slate-200 rounded-xl p-8">
                 <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center">
-                  <AlertCircle className="h-5 w-5 mr-3 text-yellow-600" />
+                  <AlertCircle className="h-5 w-5 mr-3 text-amber-600" />
                   Cost Analysis Breakdown
                 </h3>
                 
                 <div className="space-y-6">
-                  <div className="bg-red-500/20 border border-red-400/30 rounded-xl p-6">
+                  <div className="bg-red-50 border border-red-200 rounded-xl p-6">
                     <div className="flex items-center justify-between mb-3">
-                      <span className="text-red-200 font-medium">Your Current Training Burden</span>
-                      <DollarSign className="h-5 w-5 text-red-400" />
+                      <span className="text-red-800 font-medium">Your Current Training Burden</span>
+                      <DollarSign className="h-5 w-5 text-red-600" />
                     </div>
-                    <div className="text-3xl font-bold text-red-300 mb-2">
+                    <div className="text-3xl font-bold text-red-700 mb-2">
                       {formatCurrency(results.currentAnnualCost)}
                     </div>
-                    <p className="text-sm text-red-200/80">
+                    <p className="text-sm text-red-700">
                       Total cost of your existing training approach including direct costs, 
                       productivity losses, errors, mentoring burden, and inefficiencies
                     </p>
                   </div>
 
-                  <div className="bg-blue-500/20 border border-blue-400/30 rounded-xl p-6">
+                  <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
                     <div className="flex items-center justify-between mb-3">
-                      <span className="text-blue-200 font-medium">Zyglio Investment Required</span>
-                      <Calculator className="h-5 w-5 text-blue-400" />
+                      <span className="text-blue-800 font-medium">Zyglio Investment Required</span>
+                      <Calculator className="h-5 w-5 text-blue-600" />
                     </div>
-                    <div className="text-3xl font-bold text-blue-300 mb-2">
+                    <div className="text-3xl font-bold text-blue-700 mb-2">
                       {formatCurrency(results.zyglioAnnualCost)}
                     </div>
-                    <p className="text-sm text-blue-200/80">
+                    <p className="text-sm text-blue-700">
                       Annual investment in Zyglio's AI-powered training platform 
                       (estimated at 30% of current training costs)
                     </p>
                   </div>
 
-                  <div className="bg-gradient-to-r from-green-500/30 to-emerald-500/30 border border-green-400/40 rounded-xl p-6">
+                  <div className="bg-green-50 border border-green-200 rounded-xl p-6">
                     <div className="flex items-center justify-between mb-3">
-                      <span className="text-green-200 font-medium">Net Annual Value Created</span>
-                      <TrendingUp className="h-5 w-5 text-green-400" />
+                      <span className="text-green-800 font-medium">Net Annual Value Created</span>
+                      <TrendingUp className="h-5 w-5 text-green-600" />
                     </div>
-                    <div className="text-4xl font-bold text-green-300 mb-2">
+                    <div className="text-4xl font-bold text-green-700 mb-2">
                       {formatCurrency(results.annualSavings)}
                     </div>
-                    <p className="text-sm text-green-200/80">
+                    <p className="text-sm text-green-700">
                       Total value generated after deducting Zyglio investment from 
                       all productivity gains, cost savings, strategic benefits, and revenue opportunities
                     </p>
                     
                     <div className="grid grid-cols-2 gap-4 mt-6">
-                      <div className="bg-white/10 rounded-lg p-4 text-center">
-                        <div className="text-2xl font-bold text-purple-300">
+                      <div className="bg-white rounded-lg p-4 text-center">
+                        <div className="text-2xl font-bold text-slate-900">
                           {Math.round(results.roiPercentage)}%
                         </div>
-                        <div className="text-xs text-purple-200">Return on Investment</div>
+                        <div className="text-xs text-slate-600">Return on Investment</div>
                       </div>
-                      <div className="bg-white/10 rounded-lg p-4 text-center">
-                        <div className="text-2xl font-bold text-orange-300">
+                      <div className="bg-white rounded-lg p-4 text-center">
+                        <div className="text-2xl font-bold text-slate-900">
                           {Math.round(results.paybackMonths)}
                         </div>
-                        <div className="text-xs text-orange-200">Months to Payback</div>
+                        <div className="text-xs text-slate-600">Months to Payback</div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                  <BarChart3 className="h-6 w-6 mr-3 text-cyan-400" />
+              {/* Charts */}
+              <div className="bg-white border border-slate-200 rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-slate-900 mb-8 flex items-center">
+                  <BarChart3 className="h-6 w-6 mr-3 text-blue-600" />
                   ROI Visualization
                 </h3>
 
                 {/* Cost Comparison Chart */}
                 <div className="mb-8">
-                  <h4 className="text-lg font-semibold text-white mb-4">Annual Cost Comparison</h4>
+                  <h4 className="text-lg font-semibold text-slate-900 mb-4">Annual Cost Comparison</h4>
                   <ChartContainer config={chartConfig} className="h-64">
                     <ResponsiveContainer width="100%" height="100%">
                       <BarChart data={costComparisonData}>
-                        <XAxis dataKey="name" stroke="#94a3b8" />
-                        <YAxis stroke="#94a3b8" tickFormatter={(value) => `$${(value / 1000).toFixed(0)}K`} />
+                        <XAxis dataKey="name" stroke="#64748b" />
+                        <YAxis stroke="#64748b" tickFormatter={(value) => `$${(value / 1000).toFixed(0)}K`} />
                         <ChartTooltip 
                           content={<ChartTooltipContent />}
                           formatter={(value) => [formatCurrency(Number(value)), 'Annual Cost']}
@@ -756,7 +760,7 @@ const InteractiveROICalculator = () => {
 
                 {/* Value Breakdown Pie Chart */}
                 <div className="mb-8">
-                  <h4 className="text-lg font-semibold text-white mb-4">Value Creation Breakdown</h4>
+                  <h4 className="text-lg font-semibold text-slate-900 mb-4">Value Creation Breakdown</h4>
                   <ChartContainer config={chartConfig} className="h-64">
                     <ResponsiveContainer width="100%" height="100%">
                       <PieChart>
@@ -783,12 +787,12 @@ const InteractiveROICalculator = () => {
 
                 {/* ROI Timeline */}
                 <div>
-                  <h4 className="text-lg font-semibold text-white mb-4">ROI Timeline - Path to Payback</h4>
+                  <h4 className="text-lg font-semibold text-slate-900 mb-4">ROI Timeline - Path to Payback</h4>
                   <ChartContainer config={chartConfig} className="h-64">
                     <ResponsiveContainer width="100%" height="100%">
                       <LineChart data={roiTimelineData}>
-                        <XAxis dataKey="month" stroke="#94a3b8" />
-                        <YAxis stroke="#94a3b8" tickFormatter={(value) => `$${(value / 1000).toFixed(0)}K`} />
+                        <XAxis dataKey="month" stroke="#64748b" />
+                        <YAxis stroke="#64748b" tickFormatter={(value) => `$${(value / 1000).toFixed(0)}K`} />
                         <ChartTooltip 
                           content={<ChartTooltipContent />}
                           formatter={(value, name) => [formatCurrency(Number(value)), name === 'cumulative' ? 'Cumulative Benefits' : 'Investment']}
@@ -815,139 +819,139 @@ const InteractiveROICalculator = () => {
               </div>
 
               {/* Value Breakdown Details */}
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-                <h4 className="text-lg font-semibold text-white mb-4">Detailed Value Breakdown</h4>
+              <div className="bg-slate-50 border border-slate-200 rounded-xl p-8">
+                <h4 className="text-lg font-semibold text-slate-900 mb-6">Detailed Value Breakdown</h4>
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-200 flex items-center">
-                      <Users className="h-4 w-4 mr-2 text-green-400" />
+                    <span className="text-slate-700 flex items-center">
+                      <Users className="h-4 w-4 mr-2 text-green-600" />
                       Recruitment Branding:
                     </span>
-                    <span className="font-medium text-green-300">{formatCurrency(results.recruitmentBrandingBenefits)}</span>
+                    <span className="font-medium text-slate-900">{formatCurrency(results.recruitmentBrandingBenefits)}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-200 flex items-center">
-                      <Shield className="h-4 w-4 mr-2 text-blue-400" />
+                    <span className="text-slate-700 flex items-center">
+                      <Shield className="h-4 w-4 mr-2 text-blue-600" />
                       Retention Enhancement:
                     </span>
-                    <span className="font-medium text-blue-300">{formatCurrency(results.retentionEnhancementBenefits)}</span>
+                    <span className="font-medium text-slate-900">{formatCurrency(results.retentionEnhancementBenefits)}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-200 flex items-center">
-                      <Award className="h-4 w-4 mr-2 text-purple-400" />
+                    <span className="text-slate-700 flex items-center">
+                      <Award className="h-4 w-4 mr-2 text-purple-600" />
                       Customer Recognition:
                     </span>
-                    <span className="font-medium text-purple-300">{formatCurrency(results.customerRecognitionBenefits)}</span>
+                    <span className="font-medium text-slate-900">{formatCurrency(results.customerRecognitionBenefits)}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-200 flex items-center">
-                      <Megaphone className="h-4 w-4 mr-2 text-orange-400" />
+                    <span className="text-slate-700 flex items-center">
+                      <Megaphone className="h-4 w-4 mr-2 text-orange-600" />
                       PR & Media Value:
                     </span>
-                    <span className="font-medium text-orange-300">{formatCurrency(results.publicRelationsMediaBenefits)}</span>
+                    <span className="font-medium text-slate-900">{formatCurrency(results.publicRelationsMediaBenefits)}</span>
                   </div>
                   
-                  <div className="border-t border-white/20 pt-3 mt-4">
+                  <div className="border-t border-slate-300 pt-3 mt-4">
                     <div className="flex justify-between items-center">
-                      <span className="text-green-200 flex items-center font-semibold">
-                        <Banknote className="h-4 w-4 mr-2 text-green-400" />
+                      <span className="text-slate-800 flex items-center font-semibold">
+                        <Banknote className="h-4 w-4 mr-2 text-green-600" />
                         Revenue Generation Opportunities:
                       </span>
                     </div>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-200 flex items-center pl-4">
-                      <GraduationCap className="h-4 w-4 mr-2 text-green-400" />
+                    <span className="text-slate-700 flex items-center pl-4">
+                      <GraduationCap className="h-4 w-4 mr-2 text-green-600" />
                       Education Monetization:
                     </span>
-                    <span className="font-medium text-green-300">{formatCurrency(results.educationMonetizationBenefits)}</span>
+                    <span className="font-medium text-slate-900">{formatCurrency(results.educationMonetizationBenefits)}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-200 flex items-center pl-4">
-                      <Zap className="h-4 w-4 mr-2 text-blue-400" />
+                    <span className="text-slate-700 flex items-center pl-4">
+                      <Zap className="h-4 w-4 mr-2 text-blue-600" />
                       Simulation Licensing:
                     </span>
-                    <span className="font-medium text-blue-300">{formatCurrency(results.simulationLicensingBenefits)}</span>
+                    <span className="font-medium text-slate-900">{formatCurrency(results.simulationLicensingBenefits)}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-200 flex items-center pl-4">
-                      <BookOpen className="h-4 w-4 mr-2 text-red-400" />
+                    <span className="text-slate-700 flex items-center pl-4">
+                      <BookOpen className="h-4 w-4 mr-2 text-red-600" />
                       Training Services Revenue:
                     </span>
-                    <span className="font-medium text-red-300">{formatCurrency(results.trainingServicesRevenueBenefits)}</span>
+                    <span className="font-medium text-slate-900">{formatCurrency(results.trainingServicesRevenueBenefits)}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-200 flex items-center pl-4">
-                      <Award className="h-4 w-4 mr-2 text-purple-400" />
+                    <span className="text-slate-700 flex items-center pl-4">
+                      <Award className="h-4 w-4 mr-2 text-purple-600" />
                       Certification Program Revenue:
                     </span>
-                    <span className="font-medium text-purple-300">{formatCurrency(results.certificationProgramRevenueBenefits)}</span>
+                    <span className="font-medium text-slate-900">{formatCurrency(results.certificationProgramRevenueBenefits)}</span>
                   </div>
                   
-                  <div className="border-t border-white/20 pt-3 mt-4">
+                  <div className="border-t border-slate-300 pt-3 mt-4">
                     <div className="flex justify-between items-center">
-                      <span className="text-blue-200 flex items-center">
-                        <Lightbulb className="h-4 w-4 mr-2 text-cyan-400" />
+                      <span className="text-slate-700 flex items-center">
+                        <Lightbulb className="h-4 w-4 mr-2 text-cyan-600" />
                         Distractor Simulation:
                       </span>
-                      <span className="font-medium text-cyan-300">{formatCurrency(results.distractorSimulationBenefits)}</span>
+                      <span className="font-medium text-slate-900">{formatCurrency(results.distractorSimulationBenefits)}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-blue-200 flex items-center">
-                        <Clock className="h-4 w-4 mr-2 text-yellow-400" />
+                      <span className="text-slate-700 flex items-center">
+                        <Clock className="h-4 w-4 mr-2 text-yellow-600" />
                         Mentoring Reduction:
                       </span>
-                      <span className="font-medium text-yellow-300">{formatCurrency(results.mentoringReduction)}</span>
+                      <span className="font-medium text-slate-900">{formatCurrency(results.mentoringReduction)}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-blue-200 flex items-center">
-                        <Brain className="h-4 w-4 mr-2 text-cyan-400" />
+                      <span className="text-slate-700 flex items-center">
+                        <Brain className="h-4 w-4 mr-2 text-cyan-600" />
                         AI Integration Benefits:
                       </span>
-                      <span className="font-medium text-cyan-300">{formatCurrency(results.aiIntegrationBenefits)}</span>
+                      <span className="font-medium text-slate-900">{formatCurrency(results.aiIntegrationBenefits)}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-blue-200 flex items-center">
-                        <Target className="h-4 w-4 mr-2 text-green-400" />
+                      <span className="text-slate-700 flex items-center">
+                        <Target className="h-4 w-4 mr-2 text-green-600" />
                         Employee Agility Benefits:
                       </span>
-                      <span className="font-medium text-green-300">{formatCurrency(results.employeeAgilityBenefits)}</span>
+                      <span className="font-medium text-slate-900">{formatCurrency(results.employeeAgilityBenefits)}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-blue-200 flex items-center">
-                        <Database className="h-4 w-4 mr-2 text-orange-400" />
+                      <span className="text-slate-700 flex items-center">
+                        <Database className="h-4 w-4 mr-2 text-orange-600" />
                         Knowledge Capture Benefits:
                       </span>
-                      <span className="font-medium text-orange-300">{formatCurrency(results.tribalKnowledgeBenefits)}</span>
+                      <span className="font-medium text-slate-900">{formatCurrency(results.tribalKnowledgeBenefits)}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-blue-200 flex items-center">
-                        <Award className="h-4 w-4 mr-2 text-indigo-400" />
+                      <span className="text-slate-700 flex items-center">
+                        <Award className="h-4 w-4 mr-2 text-indigo-600" />
                         Assessment & Certification:
                       </span>
-                      <span className="font-medium text-indigo-300">{formatCurrency(results.assessmentCertificationBenefits)}</span>
+                      <span className="font-medium text-slate-900">{formatCurrency(results.assessmentCertificationBenefits)}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-blue-200 flex items-center">
-                        <Cog className="h-4 w-4 mr-2 text-rose-400" />
+                      <span className="text-slate-700 flex items-center">
+                        <Cog className="h-4 w-4 mr-2 text-rose-600" />
                         Procedure Automation:
                       </span>
-                      <span className="font-medium text-rose-300">{formatCurrency(results.operatingProcedureImprovementBenefits)}</span>
+                      <span className="font-medium text-slate-900">{formatCurrency(results.operatingProcedureImprovementBenefits)}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-blue-200 flex items-center">
-                        <TrendingUp className="h-4 w-4 mr-2 text-purple-400" />
+                      <span className="text-slate-700 flex items-center">
+                        <TrendingUp className="h-4 w-4 mr-2 text-purple-600" />
                         Competitive Advantage:
                       </span>
-                      <span className="font-medium text-purple-300">{formatCurrency(results.competitiveAdvantage)}</span>
+                      <span className="font-medium text-slate-900">{formatCurrency(results.competitiveAdvantage)}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-blue-200">Productivity Gains:</span>
-                      <span className="font-medium text-white">{formatCurrency(results.productivityGains)}</span>
+                      <span className="text-slate-700">Productivity Gains:</span>
+                      <span className="font-medium text-slate-900">{formatCurrency(results.productivityGains)}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-blue-200">Risk Reduction:</span>
-                      <span className="font-medium text-white">{formatCurrency(results.riskReduction)}</span>
+                      <span className="text-slate-700">Risk Reduction:</span>
+                      <span className="font-medium text-slate-900">{formatCurrency(results.riskReduction)}</span>
                     </div>
                   </div>
                 </div>
@@ -955,15 +959,16 @@ const InteractiveROICalculator = () => {
             </div>
           </div>
 
-          <div className="mt-12 p-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
-            <h4 className="font-semibold text-white text-lg mb-4 flex items-center">
-              <Calculator className="h-5 w-5 mr-2 text-cyan-400" />
+          {/* Methodology */}
+          <div className="mt-16 p-8 bg-slate-50 rounded-xl border border-slate-200">
+            <h4 className="font-semibold text-slate-900 text-lg mb-4 flex items-center">
+              <Calculator className="h-5 w-5 mr-2 text-blue-600" />
               Methodology & Assumptions
             </h4>
-            <p className="text-blue-200 mb-6 leading-relaxed">
+            <p className="text-slate-700 mb-6 leading-relaxed">
               This comprehensive ROI calculator incorporates all measurable training value drivers including strategic value factors (recruitment branding, retention enhancement, customer recognition, PR/media value), operational improvements (mentoring burden reduction, distractor simulation benefits), AI integration benefits, employee agility improvements, tribal knowledge capture, assessment and certification automation, operating procedure improvements through automated feedback, competitive positioning, stretch value factors for revenue generation opportunities (education monetization, simulation licensing, training services revenue, certification program revenue), and traditional cost savings. Results are based on industry benchmarks and Zyglio's proven client outcomes.
             </p>
-            <div className="grid md:grid-cols-2 gap-6 text-xs text-blue-300">
+            <div className="grid md:grid-cols-2 gap-6 text-xs text-slate-600">
               <div className="space-y-2">
                 <div>• Training cost reduction: 70% (industry average)</div>
                 <div>• Productivity improvement: 4x faster competency</div>
