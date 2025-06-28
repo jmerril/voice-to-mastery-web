@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { Calculator, TrendingUp, DollarSign, Users, Clock, UserCheck, Megaphone, Zap, Brain, Target, Database, AlertCircle, BarChart3 } from "lucide-react";
+import { Calculator, TrendingUp, DollarSign, Users, Clock, UserCheck, Megaphone, Zap, Brain, Target, Database, AlertCircle, BarChart3, Award, BookOpen, Cog } from "lucide-react";
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line } from "recharts";
 
@@ -26,7 +26,9 @@ const InteractiveROICalculator = () => {
     competitiveAdvantageValue: 200000, // annual competitive advantage value
     aiIntegrationValue: 150000, // annual AI integration value
     employeeAgilityValue: 120000, // annual employee agility value
-    tribalKnowledgeValue: 180000 // annual tribal knowledge capture value
+    tribalKnowledgeValue: 180000, // annual tribal knowledge capture value
+    assessmentCertificationValue: 90000, // annual assessment and certification value
+    operatingProcedureImprovementValue: 110000 // annual operating procedure improvement value
   });
 
   const [results, setResults] = useState({
@@ -43,6 +45,8 @@ const InteractiveROICalculator = () => {
     aiIntegrationBenefits: 0,
     employeeAgilityBenefits: 0,
     tribalKnowledgeBenefits: 0,
+    assessmentCertificationBenefits: 0,
+    operatingProcedureImprovementBenefits: 0,
     totalAnnualValue: 0,
     roiPercentage: 0,
     paybackMonths: 0
@@ -70,7 +74,9 @@ const InteractiveROICalculator = () => {
       competitiveAdvantageValue,
       aiIntegrationValue,
       employeeAgilityValue,
-      tribalKnowledgeValue
+      tribalKnowledgeValue,
+      assessmentCertificationValue,
+      operatingProcedureImprovementValue
     } = inputs;
 
     // Current training costs
@@ -96,12 +102,16 @@ const InteractiveROICalculator = () => {
     const brandingBenefits = brandingMarketingBenefit * 0.8; // 80% of the branding benefit realized
     const competitiveAdvantage = competitiveAdvantageValue * 0.6; // 60% of competitive advantage realized
     
-    // New AI and agility benefits
+    // AI and agility benefits
     const aiIntegrationBenefits = aiIntegrationValue * 0.7; // 70% of AI integration value realized
     const employeeAgilityBenefits = employeeAgilityValue * 0.75; // 75% of employee agility value realized
     const tribalKnowledgeBenefits = tribalKnowledgeValue * 0.8; // 80% of tribal knowledge value realized
+    
+    // New assessment and procedure improvement benefits
+    const assessmentCertificationBenefits = assessmentCertificationValue * 0.85; // 85% of assessment value realized
+    const operatingProcedureImprovementBenefits = operatingProcedureImprovementValue * 0.75; // 75% of procedure improvement value realized
 
-    const totalAnnualValue = trainingSavings + productivityGains + riskReduction + supervisorSavings + materialSavings + recruitmentSavings + brandingBenefits + competitiveAdvantage + aiIntegrationBenefits + employeeAgilityBenefits + tribalKnowledgeBenefits;
+    const totalAnnualValue = trainingSavings + productivityGains + riskReduction + supervisorSavings + materialSavings + recruitmentSavings + brandingBenefits + competitiveAdvantage + aiIntegrationBenefits + employeeAgilityBenefits + tribalKnowledgeBenefits + assessmentCertificationBenefits + operatingProcedureImprovementBenefits;
     const annualSavings = totalAnnualValue - zyglioAnnualCost;
     const roiPercentage = (annualSavings / zyglioAnnualCost) * 100;
     const paybackMonths = (zyglioAnnualCost / (annualSavings / 12));
@@ -120,6 +130,8 @@ const InteractiveROICalculator = () => {
       aiIntegrationBenefits,
       employeeAgilityBenefits,
       tribalKnowledgeBenefits,
+      assessmentCertificationBenefits,
+      operatingProcedureImprovementBenefits,
       totalAnnualValue,
       roiPercentage,
       paybackMonths
@@ -160,9 +172,11 @@ const InteractiveROICalculator = () => {
     { name: 'AI Integration', value: results.aiIntegrationBenefits, color: '#06b6d4' },
     { name: 'Employee Agility', value: results.employeeAgilityBenefits, color: '#10b981' },
     { name: 'Knowledge Capture', value: results.tribalKnowledgeBenefits, color: '#f59e0b' },
-    { name: 'Competitive Advantage', value: results.competitiveAdvantage, color: '#8b5cf6' },
-    { name: 'Productivity Gains', value: results.productivityGains, color: '#ec4899' },
-    { name: 'Risk Reduction', value: results.riskReduction, color: '#84cc16' }
+    { name: 'Assessment & Certification', value: results.assessmentCertificationBenefits, color: '#8b5cf6' },
+    { name: 'Procedure Improvements', value: results.operatingProcedureImprovementBenefits, color: '#ef4444' },
+    { name: 'Competitive Advantage', value: results.competitiveAdvantage, color: '#ec4899' },
+    { name: 'Productivity Gains', value: results.productivityGains, color: '#84cc16' },
+    { name: 'Risk Reduction', value: results.riskReduction, color: '#f97316' }
   ];
 
   const roiTimelineData = [
@@ -383,6 +397,36 @@ const InteractiveROICalculator = () => {
                       placeholder="200,000"
                     />
                   </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="assessmentCertification" className="text-white font-medium flex items-center">
+                      <Award className="h-4 w-4 mr-2 text-indigo-400" />
+                      Assessment & Certification ($)
+                    </Label>
+                    <Input
+                      id="assessmentCertification"
+                      type="number"
+                      value={inputs.assessmentCertificationValue}
+                      onChange={(e) => handleInputChange('assessmentCertificationValue', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="90,000"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="operatingProcedureImprovement" className="text-white font-medium flex items-center">
+                      <Cog className="h-4 w-4 mr-2 text-rose-400" />
+                      Procedure Automation ($)
+                    </Label>
+                    <Input
+                      id="operatingProcedureImprovement"
+                      type="number"
+                      value={inputs.operatingProcedureImprovementValue}
+                      onChange={(e) => handleInputChange('operatingProcedureImprovementValue', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="110,000"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -568,6 +612,20 @@ const InteractiveROICalculator = () => {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-blue-200 flex items-center">
+                      <Award className="h-4 w-4 mr-2 text-indigo-400" />
+                      Assessment & Certification:
+                    </span>
+                    <span className="font-medium text-indigo-300">{formatCurrency(results.assessmentCertificationBenefits)}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-blue-200 flex items-center">
+                      <Cog className="h-4 w-4 mr-2 text-rose-400" />
+                      Procedure Automation:
+                    </span>
+                    <span className="font-medium text-rose-300">{formatCurrency(results.operatingProcedureImprovementBenefits)}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-blue-200 flex items-center">
                       <TrendingUp className="h-4 w-4 mr-2 text-purple-400" />
                       Competitive Advantage:
                     </span>
@@ -593,8 +651,8 @@ const InteractiveROICalculator = () => {
             </h4>
             <p className="text-blue-200 mb-6 leading-relaxed">
               This comprehensive ROI calculator incorporates all measurable training value drivers including AI integration benefits, 
-              employee agility improvements, tribal knowledge capture, competitive positioning, and traditional cost savings. 
-              Results are based on industry benchmarks and Zyglio's proven client outcomes.
+              employee agility improvements, tribal knowledge capture, assessment and certification automation, operating procedure improvements through automated feedback, 
+              competitive positioning, and traditional cost savings. Results are based on industry benchmarks and Zyglio's proven client outcomes.
             </p>
             <div className="grid md:grid-cols-2 gap-6 text-xs text-blue-300">
               <div className="space-y-2">
@@ -604,10 +662,12 @@ const InteractiveROICalculator = () => {
                 <div>• Material waste reduction: 60% less waste</div>
                 <div>• Turnover reduction: 40% improvement</div>
                 <div>• AI integration benefits: 70% realization</div>
+                <div>• Assessment automation: 85% realization</div>
               </div>
               <div className="space-y-2">
                 <div>• Employee agility benefits: 75% realization</div>
                 <div>• Knowledge capture: 80% realization</div>
+                <div>• Procedure automation: 75% realization</div>
                 <div>• Competitive advantage: 60% realization</div>
                 <div>• Supervisor time savings: 50% reduction</div>
                 <div>• Branding benefit: 80% realization</div>
