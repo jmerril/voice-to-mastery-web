@@ -23,7 +23,7 @@ import {
   Shield
 } from "lucide-react";
 
-const Pharmaceutical = () => {
+const Medical = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
       <Navigation />
@@ -326,41 +326,6 @@ const Pharmaceutical = () => {
         </div>
       </section>
 
-      {/* Taglines */}
-      <section className="py-16 px-4 bg-gradient-to-r from-slate-800 to-blue-900 text-white">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">
-            🔊 Taglines
-          </h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-white">
-              <CardContent className="p-0 text-center">
-                <p className="text-lg font-semibold">Not a Slide Deck. A Clinical Experience.</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-white">
-              <CardContent className="p-0 text-center">
-                <p className="text-lg font-semibold">From Information to Insight—One Story at a Time.</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-white">
-              <CardContent className="p-0 text-center">
-                <p className="text-lg font-semibold">Activate Engagement Through AI-Driven Storytelling.</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-white">
-              <CardContent className="p-0 text-center">
-                <p className="text-lg font-semibold">Your Innovation, Their Journey—Told with Zyglio.</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* Call-Out Sections */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -450,4 +415,4 @@ const Pharmaceutical = () => {
   );
 };
 
-export default Pharmaceutical;
+export default Medical;
