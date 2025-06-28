@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -166,7 +167,7 @@ const InteractiveROICalculator = () => {
       color: "from-cyan-500 to-blue-600",
       fields: [
         { key: 'insuranceReduction', label: 'Insurance Savings ($)', placeholder: '120,000' },
-        { key: 'replacementInstructionSavings', label: 'Instruction Replacement ($)', placeholder: '200,000' }
+        { key: 'replacementInstructionSavings', label: 'Paid Instruction Replacement ($)', placeholder: '200,000' }
       ]
     }
   ];
