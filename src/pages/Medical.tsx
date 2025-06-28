@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -90,7 +91,7 @@ const Medical = () => {
                 </Badge>
               </div>
               <blockquote className="text-2xl md:text-3xl font-bold mb-6 leading-relaxed">
-                "Zyglio transforms how we educate our medical teams. The AI-powered simulations make complex clinical scenarios come alive in ways traditional training never could."
+                "Zyglio creates a powerful way to capture standard operating procedures and instantly make them into multi-scenario, voice-based simulation and scalable assessment of confidence, cognitive skills and ability to perform with distractions."
               </blockquote>
               <div className="flex items-center gap-4">
                 <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
@@ -106,8 +107,8 @@ const Medical = () => {
             <div className="order-1 lg:order-2">
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="Medical professional using advanced technology"
+                  src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Group of medical professionals collaborating"
                   className="rounded-2xl shadow-2xl w-full h-96 object-cover"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg">
