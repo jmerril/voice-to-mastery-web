@@ -1,10 +1,9 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { Calculator, TrendingUp, DollarSign, Users, Clock, UserCheck, Megaphone, Zap, Brain, Target, Database, AlertCircle, BarChart3, Award, BookOpen, Cog, Star, Shield, Lightbulb } from "lucide-react";
+import { Calculator, TrendingUp, DollarSign, Users, Clock, UserCheck, Megaphone, Zap, Brain, Target, Database, AlertCircle, BarChart3, Award, BookOpen, Cog, Star, Shield, Lightbulb, Banknote, GraduationCap } from "lucide-react";
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line } from "recharts";
 
@@ -35,7 +34,11 @@ const InteractiveROICalculator = () => {
     recruitmentBrandingValue: 130000, // annual recruitment branding value
     retentionEnhancementValue: 160000, // annual retention enhancement value
     customerRecognitionValue: 140000, // annual customer recognition value
-    publicRelationsMediaValue: 95000 // annual PR and media value
+    publicRelationsMediaValue: 95000, // annual PR and media value
+    educationMonetizationValue: 250000, // annual education monetization opportunities
+    simulationLicensingValue: 180000, // annual simulation licensing revenue
+    trainingServicesRevenueValue: 300000, // annual training services revenue potential
+    certificationProgramRevenueValue: 150000 // annual certification program revenue
   });
 
   const [results, setResults] = useState({
@@ -60,6 +63,10 @@ const InteractiveROICalculator = () => {
     retentionEnhancementBenefits: 0,
     customerRecognitionBenefits: 0,
     publicRelationsMediaBenefits: 0,
+    educationMonetizationBenefits: 0,
+    simulationLicensingBenefits: 0,
+    trainingServicesRevenueBenefits: 0,
+    certificationProgramRevenueBenefits: 0,
     totalAnnualValue: 0,
     roiPercentage: 0,
     paybackMonths: 0
@@ -96,7 +103,11 @@ const InteractiveROICalculator = () => {
       recruitmentBrandingValue,
       retentionEnhancementValue,
       customerRecognitionValue,
-      publicRelationsMediaValue
+      publicRelationsMediaValue,
+      educationMonetizationValue,
+      simulationLicensingValue,
+      trainingServicesRevenueValue,
+      certificationProgramRevenueValue
     } = inputs;
 
     // Current training costs
@@ -140,7 +151,13 @@ const InteractiveROICalculator = () => {
     const customerRecognitionBenefits = customerRecognitionValue * 0.7; // 70% of customer recognition value realized
     const publicRelationsMediaBenefits = publicRelationsMediaValue * 0.65; // 65% of PR and media value realized
 
-    const totalAnnualValue = trainingSavings + productivityGains + riskReduction + supervisorSavings + materialSavings + recruitmentSavings + mentoringReduction + distractorSimulationBenefits + brandingBenefits + competitiveAdvantage + aiIntegrationBenefits + employeeAgilityBenefits + tribalKnowledgeBenefits + assessmentCertificationBenefits + operatingProcedureImprovementBenefits + recruitmentBrandingBenefits + retentionEnhancementBenefits + customerRecognitionBenefits + publicRelationsMediaBenefits;
+    // Stretch value factors - Revenue generation opportunities
+    const educationMonetizationBenefits = educationMonetizationValue * 0.6; // 60% of education monetization potential realized
+    const simulationLicensingBenefits = simulationLicensingValue * 0.7; // 70% of simulation licensing revenue realized
+    const trainingServicesRevenueBenefits = trainingServicesRevenueValue * 0.65; // 65% of training services revenue realized
+    const certificationProgramRevenueBenefits = certificationProgramRevenueValue * 0.75; // 75% of certification program revenue realized
+
+    const totalAnnualValue = trainingSavings + productivityGains + riskReduction + supervisorSavings + materialSavings + recruitmentSavings + mentoringReduction + distractorSimulationBenefits + brandingBenefits + competitiveAdvantage + aiIntegrationBenefits + employeeAgilityBenefits + tribalKnowledgeBenefits + assessmentCertificationBenefits + operatingProcedureImprovementBenefits + recruitmentBrandingBenefits + retentionEnhancementBenefits + customerRecognitionBenefits + publicRelationsMediaBenefits + educationMonetizationBenefits + simulationLicensingBenefits + trainingServicesRevenueBenefits + certificationProgramRevenueBenefits;
     const annualSavings = totalAnnualValue - zyglioAnnualCost;
     const roiPercentage = (annualSavings / zyglioAnnualCost) * 100;
     const paybackMonths = (zyglioAnnualCost / (annualSavings / 12));
@@ -167,6 +184,10 @@ const InteractiveROICalculator = () => {
       retentionEnhancementBenefits,
       customerRecognitionBenefits,
       publicRelationsMediaBenefits,
+      educationMonetizationBenefits,
+      simulationLicensingBenefits,
+      trainingServicesRevenueBenefits,
+      certificationProgramRevenueBenefits,
       totalAnnualValue,
       roiPercentage,
       paybackMonths
@@ -213,6 +234,10 @@ const InteractiveROICalculator = () => {
     { name: 'Retention Enhancement', value: results.retentionEnhancementBenefits, color: '#eab308' },
     { name: 'Customer Recognition', value: results.customerRecognitionBenefits, color: '#f97316' },
     { name: 'PR & Media Value', value: results.publicRelationsMediaBenefits, color: '#a855f7' },
+    { name: 'Education Monetization', value: results.educationMonetizationBenefits, color: '#16a34a' },
+    { name: 'Simulation Licensing', value: results.simulationLicensingBenefits, color: '#0ea5e9' },
+    { name: 'Training Services Revenue', value: results.trainingServicesRevenueBenefits, color: '#dc2626' },
+    { name: 'Certification Revenue', value: results.certificationProgramRevenueBenefits, color: '#7c3aed' },
     { name: 'Competitive Advantage', value: results.competitiveAdvantage, color: '#ec4899' },
     { name: 'Productivity Gains', value: results.productivityGains, color: '#84cc16' },
     { name: 'Distractor Simulation', value: results.distractorSimulationBenefits, color: '#06b6d4' }
@@ -561,11 +586,85 @@ const InteractiveROICalculator = () => {
                   </div>
                 </div>
               </div>
+
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                  <Banknote className="h-6 w-6 mr-3 text-green-400" />
+                  Stretch Value Factors - Revenue Generation
+                </h3>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="educationMonetization" className="text-white font-medium flex items-center">
+                      <GraduationCap className="h-4 w-4 mr-2 text-green-400" />
+                      Education Monetization ($)
+                    </Label>
+                    <Input
+                      id="educationMonetization"
+                      type="number"
+                      value={inputs.educationMonetizationValue}
+                      onChange={(e) => handleInputChange('educationMonetizationValue', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="250,000"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="simulationLicensing" className="text-white font-medium flex items-center">
+                      <Zap className="h-4 w-4 mr-2 text-blue-400" />
+                      Simulation Licensing Revenue ($)
+                    </Label>
+                    <Input
+                      id="simulationLicensing"
+                      type="number"
+                      value={inputs.simulationLicensingValue}
+                      onChange={(e) => handleInputChange('simulationLicensingValue', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="180,000"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="trainingServicesRevenue" className="text-white font-medium flex items-center">
+                      <BookOpen className="h-4 w-4 mr-2 text-red-400" />
+                      Training Services Revenue ($)
+                    </Label>
+                    <Input
+                      id="trainingServicesRevenue"
+                      type="number"
+                      value={inputs.trainingServicesRevenueValue}
+                      onChange={(e) => handleInputChange('trainingServicesRevenueValue', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="300,000"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="certificationProgramRevenue" className="text-white font-medium flex items-center">
+                      <Award className="h-4 w-4 mr-2 text-purple-400" />
+                      Certification Program Revenue ($)
+                    </Label>
+                    <Input
+                      id="certificationProgramRevenue"
+                      type="number"
+                      value={inputs.certificationProgramRevenueValue}
+                      onChange={(e) => handleInputChange('certificationProgramRevenueValue', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="150,000"
+                    />
+                  </div>
+                </div>
+                
+                <div className="mt-6 p-4 bg-green-500/20 border border-green-400/30 rounded-lg">
+                  <p className="text-green-200 text-sm leading-relaxed">
+                    <strong>Stretch Value Factors:</strong> These represent potential revenue-generating opportunities that can transform training from a cost center into a profit center. Organizations can monetize their enhanced training capabilities through external education services, simulation licensing, certification programs, and knowledge commercialization.
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Results Section */}
             <div className="space-y-8">
-              {/* Cost Comparison with Clear Explanations */}
               <div className="bg-gradient-to-br from-slate-800/50 to-blue-900/50 backdrop-blur-md rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                   <AlertCircle className="h-6 w-6 mr-3 text-yellow-400" />
@@ -611,7 +710,7 @@ const InteractiveROICalculator = () => {
                     </div>
                     <p className="text-sm text-green-200/80">
                       Total value generated after deducting Zyglio investment from 
-                      all productivity gains, cost savings, and strategic benefits
+                      all productivity gains, cost savings, strategic benefits, and revenue opportunities
                     </p>
                     
                     <div className="grid grid-cols-2 gap-4 mt-6">
@@ -632,7 +731,6 @@ const InteractiveROICalculator = () => {
                 </div>
               </div>
 
-              {/* ROI Visualization Charts */}
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                   <BarChart3 className="h-6 w-6 mr-3 text-cyan-400" />
@@ -749,69 +847,109 @@ const InteractiveROICalculator = () => {
                     </span>
                     <span className="font-medium text-orange-300">{formatCurrency(results.publicRelationsMediaBenefits)}</span>
                   </div>
+                  
+                  <div className="border-t border-white/20 pt-3 mt-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-green-200 flex items-center font-semibold">
+                        <Banknote className="h-4 w-4 mr-2 text-green-400" />
+                        Revenue Generation Opportunities:
+                      </span>
+                    </div>
+                  </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-200 flex items-center">
-                      <Lightbulb className="h-4 w-4 mr-2 text-cyan-400" />
-                      Distractor Simulation:
+                    <span className="text-blue-200 flex items-center pl-4">
+                      <GraduationCap className="h-4 w-4 mr-2 text-green-400" />
+                      Education Monetization:
                     </span>
-                    <span className="font-medium text-cyan-300">{formatCurrency(results.distractorSimulationBenefits)}</span>
+                    <span className="font-medium text-green-300">{formatCurrency(results.educationMonetizationBenefits)}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-200 flex items-center">
-                      <Clock className="h-4 w-4 mr-2 text-yellow-400" />
-                      Mentoring Reduction:
+                    <span className="text-blue-200 flex items-center pl-4">
+                      <Zap className="h-4 w-4 mr-2 text-blue-400" />
+                      Simulation Licensing:
                     </span>
-                    <span className="font-medium text-yellow-300">{formatCurrency(results.mentoringReduction)}</span>
+                    <span className="font-medium text-blue-300">{formatCurrency(results.simulationLicensingBenefits)}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-200 flex items-center">
-                      <Brain className="h-4 w-4 mr-2 text-cyan-400" />
-                      AI Integration Benefits:
+                    <span className="text-blue-200 flex items-center pl-4">
+                      <BookOpen className="h-4 w-4 mr-2 text-red-400" />
+                      Training Services Revenue:
                     </span>
-                    <span className="font-medium text-cyan-300">{formatCurrency(results.aiIntegrationBenefits)}</span>
+                    <span className="font-medium text-red-300">{formatCurrency(results.trainingServicesRevenueBenefits)}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-200 flex items-center">
-                      <Target className="h-4 w-4 mr-2 text-green-400" />
-                      Employee Agility Benefits:
+                    <span className="text-blue-200 flex items-center pl-4">
+                      <Award className="h-4 w-4 mr-2 text-purple-400" />
+                      Certification Program Revenue:
                     </span>
-                    <span className="font-medium text-green-300">{formatCurrency(results.employeeAgilityBenefits)}</span>
+                    <span className="font-medium text-purple-300">{formatCurrency(results.certificationProgramRevenueBenefits)}</span>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-blue-200 flex items-center">
-                      <Database className="h-4 w-4 mr-2 text-orange-400" />
-                      Knowledge Capture Benefits:
-                    </span>
-                    <span className="font-medium text-orange-300">{formatCurrency(results.tribalKnowledgeBenefits)}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-blue-200 flex items-center">
-                      <Award className="h-4 w-4 mr-2 text-indigo-400" />
-                      Assessment & Certification:
-                    </span>
-                    <span className="font-medium text-indigo-300">{formatCurrency(results.assessmentCertificationBenefits)}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-blue-200 flex items-center">
-                      <Cog className="h-4 w-4 mr-2 text-rose-400" />
-                      Procedure Automation:
-                    </span>
-                    <span className="font-medium text-rose-300">{formatCurrency(results.operatingProcedureImprovementBenefits)}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-blue-200 flex items-center">
-                      <TrendingUp className="h-4 w-4 mr-2 text-purple-400" />
-                      Competitive Advantage:
-                    </span>
-                    <span className="font-medium text-purple-300">{formatCurrency(results.competitiveAdvantage)}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-blue-200">Productivity Gains:</span>
-                    <span className="font-medium text-white">{formatCurrency(results.productivityGains)}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-blue-200">Risk Reduction:</span>
-                    <span className="font-medium text-white">{formatCurrency(results.riskReduction)}</span>
+                  
+                  <div className="border-t border-white/20 pt-3 mt-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-blue-200 flex items-center">
+                        <Lightbulb className="h-4 w-4 mr-2 text-cyan-400" />
+                        Distractor Simulation:
+                      </span>
+                      <span className="font-medium text-cyan-300">{formatCurrency(results.distractorSimulationBenefits)}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-blue-200 flex items-center">
+                        <Clock className="h-4 w-4 mr-2 text-yellow-400" />
+                        Mentoring Reduction:
+                      </span>
+                      <span className="font-medium text-yellow-300">{formatCurrency(results.mentoringReduction)}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-blue-200 flex items-center">
+                        <Brain className="h-4 w-4 mr-2 text-cyan-400" />
+                        AI Integration Benefits:
+                      </span>
+                      <span className="font-medium text-cyan-300">{formatCurrency(results.aiIntegrationBenefits)}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-blue-200 flex items-center">
+                        <Target className="h-4 w-4 mr-2 text-green-400" />
+                        Employee Agility Benefits:
+                      </span>
+                      <span className="font-medium text-green-300">{formatCurrency(results.employeeAgilityBenefits)}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-blue-200 flex items-center">
+                        <Database className="h-4 w-4 mr-2 text-orange-400" />
+                        Knowledge Capture Benefits:
+                      </span>
+                      <span className="font-medium text-orange-300">{formatCurrency(results.tribalKnowledgeBenefits)}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-blue-200 flex items-center">
+                        <Award className="h-4 w-4 mr-2 text-indigo-400" />
+                        Assessment & Certification:
+                      </span>
+                      <span className="font-medium text-indigo-300">{formatCurrency(results.assessmentCertificationBenefits)}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-blue-200 flex items-center">
+                        <Cog className="h-4 w-4 mr-2 text-rose-400" />
+                        Procedure Automation:
+                      </span>
+                      <span className="font-medium text-rose-300">{formatCurrency(results.operatingProcedureImprovementBenefits)}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-blue-200 flex items-center">
+                        <TrendingUp className="h-4 w-4 mr-2 text-purple-400" />
+                        Competitive Advantage:
+                      </span>
+                      <span className="font-medium text-purple-300">{formatCurrency(results.competitiveAdvantage)}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-blue-200">Productivity Gains:</span>
+                      <span className="font-medium text-white">{formatCurrency(results.productivityGains)}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-blue-200">Risk Reduction:</span>
+                      <span className="font-medium text-white">{formatCurrency(results.riskReduction)}</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -824,7 +962,7 @@ const InteractiveROICalculator = () => {
               Methodology & Assumptions
             </h4>
             <p className="text-blue-200 mb-6 leading-relaxed">
-              This comprehensive ROI calculator incorporates all measurable training value drivers including strategic value factors (recruitment branding, retention enhancement, customer recognition, PR/media value), operational improvements (mentoring burden reduction, distractor simulation benefits), AI integration benefits, employee agility improvements, tribal knowledge capture, assessment and certification automation, operating procedure improvements through automated feedback, competitive positioning, and traditional cost savings. Results are based on industry benchmarks and Zyglio's proven client outcomes.
+              This comprehensive ROI calculator incorporates all measurable training value drivers including strategic value factors (recruitment branding, retention enhancement, customer recognition, PR/media value), operational improvements (mentoring burden reduction, distractor simulation benefits), AI integration benefits, employee agility improvements, tribal knowledge capture, assessment and certification automation, operating procedure improvements through automated feedback, competitive positioning, stretch value factors for revenue generation opportunities (education monetization, simulation licensing, training services revenue, certification program revenue), and traditional cost savings. Results are based on industry benchmarks and Zyglio's proven client outcomes.
             </p>
             <div className="grid md:grid-cols-2 gap-6 text-xs text-blue-300">
               <div className="space-y-2">
@@ -837,6 +975,7 @@ const InteractiveROICalculator = () => {
                 <div>• Distractor simulation benefits: 80% realization</div>
                 <div>• AI integration benefits: 70% realization</div>
                 <div>• Assessment automation: 85% realization</div>
+                <div>• Education monetization: 60% realization</div>
               </div>
               <div className="space-y-2">
                 <div>• Employee agility benefits: 75% realization</div>
@@ -847,6 +986,9 @@ const InteractiveROICalculator = () => {
                 <div>• Retention enhancement: 80% realization</div>
                 <div>• Customer recognition: 70% realization</div>
                 <div>• PR & media value: 65% realization</div>
+                <div>• Simulation licensing: 70% realization</div>
+                <div>• Training services revenue: 65% realization</div>
+                <div>• Certification program revenue: 75% realization</div>
                 <div>• Supervisor time savings: 50% reduction</div>
                 <div>• Zyglio cost: 30% of current training expenses</div>
               </div>
