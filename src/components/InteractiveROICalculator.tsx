@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { Calculator, TrendingUp, DollarSign, Users, Clock, UserCheck, Megaphone, Zap, Brain, Target, Database, AlertCircle, BarChart3, Award, BookOpen, Cog } from "lucide-react";
+import { Calculator, TrendingUp, DollarSign, Users, Clock, UserCheck, Megaphone, Zap, Brain, Target, Database, AlertCircle, BarChart3, Award, BookOpen, Cog, Star, Shield, Lightbulb } from "lucide-react";
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line } from "recharts";
 
@@ -22,13 +22,20 @@ const InteractiveROICalculator = () => {
     materialWastageCostPerEmployee: 500,
     recruitmentCostPerEmployee: 15000,
     turnoverRate: 15, // percentage
+    mentoringHoursPerEmployee: 20, // hours per year
+    mentoringCostPerHour: 80,
+    distractorSimulationValue: 75000, // annual value of distractor simulation
     brandingMarketingBenefit: 100000, // annual benefit
     competitiveAdvantageValue: 200000, // annual competitive advantage value
     aiIntegrationValue: 150000, // annual AI integration value
     employeeAgilityValue: 120000, // annual employee agility value
     tribalKnowledgeValue: 180000, // annual tribal knowledge capture value
     assessmentCertificationValue: 90000, // annual assessment and certification value
-    operatingProcedureImprovementValue: 110000 // annual operating procedure improvement value
+    operatingProcedureImprovementValue: 110000, // annual operating procedure improvement value
+    recruitmentBrandingValue: 130000, // annual recruitment branding value
+    retentionEnhancementValue: 160000, // annual retention enhancement value
+    customerRecognitionValue: 140000, // annual customer recognition value
+    publicRelationsMediaValue: 95000 // annual PR and media value
   });
 
   const [results, setResults] = useState({
@@ -40,6 +47,8 @@ const InteractiveROICalculator = () => {
     supervisorSavings: 0,
     materialSavings: 0,
     recruitmentSavings: 0,
+    mentoringReduction: 0,
+    distractorSimulationBenefits: 0,
     brandingBenefits: 0,
     competitiveAdvantage: 0,
     aiIntegrationBenefits: 0,
@@ -47,6 +56,10 @@ const InteractiveROICalculator = () => {
     tribalKnowledgeBenefits: 0,
     assessmentCertificationBenefits: 0,
     operatingProcedureImprovementBenefits: 0,
+    recruitmentBrandingBenefits: 0,
+    retentionEnhancementBenefits: 0,
+    customerRecognitionBenefits: 0,
+    publicRelationsMediaBenefits: 0,
     totalAnnualValue: 0,
     roiPercentage: 0,
     paybackMonths: 0
@@ -70,13 +83,20 @@ const InteractiveROICalculator = () => {
       materialWastageCostPerEmployee,
       recruitmentCostPerEmployee,
       turnoverRate,
+      mentoringHoursPerEmployee,
+      mentoringCostPerHour,
+      distractorSimulationValue,
       brandingMarketingBenefit,
       competitiveAdvantageValue,
       aiIntegrationValue,
       employeeAgilityValue,
       tribalKnowledgeValue,
       assessmentCertificationValue,
-      operatingProcedureImprovementValue
+      operatingProcedureImprovementValue,
+      recruitmentBrandingValue,
+      retentionEnhancementValue,
+      customerRecognitionValue,
+      publicRelationsMediaValue
     } = inputs;
 
     // Current training costs
@@ -84,7 +104,8 @@ const InteractiveROICalculator = () => {
     const productivityLossCost = employees * (productivityLossHours / 2080) * averageSalary; // 2080 = work hours per year
     const supervisorCost = employees * (trainingHoursPerYear / 8) * supervisorHoursPerTraining * supervisorCostPerHour;
     const materialWastageCost = employees * materialWastageCostPerEmployee;
-    const currentAnnualCost = currentTrainingCost + productivityLossCost + errorCostPerYear + complianceRiskCost + supervisorCost + materialWastageCost;
+    const mentoringCost = employees * mentoringHoursPerEmployee * mentoringCostPerHour;
+    const currentAnnualCost = currentTrainingCost + productivityLossCost + errorCostPerYear + complianceRiskCost + supervisorCost + materialWastageCost + mentoringCost;
 
     // Zyglio costs (estimated at 30% of current training costs)
     const zyglioAnnualCost = currentTrainingCost * 0.3;
@@ -95,6 +116,8 @@ const InteractiveROICalculator = () => {
     const riskReduction = (errorCostPerYear + complianceRiskCost) * 0.6; // 60% reduction
     const supervisorSavings = supervisorCost * 0.5; // 50% reduction in supervisor time needed
     const materialSavings = materialWastageCost * 0.6; // 60% reduction in material waste
+    const mentoringReduction = mentoringCost * 0.4; // 40% reduction in mentoring burden
+    const distractorSimulationBenefits = distractorSimulationValue * 0.8; // 80% of distractor simulation value realized
     
     // Enhanced recruitment and retention benefits
     const currentTurnoverCost = employees * (turnoverRate / 100) * recruitmentCostPerEmployee;
@@ -107,11 +130,17 @@ const InteractiveROICalculator = () => {
     const employeeAgilityBenefits = employeeAgilityValue * 0.75; // 75% of employee agility value realized
     const tribalKnowledgeBenefits = tribalKnowledgeValue * 0.8; // 80% of tribal knowledge value realized
     
-    // New assessment and procedure improvement benefits
+    // Assessment and procedure improvement benefits
     const assessmentCertificationBenefits = assessmentCertificationValue * 0.85; // 85% of assessment value realized
     const operatingProcedureImprovementBenefits = operatingProcedureImprovementValue * 0.75; // 75% of procedure improvement value realized
 
-    const totalAnnualValue = trainingSavings + productivityGains + riskReduction + supervisorSavings + materialSavings + recruitmentSavings + brandingBenefits + competitiveAdvantage + aiIntegrationBenefits + employeeAgilityBenefits + tribalKnowledgeBenefits + assessmentCertificationBenefits + operatingProcedureImprovementBenefits;
+    // Strategic value factors
+    const recruitmentBrandingBenefits = recruitmentBrandingValue * 0.75; // 75% of recruitment branding value realized
+    const retentionEnhancementBenefits = retentionEnhancementValue * 0.8; // 80% of retention enhancement value realized
+    const customerRecognitionBenefits = customerRecognitionValue * 0.7; // 70% of customer recognition value realized
+    const publicRelationsMediaBenefits = publicRelationsMediaValue * 0.65; // 65% of PR and media value realized
+
+    const totalAnnualValue = trainingSavings + productivityGains + riskReduction + supervisorSavings + materialSavings + recruitmentSavings + mentoringReduction + distractorSimulationBenefits + brandingBenefits + competitiveAdvantage + aiIntegrationBenefits + employeeAgilityBenefits + tribalKnowledgeBenefits + assessmentCertificationBenefits + operatingProcedureImprovementBenefits + recruitmentBrandingBenefits + retentionEnhancementBenefits + customerRecognitionBenefits + publicRelationsMediaBenefits;
     const annualSavings = totalAnnualValue - zyglioAnnualCost;
     const roiPercentage = (annualSavings / zyglioAnnualCost) * 100;
     const paybackMonths = (zyglioAnnualCost / (annualSavings / 12));
@@ -125,6 +154,8 @@ const InteractiveROICalculator = () => {
       supervisorSavings,
       materialSavings,
       recruitmentSavings,
+      mentoringReduction,
+      distractorSimulationBenefits,
       brandingBenefits,
       competitiveAdvantage,
       aiIntegrationBenefits,
@@ -132,6 +163,10 @@ const InteractiveROICalculator = () => {
       tribalKnowledgeBenefits,
       assessmentCertificationBenefits,
       operatingProcedureImprovementBenefits,
+      recruitmentBrandingBenefits,
+      retentionEnhancementBenefits,
+      customerRecognitionBenefits,
+      publicRelationsMediaBenefits,
       totalAnnualValue,
       roiPercentage,
       paybackMonths
@@ -174,9 +209,13 @@ const InteractiveROICalculator = () => {
     { name: 'Knowledge Capture', value: results.tribalKnowledgeBenefits, color: '#f59e0b' },
     { name: 'Assessment & Certification', value: results.assessmentCertificationBenefits, color: '#8b5cf6' },
     { name: 'Procedure Improvements', value: results.operatingProcedureImprovementBenefits, color: '#ef4444' },
+    { name: 'Recruitment Branding', value: results.recruitmentBrandingBenefits, color: '#22c55e' },
+    { name: 'Retention Enhancement', value: results.retentionEnhancementBenefits, color: '#eab308' },
+    { name: 'Customer Recognition', value: results.customerRecognitionBenefits, color: '#f97316' },
+    { name: 'PR & Media Value', value: results.publicRelationsMediaBenefits, color: '#a855f7' },
     { name: 'Competitive Advantage', value: results.competitiveAdvantage, color: '#ec4899' },
     { name: 'Productivity Gains', value: results.productivityGains, color: '#84cc16' },
-    { name: 'Risk Reduction', value: results.riskReduction, color: '#f97316' }
+    { name: 'Distractor Simulation', value: results.distractorSimulationBenefits, color: '#06b6d4' }
   ];
 
   const roiTimelineData = [
@@ -328,13 +367,37 @@ const InteractiveROICalculator = () => {
                       placeholder="25,000"
                     />
                   </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="mentoringHours" className="text-white font-medium">Mentoring Hours/Employee/Year</Label>
+                    <Input
+                      id="mentoringHours"
+                      type="number"
+                      value={inputs.mentoringHoursPerEmployee}
+                      onChange={(e) => handleInputChange('mentoringHoursPerEmployee', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="20"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="distractorSimulation" className="text-white font-medium">Distractor Simulation Value ($)</Label>
+                    <Input
+                      id="distractorSimulation"
+                      type="number"
+                      value={inputs.distractorSimulationValue}
+                      onChange={(e) => handleInputChange('distractorSimulationValue', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="75,000"
+                    />
+                  </div>
                 </div>
               </div>
 
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                   <Zap className="h-6 w-6 mr-3 text-yellow-400" />
-                  Strategic Value Drivers
+                  AI & Technology Value Drivers
                 </h3>
                 
                 <div className="grid md:grid-cols-2 gap-6">
@@ -429,6 +492,75 @@ const InteractiveROICalculator = () => {
                   </div>
                 </div>
               </div>
+
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                  <Star className="h-6 w-6 mr-3 text-yellow-400" />
+                  Strategic Value Factors
+                </h3>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="recruitmentBranding" className="text-white font-medium flex items-center">
+                      <Users className="h-4 w-4 mr-2 text-green-400" />
+                      Recruitment Branding ($)
+                    </Label>
+                    <Input
+                      id="recruitmentBranding"
+                      type="number"
+                      value={inputs.recruitmentBrandingValue}
+                      onChange={(e) => handleInputChange('recruitmentBrandingValue', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="130,000"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="retentionEnhancement" className="text-white font-medium flex items-center">
+                      <Shield className="h-4 w-4 mr-2 text-blue-400" />
+                      Retention Enhancement ($)
+                    </Label>
+                    <Input
+                      id="retentionEnhancement"
+                      type="number"
+                      value={inputs.retentionEnhancementValue}
+                      onChange={(e) => handleInputChange('retentionEnhancementValue', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="160,000"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="customerRecognition" className="text-white font-medium flex items-center">
+                      <Award className="h-4 w-4 mr-2 text-purple-400" />
+                      Customer Recognition ($)
+                    </Label>
+                    <Input
+                      id="customerRecognition"
+                      type="number"
+                      value={inputs.customerRecognitionValue}
+                      onChange={(e) => handleInputChange('customerRecognitionValue', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="140,000"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="publicRelationsMedia" className="text-white font-medium flex items-center">
+                      <Megaphone className="h-4 w-4 mr-2 text-orange-400" />
+                      PR & Media Value ($)
+                    </Label>
+                    <Input
+                      id="publicRelationsMedia"
+                      type="number"
+                      value={inputs.publicRelationsMediaValue}
+                      onChange={(e) => handleInputChange('publicRelationsMediaValue', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/50 backdrop-blur-md"
+                      placeholder="95,000"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Results Section */}
@@ -451,7 +583,7 @@ const InteractiveROICalculator = () => {
                     </div>
                     <p className="text-sm text-red-200/80">
                       Total cost of your existing training approach including direct costs, 
-                      productivity losses, errors, and inefficiencies
+                      productivity losses, errors, mentoring burden, and inefficiencies
                     </p>
                   </div>
 
@@ -591,6 +723,48 @@ const InteractiveROICalculator = () => {
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between items-center">
                     <span className="text-blue-200 flex items-center">
+                      <Users className="h-4 w-4 mr-2 text-green-400" />
+                      Recruitment Branding:
+                    </span>
+                    <span className="font-medium text-green-300">{formatCurrency(results.recruitmentBrandingBenefits)}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-blue-200 flex items-center">
+                      <Shield className="h-4 w-4 mr-2 text-blue-400" />
+                      Retention Enhancement:
+                    </span>
+                    <span className="font-medium text-blue-300">{formatCurrency(results.retentionEnhancementBenefits)}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-blue-200 flex items-center">
+                      <Award className="h-4 w-4 mr-2 text-purple-400" />
+                      Customer Recognition:
+                    </span>
+                    <span className="font-medium text-purple-300">{formatCurrency(results.customerRecognitionBenefits)}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-blue-200 flex items-center">
+                      <Megaphone className="h-4 w-4 mr-2 text-orange-400" />
+                      PR & Media Value:
+                    </span>
+                    <span className="font-medium text-orange-300">{formatCurrency(results.publicRelationsMediaBenefits)}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-blue-200 flex items-center">
+                      <Lightbulb className="h-4 w-4 mr-2 text-cyan-400" />
+                      Distractor Simulation:
+                    </span>
+                    <span className="font-medium text-cyan-300">{formatCurrency(results.distractorSimulationBenefits)}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-blue-200 flex items-center">
+                      <Clock className="h-4 w-4 mr-2 text-yellow-400" />
+                      Mentoring Reduction:
+                    </span>
+                    <span className="font-medium text-yellow-300">{formatCurrency(results.mentoringReduction)}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-blue-200 flex items-center">
                       <Brain className="h-4 w-4 mr-2 text-cyan-400" />
                       AI Integration Benefits:
                     </span>
@@ -650,9 +824,7 @@ const InteractiveROICalculator = () => {
               Methodology & Assumptions
             </h4>
             <p className="text-blue-200 mb-6 leading-relaxed">
-              This comprehensive ROI calculator incorporates all measurable training value drivers including AI integration benefits, 
-              employee agility improvements, tribal knowledge capture, assessment and certification automation, operating procedure improvements through automated feedback, 
-              competitive positioning, and traditional cost savings. Results are based on industry benchmarks and Zyglio's proven client outcomes.
+              This comprehensive ROI calculator incorporates all measurable training value drivers including strategic value factors (recruitment branding, retention enhancement, customer recognition, PR/media value), operational improvements (mentoring burden reduction, distractor simulation benefits), AI integration benefits, employee agility improvements, tribal knowledge capture, assessment and certification automation, operating procedure improvements through automated feedback, competitive positioning, and traditional cost savings. Results are based on industry benchmarks and Zyglio's proven client outcomes.
             </p>
             <div className="grid md:grid-cols-2 gap-6 text-xs text-blue-300">
               <div className="space-y-2">
@@ -661,6 +833,8 @@ const InteractiveROICalculator = () => {
                 <div>• Risk reduction: 60% fewer errors</div>
                 <div>• Material waste reduction: 60% less waste</div>
                 <div>• Turnover reduction: 40% improvement</div>
+                <div>• Mentoring burden reduction: 40% less time</div>
+                <div>• Distractor simulation benefits: 80% realization</div>
                 <div>• AI integration benefits: 70% realization</div>
                 <div>• Assessment automation: 85% realization</div>
               </div>
@@ -669,8 +843,11 @@ const InteractiveROICalculator = () => {
                 <div>• Knowledge capture: 80% realization</div>
                 <div>• Procedure automation: 75% realization</div>
                 <div>• Competitive advantage: 60% realization</div>
+                <div>• Recruitment branding: 75% realization</div>
+                <div>• Retention enhancement: 80% realization</div>
+                <div>• Customer recognition: 70% realization</div>
+                <div>• PR & media value: 65% realization</div>
                 <div>• Supervisor time savings: 50% reduction</div>
-                <div>• Branding benefit: 80% realization</div>
                 <div>• Zyglio cost: 30% of current training expenses</div>
               </div>
             </div>
