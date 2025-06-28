@@ -1,12 +1,15 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import VideoModal from "@/components/VideoModal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { useState } from "react";
 
 const ZyglioLanding = () => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -49,11 +52,14 @@ const ZyglioLanding = () => {
                 Request a Live Demo
               </Button>
             </Link>
-            <Link to="/how-it-works">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-3 text-lg">
-                Watch How It Works
-              </Button>
-            </Link>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white text-white hover:bg-white/10 px-8 py-3 text-lg"
+              onClick={() => setIsVideoOpen(true)}
+            >
+              Watch How It Works
+            </Button>
           </div>
         </div>
       </section>
@@ -267,7 +273,7 @@ const ZyglioLanding = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Link to="/how-it-works">
+            <div onClick={() => setIsVideoOpen(true)}>
               <Card className="h-full border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-blue-50 to-purple-50 cursor-pointer">
                 <CardHeader>
                   <CardTitle className="text-xl text-slate-900 flex items-center gap-2">
@@ -279,7 +285,7 @@ const ZyglioLanding = () => {
                   <p className="text-slate-600">Learn how Zyglio transforms expertise into interactive learning experiences using AI.</p>
                 </CardContent>
               </Card>
-            </Link>
+            </div>
 
             <Link to="/roi-calculator">
               <Card className="h-full border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-green-50 to-teal-50 cursor-pointer">
@@ -379,6 +385,8 @@ const ZyglioLanding = () => {
       </section>
       
       <Footer />
+      
+      <VideoModal isOpen={isVideoOpen} onClose={setIsVideoOpen} />
     </div>
   );
 };
