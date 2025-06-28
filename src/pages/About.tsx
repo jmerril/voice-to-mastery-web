@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -11,35 +10,87 @@ const About = () => {
     <div className="min-h-screen">
       <Navigation />
       
-      {/* Enhanced Hero Section with Background Graphic */}
-      <section className="relative pt-24 pb-16 px-4 overflow-hidden">
-        {/* Background Image */}
+      {/* Enhanced Hero Section with Professional Background */}
+      <section className="relative pt-24 pb-20 px-4 overflow-hidden">
+        {/* Background Image with Curved Corners */}
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1920&h=1080&fit=crop" 
             alt="Team of professionals collaborating around computers in modern office setting representing innovation and teamwork"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-3xl"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-purple-900/85 to-slate-900/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/85 via-blue-900/80 to-purple-900/85 rounded-3xl"></div>
+          
+          {/* Professional Grid Overlay */}
+          <div className="absolute inset-0 opacity-10 rounded-3xl">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent transform skew-y-3"></div>
+          </div>
         </div>
         
-        {/* Animated Elements */}
+        {/* Sophisticated Animated Elements */}
         <div className="absolute inset-0 z-10">
-          <div className="absolute top-20 left-1/4 w-36 h-36 bg-blue-400/20 rounded-full blur-2xl animate-pulse"></div>
-          <div className="absolute bottom-32 right-1/4 w-28 h-28 bg-purple-400/25 rounded-full blur-xl animate-bounce"></div>
-          <div className="absolute top-1/2 right-10 w-20 h-20 bg-cyan-400/30 rounded-full blur-lg animate-pulse"></div>
+          {/* Floating Geometric Shapes */}
+          <div className="absolute top-24 left-1/6 w-20 h-20 bg-blue-400/20 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute top-32 right-1/4 w-16 h-16 bg-purple-400/25 rounded-lg blur-lg animate-bounce" style={{ animationDelay: '0.5s' }}></div>
+          <div className="absolute bottom-40 left-1/3 w-12 h-12 bg-cyan-400/30 rounded-full blur-md animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 right-1/6 w-24 h-24 bg-indigo-400/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: '1.5s' }}></div>
+          
+          {/* Professional Network Lines */}
+          <div className="absolute top-1/4 left-1/4 w-32 h-0.5 bg-gradient-to-r from-blue-400/40 to-transparent transform rotate-45 animate-pulse"></div>
+          <div className="absolute bottom-1/3 right-1/3 w-24 h-0.5 bg-gradient-to-l from-purple-400/40 to-transparent transform -rotate-45 animate-pulse" style={{ animationDelay: '0.8s' }}></div>
+          
+          {/* Floating Icons */}
+          <div className="absolute top-1/3 left-1/5 animate-float">
+            <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center">
+              <Brain className="w-5 h-5 text-blue-300" />
+            </div>
+          </div>
+          <div className="absolute bottom-1/3 right-1/5 animate-float" style={{ animationDelay: '1.2s' }}>
+            <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center">
+              <Sparkles className="w-5 h-5 text-purple-300" />
+            </div>
+          </div>
+          <div className="absolute top-1/2 left-1/12 animate-float" style={{ animationDelay: '2s' }}>
+            <div className="w-8 h-8 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
+              <Zap className="w-4 h-4 text-cyan-300" />
+            </div>
+          </div>
         </div>
         
-        {/* Content */}
+        {/* Content with Enhanced Typography */}
         <div className="relative z-20 max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Zyglio</span>
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/20">
+              <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+              <span className="text-blue-100 font-medium text-sm tracking-wide">INNOVATION IN EDUCATION</span>
+            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 animate-fade-in leading-tight">
+              About{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300">
+                Zyglio
+              </span>
             </h1>
-            <p className="text-xl text-blue-100 max-w-4xl mx-auto animate-fade-in">
+            <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto animate-fade-in leading-relaxed">
               We're building the future of education through AI-powered simulations that transform 
               tribal knowledge into immersive, adaptive learning experiences.
             </p>
+            
+            {/* Professional Stats Bar */}
+            <div className="mt-12 flex flex-wrap justify-center gap-8 md:gap-16">
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">10+</div>
+                <div className="text-blue-200 text-sm font-medium">Years Experience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">150+</div>
+                <div className="text-blue-200 text-sm font-medium">Published Works</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">1000+</div>
+                <div className="text-blue-200 text-sm font-medium">Learners Trained</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
