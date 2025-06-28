@@ -52,14 +52,14 @@ const Pricing = () => {
       <main className="pt-20">
         {/* Enhanced Hero Section with Background Graphic */}
         <section className="relative py-20 px-4 overflow-hidden">
-          {/* Background Image */}
+          {/* Background Image with Curved Corners */}
           <div className="absolute inset-0 z-0">
             <img 
               src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&h=1080&fit=crop" 
               alt="Modern business analytics dashboard showing growth charts and financial data"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-3xl"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/85 via-blue-900/75 to-purple-900/80"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/85 via-blue-900/75 to-purple-900/80 rounded-3xl"></div>
           </div>
           
           {/* Animated Elements */}
