@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Play, Mic, ArrowRight, Users, Settings } from "lucide-react";
+import { Play, Mic, ArrowRight, Users, Settings, BarChart3 } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -79,13 +79,34 @@ const Demo = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Navigation />
       
-      <div className="pt-24 pb-16 px-4">
+      {/* Top Hero Section with Graphic */}
+      <section className="relative pt-24 pb-12 px-4 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&h=1080&fit=crop" 
+            alt="Modern AI technology workspace representing advanced learning platform"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/85 via-purple-900/75 to-blue-900/85"></div>
+        </div>
+        
+        <div className="relative z-20 max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Experience Zyglio
+          </h1>
+          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
+            See how your voice transforms into powerful, adaptive learning experiences
+          </p>
+        </div>
+      </section>
+      
+      <div className="pb-16 px-4">
         <div className="max-w-4xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent mb-6">
               Speak. Simulate. Scale.
-            </h1>
+            </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Fill out the form below to see how Zyglio can transform training in your specific environment. 
               We'll show you exactly how your voice can become powerful, adaptive learning experiences.
@@ -146,14 +167,30 @@ const Demo = () => {
                     <ArrowRight className="h-6 w-6 text-white" />
                   </div>
 
-                  {/* Step 3: Interactive Simulation */}
+                  {/* Step 3: Multiple Interactive Simulations */}
                   <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-4">
                     <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
                       <Users className="h-6 w-6 text-white" />
                     </div>
                     <div className="flex-1">
-                      <div className="text-white font-semibold">Interactive Simulation</div>
-                      <div className="text-blue-100 text-sm">Learners practice with real scenarios</div>
+                      <div className="text-white font-semibold">Multiple Interactive Simulations</div>
+                      <div className="text-blue-100 text-sm">Real-time scalable evaluation and mentoring</div>
+                    </div>
+                  </div>
+
+                  {/* Arrow */}
+                  <div className="flex justify-center py-2">
+                    <ArrowRight className="h-6 w-6 text-white" />
+                  </div>
+
+                  {/* Step 4: Data Analysis */}
+                  <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                      <BarChart3 className="h-6 w-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-white font-semibold">Evaluative Data Analysis</div>
+                      <div className="text-blue-100 text-sm">Integration to improve curriculum and courses</div>
                     </div>
                   </div>
                 </div>
@@ -173,11 +210,6 @@ const Demo = () => {
                       Watch Demo Video
                     </Button>
                   </div>
-                  
-                  {/* Call-to-action text */}
-                  <p className="text-white/90 text-sm mt-3 font-medium animate-pulse">
-                    ✨ See the magic happen in 2 minutes
-                  </p>
                 </div>
               </div>
             </div>
