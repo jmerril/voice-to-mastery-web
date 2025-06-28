@@ -171,10 +171,6 @@ const Medical = () => {
                 <p className="text-slate-600 leading-relaxed">
                   Simulates real-life decision-making via narrated, branching clinical cases that mirror daily practice.
                 </p>
-                <div className="mt-4 flex items-center text-blue-600 font-medium">
-                  <span>Learn more</span>
-                  <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </div>
               </CardContent>
             </Card>
 
@@ -189,10 +185,6 @@ const Medical = () => {
                 <p className="text-slate-600 leading-relaxed">
                   Learners explore real-world patient journeys, selecting actions and seeing both immediate and longitudinal outcomes.
                 </p>
-                <div className="mt-4 flex items-center text-purple-600 font-medium">
-                  <span>Explore cases</span>
-                  <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </div>
               </CardContent>
             </Card>
 
@@ -207,10 +199,6 @@ const Medical = () => {
                 <p className="text-slate-600 leading-relaxed">
                   Integrates visuals from peer-reviewed literature or internal data to enhance realism and clinical trust.
                 </p>
-                <div className="mt-4 flex items-center text-green-600 font-medium">
-                  <span>View examples</span>
-                  <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </div>
               </CardContent>
             </Card>
 
@@ -225,10 +213,6 @@ const Medical = () => {
                 <p className="text-slate-600 leading-relaxed">
                   Delivers the same high-impact experience in 10+ languages, localized to regional clinical practices and cultural norms.
                 </p>
-                <div className="mt-4 flex items-center text-teal-600 font-medium">
-                  <span>See languages</span>
-                  <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </div>
               </CardContent>
             </Card>
 
@@ -241,12 +225,8 @@ const Medical = () => {
                   <h3 className="text-xl font-bold text-slate-800">Analytics & Impact Measurement</h3>
                 </div>
                 <p className="text-slate-600 leading-relaxed">
-                  Track knowledge gains, behavior shifts, and scenario engagement for both HCPs and internal training audiences.
+                  Track knowledge gains, behavior shifts, and scenario engagement for both HCPs and internal training audiences. Measure voice stress, hesitation, confidence and provide aggregate feedback to improve courses, simulations and curriculum.
                 </p>
-                <div className="mt-4 flex items-center text-orange-600 font-medium">
-                  <span>View analytics</span>
-                  <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </div>
               </CardContent>
             </Card>
           </div>
