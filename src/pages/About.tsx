@@ -75,22 +75,6 @@ const About = () => {
               We're building the future of education through AI-powered simulations that transform 
               tribal knowledge into immersive, adaptive learning experiences.
             </p>
-            
-            {/* Professional Stats Bar */}
-            <div className="mt-12 flex flex-wrap justify-center gap-8 md:gap-16">
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">10+</div>
-                <div className="text-blue-200 text-sm font-medium">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">150+</div>
-                <div className="text-blue-200 text-sm font-medium">Published Works</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">1000+</div>
-                <div className="text-blue-200 text-sm font-medium">Learners Trained</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
