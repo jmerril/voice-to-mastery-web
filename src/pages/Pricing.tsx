@@ -147,6 +147,68 @@ const Pricing = () => {
           </div>
         </section>
 
+        {/* Pilot Approach Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">
+                Our Proven Pilot Approach
+              </h2>
+              <p className="text-xl text-slate-600 mb-8">
+                We determine areas that 'move the needle' and work to demonstrate value through targeted pilot efforts
+              </p>
+            </div>
+            
+            <Card className="border-slate-200">
+              <CardContent className="p-8">
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-blue-100 rounded-full p-2 mt-1">
+                      <TrendingUp className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                        Identify High-Impact Areas
+                      </h3>
+                      <p className="text-slate-600">
+                        We work with you to identify the specific training areas that will 'move the needle' for your organization's performance and profitability.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="bg-green-100 rounded-full p-2 mt-1">
+                      <Zap className="h-6 w-6 text-green-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                        Demonstrate Value Through Pilots
+                      </h3>
+                      <p className="text-slate-600">
+                        Start with focused pilot efforts that quickly demonstrate measurable value and ROI before scaling across your organization.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="bg-purple-100 rounded-full p-2 mt-1">
+                      <Building className="h-6 w-6 text-purple-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                        Scale with Comprehensive Platform
+                      </h3>
+                      <p className="text-slate-600">
+                        Upon pilot success, Zyglio provides individual tracking, dashboarding, and a comprehensive library of simulations to enhance learning, assess performance, and offer ongoing opportunities for advancement.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="py-20 px-4 bg-slate-50">
           <div className="max-w-4xl mx-auto">
