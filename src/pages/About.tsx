@@ -537,7 +537,7 @@ const About = () => {
                   Request a Demo
                 </Button>
               </Link>
-              <Link to="/contact">
+              <Link to="/demo">
                 <Button size="lg" variant="outline" className="px-8 py-4">
                   Contact Us
                 </Button>
