@@ -34,12 +34,14 @@ const ZyglioLanding = () => {
         {/* Content */}
         <div className="relative z-20 max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
-            Transform Learning with 
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400"> AI</span>
+            From Voice to 
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400"> Mastery</span>
           </h1>
+          <h2 className="text-3xl md:text-4xl font-semibold text-cyan-300 mb-8 animate-fade-in">
+            From Prompt to Unprecedented Educational Experiences
+          </h2>
           <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in">
-            Zyglio revolutionizes education through intelligent simulations, adaptive learning, 
-            and AI-powered content creation that scales expertise across organizations.
+            Zyglio revolutionizes how people learn by transforming speech into structured, object-based training simulations. One voice, one explanation—instantly becomes a learning experience that adapts, scales, and evolves across roles, locations, and industries.
           </p>
         </div>
       </section>
