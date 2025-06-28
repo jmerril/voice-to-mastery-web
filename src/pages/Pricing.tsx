@@ -1,4 +1,3 @@
-
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
@@ -178,50 +177,6 @@ const Pricing = () => {
                 </Button>
               </CardContent>
             </Card>
-          </div>
-        </section>
-
-        {/* Custom ROI Analysis CTA */}
-        <section className="py-20 px-4 bg-slate-900 text-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">
-              Ready for Your Custom ROI Analysis?
-            </h2>
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Every organization is unique. Let our experts analyze your specific situation and 
-              show you exactly how Zyglio will impact your bottom line, operational efficiency, and company value.
-            </p>
-            <div className="bg-slate-800 rounded-lg p-8 mb-8">
-              <h3 className="text-2xl font-semibold mb-4">Your Free ROI Analysis Includes:</h3>
-              <div className="grid md:grid-cols-2 gap-4 text-left">
-                <div className="flex items-start">
-                  <Check className="h-5 w-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
-                  <span>Personalized cost-benefit projection</span>
-                </div>
-                <div className="flex items-start">
-                  <Check className="h-5 w-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
-                  <span>Industry-specific implementation roadmap</span>
-                </div>
-                <div className="flex items-start">
-                  <Check className="h-5 w-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
-                  <span>Risk assessment and mitigation strategies</span>
-                </div>
-                <div className="flex items-start">
-                  <Check className="h-5 w-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
-                  <span>Custom pricing based on your needs</span>
-                </div>
-              </div>
-            </div>
-            <Link to="/demo">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                <Phone className="mr-2 h-5 w-5" />
-                Schedule Your Free ROI Analysis
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-            <p className="text-slate-400 mt-4">
-              30-minute consultation • No obligation • Immediate insights
-            </p>
           </div>
         </section>
 
