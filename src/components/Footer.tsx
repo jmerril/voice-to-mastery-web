@@ -35,7 +35,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Solutions</h4>
             <ul className="space-y-2 text-sm">
               <li><Link to="/industries" className="text-slate-400 hover:text-white transition-colors">Industries</Link></li>
-              <li><Link to="/pharmaceutical" className="text-slate-400 hover:text-white transition-colors">Pharmaceutical</Link></li>
+              <li><Link to="/pharmaceutical" className="text-slate-400 hover:text-white transition-colors">Medical</Link></li>
               <li><Link to="/case-studies" className="text-slate-400 hover:text-white transition-colors">Case Studies</Link></li>
               <li><Link to="/roi-calculator" className="text-slate-400 hover:text-white transition-colors">ROI Calculator</Link></li>
             </ul>
