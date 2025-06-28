@@ -20,7 +20,8 @@ import {
   CheckCircle2,
   ArrowRight,
   Heart,
-  Shield
+  Shield,
+  Quote
 } from "lucide-react";
 
 const Medical = () => {
@@ -70,6 +71,51 @@ const Medical = () => {
               <div className="flex items-center gap-2">
                 <Users className="h-4 w-4" />
                 <span>Trusted by 500+ Healthcare Organizations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Doctor Call-out Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 via-teal-600 to-purple-600 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="flex items-center gap-3 mb-6">
+                <Quote className="h-8 w-8 text-yellow-300" />
+                <Badge className="bg-white/20 text-white border-white/30">
+                  Clinical Excellence
+                </Badge>
+              </div>
+              <blockquote className="text-2xl md:text-3xl font-bold mb-6 leading-relaxed">
+                "Zyglio transforms how we educate our medical teams. The AI-powered simulations make complex clinical scenarios come alive in ways traditional training never could."
+              </blockquote>
+              <div className="flex items-center gap-4">
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                  <Stethoscope className="h-8 w-8 text-white" />
+                </div>
+                <div>
+                  <p className="font-semibold text-lg">Dr. Sarah Chen, MD</p>
+                  <p className="text-blue-200">Chief Medical Officer, MedTech Solutions</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="order-1 lg:order-2">
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Medical professional using advanced technology"
+                  className="rounded-2xl shadow-2xl w-full h-96 object-cover"
+                />
+                <div className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    <span className="text-slate-800 font-medium">Live Training Session</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
