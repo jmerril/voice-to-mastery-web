@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Brain, Users, BarChart3 } from "lucide-react";
@@ -14,16 +13,6 @@ const Hero = () => {
           Empowering SMEs with AI-driven authoring tools, comprehensive learner analytics, 
           and secure content management for transformative educational experiences.
         </p>
-        
-        <div className="flex justify-center mb-16">
-          <Button 
-            variant="outline" 
-            size="lg" 
-            className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg"
-          >
-            Schedule Demo
-          </Button>
-        </div>
         
         {/* Feature Cards */}
         <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
