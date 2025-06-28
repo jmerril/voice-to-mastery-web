@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -20,7 +19,6 @@ import {
   Users,
   CheckCircle2,
   ArrowRight,
-  Play,
   Heart,
   Shield
 } from "lucide-react";
@@ -31,11 +29,13 @@ const Pharmaceutical = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/15 to-teal-600/20"></div>
-        <div className="absolute inset-0 opacity-30" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg%20width%3D%2760%27%20height%3D%2760%27%20viewBox%3D%270%200%2060%2060%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3Cg%20fill%3D%27none%27%20fill-rule%3D%27evenodd%27%3E%3Cg%20fill%3D%27%239C92AC%27%20fill-opacity%3D%270.15%27%3E%3Ccircle%20cx%3D%276%27%20cy%3D%276%27%20r%3D%274%27/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-        }}></div>
+      <section 
+        className="relative py-20 px-4 overflow-hidden bg-cover bg-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')`
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/30 via-purple-600/25 to-teal-600/30"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-12">
@@ -48,28 +48,17 @@ const Pharmaceutical = () => {
                 <div className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full animate-pulse"></div>
               </div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 bg-clip-text text-transparent mb-8 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight drop-shadow-lg">
               Transform Clinical 
               <br />
-              <span className="text-4xl md:text-6xl">Engagement with Zyglio.ai</span>
+              <span className="text-4xl md:text-6xl bg-gradient-to-r from-blue-300 via-purple-300 to-teal-300 bg-clip-text text-transparent">Engagement with Zyglio.ai</span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto mb-10 leading-relaxed">
+            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-10 leading-relaxed drop-shadow-md">
               AI-Powered Storytelling for Pharmaceutical and Medical Technology Companies
             </p>
-            
-            {/* Hero Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300">
-                <Play className="h-5 w-5 mr-2" />
-                Watch Demo
-              </Button>
-              <Button size="lg" variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg">
-                Schedule Consultation
-              </Button>
-            </div>
 
             {/* Trust Indicators */}
-            <div className="flex flex-wrap justify-center items-center gap-8 text-slate-500 text-sm">
+            <div className="flex flex-wrap justify-center items-center gap-8 text-white/80 text-sm">
               <div className="flex items-center gap-2">
                 <Shield className="h-4 w-4" />
                 <span>HIPAA Compliant</span>
@@ -440,7 +429,7 @@ const Pharmaceutical = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-bold px-10 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
               <Heart className="h-5 w-5 mr-2" />
-              Schedule a Demo
+              Get Started Today
             </Button>
             <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold px-10 py-4 text-lg hover:scale-105 transition-all duration-300">
               <Sparkles className="h-5 w-5 mr-2" />
