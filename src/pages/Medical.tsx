@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -93,30 +92,15 @@ const Medical = () => {
               <blockquote className="text-2xl md:text-3xl font-bold mb-6 leading-relaxed">
                 "Zyglio creates a powerful way to capture standard operating procedures and instantly make them into multi-scenario, voice-based simulation and scalable assessment of confidence, cognitive skills and ability to perform with distractions."
               </blockquote>
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                  <Stethoscope className="h-8 w-8 text-white" />
-                </div>
-                <div>
-                  <p className="font-semibold text-lg">Dr. Sarah Chen, MD</p>
-                  <p className="text-blue-200">Chief Medical Officer, MedTech Solutions</p>
-                </div>
-              </div>
             </div>
             
             <div className="order-1 lg:order-2">
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="Group of medical professionals collaborating"
+                  src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Operating room with medical professionals"
                   className="rounded-2xl shadow-2xl w-full h-96 object-cover"
                 />
-                <div className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-slate-800 font-medium">Live Training Session</span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
