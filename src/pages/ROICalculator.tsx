@@ -1,4 +1,3 @@
-
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import InteractiveROICalculator from "../components/InteractiveROICalculator";
@@ -261,15 +260,6 @@ const ROICalculator = () => {
                 >
                   Schedule Free Demo
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link to="/pricing">
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg font-semibold rounded-full transition-all duration-200"
-                >
-                  View Pricing Plans
                 </Button>
               </Link>
             </div>
