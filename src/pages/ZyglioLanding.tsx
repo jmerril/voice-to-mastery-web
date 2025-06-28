@@ -14,14 +14,14 @@ const ZyglioLanding = () => {
       
       {/* Enhanced Hero Section with Background Graphic */}
       <section className="relative pt-20 pb-16 px-4 overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image with Curved Corners */}
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop" 
             alt="Digital network visualization representing AI-powered learning connections"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-3xl"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-purple-900/80 to-blue-900/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-purple-900/80 to-blue-900/90 rounded-3xl"></div>
         </div>
         
         {/* Animated Elements */}
