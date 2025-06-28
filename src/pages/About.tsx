@@ -121,7 +121,7 @@ const About = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-slate-800">Executive Leadership</h3>
-                      <p className="text-blue-600 font-medium">Global Leaders in Scalable Learning</p>
+                      <p className="text-blue-600 font-medium">Global Leaders in Scalable Learning, Simulation, and Innovation</p>
                     </div>
                   </div>
                   <p className="text-slate-600 mb-4 leading-relaxed">
@@ -163,7 +163,7 @@ const About = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-slate-800">Engineering Team</h3>
-                      <p className="text-green-600 font-medium">Builders of Intelligent Simulation</p>
+                      <p className="text-green-600 font-medium">Builders of Intelligent Simulation and Scalable Learning Systems</p>
                     </div>
                   </div>
                   <p className="text-slate-600 mb-4 leading-relaxed">
@@ -205,7 +205,7 @@ const About = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-slate-800">Advisory Board</h3>
-                      <p className="text-orange-600 font-medium">Strategic Advisors</p>
+                      <p className="text-orange-600 font-medium">Strategic Advisors Across Healthcare, Aerospace, and Education</p>
                     </div>
                   </div>
                   <p className="text-slate-600 mb-4 leading-relaxed">
@@ -288,18 +288,34 @@ const About = () => {
                       </div>
                       <div className="flex items-center gap-3">
                         <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                        <span className="text-slate-600">Dynamic scenario generation</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                        <span className="text-slate-600">Scalable assessment and mentorship</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                        <span className="text-slate-600">Ability to measure confidence</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
                         <span className="text-slate-600">Instant feedback and explanations</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
                         <span className="text-slate-600">Progress tracking and analytics</span>
                       </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                        <span className="text-slate-600">Real-world distractions</span>
+                      </div>
                     </div>
                   </div>
                   <div className="relative">
                     <img 
-                      src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&h=400&fit=crop" 
-                      alt="Student taking online assessment on tablet with multiple choice questions"
+                      src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=400&fit=crop" 
+                      alt="Group of professionals in business setting around video screens representing collaborative learning and assessment"
                       className="w-full h-64 object-cover rounded-2xl"
                     />
                     <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/20 to-transparent rounded-2xl"></div>
