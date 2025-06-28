@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -52,24 +53,38 @@ const Technology = () => {
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-16">
-            <div className="relative mb-8">
+            <div className="relative mb-8 overflow-hidden rounded-3xl">
               <img 
-                src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1200&h=400&fit=crop" 
-                alt="Advanced AI technology and neural networks visualization"
-                className="w-full h-64 object-cover rounded-3xl shadow-lg"
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=500&fit=crop" 
+                alt="Advanced AI circuit board technology with neural network connections"
+                className="w-full h-80 object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/80 to-purple-600/80 rounded-3xl flex items-center justify-center">
-                <div className="text-center text-white">
-                  <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                    Built for Performance. Engineered for Agility.
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-purple-900/80 to-blue-900/90 flex items-center justify-center">
+                <div className="text-center text-white max-w-5xl px-8">
+                  <div className="mb-6 flex justify-center">
+                    <div className="flex space-x-4">
+                      <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+                      <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-100"></div>
+                      <div className="w-3 h-3 bg-teal-400 rounded-full animate-pulse delay-200"></div>
+                    </div>
+                  </div>
+                  <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Built for Performance.<br />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300">
+                      Engineered for Agility.
+                    </span>
                   </h1>
+                  <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
+                    Zyglio isn't just fast—it's foundational. Our platform is built on the latest in AI, 
+                    simulation science, and adaptive learning principles. Everything is modular, object-based, and scalable.
+                  </p>
                 </div>
               </div>
+              {/* Decorative tech elements */}
+              <div className="absolute top-4 left-4 w-20 h-20 border border-blue-300/30 rounded-lg bg-blue-500/10 backdrop-blur-sm"></div>
+              <div className="absolute bottom-4 right-4 w-16 h-16 border border-purple-300/30 rounded-full bg-purple-500/10 backdrop-blur-sm"></div>
+              <div className="absolute top-1/2 left-8 w-12 h-12 border border-teal-300/30 rounded bg-teal-500/10 backdrop-blur-sm rotate-45"></div>
             </div>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto">
-              Zyglio isn't just fast—it's foundational. Our platform is built on the latest in AI, simulation science, 
-              and adaptive learning principles. Everything is modular, object-based, and scalable.
-            </p>
           </div>
 
           {/* Core Technologies */}
