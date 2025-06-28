@@ -13,7 +13,7 @@ const ZyglioLanding = () => {
       <Navigation />
       
       {/* Enhanced Hero Section with Background Graphic */}
-      <section className="relative pt-20 pb-16 px-4 overflow-hidden">
+      <section className="relative pt-24 pb-20 px-4 overflow-hidden">
         {/* Background Image with Curved Corners */}
         <div className="absolute inset-0 z-0">
           <img 
