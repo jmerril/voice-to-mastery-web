@@ -8,22 +8,44 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen">
       <Navigation />
       
-      <div className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          {/* Hero Section */}
+      {/* Enhanced Hero Section with Background Graphic */}
+      <section className="relative pt-24 pb-16 px-4 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1920&h=1080&fit=crop" 
+            alt="Team of professionals collaborating around computers in modern office setting representing innovation and teamwork"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-purple-900/85 to-slate-900/90"></div>
+        </div>
+        
+        {/* Animated Elements */}
+        <div className="absolute inset-0 z-10">
+          <div className="absolute top-20 left-1/4 w-36 h-36 bg-blue-400/20 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute bottom-32 right-1/4 w-28 h-28 bg-purple-400/25 rounded-full blur-xl animate-bounce"></div>
+          <div className="absolute top-1/2 right-10 w-20 h-20 bg-cyan-400/30 rounded-full blur-lg animate-pulse"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-20 max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6">
-              About <span className="text-blue-600">Zyglio</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Zyglio</span>
             </h1>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto">
+            <p className="text-xl text-blue-100 max-w-4xl mx-auto animate-fade-in">
               We're building the future of education through AI-powered simulations that transform 
               tribal knowledge into immersive, adaptive learning experiences.
             </p>
           </div>
+        </div>
+      </section>
 
+      <div className="bg-gradient-to-br from-slate-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 pb-16">
           {/* AI-First Approach Section */}
           <div className="mb-20">
             <div className="text-center mb-12">

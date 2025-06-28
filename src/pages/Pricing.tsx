@@ -50,19 +50,38 @@ const Pricing = () => {
       <Navigation />
       
       <main className="pt-20">
-        {/* Hero Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-slate-900 mb-6">
-              Make Your Company More Valuable & Profitable
+        {/* Enhanced Hero Section with Background Graphic */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&h=1080&fit=crop" 
+              alt="Modern business analytics dashboard showing growth charts and financial data"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/85 via-blue-900/75 to-purple-900/80"></div>
+          </div>
+          
+          {/* Animated Elements */}
+          <div className="absolute inset-0 z-10">
+            <div className="absolute top-10 right-10 w-40 h-40 bg-green-400/20 rounded-full blur-2xl animate-pulse"></div>
+            <div className="absolute bottom-20 left-10 w-32 h-32 bg-blue-400/25 rounded-full blur-xl animate-bounce"></div>
+            <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-purple-400/30 rounded-full blur-lg animate-pulse"></div>
+          </div>
+          
+          {/* Content */}
+          <div className="relative z-20 max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-white mb-6 animate-fade-in">
+              Make Your Company More Valuable & 
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400"> Profitable</span>
             </h1>
-            <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-200 mb-8 max-w-3xl mx-auto animate-fade-in">
               Stop treating training as a cost center. With Zyglio, training becomes your competitive advantage 
               that directly impacts your bottom line and company valuation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
               <Link to="/demo">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4">
                   <Phone className="mr-2 h-5 w-5" />
                   Request Demo
                 </Button>
