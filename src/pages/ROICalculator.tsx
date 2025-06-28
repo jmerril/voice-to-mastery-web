@@ -51,61 +51,63 @@ const ROICalculator = () => {
       <Navigation />
       
       <main className="pt-20">
-        {/* Enhanced Hero Section with Tech Background */}
+        {/* Enhanced Hero Section with Financial Graphics Background */}
         <section className="relative py-32 px-4 overflow-hidden">
           {/* Background Image */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
-            }}
-          />
-          
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/95 via-slate-900/90 to-purple-900/95" />
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=1920&h=1080&fit=crop" 
+              alt="Modern financial analytics dashboard with charts, graphs, and ROI metrics displayed on multiple screens"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-purple-900/85 to-green-900/80"></div>
+          </div>
           
           {/* Animated Grid Pattern */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f46e5_1px,transparent_1px),linear-gradient(to_bottom,#4f46e5_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
+          <div className="absolute inset-0 z-10 opacity-20">
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#60a5fa_1px,transparent_1px),linear-gradient(to_bottom,#60a5fa_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
           </div>
           
           {/* Floating Elements */}
-          <div className="absolute top-20 left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl animate-pulse" />
-          <div className="absolute bottom-32 right-16 w-32 h-32 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-1000" />
-          <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-cyan-500/20 rounded-full blur-xl animate-pulse delay-500" />
+          <div className="absolute inset-0 z-10">
+            <div className="absolute top-20 left-10 w-32 h-32 bg-green-400/20 rounded-full blur-2xl animate-pulse"></div>
+            <div className="absolute bottom-32 right-16 w-40 h-40 bg-blue-400/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-purple-400/20 rounded-full blur-xl animate-pulse delay-500"></div>
+            <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-cyan-400/25 rounded-full blur-lg animate-bounce"></div>
+          </div>
           
-          <div className="max-w-6xl mx-auto text-center relative z-10">
-            <div className="inline-flex items-center space-x-3 mb-8 px-6 py-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+          <div className="max-w-6xl mx-auto text-center relative z-20">
+            <div className="inline-flex items-center space-x-3 mb-8 px-6 py-3 bg-white/15 backdrop-blur-md rounded-full border border-white/20">
               <Calculator className="h-6 w-6 text-cyan-400" />
               <span className="text-white font-semibold text-lg">AI-Powered ROI Calculator</span>
             </div>
             
-            <h1 className="text-7xl font-bold text-white mb-8 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight animate-fade-in">
               Calculate Your
-              <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Training ROI
               </span>
             </h1>
             
-            <p className="text-2xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in">
               Transform training from cost center to competitive advantage. 
-              <span className="text-cyan-300 font-semibold"> Discover your personalized ROI </span>
+              <span className="text-green-300 font-semibold"> Discover your personalized ROI </span>
               with our advanced calculator.
             </p>
             
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div className="flex flex-col items-center space-y-3 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
-                <DollarSign className="h-10 w-10 text-green-400" />
+            <div className="grid md:grid-cols-3 gap-8 mb-12 animate-fade-in">
+              <div className="flex flex-col items-center space-y-3 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <DollarSign className="h-12 w-12 text-green-400" />
                 <span className="text-white font-semibold text-lg">Instant Analysis</span>
                 <span className="text-blue-200 text-center">Real-time ROI calculations</span>
               </div>
-              <div className="flex flex-col items-center space-y-3 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
-                <TrendingUp className="h-10 w-10 text-blue-400" />
+              <div className="flex flex-col items-center space-y-3 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <TrendingUp className="h-12 w-12 text-blue-400" />
                 <span className="text-white font-semibold text-lg">Personalized Results</span>
                 <span className="text-blue-200 text-center">Tailored to your organization</span>
               </div>
-              <div className="flex flex-col items-center space-y-3 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
-                <Shield className="h-10 w-10 text-purple-400" />
+              <div className="flex flex-col items-center space-y-3 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <Shield className="h-12 w-12 text-purple-400" />
                 <span className="text-white font-semibold text-lg">Enterprise Grade</span>
                 <span className="text-blue-200 text-center">Proven methodologies</span>
               </div>

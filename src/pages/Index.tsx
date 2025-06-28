@@ -1,285 +1,246 @@
+
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Play, Mic, Brain, Zap, Globe, Users, TrendingUp, Languages } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Check, ArrowRight, Zap, Building, Shield, Download, Phone, TrendingUp, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import VideoModal from "@/components/VideoModal";
 
 const Index = () => {
-  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent mb-6">
-            From Voice to Mastery
-          </h1>
-          <p className="text-3xl md:text-5xl font-black text-slate-800 mb-6 max-w-6xl mx-auto leading-tight">
-            From Prompt to Unprecedented Educational Experiences
-          </p>
-          <p className="text-lg text-slate-500 mb-12 max-w-5xl mx-auto leading-relaxed">
-            Zyglio revolutionizes how people learn by transforming speech into structured, object-based training simulations. 
-            One voice, one explanation—instantly becomes a learning experience that adapts, scales, and evolves across roles, locations, and industries.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Link to="/demo">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
-                Request a Live Demo <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="px-8 py-4 text-lg"
-              onClick={() => setIsVideoModalOpen(true)}
-            >
-              <Play className="mr-2 h-5 w-5" /> Watch How It Works
-            </Button>
-          </div>
-          
-          {/* Hero Visual */}
-          <div className="relative mb-12">
+      <main className="pt-20">
+        {/* Enhanced Hero Section with AI Learning Background */}
+        <section className="relative py-32 px-4 overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
             <img 
-              src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=600&fit=crop" 
-              alt="Modern AI technology workspace with multiple screens showing data analytics"
-              className="w-full h-64 md:h-96 object-cover rounded-3xl shadow-2xl"
+              src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&h=1080&fit=crop" 
+              alt="Futuristic AI learning environment with holographic displays showing educational content and neural network connections"
+              className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-teal-600/20 rounded-3xl"></div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                  {[
-                    { icon: Mic, label: "Voice Input", color: "text-blue-500" },
-                    { icon: Brain, label: "AI Processing", color: "text-purple-500" },
-                    { icon: Zap, label: "Simulation", color: "text-yellow-500" },
-                    { icon: Users, label: "Training", color: "text-green-500" }
-                  ].map((item, index) => (
-                    <div key={index} className="text-center">
-                      <div className={`${item.color} mb-3 flex justify-center`}>
-                        <item.icon size={48} />
-                      </div>
-                      <p className="text-sm font-medium text-slate-600">{item.label}</p>
-                    </div>
-                  ))}
-                </div>
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-purple-900/85 to-cyan-900/80"></div>
+          </div>
+          
+          {/* Animated Elements */}
+          <div className="absolute inset-0 z-10">
+            <div className="absolute top-20 left-10 w-32 h-32 bg-blue-400/20 rounded-full blur-xl animate-pulse"></div>
+            <div className="absolute top-40 right-20 w-24 h-24 bg-purple-400/30 rounded-full blur-lg animate-bounce"></div>
+            <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-cyan-400/25 rounded-full blur-md animate-pulse delay-500"></div>
+            <div className="absolute top-1/3 right-1/3 w-20 h-20 bg-green-400/20 rounded-full blur-lg animate-pulse delay-700"></div>
+            
+            {/* Floating Particles */}
+            <div className="absolute top-10 left-10 w-2 h-2 bg-white/30 rounded-full animate-bounce delay-300"></div>
+            <div className="absolute top-20 right-20 w-1 h-1 bg-white/40 rounded-full animate-bounce delay-1000"></div>
+            <div className="absolute bottom-20 left-20 w-1.5 h-1.5 bg-white/25 rounded-full animate-bounce delay-700"></div>
+          </div>
+          
+          {/* Content */}
+          <div className="relative z-20 max-w-7xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-white/20">
+              <Sparkles className="h-4 w-4 text-yellow-300" />
+              <span className="text-white/90 text-sm font-medium">Next-Generation AI Learning Platform</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
+              Transform Learning with 
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400"> AI</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in">
+              Zyglio revolutionizes education through intelligent simulations, adaptive learning, 
+              and AI-powered content creation that scales expertise across organizations.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in">
+              <Link to="/demo">
+                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Get Demo
+                </Button>
+              </Link>
+              <Link to="/how-it-works">
+                <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg">
+                  Learn How It Works
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+            </div>
+            
+            {/* Quick Stats */}
+            <div className="grid md:grid-cols-3 gap-8 mt-16 animate-fade-in">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-cyan-300 mb-2">300%</div>
+                <div className="text-blue-200 font-medium">Average ROI</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-green-300 mb-2">70%</div>
+                <div className="text-blue-200 font-medium">Cost Reduction</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-purple-300 mb-2">4x</div>
+                <div className="text-blue-200 font-medium">Faster Learning</div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Intro Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-8">
-                The Future of Training is Here
+        {/* Key Benefits Section */}
+        <section className="py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">
+                Why Leading Companies Choose Zyglio
               </h2>
-              <div className="text-lg text-slate-600 space-y-6 leading-relaxed">
-                <p>
-                  In the past, training content had to be carefully scripted, filmed, and edited. 
-                  One hour of courseware could take over 100 hours of subject matter expert (SME) time.
-                </p>
-                <p className="font-semibold text-blue-600 text-xl">
-                  With Zyglio, that model is gone.
-                </p>
-                <p>
-                  Today, a single voice-based explanation—even a casual mentoring session—can generate 
-                  adaptive learning modules, multilingual simulations, and measurable training outcomes.
-                </p>
-                <p>
-                  Zyglio makes content dynamic, object-oriented, and infinitely flexible—without needing 
-                  specialized teams to build from scratch.
-                </p>
-              </div>
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+                Transform your organization's training from traditional methods to AI-powered learning experiences that deliver measurable results.
+              </p>
             </div>
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop" 
-                alt="Professional team collaborating in modern office environment"
-                className="w-full h-96 object-cover rounded-2xl shadow-lg"
-              />
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-transparent rounded-2xl"></div>
+            
+            <div className="grid lg:grid-cols-3 gap-8">
+              <Card className="text-center border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white">
+                <CardHeader className="pb-4">
+                  <div className="mx-auto mb-6 p-4 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl w-fit">
+                    <TrendingUp className="h-8 w-8 text-blue-600" />
+                  </div>
+                  <CardTitle className="text-2xl text-slate-900">Increase Company Value</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600 leading-relaxed">Organizations using Zyglio see 25-40% improvement in operational efficiency, directly impacting company valuation and market position.</p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white">
+                <CardHeader className="pb-4">
+                  <div className="mx-auto mb-6 p-4 bg-gradient-to-br from-green-100 to-teal-100 rounded-2xl w-fit">
+                    <Building className="h-8 w-8 text-green-600" />
+                  </div>
+                  <CardTitle className="text-2xl text-slate-900">Boost Profitability</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600 leading-relaxed">Reduce training costs by up to 70% while increasing knowledge retention by 2-4x, creating sustainable competitive advantages.</p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white">
+                <CardHeader className="pb-4">
+                  <div className="mx-auto mb-6 p-4 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl w-fit">
+                    <Shield className="h-8 w-8 text-purple-600" />
+                  </div>
+                  <CardTitle className="text-2xl text-slate-900">Risk Mitigation</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600 leading-relaxed">Better-trained teams mean fewer costly mistakes, improved compliance, and reduced liability exposure across your organization.</p>
+                </CardContent>
+              </Card>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Key Features */}
-      <section className="py-16 px-4 bg-gradient-to-br from-blue-50 to-teal-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-800 mb-12">
-            Why Zyglio?
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="p-8 hover:shadow-lg transition-shadow border-0 bg-white/80 backdrop-blur-sm">
-              <CardContent className="p-0">
-                <div className="relative mb-6">
-                  <img 
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop" 
-                    alt="Business analytics dashboard showing growth metrics"
-                    className="w-full h-32 object-cover rounded-lg"
-                  />
-                  <div className="absolute inset-0 bg-blue-600/20 rounded-lg flex items-center justify-center">
-                    <TrendingUp size={48} className="text-white" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-3">100x Faster Content Production</h3>
-                <p className="text-slate-600">
-                  Transform what used to take 100 hours into a reusable course in under one.
-                </p>
-              </CardContent>
-            </Card>
+        {/* Quick Links Section */}
+        <section className="py-20 px-4 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">
+                Explore Zyglio's Capabilities
+              </h2>
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+                Discover how our AI-powered platform transforms traditional training into engaging, effective learning experiences.
+              </p>
+            </div>
             
-            <Card className="p-8 hover:shadow-lg transition-shadow border-0 bg-white/80 backdrop-blur-sm">
-              <CardContent className="p-0">
-                <div className="relative mb-6">
-                  <img 
-                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=250&fit=crop" 
-                    alt="Team of professionals working together in training session"
-                    className="w-full h-32 object-cover rounded-lg"
-                  />
-                  <div className="absolute inset-0 bg-teal-600/20 rounded-lg flex items-center justify-center">
-                    <Users size={48} className="text-white" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-3">Scalable Mentorship</h3>
-                <p className="text-slate-600">
-                  Your best instructor can now "train" hundreds—even thousands—of team members without being present.
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="p-8 hover:shadow-lg transition-shadow border-0 bg-white/80 backdrop-blur-sm">
-              <CardContent className="p-0">
-                <div className="relative mb-6">
-                  <img 
-                    src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop" 
-                    alt="Global network connectivity representing multilingual capabilities"
-                    className="w-full h-32 object-cover rounded-lg"
-                  />
-                  <div className="absolute inset-0 bg-purple-600/20 rounded-lg flex items-center justify-center">
-                    <Globe size={48} className="text-white" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-3">Multilingual from Day One</h3>
-                <p className="text-slate-600">
-                  Zyglio's voice engine supports language expansion and localization with no manual scripting.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <Link to="/how-it-works">
+                <Card className="h-full border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-blue-50 to-purple-50 cursor-pointer">
+                  <CardHeader>
+                    <CardTitle className="text-xl text-slate-900 flex items-center gap-2">
+                      How It Works
+                      <ArrowRight className="h-5 w-5 text-blue-600" />
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-slate-600">Learn how Zyglio transforms expertise into interactive learning experiences using AI.</p>
+                  </CardContent>
+                </Card>
+              </Link>
 
-            <Card className="p-8 hover:shadow-lg transition-shadow border-0 bg-white/80 backdrop-blur-sm">
-              <CardContent className="p-0">
-                <div className="relative mb-6">
-                  <img 
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=250&fit=crop" 
-                    alt="Diverse group of people speaking different languages in a collaborative setting"
-                    className="w-full h-32 object-cover rounded-lg"
-                  />
-                  <div className="absolute inset-0 bg-emerald-600/20 rounded-lg flex items-center justify-center">
-                    <Languages size={48} className="text-white" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-3">Language Barrier-Free Learning</h3>
-                <p className="text-slate-600">
-                  Support for 40+ languages eliminates language as a barrier to accessing expert knowledge and training.
-                </p>
-              </CardContent>
-            </Card>
+              <Link to="/roi-calculator">
+                <Card className="h-full border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-green-50 to-teal-50 cursor-pointer">
+                  <CardHeader>
+                    <CardTitle className="text-xl text-slate-900 flex items-center gap-2">
+                      ROI Calculator
+                      <ArrowRight className="h-5 w-5 text-green-600" />
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-slate-600">Calculate your potential return on investment with our personalized ROI calculator.</p>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              <Link to="/industries">
+                <Card className="h-full border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-purple-50 to-pink-50 cursor-pointer">
+                  <CardHeader>
+                    <CardTitle className="text-xl text-slate-900 flex items-center gap-2">
+                      Industries
+                      <ArrowRight className="h-5 w-5 text-purple-600" />
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-slate-600">Explore how Zyglio transforms training across healthcare, manufacturing, and more.</p>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              <Link to="/technology">
+                <Card className="h-full border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-cyan-50 to-blue-50 cursor-pointer">
+                  <CardHeader>
+                    <CardTitle className="text-xl text-slate-900 flex items-center gap-2">
+                      Technology
+                      <ArrowRight className="h-5 w-5 text-cyan-600" />
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-slate-600">Discover the cutting-edge AI technology that powers Zyglio's learning platform.</p>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              <Link to="/case-studies">
+                <Card className="h-full border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-orange-50 to-red-50 cursor-pointer">
+                  <CardHeader>
+                    <CardTitle className="text-xl text-slate-900 flex items-center gap-2">
+                      Case Studies
+                      <ArrowRight className="h-5 w-5 text-orange-600" />
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-slate-600">See real-world success stories from companies transforming their training programs.</p>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              <Link to="/demo">
+                <Card className="h-full border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-yellow-50 to-orange-50 cursor-pointer">
+                  <CardHeader>
+                    <CardTitle className="text-xl text-slate-900 flex items-center gap-2">
+                      Get Demo
+                      <ArrowRight className="h-5 w-5 text-yellow-600" />
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-slate-600">Schedule a personalized demo to see how Zyglio can transform your training programs.</p>
+                  </CardContent>
+                </Card>
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Industries Preview */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-8">
-            Industry-Agnostic. Discipline-Flexible.
-          </h2>
-          <p className="text-lg text-slate-600 mb-12 max-w-3xl mx-auto">
-            Wherever there's expertise to transfer—whether in the kitchen, the OR, the garage, or the flight deck—Zyglio turns human mentorship into scalable training.
-          </p>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            {[
-              { 
-                label: "Restaurants & Hospitality",
-                image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=300&h=200&fit=crop"
-              },
-              { 
-                label: "Healthcare",
-                image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=300&h=200&fit=crop"
-              },
-              { 
-                label: "Automotive",
-                image: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=300&h=200&fit=crop"
-              },
-              { 
-                label: "Aerospace",
-                image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&h=200&fit=crop"
-              }
-            ].map((industry, index) => (
-              <div key={index} className="relative group">
-                <img 
-                  src={industry.image} 
-                  alt={industry.label}
-                  className="w-full h-32 object-cover rounded-2xl"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-2xl"></div>
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-                  <p className="font-medium text-sm text-center px-2">{industry.label}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <Link to="/industries">
-            <Button size="lg" variant="outline" className="text-blue-600 border-blue-600 hover:bg-blue-50">
-              Explore All Industries <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </Link>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-teal-600 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img 
-            src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=400&fit=crop" 
-            alt="Modern office meeting room with presentation screen"
-            className="w-full h-full object-cover opacity-20"
-          />
-        </div>
-        <div className="max-w-4xl mx-auto text-center text-white relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Transform Your Training?
-          </h2>
-          <p className="text-xl mb-8 opacity-90">
-            See how Zyglio can work in your environment with a personalized demo.
-          </p>
-          <Link to="/demo">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg">
-              Request Your Demo Today
-            </Button>
-          </Link>
-        </div>
-      </section>
+        </section>
+      </main>
 
       <Footer />
-      
-      <VideoModal 
-        isOpen={isVideoModalOpen} 
-        onClose={setIsVideoModalOpen}
-      />
     </div>
   );
 };
