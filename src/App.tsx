@@ -29,7 +29,6 @@ const App = () => {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<ZyglioLanding />} />
-              <Route path="/zyglio" element={<ZyglioLanding />} />
               <Route path="/how-it-works" element={<HowItWorks />} />
               <Route path="/industries" element={<Industries />} />
               <Route path="/technology" element={<Technology />} />
