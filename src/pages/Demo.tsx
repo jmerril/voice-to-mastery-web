@@ -11,6 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Play, Mic, ArrowRight, Users, Settings, BarChart3 } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
 
 const Demo = () => {
   const [formData, setFormData] = useState({
@@ -107,10 +108,15 @@ const Demo = () => {
             <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent mb-6">
               Speak. Simulate. Scale.
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-6">
               Fill out the form below to see how Zyglio can transform training in your specific environment. 
               We'll show you exactly how your voice can become powerful, adaptive learning experiences.
             </p>
+            <Link to="/live-demo">
+              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg">
+                Try Live Voice Demo Now
+              </Button>
+            </Link>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">

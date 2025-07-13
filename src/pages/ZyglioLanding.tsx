@@ -48,9 +48,14 @@ const ZyglioLanding = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link to="/demo">
+            <Link to="/live-demo">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
-                Request a Live Demo
+                Try Live Demo
+              </Button>
+            </Link>
+            <Link to="/demo">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-3 text-lg">
+                Contact Us for Demo
               </Button>
             </Link>
             <Button 

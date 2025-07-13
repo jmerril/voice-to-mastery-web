@@ -12,6 +12,7 @@ import CaseStudies from "./pages/CaseStudies";
 import Pricing from "./pages/Pricing";
 import About from "./pages/About";
 import Demo from "./pages/Demo";
+import LiveDemo from "./pages/LiveDemo";
 import NotFound from "./pages/NotFound";
 import ZyglioLanding from "./pages/ZyglioLanding";
 import ROICalculator from "./pages/ROICalculator";
@@ -39,6 +40,7 @@ const App = () => {
               <Route path="/medical" element={<Medical />} />
               <Route path="/about" element={<About />} />
               <Route path="/demo" element={<Demo />} />
+              <Route path="/live-demo" element={<LiveDemo />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

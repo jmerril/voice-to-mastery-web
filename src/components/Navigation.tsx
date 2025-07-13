@@ -46,9 +46,14 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
+            <Link to="/live-demo">
+              <Button variant="outline" className="mr-2">
+                Live Demo
+              </Button>
+            </Link>
             <Link to="/demo">
               <Button className="bg-blue-400 hover:bg-blue-500">
-                Get Demo
+                Contact Us
               </Button>
             </Link>
           </div>
@@ -80,9 +85,14 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
+              <Link to="/live-demo" onClick={() => setIsOpen(false)}>
+                <Button variant="outline" className="w-full mb-2">
+                  Live Demo
+                </Button>
+              </Link>
               <Link to="/demo" onClick={() => setIsOpen(false)}>
                 <Button className="bg-blue-400 hover:bg-blue-500 w-full">
-                  Get Demo
+                  Contact Us
                 </Button>
               </Link>
             </div>
