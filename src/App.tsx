@@ -16,6 +16,7 @@ import NotFound from "./pages/NotFound";
 import ZyglioLanding from "./pages/ZyglioLanding";
 import ROICalculator from "./pages/ROICalculator";
 import Medical from "./pages/Medical";
+import EntertainmentEducation from "./pages/EntertainmentEducation";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +40,7 @@ const App = () => {
               <Route path="/medical" element={<Medical />} />
               <Route path="/about" element={<About />} />
               <Route path="/demo" element={<Demo />} />
+              <Route path="/entertainment-education" element={<EntertainmentEducation />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
