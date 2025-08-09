@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mic, Brain, Settings, Users, TrendingUp, ArrowRight, Play, Zap, Sparkles, BookOpen, Target, Lightbulb, Clock, Activity, ChefHat, Wrench } from "lucide-react";
+import { Mic, Brain, Settings, Users, TrendingUp, ArrowRight, Play, Zap, Sparkles, BookOpen, Target, Lightbulb, Clock, Activity, ChefHat, Wrench, Clapperboard, GraduationCap, Globe2, BarChart3, ShoppingCart, DollarSign, Megaphone, Search, Trophy } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -372,6 +372,128 @@ const HowItWorks = () => {
                         <div className="mt-4 inline-flex items-center gap-2 bg-white/50 backdrop-blur-sm rounded-full px-4 py-2">
                           <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                           <span className="text-sm font-medium text-slate-700">Workshop Ready</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </TabsContent>
+                <TabsContent value="entertainment-education" className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div className="space-y-6">
+                      <div className="p-6 bg-gradient-to-br from-violet-50 via-indigo-50 to-violet-50 rounded-2xl border border-violet-100 shadow-sm">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="w-10 h-10 bg-gradient-to-br from-violet-500 to-indigo-500 rounded-lg flex items-center justify-center">
+                            <Megaphone className="h-5 w-5 text-white" />
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-slate-800 text-lg">Audience Acquisition</h4>
+                            <p className="text-violet-700/80 text-sm font-medium">Building Reach & Market Entry</p>
+                          </div>
+                        </div>
+                        <ul className="space-y-2 text-slate-700">
+                          <li className="flex items-start gap-2"><Globe2 className="h-4 w-4 mt-1 text-violet-600" /><span>Global-ready streaming on low-latency AWS edge delivery.</span></li>
+                          <li className="flex items-start gap-2"><Search className="h-4 w-4 mt-1 text-violet-600" /><span>AI-driven targeting by niche segments (enthusiasts, students, historians, casual viewers).</span></li>
+                          <li className="flex items-start gap-2"><Users className="h-4 w-4 mt-1 text-violet-600" /><span>Partnership marketing with institutions, platforms, and influencers.</span></li>
+                          <li className="flex items-start gap-2"><Sparkles className="h-4 w-4 mt-1 text-violet-600" /><span>Multi-channel discovery: SEO hubs, short-form highlights, OTT, and streaming partnerships.</span></li>
+                          <li className="flex items-start gap-2"><TrendingUp className="h-4 w-4 mt-1 text-violet-600" /><span>Proven wins turning mission-driven archives into global streaming success.</span></li>
+                        </ul>
+                      </div>
+
+                      <div className="p-6 bg-gradient-to-br from-indigo-50 via-blue-50 to-indigo-50 rounded-2xl border border-indigo-100 shadow-sm">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-sky-500 rounded-lg flex items-center justify-center">
+                            <Sparkles className="h-5 w-5 text-white" />
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-slate-800 text-lg">Audience Engagement</h4>
+                            <p className="text-indigo-700/80 text-sm font-medium">Turning Viewers into Loyal Participants</p>
+                          </div>
+                        </div>
+                        <ul className="space-y-2 text-slate-700">
+                          <li className="flex items-start gap-2"><Search className="h-4 w-4 mt-1 text-indigo-600" /><span>AI-first search: "Show me all performances by [artist]" or "Find lessons on [topic]".</span></li>
+                          <li className="flex items-start gap-2"><BookOpen className="h-4 w-4 mt-1 text-indigo-600" /><span>Fuse data + media: stats, bios, context beside key video moments.</span></li>
+                          <li className="flex items-start gap-2"><Sparkles className="h-4 w-4 mt-1 text-indigo-600" /><span>Predictive insights and personalized playlists, alerts, and suggestions.</span></li>
+                          <li className="flex items-start gap-2"><Trophy className="h-4 w-4 mt-1 text-indigo-600" /><span>Interactive Q&A, live polls, leaderboards, prediction challenges.</span></li>
+                          <li className="flex items-start gap-2"><Zap className="h-4 w-4 mt-1 text-indigo-600" /><span>Gamified loyalty: streaks, points, exclusive unlocks.</span></li>
+                        </ul>
+                      </div>
+
+                      <div className="p-6 bg-gradient-to-br from-emerald-50 via-teal-50 to-emerald-50 rounded-2xl border border-emerald-100 shadow-sm">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center">
+                            <DollarSign className="h-5 w-5 text-white" />
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-slate-800 text-lg">Revenue Expansion</h4>
+                            <p className="text-emerald-700/80 text-sm font-medium">Monetizing the Passion Economy</p>
+                          </div>
+                        </div>
+                        <ul className="space-y-2 text-slate-700">
+                          <li className="flex items-start gap-2"><BarChart3 className="h-4 w-4 mt-1 text-emerald-600" /><span>Subscription tiers from free/ad-supported to VIP with early access and analytics.</span></li>
+                          <li className="flex items-start gap-2"><TrendingUp className="h-4 w-4 mt-1 text-emerald-600" /><span>Dynamic pricing for exclusives and limited-time events.</span></li>
+                          <li className="flex items-start gap-2"><ShoppingCart className="h-4 w-4 mt-1 text-emerald-600" /><span>Embedded e-commerce: merch, collectibles, learning modules, tickets—purchasable in-stream.</span></li>
+                          <li className="flex items-start gap-2"><Megaphone className="h-4 w-4 mt-1 text-emerald-600" /><span>Advertising & sponsorship: branded content, targeted ad placements.</span></li>
+                          <li className="flex items-start gap-2"><Users className="h-4 w-4 mt-1 text-emerald-600" /><span>Data monetization with aggregated analytics for stakeholders and "found revenue".</span></li>
+                        </ul>
+                      </div>
+
+                      <div className="p-6 bg-gradient-to-br from-slate-50 via-purple-50 to-slate-50 rounded-2xl border border-slate-200 shadow-sm">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-fuchsia-500 rounded-lg flex items-center justify-center">
+                            <Brain className="h-5 w-5 text-white" />
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-slate-800 text-lg">Why Zyglio</h4>
+                            <p className="text-purple-700/80 text-sm font-medium">The Right Partner for Media & Learning</p>
+                          </div>
+                        </div>
+                        <ul className="space-y-2 text-slate-700">
+                          <li className="flex items-start gap-2"><Settings className="h-4 w-4 mt-1 text-purple-600" /><span>End-to-end: software, marketing, analytics, e‑commerce, ad integration.</span></li>
+                          <li className="flex items-start gap-2"><Sparkles className="h-4 w-4 mt-1 text-purple-600" /><span>AI-optimized architecture: automated tagging, real-time delivery, RAG.</span></li>
+                          <li className="flex items-start gap-2"><Globe2 className="h-4 w-4 mt-1 text-purple-600" /><span>Global-ready infrastructure for seamless international access.</span></li>
+                          <li className="flex items-start gap-2"><TrendingUp className="h-4 w-4 mt-1 text-purple-600" /><span>Proven success uniting live/on-demand media with commerce and AI.</span></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="relative overflow-hidden bg-gradient-to-br from-violet-50 to-indigo-50 rounded-2xl p-8 border border-violet-100">
+                      <div className="absolute inset-0 opacity-10">
+                        <div className="absolute top-4 left-4 w-8 h-8 border-2 border-violet-300 rounded-full"></div>
+                        <div className="absolute top-12 right-8 w-4 h-4 bg-violet-300 rounded-full"></div>
+                        <div className="absolute bottom-8 left-8 w-6 h-6 border border-violet-300 rounded-sm rotate-45"></div>
+                        <div className="absolute bottom-4 right-4 w-10 h-10 border-2 border-violet-300 rounded-full"></div>
+                      </div>
+                      <div className="relative text-center">
+                        <div className="w-24 h-24 bg-gradient-to-br from-violet-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+                          <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
+                            <Clapperboard className="h-8 w-8 text-white" />
+                          </div>
+                        </div>
+                        <h5 className="text-xl font-bold text-slate-800 mb-2">Entertainment & Education</h5>
+                        <p className="text-slate-600 font-medium leading-relaxed">
+                          AI-personalized streaming, interactive learning, and commerce—unified for global audience growth and sustainable revenue.
+                        </p>
+                        <div className="mt-5 grid grid-cols-2 gap-3">
+                          <div className="flex items-center gap-2 bg-white/60 backdrop-blur-sm rounded-full px-3 py-2">
+                            <Sparkles className="h-4 w-4 text-violet-600" />
+                            <span className="text-sm font-medium text-slate-700">AI Personalization</span>
+                          </div>
+                          <div className="flex items-center gap-2 bg-white/60 backdrop-blur-sm rounded-full px-3 py-2">
+                            <Globe2 className="h-4 w-4 text-violet-600" />
+                            <span className="text-sm font-medium text-slate-700">Global Streaming</span>
+                          </div>
+                          <div className="flex items-center gap-2 bg-white/60 backdrop-blur-sm rounded-full px-3 py-2">
+                            <ShoppingCart className="h-4 w-4 text-violet-600" />
+                            <span className="text-sm font-medium text-slate-700">Integrated Commerce</span>
+                          </div>
+                          <div className="flex items-center gap-2 bg-white/60 backdrop-blur-sm rounded-full px-3 py-2">
+                            <BarChart3 className="h-4 w-4 text-violet-600" />
+                            <span className="text-sm font-medium text-slate-700">Real-time Analytics</span>
+                          </div>
+                        </div>
+                        <div className="mt-4 inline-flex items-center gap-2 bg-white/60 backdrop-blur-sm rounded-full px-4 py-2">
+                          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                          <span className="text-sm font-medium text-slate-700">Ecosystem Ready</span>
                         </div>
                       </div>
                     </div>
