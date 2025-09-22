@@ -22,11 +22,8 @@ const Header = () => {
             </h1>
           </div>
           
-          {/* Desktop Navigation - Simplified */}
+          {/* Desktop Navigation - No buttons */}
           <div className="hidden md:flex items-center">
-            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-              Schedule Demo
-            </Button>
           </div>
           
           {/* Mobile menu button */}
@@ -40,13 +37,10 @@ const Header = () => {
           </div>
         </div>
         
-        {/* Mobile Navigation - Simplified */}
+        {/* Mobile Navigation - No buttons */}
         {isOpen && (
           <div className="md:hidden py-4 border-t border-slate-200">
             <div className="flex flex-col space-y-3">
-              <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 w-full">
-                Schedule Demo
-              </Button>
             </div>
           </div>
         )}
