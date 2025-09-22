@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Building2, GraduationCap, Heart, Factory, Shield, Users2 } from "lucide-react";
+import { Building2, GraduationCap, Heart, Factory, Shield, ChefHat } from "lucide-react";
 
 const categories = [
   {
@@ -28,9 +28,9 @@ const categories = [
     description: "Prepare first responders with realistic scenario-based training."
   },
   {
-    icon: Users2,
-    title: "Professional Services",
-    description: "Scale consultant expertise and accelerate junior professional development."
+    icon: ChefHat,
+    title: "Hospitality & Food Service",
+    description: "Train staff in service excellence, food safety, and customer experience standards."
   }
 ];
 

@@ -8,20 +8,9 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   
-  const navItems = [
-    { name: "SME Authoring", href: "#sme-authoring" },
-    { name: "Learner Framework", href: "#learner-framework" },
-    { name: "Analytics", href: "#analytics" },
-    { name: "Content Library", href: "#content-library" }
-  ];
+  // Removed navigation items as requested
   
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsOpen(false);
-  };
+  // Removed scroll function as navigation items are removed
   
   return (
     <header className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-200">
@@ -33,17 +22,8 @@ const Header = () => {
             </h1>
           </div>
           
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <button
-                key={item.href}
-                onClick={() => scrollToSection(item.href)}
-                className="text-sm font-medium transition-colors hover:text-blue-600 text-slate-600"
-              >
-                {item.name}
-              </button>
-            ))}
+          {/* Desktop Navigation - Simplified */}
+          <div className="hidden md:flex items-center">
             <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
               Schedule Demo
             </Button>
@@ -60,19 +40,10 @@ const Header = () => {
           </div>
         </div>
         
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Simplified */}
         {isOpen && (
           <div className="md:hidden py-4 border-t border-slate-200">
             <div className="flex flex-col space-y-3">
-              {navItems.map((item) => (
-                <button
-                  key={item.href}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-sm font-medium px-2 py-1 rounded transition-colors hover:text-blue-600 text-slate-600 text-left"
-                >
-                  {item.name}
-                </button>
-              ))}
               <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 w-full">
                 Schedule Demo
               </Button>
