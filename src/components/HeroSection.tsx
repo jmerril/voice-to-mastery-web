@@ -1,16 +1,10 @@
-import heroImage from "/images/hero-ai-mentorship.jpg";
+// Clean hero section without background image
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0">
-        <img 
-          src={heroImage} 
-          alt="AI mentorship phenomenon" 
-          className="w-full h-full object-cover opacity-20"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background" />
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center">
+      {/* Clean background without image or animated elements */}
+      <div className="absolute inset-0 bg-background" />
       
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <h1 className="text-6xl md:text-8xl font-thin tracking-tight mb-8">
