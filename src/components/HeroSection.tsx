@@ -1,12 +1,19 @@
-// Clean hero section without background image
+import epicHeroImage from "/images/epic-hero-shot.jpg";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center">
-      {/* Clean background without image or animated elements */}
-      <div className="absolute inset-0 bg-background" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Epic Hero Background */}
+      <div className="absolute inset-0">
+        <img 
+          src={epicHeroImage} 
+          alt="Epic AI mentorship landscape" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/80" />
+      </div>
       
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <div className="relative z-20 max-w-4xl mx-auto px-6 text-center">
         <h1 className="text-6xl md:text-8xl font-thin tracking-tight mb-8">
           The{" "}
           <span className="text-primary font-light">
