@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Brain, MessageSquare, Target, Zap } from "lucide-react";
-import challengesImage from "/images/learning-challenges.jpg";
+import challengesImage from "/images/learning-challenges-new.jpg";
 
 const challenges = [
   {
