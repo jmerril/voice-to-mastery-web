@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import revolutionImage from "/images/educational-revolution.jpg";
 
 const principles = [
   "conversation beats consumption. people learn by doing and dialog.",
@@ -21,9 +22,18 @@ export const EducationalRevolutionSection = () => {
               Educational Revolution
             </span>
           </h2>
-          <p className="text-xl font-light text-muted-foreground">
+          <p className="text-xl font-light text-muted-foreground mb-12">
             (excerpts)
           </p>
+          
+          {/* Hero Image */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <img 
+              src={revolutionImage} 
+              alt="Educational Revolution" 
+              className="w-full h-64 md:h-80 object-cover rounded-2xl shadow-xl"
+            />
+          </div>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

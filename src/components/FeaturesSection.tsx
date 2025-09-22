@@ -1,19 +1,20 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Mic, Atom, TrendingUp, Users, Brain, Zap } from "lucide-react";
-// Temporary placeholders - images will be added later
+import atomicKnowledgeImage from "/images/atomic-knowledge.jpg";
+import voiceCoachingImage from "/images/voice-first-ai.jpg";
 
 const features = [
   {
     icon: Mic,
     title: "Voice-First Mentorship",
     description: "Natural conversation with AI mentors that understand context, tone, and learning style.",
-    image: null
+    image: voiceCoachingImage
   },
   {
     icon: Atom,
     title: "Atomic Knowledge System",
     description: "Expertise broken down into precise, interconnected knowledge atoms for targeted learning.",
-    image: null
+    image: atomicKnowledgeImage
   },
   {
     icon: TrendingUp,

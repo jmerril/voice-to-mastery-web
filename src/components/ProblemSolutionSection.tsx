@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Brain, MessageSquare, Target, Zap } from "lucide-react";
+import challengesImage from "/images/learning-challenges.jpg";
 
 const challenges = [
   {
@@ -32,9 +33,18 @@ export const ProblemSolutionSection = () => {
           <h2 className="text-4xl md:text-5xl font-thin text-foreground mb-6">
             The Learning Challenge
           </h2>
-          <p className="text-xl font-light text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl font-light text-muted-foreground max-w-2xl mx-auto mb-12">
             Traditional knowledge transfer breaks down when expertise needs to scale.
           </p>
+          
+          {/* Hero Image */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <img 
+              src={challengesImage} 
+              alt="Learning Challenges" 
+              className="w-full h-64 md:h-80 object-cover rounded-2xl shadow-xl"
+            />
+          </div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
