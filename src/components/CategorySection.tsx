@@ -1,34 +1,39 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Building2, GraduationCap, Heart, Factory, Shield, ChefHat } from "lucide-react";
+import enterpriseLearningImage from "/images/industry-enterprise-learning.jpg";
+import educationalInstitutionsImage from "/images/industry-educational-institutions.jpg";
+import healthcareTrainingImage from "/images/industry-healthcare-training.jpg";
+import manufacturingImage from "/images/industry-manufacturing.jpg";
+import publicSafetyImage from "/images/industry-public-safety.jpg";
+import hospitalityFoodImage from "/images/industry-hospitality-food.jpg";
 
 const categories = [
   {
-    icon: Building2,
+    image: enterpriseLearningImage,
     title: "Enterprise Learning",
     description: "Transform organizational knowledge transfer and employee development programs."
   },
   {
-    icon: GraduationCap,
+    image: educationalInstitutionsImage,
     title: "Educational Institutions",
     description: "Revolutionize how students learn complex subjects through AI mentorship."
   },
   {
-    icon: Heart,
+    image: healthcareTrainingImage,
     title: "Healthcare Training",
     description: "Safe simulation environments for critical medical and patient care scenarios."
   },
   {
-    icon: Factory,
+    image: manufacturingImage,
     title: "Manufacturing",
     description: "Standardize expertise across facilities and accelerate technician training."
   },
   {
-    icon: Shield,
+    image: publicSafetyImage,
     title: "Public Safety",
     description: "Prepare first responders with realistic scenario-based training."
   },
   {
-    icon: ChefHat,
+    image: hospitalityFoodImage,
     title: "Hospitality & Food Service",
     description: "Train staff in service excellence, food safety, and customer experience standards."
   }
@@ -51,12 +56,16 @@ export const CategorySection = () => {
           {categories.map((category, index) => (
             <Card 
               key={index}
-              className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50 bg-card/50 backdrop-blur-sm"
+              className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden"
             >
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <category.icon className="w-8 h-8 text-primary" />
-                </div>
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src={category.image} 
+                  alt={category.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <CardContent className="p-6 text-center">
                 <h3 className="text-xl font-medium mb-4 text-foreground">
                   {category.title}
                 </h3>
