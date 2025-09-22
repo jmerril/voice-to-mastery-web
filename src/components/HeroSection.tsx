@@ -1,4 +1,4 @@
-import heroLaptopImage from "/images/hero-laptop-meeting.jpg";
+import heroTeamImage from "/images/hero-team-holographic.jpg";
 
 export const HeroSection = () => {
   return (
@@ -6,11 +6,11 @@ export const HeroSection = () => {
       {/* Epic Hero Background */}
       <div className="absolute inset-0">
         <img 
-          src={heroLaptopImage} 
-          alt="Virtual mentorship and learning" 
+          src={heroTeamImage} 
+          alt="Team collaboration with AI holographic knowledge" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/20 to-background/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/70 to-background/70" />
       </div>
       
       <div className="relative z-20 max-w-4xl mx-auto px-6 text-center py-8">
