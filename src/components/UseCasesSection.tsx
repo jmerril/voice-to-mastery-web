@@ -1,7 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import proceduralIntelligenceImage from "@/assets/procedural-intelligence.jpg";
-import teamCollaborationImage from "@/assets/team-collaboration.jpg";
-import voiceCoachingImage from "@/assets/voice-coaching.jpg";
+// Temporary placeholders - images will be added later
 
 const opportunities = [
   {
@@ -30,7 +28,7 @@ const opportunities = [
   }
 ];
 
-const images = [proceduralIntelligenceImage, teamCollaborationImage, voiceCoachingImage];
+const placeholderImages = [null, null, null];
 
 export const UseCasesSection = () => {
   return (
@@ -82,16 +80,12 @@ export const UseCasesSection = () => {
 
         {/* Visual Assets */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {images.map((image, index) => (
+          {placeholderImages.map((_, index) => (
             <div 
               key={index}
               className="group relative overflow-hidden rounded-2xl aspect-video bg-muted/20"
             >
-              <img 
-                src={image} 
-                alt={`Use case ${index + 1}`}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
+              <div className="w-full h-full bg-gradient-to-br from-primary/20 via-primary/10 to-muted/30 group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
             </div>
           ))}

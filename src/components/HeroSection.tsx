@@ -1,14 +1,10 @@
-import heroImage from "@/assets/hero-image.jpg";
+// Temporary placeholder - hero image will be added later
 
 export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
-        <img 
-          src={heroImage} 
-          alt="AI mentorship phenomenon" 
-          className="w-full h-full object-cover opacity-20"
-        />
+        <div className="w-full h-full bg-gradient-to-br from-primary/20 via-primary/10 to-background opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background" />
       </div>
       
