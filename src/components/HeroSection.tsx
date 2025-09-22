@@ -1,4 +1,4 @@
-import epicHeroImage from "/images/epic-hero-shot.jpg";
+import corporateBanner from "/images/corporate-banner.jpg";
 
 export const HeroSection = () => {
   return (
@@ -6,11 +6,11 @@ export const HeroSection = () => {
       {/* Epic Hero Background */}
       <div className="absolute inset-0">
         <img 
-          src={epicHeroImage} 
-          alt="Epic AI mentorship landscape" 
+          src={corporateBanner} 
+          alt="Corporate banner" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/30 to-background/60" />
       </div>
       
       <div className="relative z-20 max-w-4xl mx-auto px-6 text-center">
