@@ -1,11 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Mic, Atom, TrendingUp, Users, Brain, Zap } from "lucide-react";
-import voiceFirstImage from "/images/voice-first-mentorship.jpg";
-import atomicKnowledgeImage from "/images/atomic-knowledge-system.jpg";
-import performanceTrackingImage from "/images/performance-tracking.jpg";
-import scalableExpertiseImage from "/images/scalable-expertise.jpg";
-import adaptiveLearningImage from "/images/adaptive-learning.jpg";
-import continuousImprovementImage from "/images/continuous-improvement.jpg";
+import voiceFirstImage from "/images/voice-first-corporate.jpg";
+import atomicKnowledgeImage from "/images/atomic-knowledge-corporate.jpg";
+import performanceTrackingImage from "/images/performance-tracking-corporate.jpg";
+import scalableExpertiseImage from "/images/scalable-expertise-corporate.jpg";
+import adaptiveLearningImage from "/images/adaptive-learning-corporate.jpg";
+import continuousImprovementImage from "/images/continuous-improvement-corporate.jpg";
 
 const features = [
   {

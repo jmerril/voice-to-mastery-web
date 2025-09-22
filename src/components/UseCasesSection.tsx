@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
-import proceduralIntelligenceImage from "/images/procedural-intelligence.jpg";
-import teamCollaborationImage from "/images/team-collaboration.jpg";
-import voiceCoachingImage from "/images/voice-first-ai.jpg";
+import proceduralIntelligenceImage from "/images/procedural-intelligence-corporate.jpg";
+import teamCollaborationImage from "/images/team-collaboration-corporate.jpg";
+import voiceCoachingImage from "/images/voice-coaching-corporate.jpg";
 
 const opportunities = [
   {

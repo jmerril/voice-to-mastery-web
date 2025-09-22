@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import revolutionImage from "/images/educational-revolution-new.jpg";
+import revolutionImage from "/images/educational-revolution-corporate.jpg";
 
 const principles = [
   "conversation beats consumption. people learn by doing and dialog.",
