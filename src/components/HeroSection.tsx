@@ -1,19 +1,11 @@
-import heroLaptopImage from "/images/hero-laptop-clean.jpg";
+// Clean hero section without background image
 
 export const HeroSection = () => {
   return (
-    <section className="relative h-96 md:h-[500px] flex items-center justify-center overflow-hidden">
-      {/* Epic Hero Background */}
-      <div className="absolute inset-0">
-        <img 
-          src={heroLaptopImage} 
-          alt="Virtual AI mentorship session" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/85 to-background/90" />
-      </div>
+    <section className="relative h-96 md:h-[500px] flex items-center justify-center bg-background">
+      {/* Clean background without image */}
       
-      <div className="relative z-20 max-w-4xl mx-auto px-6 text-center py-8">
+      <div className="relative max-w-4xl mx-auto px-6 text-center py-8">
         <h1 className="text-4xl md:text-6xl font-thin tracking-tight mb-4">
           The{" "}
           <span className="text-primary font-light">
