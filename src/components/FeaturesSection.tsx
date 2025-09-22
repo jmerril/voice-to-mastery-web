@@ -1,14 +1,18 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Mic, Atom, TrendingUp, Users, Brain, Zap } from "lucide-react";
-import atomicKnowledgeImage from "/images/atomic-knowledge.jpg";
-import voiceCoachingImage from "/images/voice-first-ai.jpg";
+import voiceFirstImage from "/images/voice-first-mentorship.jpg";
+import atomicKnowledgeImage from "/images/atomic-knowledge-system.jpg";
+import performanceTrackingImage from "/images/performance-tracking.jpg";
+import scalableExpertiseImage from "/images/scalable-expertise.jpg";
+import adaptiveLearningImage from "/images/adaptive-learning.jpg";
+import continuousImprovementImage from "/images/continuous-improvement.jpg";
 
 const features = [
   {
     icon: Mic,
     title: "Voice-First Mentorship",
     description: "Natural conversation with AI mentors that understand context, tone, and learning style.",
-    image: voiceCoachingImage
+    image: voiceFirstImage
   },
   {
     icon: Atom,
@@ -20,25 +24,25 @@ const features = [
     icon: TrendingUp,
     title: "Performance Tracking",
     description: "Real-time measurement of skill acquisition and application effectiveness.",
-    image: null
+    image: performanceTrackingImage
   },
   {
     icon: Users,
     title: "Scalable Expertise",
     description: "Deploy expert knowledge at unlimited scale without diluting quality or context.",
-    image: null
+    image: scalableExpertiseImage
   },
   {
     icon: Brain,
     title: "Adaptive Learning",
     description: "AI that learns from each interaction to optimize the mentorship experience.",
-    image: null
+    image: adaptiveLearningImage
   },
   {
     icon: Zap,
     title: "Continuous Improvement",
     description: "Both system and learner evolve together through feedback loops.",
-    image: null
+    image: continuousImprovementImage
   }
 ];
 

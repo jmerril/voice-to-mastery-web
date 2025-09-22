@@ -8,7 +8,7 @@ export const HeroSection = () => {
       
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <h1 className="text-6xl md:text-8xl font-thin tracking-tight mb-8">
-          the{" "}
+          The{" "}
           <span className="text-primary font-light">
             phenomenon
           </span>
