@@ -67,12 +67,8 @@ const faqs = [
     answer: "Zyglio operates as a SaaS platform with recurring revenue. Pricing can be per-user, per-module, or enterprise license, depending on customer size and complexity. We also offer tiered functionality (e.g., analytics, integrations) that provides upsell opportunities."
   },
   {
-    question: "What are Zyglio's projected unit economics once scaled?",
-    answer: "Our SaaS model targets gross margins above 70%. Customer acquisition costs are mitigated by our pilot-to-contract approach, which provides early proof of ROI. Lifetime value is high due to stickiness—once Zyglio is embedded in workflows and knowledge taxonomies, replacement costs are prohibitive."
-  },
-  {
     question: "Who is the team behind Zyglio?",
-    answer: "Jonathan Merril, MD – EVP AI Strategy & Implementation at Lockwood Group, serial entrepreneur, medical technologist, and inventor with multiple patents in learning systems. Mark Mykityshyn, Ph.D. – An aerospace and systems engineer and former Naval aviator with extensive experience building and scaling companies. The broader team includes cross-functional experts in AI, simulation, and UX design, with advisors and early collaborators from hospitality, defense, and healthcare."
+    answer: "Jonathan Merril, MD – distinguished career in on-line learning and education, serial entrepreneur, medical technologist, and inventor with multiple patents in learning systems. Mark Mykityshyn, Ph.D. – An aerospace and systems engineer and former Naval aviator with extensive experience building and scaling companies. The broader team includes cross-functional experts in AI, simulation, and UX design, with advisors and early collaborators from hospitality, defense, and healthcare."
   }
 ];
 
