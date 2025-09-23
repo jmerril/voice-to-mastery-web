@@ -1,25 +1,28 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Brain, MessageSquare, Target, Zap } from "lucide-react";
 import challengesImage from "/images/learning-challenges-corporate.jpg";
+import knowledgeIsolationImage from "/images/challenge-knowledge-isolation.jpg";
+import ineffectiveTransferImage from "/images/challenge-ineffective-transfer.jpg";
+import performanceGapsImage from "/images/challenge-performance-gaps.jpg";
+import scaleLimitationsImage from "/images/challenge-scale-limitations.jpg";
 
 const challenges = [
   {
-    icon: Brain,
+    image: knowledgeIsolationImage,
     title: "Knowledge Isolation",
     description: "Expert knowledge trapped in individual minds, creating bottlenecks and single points of failure."
   },
   {
-    icon: MessageSquare,
+    image: ineffectiveTransferImage,
     title: "Ineffective Transfer",
     description: "Traditional training methods fail to capture the nuance and context of real expertise."
   },
   {
-    icon: Target,
+    image: performanceGapsImage,
     title: "Performance Gaps",
     description: "Disconnect between learning and application, leading to poor performance outcomes."
   },
   {
-    icon: Zap,
+    image: scaleLimitationsImage,
     title: "Scale Limitations",
     description: "Best mentors can't be everywhere at once, limiting organizational learning velocity."
   }
@@ -51,12 +54,16 @@ export const ProblemSolutionSection = () => {
           {challenges.map((challenge, index) => (
             <Card 
               key={index}
-              className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50 bg-card/50 backdrop-blur-sm"
+              className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden"
             >
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <challenge.icon className="w-8 h-8 text-primary" />
-                </div>
+              <div className="h-40 overflow-hidden">
+                <img 
+                  src={challenge.image} 
+                  alt={challenge.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <CardContent className="p-6 text-center">
                 <h3 className="text-xl font-medium mb-4 text-foreground">
                   {challenge.title}
                 </h3>
