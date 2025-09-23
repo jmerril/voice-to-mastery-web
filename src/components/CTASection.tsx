@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail, Calendar } from "lucide-react";
+import { ArrowRight, Mail, Calendar, Download } from "lucide-react";
 
 export const CTASection = () => {
   return (
@@ -14,7 +14,7 @@ export const CTASection = () => {
           Join leading organizations already transforming how they capture, transfer, and scale expertise.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
           <Button 
             size="lg" 
             className="group font-light text-lg px-8 py-6 rounded-xl hover:shadow-lg transition-all duration-300"
@@ -31,6 +31,33 @@ export const CTASection = () => {
           >
             <Mail className="w-5 h-5 mr-2" />
             Get in Touch
+          </Button>
+        </div>
+
+        {/* White Paper Download Section */}
+        <div className="border-t border-border/30 pt-8">
+          <h3 className="text-2xl font-light text-foreground mb-4">
+            Deep Dive: The Science Behind Zyglio
+          </h3>
+          <p className="text-lg font-light text-muted-foreground mb-6 max-w-2xl mx-auto">
+            Download our comprehensive white paper on "The Cognitive Architecture of Performance" 
+            and discover the scientific foundation of next-generation learning systems.
+          </p>
+          
+          <Button 
+            variant="secondary" 
+            size="lg"
+            className="group font-light text-lg px-8 py-6 rounded-xl hover:shadow-lg transition-all duration-300"
+            onClick={() => {
+              const link = document.createElement('a');
+              link.href = '/Zyglio_White_Paper_Cognitive_Architecture_Performance.pdf';
+              link.download = 'Zyglio_White_Paper_Cognitive_Architecture_Performance.pdf';
+              link.click();
+            }}
+          >
+            <Download className="w-5 h-5 mr-2" />
+            Download White Paper
+            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
         
