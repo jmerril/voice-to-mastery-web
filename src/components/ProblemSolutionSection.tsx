@@ -1,9 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import challengesImage from "/images/learning-challenges-corporate.jpg";
-import knowledgeIsolationImage from "/images/challenge-knowledge-isolation.jpg";
-import ineffectiveTransferImage from "/images/challenge-ineffective-transfer.jpg";
-import performanceGapsImage from "/images/challenge-performance-gaps.jpg";
-import scaleLimitationsImage from "/images/challenge-scale-limitations.jpg";
+import knowledgeIsolationImage from "/images/challenge-knowledge-isolation-healthcare-abstract.jpg";
+import ineffectiveTransferImage from "/images/challenge-ineffective-transfer-manufacturing-abstract.jpg";
+import performanceGapsImage from "/images/challenge-performance-gaps-support-abstract.jpg";
+import scaleLimitationsImage from "/images/challenge-scale-limitations-logistics-abstract.jpg";
 
 const challenges = [
   {
