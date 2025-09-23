@@ -8,7 +8,8 @@ const principles = [
   "emotion matters. tone, pressure, and context must be simulated.",
   "mentorship must scale. the best teacher you ever had—now in your pocket.",
   "memory with metrics. learning history and performance are first-class citizens.",
-  "the flywheel wins. the system—and the human—get better together."
+  "the flywheel wins. the system—and the human—get better together.",
+  "AI curates and presents graphics, audio, text, articles and other proven materials that improve conceptual learning and retention."
 ];
 
 export const EducationalRevolutionSection = () => {
@@ -42,17 +43,10 @@ export const EducationalRevolutionSection = () => {
               key={index}
               className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50 bg-card/50 backdrop-blur-sm"
             >
-              <CardContent className="p-8 flex items-start space-x-6">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <span className="text-lg font-medium text-primary">
-                    {index + 1}
-                  </span>
-                </div>
-                <div className="flex-1">
-                  <p className="text-lg font-light text-foreground leading-relaxed">
-                    {principle}
-                  </p>
-                </div>
+              <CardContent className="p-8">
+                <p className="text-lg font-light text-foreground leading-relaxed">
+                  {principle}
+                </p>
               </CardContent>
             </Card>
           ))}
