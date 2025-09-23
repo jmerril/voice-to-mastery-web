@@ -2,13 +2,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import revolutionImage from "/images/educational-revolution-corporate.jpg";
 
 const principles = [
-  "conversation beats consumption. people learn by doing and dialog.",
-  "why cements what. rationale and consequences anchor memory.",
-  "errors are data. every miss is a map to mastery.",
-  "emotion matters. tone, pressure, and context must be simulated.",
-  "mentorship must scale. the best teacher you ever had—now in your pocket.",
-  "memory with metrics. learning history and performance are first-class citizens.",
-  "the flywheel wins. the system—and the human—get better together.",
+  "Conversation beats consumption. people learn by doing and dialog.",
+  "Why cements what. rationale and consequences anchor memory.",
+  "Errors are data. every miss is a map to mastery.",
+  "Emotion matters. tone, pressure, and context must be simulated.",
+  "Mentorship must scale. the best teacher you ever had—now in your pocket.",
+  "Memory with metrics. learning history and performance are first-class citizens.",
+  "The flywheel wins. the system—and the human—get better together.",
   "AI curates and presents graphics, audio, text, articles and other proven materials that improve conceptual learning and retention."
 ];
 
