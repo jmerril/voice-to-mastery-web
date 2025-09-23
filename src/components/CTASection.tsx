@@ -49,11 +49,14 @@ export const CTASection = () => {
             size="lg"
             className="group font-light text-lg px-8 py-6 rounded-xl hover:shadow-lg transition-all duration-300"
             onClick={() => {
-              window.open('/Zyglio_White_Paper_Cognitive_Architecture_Performance.pdf', '_blank');
+              const link = document.createElement('a');
+              link.href = '/Zyglio_White_Paper_Cognitive_Architecture_Performance.pdf';
+              link.download = 'Zyglio_White_Paper_Cognitive_Architecture_Performance.pdf';
+              link.click();
             }}
           >
             <Download className="w-5 h-5 mr-2" />
-            View White Paper
+            Download White Paper
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
