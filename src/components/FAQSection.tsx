@@ -60,7 +60,7 @@ const faqs = [
   },
   {
     question: "What traction does Zyglio have so far?",
-    answer: "Hospitality Pilot (Gott's Roadside): Full training academy rollout across multiple locations. Defense Collaboration (USMC concept + Laborde Products marine engines): Early adoption for 'train & retain' scenarios. Cybersecurity (Tangible Security): AI-driven enterprise security training modules in development. Healthcare (Lockwood Group): AI-assisted KOL engagement and compliance training prototypes. Strong inbound interest from staffing firms, hospitality groups, and industrial partners."
+    answer: "We have completed successful pilots across multiple verticals including hospitality (full training academy rollout across multiple locations), defense (early adoption for training and retention scenarios), cybersecurity (AI-driven enterprise security training modules in development), and healthcare (AI-assisted engagement and compliance training prototypes). We continue to see strong inbound interest from staffing firms, hospitality groups, and industrial partners."
   },
   {
     question: "What is Zyglio's revenue model?",
