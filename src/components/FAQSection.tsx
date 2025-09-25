@@ -68,7 +68,7 @@ const faqs = [
   },
   {
     question: "Who is the team behind Zyglio?",
-    answer: "Jonathan Merril, MD – distinguished career in on-line learning and education, serial entrepreneur, medical technologist, and inventor with multiple patents in learning systems. Mark Mykityshyn, Ph.D. – An aerospace and systems engineer and former Naval aviator with extensive experience building and scaling companies. The broader team includes cross-functional experts in AI, simulation, and UX design, with advisors and early collaborators from hospitality, defense, and healthcare."
+    answer: "The Zyglio team includes cross-functional experts in AI, simulation, and UX design, with advisors and early collaborators from hospitality, defense, and healthcare. Our leadership brings together expertise in learning systems, aerospace engineering, and scaling technology companies."
   }
 ];
 
