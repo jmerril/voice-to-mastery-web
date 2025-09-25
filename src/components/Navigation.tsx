@@ -47,11 +47,7 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Link to="/demo">
-              <Button className="bg-blue-400 hover:bg-blue-500">
-                Get Demo
-              </Button>
-            </Link>
+            {/* Demo button removed */}
           </div>
           
           {/* Mobile menu button */}
@@ -81,11 +77,7 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <Link to="/demo" onClick={() => setIsOpen(false)}>
-                <Button className="bg-blue-400 hover:bg-blue-500 w-full">
-                  Get Demo
-                </Button>
-              </Link>
+              {/* Demo button removed */}
             </div>
           </div>
         )}

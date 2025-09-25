@@ -14,25 +14,7 @@ export const CTASection = () => {
           Join leading organizations already transforming how they capture, transfer, and scale expertise.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-          <Button 
-            size="lg" 
-            className="group font-light text-lg px-8 py-6 rounded-xl hover:shadow-lg transition-all duration-300"
-          >
-            <Calendar className="w-5 h-5 mr-2" />
-            Schedule Demo
-            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          
-          <Button 
-            variant="outline" 
-            size="lg" 
-            className="group font-light text-lg px-8 py-6 rounded-xl hover:shadow-lg transition-all duration-300"
-          >
-            <Mail className="w-5 h-5 mr-2" />
-            Get in Touch
-          </Button>
-        </div>
+        {/* Removed demo and contact buttons */}
 
         {/* White Paper Download Section */}
         <div className="border-t border-border/30 pt-8">

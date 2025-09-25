@@ -55,12 +55,7 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in">
-              <Link to="/demo">
-                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Get Demo
-                </Button>
-              </Link>
+              {/* Demo button removed */}
               <Link to="/how-it-works">
                 <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg">
                   Learn How It Works
@@ -222,19 +217,7 @@ const Index = () => {
                 </Card>
               </Link>
 
-              <Link to="/demo">
-                <Card className="h-full border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-yellow-50 to-orange-50 cursor-pointer">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-slate-900 flex items-center gap-2">
-                      Get Demo
-                      <ArrowRight className="h-5 w-5 text-yellow-600" />
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-slate-600">Schedule a personalized demo to see how Zyglio can transform your training programs.</p>
-                  </CardContent>
-                </Card>
-              </Link>
+              {/* Demo card removed */}
             </div>
           </div>
         </section>
